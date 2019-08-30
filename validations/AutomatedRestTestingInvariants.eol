@@ -63,6 +63,10 @@ operation OnlyOnePrimaryKey(): Boolean {
 
 
 // 5 
-operation DomainAttribute ValidAttribute(): Boolean {
-
+operation RestrictionAttribute ValidAttribute(): Boolean {
+	if(self.restrictions.size() = 0) {
+		return true;
+	} else {
+		return false;
+	}
 }
