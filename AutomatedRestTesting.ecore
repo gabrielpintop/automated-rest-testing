@@ -35,6 +35,7 @@
     <eLiterals name="Integer" value="2"/>
     <eLiterals name="Double" value="3"/>
     <eLiterals name="Date" value="4"/>
+    <eLiterals name="Array" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute" abstract="true" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//AttributeType"
