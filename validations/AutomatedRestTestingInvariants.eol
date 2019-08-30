@@ -6,9 +6,8 @@ System.out.println("3. There are no GET service with request body:");
 NoGetServicesWithBody().println();
 System.out.println("4. The max number of primary key attributes is one in all entities: ");
 OnlyOnePrimaryKey().println();
-
-var stringTypesSequence = Sequence{"First Name", "First Name (Male)", "First Name (Female)", "Last Name", "Family Name", "Full Name", "Gender", "Email Address", "Phone", "Country", "City", "Country Code"};
-var numericTypesSequence = Sequence{"Latitude", "Longitude", "Row Number"};
+System.out.println("5. The restrictions are valid for the attribute: ");
+RestrictionAttribute.allInstances[0].ValidAttribute().println();
 
 // 1 DONE
 operation NoRepeatedEntities(): Boolean {
@@ -31,7 +30,6 @@ operation NoRepeatedEntities(): Boolean {
 
 // 2 DONE
 operation RestService UniqueParameters(): Boolean {
-	var servicesAttributes = RestService.allInstances.select(s | s.requestParameters.isDefined() and s.requestParameters.requestAttributes.size() > 0).collect(r | r.requestParameters.requestAttributes);
 	if(self.requestParameters.isDefined() and self.requestParameters.requestAttributes.size() > 0) {
 		var requestAttributes = self.requestParameters.requestAttributes;
 		
@@ -67,16 +65,36 @@ operation OnlyOnePrimaryKey(): Boolean {
 
 // 5 
 operation RestrictionAttribute ValidAttribute(): Boolean {
+	var stringTypesSequence = Sequence{"First Name", "First Name (Male)", "First Name (Female)", "Last Name", "Family Name", "Full Name", "Gender", "Email Address", "Phone", "Country", "City", "Country Code"};
+	var numericTypesSequence = Sequence{"Latitude", "Longitude", "Row Number"};
+
 	if(self.restrictions.size() = 0) {
 		return true;
 	} else {
-		var typeRestrictions = self.restrictions.select(r | r.type.value = 0);
+		var typeRestrictions = self.restrictions.select(r | r.operator.value = 0);
 		if(typeRestrictions.size() = 0) {
+			System.out.println("Size is  0");
 			return true;
 		} else if(typeRestrictions.size() > 1) {
+			System.out.println("Size > 0");
 			return false;
 		} else {
-			return true;
+			System.out.println("Size is 1");
+			var restriction = typeRestrictions.first();
+			if(self.type.value = restriction.type.value) {
+				System.out.println("Equal types");
+				if(self.type.value = 0) {
+					return stringTypesSequence.exists(s | s = restriction.value);
+				} else if(self.type.value = 1) {
+					return restriction.value = "Boolean";
+				} else if(self.type.value = 2 or self.type.value = 3) {
+					return numericTypesSequence.exists(s | s = restriction.value);
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
 		}
 	}
 }
