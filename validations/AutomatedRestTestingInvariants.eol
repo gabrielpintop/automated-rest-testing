@@ -7,6 +7,9 @@ NoGetServicesWithBody().println();
 System.out.println("4. The max number of primary key attributes is one in all entities: ");
 OnlyOnePrimaryKey().println();
 
+var stringTypesSequence = Sequence{"First Name", "First Name (Male)", "First Name (Female)", "Last Name", "Family Name", "Full Name", "Gender", "Email Address", "Phone", "Country", "City", "Country Code"};
+var numericTypesSequence = Sequence{"Latitude", "Longitude", "Row Number"};
+
 // 1 DONE
 operation NoRepeatedEntities(): Boolean {
 	var entities = Element.allInstances.select(e | e.type().name = "DomainEntity" or e.type().name = "ResponseEntity");
@@ -67,6 +70,13 @@ operation RestrictionAttribute ValidAttribute(): Boolean {
 	if(self.restrictions.size() = 0) {
 		return true;
 	} else {
-		return false;
+		var typeRestrictions = self.restrictions.select(r | r.type.value = 0);
+		if(typeRestrictions.size() = 0) {
+			return true;
+		} else if(typeRestrictions.size() > 1) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }

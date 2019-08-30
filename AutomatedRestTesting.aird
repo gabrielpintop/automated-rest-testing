@@ -1251,9 +1251,9 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_OqoeBMqmEemYrf0HoRCzDA" red="221" green="236" blue="202"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Os2rkMqmEemYrf0HoRCzDA" name="Minor" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Minor"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Minor"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Os2rkMqmEemYrf0HoRCzDA" name="Type" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Type"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Type"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Os3SoMqmEemYrf0HoRCzDA" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Os3SocqmEemYrf0HoRCzDA"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
@@ -1317,9 +1317,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Os9ZQMqmEemYrf0HoRCzDA" name="Type" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Type"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Type"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Os9ZQMqmEemYrf0HoRCzDA" name="Minor" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Minor"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="AutomatedRestTesting.ecore#//MockarooOperator/Minor"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Os-AUMqmEemYrf0HoRCzDA" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Os-AUcqmEemYrf0HoRCzDA"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
@@ -1369,7 +1369,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OsUgEMqmEemYrf0HoRCzDA" name="operator : MockarooOperator = Minor" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OsUgEMqmEemYrf0HoRCzDA" name="operator : MockarooOperator = Type" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="AutomatedRestTesting.ecore#//Restriction/operator"/>
           <semanticElements xmi:type="ecore:EAttribute" href="AutomatedRestTesting.ecore#//Restriction/operator"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_OsWVQMqmEemYrf0HoRCzDA" labelAlignment="LEFT">

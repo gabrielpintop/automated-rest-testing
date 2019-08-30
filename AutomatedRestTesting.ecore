@@ -67,13 +67,13 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MockarooOperator">
-    <eLiterals name="Minor"/>
+    <eLiterals name="Type"/>
     <eLiterals name="MinorEqual" value="1"/>
     <eLiterals name="Equal" value="2"/>
     <eLiterals name="Different" value="3"/>
     <eLiterals name="Major" value="4"/>
     <eLiterals name="MajorEqual" value="5"/>
-    <eLiterals name="Type" value="6"/>
+    <eLiterals name="Minor" value="6" literal="Minor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="KatalonOperator">
     <eLiterals name="VerifyEqual"/>
