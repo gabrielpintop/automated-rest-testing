@@ -66,7 +66,19 @@
       xsi:type="AutomatedRestTesting:RestService"
       name="GetStatesByCountry"
       uri="/countries/{country}/states"
-      resources="//@elements.1"/>
+      resources="//@elements.1">
+    <response
+        name="StateResponse">
+      <responseAttributes
+          name="Status"
+          type="Integer"
+          value="404">
+        <assertions
+            type="Integer"
+            value="404"/>
+      </responseAttributes>
+    </response>
+  </elements>
   <elements
       xsi:type="AutomatedRestTesting:RestService"
       name="GetCitiesByCountry"
