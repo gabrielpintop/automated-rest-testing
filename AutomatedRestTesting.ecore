@@ -62,9 +62,7 @@
         upperBound="-1" eType="#//Assertion" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" eSuperTypes="#//Attribute">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="restrictions" lowerBound="1"
-        upperBound="-1" eType="#//Restriction" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" eSuperTypes="#//RestrictionAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaryKey" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
@@ -93,13 +91,13 @@
     <eLiterals name="Put" value="2"/>
     <eLiterals name="Delete" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RequestAttribute" eSuperTypes="#//Attribute">
+  <eClassifiers xsi:type="ecore:EClass" name="RestrictionAttribute" eSuperTypes="#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="restrictions" lowerBound="1"
         upperBound="-1" eType="#//Restriction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequestEntity" abstract="true" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requestAttributes" upperBound="-1"
-        eType="#//RequestAttribute" containment="true"/>
+        eType="#//RestrictionAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameters" eSuperTypes="#//RequestEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isQuery" unique="false"
