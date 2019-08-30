@@ -22,8 +22,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" lowerBound="1"
         upperBound="-1" eType="#//DomainEntity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//MethodType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requestParameters" eType="#//Parameters"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestParameters" upperBound="-1"
+        eType="#//Parameters" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requestBody" eType="#//Body"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="response" lowerBound="1"

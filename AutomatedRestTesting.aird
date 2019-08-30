@@ -1814,7 +1814,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_FLKUEMrAEemYrf0HoRCzDA" name="[0..1] requestParameters" sourceNode="_Oq2gcMqmEemYrf0HoRCzDA" targetNode="_la0Z0Mq9EemYrf0HoRCzDA">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_FLKUEMrAEemYrf0HoRCzDA" name="[0..*] requestParameters" sourceNode="_Oq2gcMqmEemYrf0HoRCzDA" targetNode="_la0Z0Mq9EemYrf0HoRCzDA">
         <target xmi:type="ecore:EReference" href="AutomatedRestTesting.ecore#//RestService/requestParameters"/>
         <semanticElements xmi:type="ecore:EReference" href="AutomatedRestTesting.ecore#//RestService/requestParameters"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_kQjew8rAEemYrf0HoRCzDA" description="_kQjewMrAEemYrf0HoRCzDA" sourceArrow="FillDiamond" routingStyle="manhattan">
