@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="AutomatedRestTesting" nsURI="http://www.example.org/AutomatedRestTesting"
+    nsPrefix="AutomatedRestTesting">
+  <eClassifiers xsi:type="ecore:EClass" name="AutomatedRestTesting">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseEntity" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseAttributes" upperBound="-1"
+        eType="#//AssertionAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainEntity" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainAttributes" lowerBound="1"
+        upperBound="-1" eType="#//DomainAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RestService" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="response" lowerBound="1"
+        eType="#//ResponseEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" lowerBound="1"
+        upperBound="-1" eType="#//DomainEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//MethodType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestParameters" eType="#//Parameters"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestBody" eType="#//Body"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AttributeType">
+    <eLiterals name="String"/>
+    <eLiterals name="Boolean" value="1"/>
+    <eLiterals name="Integer" value="2"/>
+    <eLiterals name="Double" value="3"/>
+    <eLiterals name="Date" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//AttributeType"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Restriction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" unique="false"
+        eType="#//MockarooOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//AttributeType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assertion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" unique="false"
+        eType="#//KatalonOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//AttributeType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssertionAttribute" eSuperTypes="#//Attribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assertions" lowerBound="1"
+        upperBound="-1" eType="#//Assertion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" eSuperTypes="#//Attribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="restrictions" lowerBound="1"
+        upperBound="-1" eType="#//Restriction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaryKey" unique="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MockarooOperator">
+    <eLiterals name="Minor"/>
+    <eLiterals name="MinorEqual" value="1"/>
+    <eLiterals name="Equal" value="2"/>
+    <eLiterals name="Different" value="3"/>
+    <eLiterals name="Major" value="4"/>
+    <eLiterals name="MajorEqual" value="5"/>
+    <eLiterals name="Type" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="KatalonOperator">
+    <eLiterals name="VerifyEqual"/>
+    <eLiterals name="VerifyGreaterThan" value="1"/>
+    <eLiterals name="VerifyGreaterThanOrEqual" value="2"/>
+    <eLiterals name="VerifyLessThan" value="3"/>
+    <eLiterals name="VerifyLessThanOrEqual" value="4"/>
+    <eLiterals name="VerifyMatch" value="5"/>
+    <eLiterals name="VerifyNotEqual" value="6" literal="VerifyNotEqual"/>
+    <eLiterals name="VerifyNotMatch" value="7" literal="VerifyNotMatch"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MethodType">
+    <eLiterals name="Get"/>
+    <eLiterals name="Post" value="1"/>
+    <eLiterals name="Put" value="2"/>
+    <eLiterals name="Delete" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestAttribute" eSuperTypes="#//Attribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="restrictions" lowerBound="1"
+        upperBound="-1" eType="#//Restriction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestEntity" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestAttributes" upperBound="-1"
+        eType="#//RequestAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameters" eSuperTypes="#//RequestEntity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isQuery" unique="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Body" eSuperTypes="#//RequestEntity"/>
+</ecore:EPackage>

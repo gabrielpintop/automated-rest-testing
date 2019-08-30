@@ -1,0 +1,68 @@
+System.out.println("1. There are no repeated domain entities: ");
+NoRepeatedEntities().println();
+System.out.println("2. The rest services does not have repeated parameters (query or path):");
+RestService.allInstances[0].UniqueParameters().println();
+System.out.println("3. There are no GET service with request body:");
+NoGetServicesWithBody().println();
+System.out.println("4. The max number of primary key attributes is one in all entities: ");
+OnlyOnePrimaryKey().println();
+
+// 1 DONE
+operation NoRepeatedEntities(): Boolean {
+	var entities = Element.allInstances.select(e | e.type().name = "DomainEntity" or e.type().name = "ResponseEntity");
+	
+	var ocurrences = 0;
+	
+	var entityName: String;
+	
+	for(i in 0.to(entities.size() - 1)){
+		entityName = entities[i].name;
+		ocurrences = entities.select(e | e.name = entityName);
+		if(ocurrences.size() > 1) {
+			return false;
+		 }
+	}
+	
+	return true;
+}
+
+// 2 DONE
+operation RestService UniqueParameters(): Boolean {
+	var servicesAttributes = RestService.allInstances.select(s | s.requestParameters.isDefined() and s.requestParameters.requestAttributes.size() > 0).collect(r | r.requestParameters.requestAttributes);
+	if(self.requestParameters.isDefined() and self.requestParameters.requestAttributes.size() > 0) {
+		var requestAttributes = self.requestParameters.requestAttributes;
+		
+		var attributeName: String;
+		
+		var ocurrences = 0;
+		
+		for(i in 0.to(requestAttributes.size() - 1)){
+			attributeName = requestAttributes[i].name;
+			ocurrences = requestAttributes.select(a | a.name = attributeName);
+			if(ocurrences.size() > 1) {
+				return false;
+		 	}
+		}
+		
+		return true;
+		
+	} else {
+		return false;
+	}
+}
+
+// 3 DONE
+operation NoGetServicesWithBody(): Boolean {
+	return RestService.allInstances.select(s | s.method.value = 0 and s.requestBody.isDefined()).size() = 0;
+}
+
+// 4 DONE
+operation OnlyOnePrimaryKey(): Boolean {
+	return DomainEntity.allInstances.select(e | e.domainAttributes.size() > 0 and e.domainAttributes.select(d |d.primaryKey = true).size() > 1).size() = 0;
+}
+
+
+// 5 
+operation DomainAttribute ValidAttribute(): Boolean {
+
+}
