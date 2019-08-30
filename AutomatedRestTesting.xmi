@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AutomatedRestTesting:AutomatedRestTesting xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AutomatedRestTesting="http://www.example.org/AutomatedRestTesting">
   <elements xsi:type="AutomatedRestTesting:DomainEntity" name="Libro">
-    <domainAttributes name="Nombre">
-      <restrictions valid="true" operator="Type" value="Title"/>
+    <domainAttributes name="Nombre" type="Double">
+      <restrictions type="Double" value="Latitude"/>
     </domainAttributes>
-    <domainAttributes name="ISBN" primaryKey="true">
-      <restrictions valid="true" value="ISBN"/>
-    </domainAttributes>
-    <domainAttributes name="Edicion" type="Integer">
-      <restrictions valid="true" operator="MajorEqual" type="Integer" value="1"/>
-    </domainAttributes>
-  </elements>
-  <elements xsi:type="AutomatedRestTesting:DomainEntity" name="Autor">
-    <domainAttributes name="Nombre">
-      <restrictions valid="true" operator="Type" value="First Name"/>
-    </domainAttributes>
-    <domainAttributes name="Alias" primaryKey="true">
-      <restrictions valid="true" operator="Type" value="Last Name"/>
-    </domainAttributes>
-    <domainAttributes name="Edad" type="Integer">
-      <restrictions valid="true" operator="MajorEqual" type="Integer" value="21"/>
-    </domainAttributes>
-  </elements>
-  <elements xsi:type="AutomatedRestTesting:ResponseEntity" name="LibrosResponse">
-    <responseAttributes name="Nombre" value="Cien años de soledad">
-      <assertions operator="VerifyGreaterThan" value="A"/>
-      <assertions value="J"/>
-      <assertions value="Cien años de soledad"/>
-    </responseAttributes>
-  </elements>
-  <elements xsi:type="AutomatedRestTesting:RestService" name="Obtener Libros" uri="/libro" response="//@elements.2" resources="//@elements.0 //@elements.1">
-    <requestParameters>
-      <requestAttributes name="A1"/>
-      <requestAttributes name="A2"/>
-    </requestParameters>
   </elements>
 </AutomatedRestTesting:AutomatedRestTesting>
