@@ -28,7 +28,11 @@
       name="Country">
     <domainAttributes
         name="shortName"
-        primaryKey="true"/>
+        primaryKey="true">
+      <restrictions
+          valid="true"
+          value="Longitud"/>
+    </domainAttributes>
     <domainAttributes
         name="name"/>
     <domainAttributes
@@ -52,79 +56,12 @@
       xsi:type="AutomatedRestTesting:RestService"
       name="GetCountries"
       uri="/countries"
-      resources="//@elements.1">
-    <response
-        name="GetCountiesResponse">
-      <responseAttributes
-          name="Status"
-          type="Integer"
-          value="200">
-        <assertions
-            value="200"/>
-      </responseAttributes>
-    </response>
-  </elements>
+      resources="//@elements.1"/>
   <elements
       xsi:type="AutomatedRestTesting:RestService"
       name="GetCountryByShort"
       uri="/countries/{country}"
-      resources="//@elements.1">
-    <requestParameters
-        name="country"/>
-    <response
-        name="CountryResponse">
-      <responseAttributes
-          name="shortName">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="name">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="native">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="phone">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="continent">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="capital">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="currency">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="languages">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="emoji">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-      <responseAttributes
-          name="emojiU">
-        <assertions
-            operator="VerifyNotEqual"/>
-      </responseAttributes>
-    </response>
-  </elements>
+      resources="//@elements.1"/>
   <elements
       xsi:type="AutomatedRestTesting:RestService"
       name="GetStatesByCountry"
@@ -149,7 +86,47 @@
       xsi:type="AutomatedRestTesting:RestService"
       name="GetStudentById"
       uri="/students/{id}"
-      resources="//@elements.0"/>
+      resources="//@elements.0">
+    <response
+        name="StudentResponse">
+      <responseAttributes
+          name="first_name"
+          value="José">
+        <assertions
+            value="José"/>
+      </responseAttributes>
+      <responseAttributes
+          name="last_name"
+          value="Rojas">
+        <assertions
+            value="Rojas"/>
+      </responseAttributes>
+      <responseAttributes
+          name="gender"
+          value="Male">
+        <assertions
+            value="Male"/>
+      </responseAttributes>
+      <responseAttributes
+          name="Country"
+          value="Colombia">
+        <assertions
+            value="Colombia"/>
+      </responseAttributes>
+      <responseAttributes
+          name="City"
+          value="Tunja">
+        <assertions
+            value="Tunja"/>
+      </responseAttributes>
+      <responseAttributes
+          name="university"
+          value="UNAL">
+        <assertions
+            value="UNAL"/>
+      </responseAttributes>
+    </response>
+  </elements>
   <elements
       xsi:type="AutomatedRestTesting:RestService"
       name="DeleteStudent"

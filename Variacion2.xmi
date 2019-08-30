@@ -86,7 +86,12 @@
       <responseAttributes
           name="Students"
           type="Array"
-          value="Student"/>
+          value="Student">
+        <assertions
+            operator="VerifyNotEqual"
+            type="Array"
+            value="[]"/>
+      </responseAttributes>
     </response>
   </elements>
   <elements
@@ -114,7 +119,11 @@
       <responseAttributes
           name="Status"
           type="Integer"
-          value="200"/>
+          value="200">
+        <assertions
+            type="Integer"
+            value="200"/>
+      </responseAttributes>
     </response>
   </elements>
   <elements
