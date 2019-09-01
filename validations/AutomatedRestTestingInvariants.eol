@@ -1,13 +1,15 @@
+// Gabriel Pinto
+// Juan Hernandez
 System.out.println("1. There are no repeated domain entities: ");
 NoRepeatedEntities().println();
 System.out.println("2. The rest services does not have repeated parameters (query or path):");
-RestService.allInstances[0].UniqueParameters().println();
+RestService.allInstances.select(s | s.name = "GetCitiesByCountry").first().UniqueParameters().println();
 System.out.println("3. There are no GET service with request body:");
 NoGetServicesWithBody().println();
 System.out.println("4. The max number of primary key attributes is one in all entities: ");
 OnlyOnePrimaryKey().println();
 System.out.println("5. The restrictions are valid for the attribute: ");
-RestrictionAttribute.allInstances[0].ValidAttribute().println();
+System.out.println(DomainEntity.allInstances.select(d | d.name = "Country").first().domainAttributes.select(a | a.name = "shortName").first().ValidAttribute());
 
 // 1 DONE
 operation NoRepeatedEntities(): Boolean {
@@ -30,25 +32,23 @@ operation NoRepeatedEntities(): Boolean {
 
 // 2 DONE
 operation RestService UniqueParameters(): Boolean {
-	if(self.requestParameters.isDefined() and self.requestParameters.requestAttributes.size() > 0) {
-		var requestAttributes = self.requestParameters.requestAttributes;
-		
-		var attributeName: String;
+	
+	if(self.requestParameters.size() > 0) {
+		var parameterName: String;
 		
 		var ocurrences = 0;
 		
-		for(i in 0.to(requestAttributes.size() - 1)){
-			attributeName = requestAttributes[i].name;
-			ocurrences = requestAttributes.select(a | a.name = attributeName);
+		for(i in 0.to(self.requestParameters.size() - 1)){
+			parameterName = self.requestParameters[i].name;
+			ocurrences = self.requestParameters.select(a | a.name = parameterName);
 			if(ocurrences.size() > 1) {
 				return false;
 		 	}
 		}
 		
 		return true;
-		
 	} else {
-		return false;
+		return true;
 	}
 }
 
@@ -73,16 +73,12 @@ operation RestrictionAttribute ValidAttribute(): Boolean {
 	} else {
 		var typeRestrictions = self.restrictions.select(r | r.operator.value = 0);
 		if(typeRestrictions.size() = 0) {
-			System.out.println("Size is  0");
 			return true;
 		} else if(typeRestrictions.size() > 1) {
-			System.out.println("Size > 0");
 			return false;
 		} else {
-			System.out.println("Size is 1");
 			var restriction = typeRestrictions.first();
 			if(self.type.value = restriction.type.value) {
-				System.out.println("Equal types");
 				if(self.type.value = 0) {
 					return stringTypesSequence.exists(s | s = restriction.value);
 				} else if(self.type.value = 1) {
