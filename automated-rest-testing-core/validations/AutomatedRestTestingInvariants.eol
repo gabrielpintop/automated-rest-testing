@@ -1,0 +1,96 @@
+// Gabriel Pinto
+// Juan Hernandez
+System.out.println("1. There are no repeated domain entities: ");
+NoRepeatedEntities().println();
+System.out.println("2. The rest services does not have repeated parameters (query or path):");
+RestService.allInstances.select(s | s.name = "GetCitiesByCountry").first().UniqueParameters().println();
+System.out.println("3. There are no GET service with request body:");
+NoGetServicesWithBody().println();
+System.out.println("4. The max number of primary key attributes is one in all entities: ");
+OnlyOnePrimaryKey().println();
+System.out.println("5. The restrictions are valid for the attribute: ");
+System.out.println(DomainEntity.allInstances.select(d | d.name = "Country").first().domainAttributes.select(a | a.name = "shortName").first().ValidAttribute());
+
+// 1 DONE
+operation NoRepeatedEntities(): Boolean {
+	var entities = Element.allInstances.select(e | e.type().name = "Entity");
+	
+	var ocurrences = 0;
+	
+	var entityName: String;
+	
+	for(i in 0.to(entities.size() - 1)){
+		entityName = entities[i].name;
+		ocurrences = entities.select(e | e.name = entityName);
+		if(ocurrences.size() > 1) {
+			return false;
+		 }
+	}
+	
+	return true;
+}
+
+// 2 DONE
+operation RestService UniqueParameters(): Boolean {
+	
+	if(self.parameters.size() > 0) {
+		var parameterName: String;
+		
+		var ocurrences = 0;
+		
+		for(i in 0.to(self.requestParameters.size() - 1)){
+			parameterName = self.requestParameters[i].name;
+			ocurrences = self.requestParameters.select(a | a.name = parameterName);
+			if(ocurrences.size() > 1) {
+				return false;
+		 	}
+		}
+		
+		return true;
+	} else {
+		return true;
+	}
+}
+
+// 3 DONE
+operation NoGetServicesWithBody(): Boolean {
+	return RestService.allInstances.select(s | s.method.value = 0 and s.request.isDefined()).size() = 0;
+}
+
+// 4 DONE
+operation OnlyOnePrimaryKey(): Boolean {
+	return Entity.allInstances.select(e | e.entityAttributes.size() > 0 and e.entityAttributes.select(d |d.primaryKey = true).size() > 1).size() = 0;
+}
+
+
+// 5 
+operation RestrictionAttribute ValidAttribute(): Boolean {
+	var stringTypesSequence = Sequence{"First Name", "First Name (Male)", "First Name (Female)", "Last Name", "Family Name", "Full Name", "Gender", "Email Address", "Phone", "Country", "Country Code", "City"};
+	var numericTypesSequence = Sequence{"Latitude", "Longitude", "Row Number"};
+
+	if(self.restrictions.size() = 0) {
+		return true;
+	} else {
+		var typeRestrictions = self.restrictions.select(r | r.operator.value = 0);
+		if(typeRestrictions.size() = 0) {
+			return true;
+		} else if(typeRestrictions.size() > 1) {
+			return false;
+		} else {
+			var restriction = typeRestrictions.first();
+			if(self.type.value = restriction.type.value) {
+				if(self.type.value = 0) {
+					return stringTypesSequence.exists(s | s = restriction.value);
+				} else if(self.type.value = 1) {
+					return restriction.value = "Boolean";
+				} else if(self.type.value = 2 or self.type.value = 3) {
+					return numericTypesSequence.exists(s | s = restriction.value);
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		}
+	}
+}

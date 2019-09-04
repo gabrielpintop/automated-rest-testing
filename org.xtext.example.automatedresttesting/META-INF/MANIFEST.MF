@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.example.automatedresttesting
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.example.automatedresttesting; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: AutomatedRestTestingHernandezPinto,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.example.automatedresttesting.validation,
+ org.xtext.example.automatedresttesting.scoping,
+ org.xtext.example.automatedresttesting,
+ org.xtext.example.automatedresttesting.parser.antlr.internal,
+ org.xtext.example.automatedresttesting.parser.antlr,
+ org.xtext.example.automatedresttesting.services,
+ org.xtext.example.automatedresttesting.serializer,
+ org.xtext.example.automatedresttesting.formatting,
+ org.xtext.example.automatedresttesting.generator
+Import-Package: org.apache.log4j

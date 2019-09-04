@@ -1,0 +1,370 @@
+/**
+ */
+package automatedresttesting;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.emf.common.util.Enumerator;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the literals of the enumeration '<em><b>Relational Operator</b></em>',
+ * and utility methods for working with them.
+ * <!-- end-user-doc -->
+ * @see automatedresttesting.AutomatedresttestingPackage#getRelationalOperator()
+ * @model
+ * @generated
+ */
+public enum RelationalOperator implements Enumerator {
+	/**
+	 * The '<em><b>Minor</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MINOR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MINOR(0, "Minor", "<"),
+
+	/**
+	 * The '<em><b>Minor Equal</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MINOR_EQUAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MINOR_EQUAL(1, "MinorEqual", "<="),
+
+	/**
+	 * The '<em><b>Equal</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #EQUAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	EQUAL(2, "Equal", "="),
+
+	/**
+	 * The '<em><b>Different</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DIFFERENT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DIFFERENT(3, "Different", "<>"),
+
+	/**
+	 * The '<em><b>Major Equal</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAJOR_EQUAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MAJOR_EQUAL(4, "MajorEqual", ">="),
+
+	/**
+	 * The '<em><b>Major</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAJOR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MAJOR(5, "Major", ">"),
+
+	/**
+	 * The '<em><b>AND</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #AND_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	AND(6, "AND", "and"),
+
+	/**
+	 * The '<em><b>OR</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OR(7, "OR", "or");
+
+	/**
+	 * The '<em><b>Minor</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Minor</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MINOR
+	 * @model name="Minor" literal="<"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MINOR_VALUE = 0;
+
+	/**
+	 * The '<em><b>Minor Equal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Minor Equal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MINOR_EQUAL
+	 * @model name="MinorEqual" literal="<="
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MINOR_EQUAL_VALUE = 1;
+
+	/**
+	 * The '<em><b>Equal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Equal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #EQUAL
+	 * @model name="Equal" literal="="
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EQUAL_VALUE = 2;
+
+	/**
+	 * The '<em><b>Different</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Different</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DIFFERENT
+	 * @model name="Different" literal="<>"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DIFFERENT_VALUE = 3;
+
+	/**
+	 * The '<em><b>Major Equal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Major Equal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MAJOR_EQUAL
+	 * @model name="MajorEqual" literal=">="
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MAJOR_EQUAL_VALUE = 4;
+
+	/**
+	 * The '<em><b>Major</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Major</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MAJOR
+	 * @model name="Major" literal=">"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MAJOR_VALUE = 5;
+
+	/**
+	 * The '<em><b>AND</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>AND</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #AND
+	 * @model literal="and"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AND_VALUE = 6;
+
+	/**
+	 * The '<em><b>OR</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OR</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OR
+	 * @model literal="or"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OR_VALUE = 7;
+
+	/**
+	 * An array of all the '<em><b>Relational Operator</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static final RelationalOperator[] VALUES_ARRAY =
+		new RelationalOperator[] {
+			MINOR,
+			MINOR_EQUAL,
+			EQUAL,
+			DIFFERENT,
+			MAJOR_EQUAL,
+			MAJOR,
+			AND,
+			OR,
+		};
+
+	/**
+	 * A public read-only list of all the '<em><b>Relational Operator</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<RelationalOperator> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
+	/**
+	 * Returns the '<em><b>Relational Operator</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static RelationalOperator get(String literal) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			RelationalOperator result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Relational Operator</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static RelationalOperator getByName(String name) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			RelationalOperator result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Relational Operator</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static RelationalOperator get(int value) {
+		switch (value) {
+			case MINOR_VALUE: return MINOR;
+			case MINOR_EQUAL_VALUE: return MINOR_EQUAL;
+			case EQUAL_VALUE: return EQUAL;
+			case DIFFERENT_VALUE: return DIFFERENT;
+			case MAJOR_EQUAL_VALUE: return MAJOR_EQUAL;
+			case MAJOR_VALUE: return MAJOR;
+			case AND_VALUE: return AND;
+			case OR_VALUE: return OR;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final int value;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String name;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String literal;
+
+	/**
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private RelationalOperator(int value, String name, String literal) {
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+	  return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+	  return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLiteral() {
+	  return literal;
+	}
+
+	/**
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return literal;
+	}
+	
+} //RelationalOperator

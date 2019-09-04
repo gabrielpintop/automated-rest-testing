@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/AutomatedRestTestingHernandezPinto/src" modelPluginID="AutomatedRestTestingHernandezPinto"
+    modelName="AutomatedRestTesting" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>AutomatedRestTesting.ecore</foreignModel>
+  <genPackages prefix="Automatedresttesting" disposableProviderFactory="true" ecorePackage="AutomatedRestTesting.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AutomatedRestTesting.ecore#//AttributeType">
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//AttributeType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//AttributeType/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//AttributeType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//AttributeType/double"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//AttributeType/date"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AutomatedRestTesting.ecore#//MockTypes">
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FirstNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FirstNameMaleType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FirstNameFemaleType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/LastNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FamilyNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FullNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/GenderType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/EmailAddressType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/PhoneType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/CountryType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/CountryCodeType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/CityType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/RowNumberType"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AutomatedRestTesting.ecore#//MethodType">
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MethodType/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MethodType/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MethodType/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MethodType/DELETE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AutomatedRestTesting.ecore#//ParameterType">
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//ParameterType/path"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//ParameterType/query"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AutomatedRestTesting.ecore#//RelationalOperator">
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/Minor"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/MinorEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/Equal"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/Different"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/MajorEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/Major"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//RelationalOperator/OR"/>
+    </genEnums>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//AutomatedRestTesting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//AutomatedRestTesting/url"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//AutomatedRestTesting/tests"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//AutomatedRestTesting/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//AutomatedRestTesting/dataElements"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Entity/entityAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//RestService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//RestService/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//RestService/method"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//RestService/response"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//RestService/request"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//RestService/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//RestService/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Attribute/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Attribute/restrictions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Restriction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Restriction/valid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Restriction/mockType"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Assertion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Assertion/condition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Assertion/dataToTest"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//DomainAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//DomainAttribute/primaryKey"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Parameter/paramType"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Test">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Test/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Test/assertions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Test/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="AutomatedRestTesting.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Element/isArray"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Expression/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Expression/expectedValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Expression/relationalOperator"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//SimpleEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//SimpleEntity/entityAttributes"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
