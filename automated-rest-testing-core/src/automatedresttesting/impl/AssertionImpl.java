@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.AssertionImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link automatedresttesting.impl.AssertionImpl#getDataToTest <em>Data To Test</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

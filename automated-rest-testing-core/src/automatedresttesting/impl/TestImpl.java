@@ -4,6 +4,7 @@ package automatedresttesting.impl;
 
 import automatedresttesting.Assertion;
 import automatedresttesting.AutomatedresttestingPackage;
+import automatedresttesting.RestService;
 import automatedresttesting.Test;
 
 import java.util.Collection;
@@ -28,12 +29,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.TestImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link automatedresttesting.impl.TestImpl#getAssertions <em>Assertions</em>}</li>
  *   <li>{@link automatedresttesting.impl.TestImpl#getName <em>Name</em>}</li>
+ *   <li>{@link automatedresttesting.impl.TestImpl#getService <em>Service</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +89,16 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getService() <em>Service</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getService()
+	 * @generated
+	 * @ordered
+	 */
+	protected RestService service;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,6 +178,44 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public RestService getService() {
+		if (service != null && service.eIsProxy()) {
+			InternalEObject oldService = (InternalEObject)service;
+			service = (RestService)eResolveProxy(oldService);
+			if (service != oldService) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AutomatedresttestingPackage.TEST__SERVICE, oldService, service));
+			}
+		}
+		return service;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RestService basicGetService() {
+		return service;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setService(RestService newService) {
+		RestService oldService = service;
+		service = newService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.TEST__SERVICE, oldService, service));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -189,6 +239,9 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 				return getAssertions();
 			case AutomatedresttestingPackage.TEST__NAME:
 				return getName();
+			case AutomatedresttestingPackage.TEST__SERVICE:
+				if (resolve) return getService();
+				return basicGetService();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +265,9 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 			case AutomatedresttestingPackage.TEST__NAME:
 				setName((String)newValue);
 				return;
+			case AutomatedresttestingPackage.TEST__SERVICE:
+				setService((RestService)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -233,6 +289,9 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 			case AutomatedresttestingPackage.TEST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case AutomatedresttestingPackage.TEST__SERVICE:
+				setService((RestService)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -251,6 +310,8 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 				return assertions != null && !assertions.isEmpty();
 			case AutomatedresttestingPackage.TEST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case AutomatedresttestingPackage.TEST__SERVICE:
+				return service != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,7 +325,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (description: ");
 		result.append(description);
 		result.append(", name: ");

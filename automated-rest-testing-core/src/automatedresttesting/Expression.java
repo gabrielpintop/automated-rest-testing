@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.Expression#getType <em>Type</em>}</li>
  *   <li>{@link automatedresttesting.Expression#getExpectedValue <em>Expected Value</em>}</li>
  *   <li>{@link automatedresttesting.Expression#getRelationalOperator <em>Relational Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getExpression()
  * @model
@@ -27,10 +27,6 @@ public interface Expression extends EObject {
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.AttributeType}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see automatedresttesting.AttributeType
@@ -82,10 +78,6 @@ public interface Expression extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Expected Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Expected Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expected Value</em>' attribute.
 	 * @see #setExpectedValue(String)
@@ -109,10 +101,6 @@ public interface Expression extends EObject {
 	 * Returns the value of the '<em><b>Relational Operator</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.RelationalOperator}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Relational Operator</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relational Operator</em>' attribute.
 	 * @see automatedresttesting.RelationalOperator

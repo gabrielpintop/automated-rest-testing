@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.ElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link automatedresttesting.impl.ElementImpl#isIsArray <em>Is Array</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -205,7 +205,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", isArray: ");

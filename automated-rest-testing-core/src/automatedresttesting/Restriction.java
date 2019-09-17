@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.Restriction#isValid <em>Valid</em>}</li>
  *   <li>{@link automatedresttesting.Restriction#getMockType <em>Mock Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getRestriction()
  * @model
@@ -25,10 +25,6 @@ public interface Restriction extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Valid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valid</em>' attribute.
 	 * @see #setValid(boolean)
@@ -52,10 +48,6 @@ public interface Restriction extends EObject {
 	 * Returns the value of the '<em><b>Mock Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.MockTypes}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Mock Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mock Type</em>' attribute.
 	 * @see automatedresttesting.MockTypes

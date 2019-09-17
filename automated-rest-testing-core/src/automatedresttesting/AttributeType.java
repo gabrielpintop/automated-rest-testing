@@ -71,10 +71,6 @@ public enum AttributeType implements Enumerator {
 	/**
 	 * The '<em><b>String</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>String</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #STRING
 	 * @model name="string"
@@ -86,10 +82,6 @@ public enum AttributeType implements Enumerator {
 	/**
 	 * The '<em><b>Boolean</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Boolean</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BOOLEAN
 	 * @model name="boolean"
@@ -101,10 +93,6 @@ public enum AttributeType implements Enumerator {
 	/**
 	 * The '<em><b>Integer</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Integer</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #INTEGER
 	 * @model name="integer"
@@ -116,10 +104,6 @@ public enum AttributeType implements Enumerator {
 	/**
 	 * The '<em><b>Double</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Double</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DOUBLE
 	 * @model name="double"
@@ -131,10 +115,6 @@ public enum AttributeType implements Enumerator {
 	/**
 	 * The '<em><b>Date</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Date</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DATE
 	 * @model name="date"
@@ -170,6 +150,8 @@ public enum AttributeType implements Enumerator {
 	 * Returns the '<em><b>Attribute Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AttributeType get(String literal) {
@@ -186,6 +168,8 @@ public enum AttributeType implements Enumerator {
 	 * Returns the '<em><b>Attribute Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AttributeType getByName(String name) {
@@ -202,6 +186,8 @@ public enum AttributeType implements Enumerator {
 	 * Returns the '<em><b>Attribute Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AttributeType get(int value) {

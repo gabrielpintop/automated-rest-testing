@@ -41,10 +41,6 @@ public enum ParameterType implements Enumerator {
 	/**
 	 * The '<em><b>Path</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Path</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PATH
 	 * @model name="path"
@@ -56,10 +52,6 @@ public enum ParameterType implements Enumerator {
 	/**
 	 * The '<em><b>Query</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Query</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #QUERY
 	 * @model name="query"
@@ -92,6 +84,8 @@ public enum ParameterType implements Enumerator {
 	 * Returns the '<em><b>Parameter Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ParameterType get(String literal) {
@@ -108,6 +102,8 @@ public enum ParameterType implements Enumerator {
 	 * Returns the '<em><b>Parameter Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ParameterType getByName(String name) {
@@ -124,6 +120,8 @@ public enum ParameterType implements Enumerator {
 	 * Returns the '<em><b>Parameter Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ParameterType get(int value) {

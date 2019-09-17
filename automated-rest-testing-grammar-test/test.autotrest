@@ -7,7 +7,7 @@ Entity Country{
 	string native; string phone ( mockType = PhoneType ); 
 	string continent; string capital ( mockType = CityType ); 
 	string currency; 
-	string [] languages; 
+	string[] languages; 
 	string emoji; 
 	string emojiU;
 }
@@ -31,7 +31,7 @@ SimpleEntity Respuesta{
 GET GetCountries{ 
 	URL = /countries;
 	Response { 
-		Type = Country[];
+		Type = Country [];
 	} 
 }
 
@@ -45,7 +45,7 @@ GET GetCountryByShort{
 GET GetStatesByCountry{
 	URL = /countries/:{country}/states;
 	Response {
-		Type = string [];
+		Type = Student [];
 	}
 }
 
@@ -53,7 +53,7 @@ GET GETCitiesByCountry{
 	URL = /countries/:{country}/cities?${state};
 
 	Response {
-		Type = string [];
+		Type = Student [];
 	}
 }
 
@@ -91,6 +91,26 @@ DELETE DeleteStudent{
 	Response { 
 		Type = Respuesta;
 	} 
+}
+
+Test p1{
+    service = GetCountries;
+    description ="Probar que retorne 200";    
+    Assertions{
+         response -> Student.code == "200";
+         response -> Student.code == "200";
+    }
+}
+
+Test p2{
+    service = GetCountryByShort;
+    description ="No existe el país";    
+    Assertions{
+        response -> Respuesta.status == "200"; 
+        response -> Country.shortName == parameter.GetCountryByShort.country;
+        response -> Country.name=='Brazil';
+    }
+
 }
 
 

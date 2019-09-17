@@ -184,7 +184,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link AutomatedresttestingPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -198,7 +198,8 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		if (isInited) return (AutomatedresttestingPackage)EPackage.Registry.INSTANCE.getEPackage(AutomatedresttestingPackage.eNS_URI);
 
 		// Obtain or create and register package
-		AutomatedresttestingPackageImpl theAutomatedresttestingPackage = (AutomatedresttestingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof AutomatedresttestingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new AutomatedresttestingPackageImpl());
+		Object registeredAutomatedresttestingPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AutomatedresttestingPackageImpl theAutomatedresttestingPackage = registeredAutomatedresttestingPackage instanceof AutomatedresttestingPackageImpl ? (AutomatedresttestingPackageImpl)registeredAutomatedresttestingPackage : new AutomatedresttestingPackageImpl();
 
 		isInited = true;
 
@@ -211,7 +212,6 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		// Mark meta-data to indicate it can't be changed
 		theAutomatedresttestingPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AutomatedresttestingPackage.eNS_URI, theAutomatedresttestingPackage);
 		return theAutomatedresttestingPackage;
@@ -510,6 +510,15 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTest_Service() {
+		return (EReference)testEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getElement() {
 		return elementEClass;
 	}
@@ -699,6 +708,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		createEAttribute(testEClass, TEST__DESCRIPTION);
 		createEReference(testEClass, TEST__ASSERTIONS);
 		createEAttribute(testEClass, TEST__NAME);
+		createEReference(testEClass, TEST__SERVICE);
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__NAME);
@@ -795,6 +805,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		initEAttribute(getTest_Description(), ecorePackage.getEString(), "description", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTest_Assertions(), this.getAssertion(), null, "assertions", null, 1, -1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTest_Name(), ecorePackage.getEString(), "name", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTest_Service(), this.getRestService(), null, "service", null, 1, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

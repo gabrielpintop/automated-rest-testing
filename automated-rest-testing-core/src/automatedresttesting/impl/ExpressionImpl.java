@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.ExpressionImpl#getType <em>Type</em>}</li>
  *   <li>{@link automatedresttesting.impl.ExpressionImpl#getExpectedValue <em>Expected Value</em>}</li>
  *   <li>{@link automatedresttesting.impl.ExpressionImpl#getRelationalOperator <em>Relational Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -293,7 +293,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", expectedValue: ");

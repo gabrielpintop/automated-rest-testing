@@ -24,8 +24,9 @@ Test returns Test:
 	'Test'
 	name=EString
 	LEFT_BRACKET
-		('description' description=EString)?
-		'assertions' LEFT_BRACKET assertions+=Assertion ( COMMA assertions+=Assertion)* RIGHT_BRACKET 
+		'service' EQUAL service=[RestService|EString] SEMICOLON
+		('description' EQUAL description=EString SEMICOLON)?
+		'Assertions' LEFT_BRACKET (assertions+=Assertion SEMICOLON)+ RIGHT_BRACKET 
 	RIGHT_BRACKET;
 
 RestService returns RestService:
@@ -34,36 +35,28 @@ RestService returns RestService:
 		'URL' EQUAL uri=SLASH EString (SLASH EString | parameters+=Parameter)* SEMICOLON
 		('Request' 
 			LEFT_BRACKET
-			'Type' EQUAL (request=([Element|EString])) ('[]')? SEMICOLON
+			'Type' EQUAL (request=([Element|EString])) ('[' ']')? SEMICOLON
 			RIGHT_BRACKET
 		)?
 		'Response' 
 		LEFT_BRACKET
-			'Type' EQUAL response=[Element|EString] ('[]')? SEMICOLON
+			'Type' EQUAL response=[Element|EString] ('[' ']')? SEMICOLON
 		RIGHT_BRACKET
 	RIGHT_BRACKET;
 	
 Assertion returns Assertion:
-	'Assertion'
-	LEFT_BRACKET
-		'dataToTest' dataToTest=[Element|EString]
-		'condition' condition=Expression
-	RIGHT_BRACKET;
+	'response' ARROW dataToTest=[Element|EString] condition=Expression
+;
 
 Expression returns Expression:
-	{Expression}
-	'Expression'
-	LEFT_BRACKET
-		('type' type=AttributeType)?
-		('expectedValue' expectedValue=EString)?
-		('relationalOperator' relationalOperator=RelationalOperator)?
-	RIGHT_BRACKET;
+	relationalOperator=RelationalOperator expectedValue=EString
+;
 
 enum AttributeType returns AttributeType:
 				string = 'string' | boolean = 'boolean' | integer = 'integer' | double = 'double' | date = 'date';
 
 enum RelationalOperator returns RelationalOperator:
-				Minor = 'Minor' | MinorEqual = 'MinorEqual' | Equal = 'Equal' | Different = 'Different' | MajorEqual = 'MajorEqual' | Major = 'Major' | AND = 'AND' | OR = 'OR';
+				Minor = '<' | MinorEqual = '<=' | Equal = '==' | Different = '!=' | MajorEqual = '>=' | Major = '>' | AND = '&&' | OR = '||';
 
 enum MethodType returns MethodType:
 				GET = 'GET' | POST = 'POST' | PUT = 'PUT' | DELETE = 'DELETE';
@@ -71,12 +64,6 @@ enum MethodType returns MethodType:
 Parameter returns Parameter:
 	{Parameter}
 	(SLASH TWO_DOTS | QUESTION_MARK MONEY) LEFT_BRACKET name=EString RIGHT_BRACKET
-	//LEFT_BRACKET
-	//	('value' value=EString)?
-	//	('type' type=AttributeType)?
-	//	('paramType' paramType=ParameterType)?
-	//	('restrictions' LEFT_BRACKET restrictions+=Restriction ( COMMA restrictions+=Restriction)* RIGHT_BRACKET )?
-	// RIGHT_BRACKET
 	;
 
 EBoolean returns ecore::EBoolean:
@@ -102,12 +89,11 @@ Entity returns Entity:
 
 Attribute_Impl returns Attribute:
 	{Attribute}
-	(type=AttributeType) (isArray?='[]')? name=EString;
+	(type=AttributeType) (isArray?='[' ']')? name=EString;
 
 DomainAttribute returns DomainAttribute:
 	{DomainAttribute} 
-	// ('value' value=EString)?
-	(type=AttributeType) (isArray?='[]')? name=EString
+	(type=AttributeType) (isArray?='[' ']')? name=EString
 	(LEFT_PARENTHESIS
 		(primaryKey?='PK' COMMA)? (restrictions+=Restriction)
 	RIGHT_PARENTHESIS)?;
@@ -120,6 +106,8 @@ SimpleEntity returns SimpleEntity:
 	RIGHT_BRACKET;
 	
 // Terminals
+
+terminal ARROW : "->";
 
 terminal EQUAL : "=";
 

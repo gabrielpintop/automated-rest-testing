@@ -24,10 +24,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.SimpleEntityImpl#getEntityAttributes <em>Entity Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

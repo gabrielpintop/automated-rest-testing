@@ -30,13 +30,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.AutomatedRestTestingImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link automatedresttesting.impl.AutomatedRestTestingImpl#getTests <em>Tests</em>}</li>
  *   <li>{@link automatedresttesting.impl.AutomatedRestTestingImpl#getServices <em>Services</em>}</li>
  *   <li>{@link automatedresttesting.impl.AutomatedRestTestingImpl#getDataElements <em>Data Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -286,7 +286,7 @@ public class AutomatedRestTestingImpl extends MinimalEObjectImpl.Container imple
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (url: ");
 		result.append(url);
 		result.append(')');

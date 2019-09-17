@@ -671,13 +671,22 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int TEST__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Service</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST__SERVICE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Test</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_FEATURE_COUNT = 3;
+	int TEST_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Test</em>' class.
@@ -1193,6 +1202,17 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EAttribute getTest_Name();
 
 	/**
+	 * Returns the meta object for the reference '{@link automatedresttesting.Test#getService <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Service</em>'.
+	 * @see automatedresttesting.Test#getService()
+	 * @see #getTest()
+	 * @generated
+	 */
+	EReference getTest_Service();
+
+	/**
 	 * Returns the meta object for class '{@link automatedresttesting.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1634,6 +1654,14 @@ public interface AutomatedresttestingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEST__NAME = eINSTANCE.getTest_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Service</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEST__SERVICE = eINSTANCE.getTest_Service();
 
 		/**
 		 * The meta object literal for the '{@link automatedresttesting.impl.ElementImpl <em>Element</em>}' class.

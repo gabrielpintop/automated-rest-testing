@@ -10,10 +10,10 @@ package automatedresttesting;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.Parameter#getParamType <em>Param Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getParameter()
  * @model
@@ -24,10 +24,6 @@ public interface Parameter extends Attribute {
 	 * Returns the value of the '<em><b>Param Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.ParameterType}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Param Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Param Type</em>' attribute.
 	 * @see automatedresttesting.ParameterType

@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.DomainAttributeImpl#isPrimaryKey <em>Primary Key</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -152,7 +152,7 @@ public class DomainAttributeImpl extends AttributeImpl implements DomainAttribut
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (primaryKey: ");
 		result.append(primaryKey);
 		result.append(')');

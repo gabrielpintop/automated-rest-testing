@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
 <plugin>
 	<extension
@@ -58,20 +58,20 @@
 			<and>
 				<reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
 				<with variable="activeEditor">
-					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-						value="org.xtext.example.automatedresttesting.AutomatedRestTesting" 
+					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
+						value="org.xtext.example.automatedresttesting.AutomatedRestTesting"
 						forcePluginActivation="true"/>
-				</with>		
+				</with>
 			</and>
 		</definition>
 		<definition id="org.xtext.example.automatedresttesting.AutomatedRestTesting.XtextEditor.opened">
 			<and>
 				<reference definitionId="isXtextEditorActive"/>
 				<with variable="activeEditor">
-					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-						value="org.xtext.example.automatedresttesting.AutomatedRestTesting" 
+					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
+						value="org.xtext.example.automatedresttesting.AutomatedRestTesting"
 						forcePluginActivation="true"/>
-				</with>		
+				</with>
 			</and>
 		</definition>
 	</extension>
@@ -154,7 +154,7 @@
 		</menuContribution>
 		<!-- copy qualified name -->
 		<menuContribution locationURI="popup:#TextEditorContext?after=copy">
-			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
+			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
 					<reference definitionId="org.xtext.example.automatedresttesting.AutomatedRestTesting.Editor.opened" />
@@ -170,7 +170,7 @@
 			</command>
 		</menuContribution>
 		<menuContribution locationURI="popup:org.eclipse.xtext.ui.outline?after=additions">
-			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName" 
+			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
 					<and>
@@ -203,6 +203,15 @@
 				</reference>
 			</activeWhen>
 		</handler>
+	</extension>
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+		<content-type
+			base-type="org.eclipse.core.runtime.text"
+			file-extensions="autotrest"
+			id="org.xtext.example.automatedresttesting.AutomatedRestTesting.contenttype"
+			name="AutomatedRestTesting File"
+			priority="normal">
+		</content-type>
 	</extension>
 	<!-- adding resource factories -->
 	<extension
@@ -239,6 +248,15 @@
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.expensive"/>
 		<persistent value="true"/>
+	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			category="org.xtext.example.automatedresttesting.AutomatedRestTesting"
+			class="org.xtext.example.automatedresttesting.ui.AutomatedRestTestingExecutableExtensionFactory:org.eclipse.xtext.ui.validation.ValidatorPreferencePage"
+			id="org.xtext.example.automatedresttesting.AutomatedRestTesting.validator.preferencePage"
+			name="Errors/Warnings">
+			<keywordReference id="org.xtext.example.automatedresttesting.ui.keyword_AutomatedRestTesting"/>
+		</page>
 	</extension>
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
@@ -388,12 +406,18 @@
 			class="org.xtext.example.automatedresttesting.ui.AutomatedRestTestingExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="autotrest">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.xtext.example.automatedresttesting.AutomatedRestTesting.contenttype"
+			contentViewerId="org.xtext.example.automatedresttesting.AutomatedRestTesting.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.xtext.example.automatedresttesting.AutomatedRestTesting.compare.contentMergeViewers"
 			class="org.xtext.example.automatedresttesting.ui.AutomatedRestTestingExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="autotrest" label="AutomatedRestTesting Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.xtext.example.automatedresttesting.AutomatedRestTesting.contenttype"
+			contentMergeViewerId="org.xtext.example.automatedresttesting.AutomatedRestTesting.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.xtext.example.automatedresttesting.AutomatedRestTesting.editors.documentProviders"

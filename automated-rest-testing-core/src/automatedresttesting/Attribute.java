@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.Attribute#getValue <em>Value</em>}</li>
  *   <li>{@link automatedresttesting.Attribute#getRestrictions <em>Restrictions</em>}</li>
  *   <li>{@link automatedresttesting.Attribute#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getAttribute()
  * @model
@@ -26,10 +26,6 @@ public interface Attribute extends Element {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
@@ -53,10 +49,6 @@ public interface Attribute extends Element {
 	 * Returns the value of the '<em><b>Restrictions</b></em>' containment reference list.
 	 * The list contents are of type {@link automatedresttesting.Restriction}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Restrictions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Restrictions</em>' containment reference list.
 	 * @see automatedresttesting.AutomatedresttestingPackage#getAttribute_Restrictions()
@@ -69,10 +61,6 @@ public interface Attribute extends Element {
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.AttributeType}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see automatedresttesting.AttributeType
