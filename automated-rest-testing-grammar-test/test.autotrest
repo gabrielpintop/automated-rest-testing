@@ -45,7 +45,7 @@ GET GetCountryByShort{
 GET GetStatesByCountry{
 	URL = /countries/:{country}/states;
 	Response {
-		Type = Student [];
+		Type = string[];
 	}
 }
 
@@ -95,22 +95,58 @@ DELETE DeleteStudent{
 
 Test p1{
     service = GetCountries;
-    description ="Probar que retorne 200";    
+    description = "Probar que retorne 200";    
     Assertions{
-         response -> Student.code == "200";
-         response -> Student.code == "200";
+         response."Respuesta.status" == '200';
     }
 }
 
 Test p2{
     service = GetCountryByShort;
-    description ="No existe el país";    
+    description ="No existe el país";
+    Mapping[
+    	{parameter="GetCountryByShort.country", value="BR"}
+    ]    
     Assertions{
-        response -> Respuesta.status == "200"; 
-        response -> Country.shortName == parameter.GetCountryByShort.country;
-        response -> Country.name=='Brazil';
+        response."Respuesta.status" == '200'; 
+        response ->"Country.shortName" == parameter."GetCountryByShort.country";
+        response ->"Country.name" == 'Brazil';
     }
-
 }
+
+Test p3 {
+	service = GETCitiesByCountry;
+	description ="Retorna una lista de ciudades";
+	Mapping [ 
+		{ parameter ="GETCitiesByCountry.country", value ="BR"} 
+		{ parameter ="GETCitiesByCountry.state", value ="Parana"}
+	]
+	Assertions{ 
+		response."Respuesta.status" == '200'; 
+		response >= '200';
+	}
+}
+
+Test p4{ 
+	service = AddStudent; 
+	description ="Agrega un estudiante"; 
+	Assertions { 
+		response."Respuesta.status" == "200"; 
+		response->"Respuesta.status" == 'success';
+	} 
+}
+
+Test p5 { 
+	service = DeleteStudent; 
+	description ="Elimina un estudiante"; 
+	Mapping [ 
+		{ parameter = "DeleteStudent.id", value = request->"Student.id"}
+	]
+	Assertions { 
+		response."Respuesta.status" == "200"; 
+		response->"Respuesta.status" == 'success';
+	} 
+}
+
 
 
