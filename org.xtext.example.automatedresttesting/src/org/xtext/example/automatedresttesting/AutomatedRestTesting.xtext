@@ -20,36 +20,46 @@ Attribute returns Attribute:
 EString returns ecore::EString:
 	STRING | ID;
 
-Test returns Test:
-	'Test'
-	name=EString
-	LEFT_BRACKET
-		'service' EQUAL service=[RestService|EString] SEMICOLON
-		('description' EQUAL description=EString SEMICOLON)?
-		'Assertions' LEFT_BRACKET (assertions+=Assertion SEMICOLON)+ RIGHT_BRACKET 
-	RIGHT_BRACKET;
-
 RestService returns RestService:
 	(method=MethodType) name=EString
 	LEFT_BRACKET
 		'URL' EQUAL uri=SLASH EString (SLASH EString | parameters+=Parameter)* SEMICOLON
 		('Request' 
 			LEFT_BRACKET
-			'Type' EQUAL (request=([Element|EString])) ('[' ']')? SEMICOLON
+			'Type' EQUAL request=([Element|EString]) (SQUARE_LEFT_BRACKET  SQUARE_RIGHT_BRACKET)? SEMICOLON
 			RIGHT_BRACKET
 		)?
 		'Response' 
 		LEFT_BRACKET
-			'Type' EQUAL response=[Element|EString] ('[' ']')? SEMICOLON
+			'Type' EQUAL response=[Element|EString] (SQUARE_LEFT_BRACKET  SQUARE_RIGHT_BRACKET)? SEMICOLON
 		RIGHT_BRACKET
 	RIGHT_BRACKET;
-	
+
+Test returns Test:
+	'Test'
+	name=EString
+	LEFT_BRACKET
+		'service' EQUAL service=[RestService|EString] SEMICOLON
+		('description' EQUAL description=EString SEMICOLON)?
+		(Mapping)?
+		'Assertions' LEFT_BRACKET (assertions+=Assertion SEMICOLON)+ RIGHT_BRACKET 
+	RIGHT_BRACKET;
+
+
 Assertion returns Assertion:
-	'response' ARROW dataToTest=[Element|EString] condition=Expression
+	'response' ((DOT | ARROW)? (dataToTest=[Element]))? condition=Expression
 ;
 
 Expression returns Expression:
-	relationalOperator=RelationalOperator expectedValue=EString
+	relationalOperator=RelationalOperator (('parameter' (DOT | ARROW))? expectedValue=EString)?
+;
+
+Mapping: 
+	'Mapping' SQUARE_LEFT_BRACKET MappingParameter (MappingParameter)* SQUARE_RIGHT_BRACKET
+;
+
+MappingParameter:
+	LEFT_BRACKET 'parameter' EQUAL EString COMMA 'value' EQUAL ('request' ARROW)? EString RIGHT_BRACKET
 ;
 
 enum AttributeType returns AttributeType:
@@ -89,11 +99,11 @@ Entity returns Entity:
 
 Attribute_Impl returns Attribute:
 	{Attribute}
-	(type=AttributeType) (isArray?='[' ']')? name=EString;
+	(type=AttributeType) (isArray?=SQUARE_LEFT_BRACKET  SQUARE_RIGHT_BRACKET)? name=EString;
 
 DomainAttribute returns DomainAttribute:
 	{DomainAttribute} 
-	(type=AttributeType) (isArray?='[' ']')? name=EString
+	(type=AttributeType) (isArray?=SQUARE_LEFT_BRACKET  SQUARE_RIGHT_BRACKET)? name=EString
 	(LEFT_PARENTHESIS
 		(primaryKey?='PK' COMMA)? (restrictions+=Restriction)
 	RIGHT_PARENTHESIS)?;
@@ -121,9 +131,15 @@ terminal LEFT_BRACKET : "{";
 
 terminal RIGHT_BRACKET : "}";
 
+terminal SQUARE_LEFT_BRACKET : "[";
+
+terminal SQUARE_RIGHT_BRACKET : "]";
+
 terminal COMMA : ",";
 
 terminal SLASH : "/";
+
+terminal DOT : ".";
 
 terminal TWO_DOTS : ":";
 
