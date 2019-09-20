@@ -4,7 +4,7 @@
 package org.xtext.example.automatedresttesting.formatting2
 
 import automatedresttesting.AutomatedRestTesting
-import automatedresttesting.Test
+import automatedresttesting.RestService
 import com.google.inject.Inject
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
@@ -27,12 +27,12 @@ class AutomatedRestTestingFormatter extends AbstractFormatter2 {
 		}
 	}
 
-	def dispatch void format(Test test, extension IFormattableDocument document) {
+	def dispatch void format(RestService restService, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		for (assertion : test.assertions) {
-			assertion.format
+		for (parameter : restService.parameters) {
+			parameter.format
 		}
 	}
 	
-	// TODO: implement for RestService, Assertion, Entity, DomainAttribute, SimpleEntity
+	// TODO: implement for Test, Assertion, Entity, DomainAttribute, SimpleEntity
 }

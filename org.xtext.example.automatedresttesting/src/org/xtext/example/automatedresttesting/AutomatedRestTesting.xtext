@@ -41,26 +41,25 @@ Test returns Test:
 	LEFT_BRACKET
 		'service' EQUAL service=[RestService|EString] SEMICOLON
 		('description' EQUAL description=EString SEMICOLON)?
-		(Mapping)?
+		('Mapping' SQUARE_LEFT_BRACKET mappings+=MappingElement (COMMA mappings+=MappingElement)* SQUARE_RIGHT_BRACKET SEMICOLON)?
 		'Assertions' LEFT_BRACKET (assertions+=Assertion SEMICOLON)+ RIGHT_BRACKET 
 	RIGHT_BRACKET;
 
 
 Assertion returns Assertion:
-	'response' ((DOT | ARROW)? (dataToTest=[Element]))? condition=Expression
+	'response' ((DOT | ARROW)? (dataToTest=[Element|EString]))? condition=Expression
 ;
 
 Expression returns Expression:
 	relationalOperator=RelationalOperator (('parameter' (DOT | ARROW))? expectedValue=EString)?
 ;
 
-Mapping: 
-	'Mapping' SQUARE_LEFT_BRACKET MappingParameter (MappingParameter)* SQUARE_RIGHT_BRACKET
-;
-
-MappingParameter:
-	LEFT_BRACKET 'parameter' EQUAL EString COMMA 'value' EQUAL ('request' ARROW)? EString RIGHT_BRACKET
-;
+MappingElement returns MappingElement:
+	LEFT_BRACKET
+		'parameter' EQUAL parameter=[Element|EString] 
+		COMMA 
+		'value' EQUAL ('request' ARROW)? value=[Element|EString] 
+	RIGHT_BRACKET;
 
 enum AttributeType returns AttributeType:
 				string = 'string' | boolean = 'boolean' | integer = 'integer' | double = 'double' | date = 'date';

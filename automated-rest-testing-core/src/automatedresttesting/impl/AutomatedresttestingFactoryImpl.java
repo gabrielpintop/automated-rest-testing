@@ -68,6 +68,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 			case AutomatedresttestingPackage.TEST: return createTest();
 			case AutomatedresttestingPackage.EXPRESSION: return createExpression();
 			case AutomatedresttestingPackage.SIMPLE_ENTITY: return createSimpleEntity();
+			case AutomatedresttestingPackage.MAPPING_ELEMENT: return createMappingElement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -227,6 +228,16 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	public SimpleEntity createSimpleEntity() {
 		SimpleEntityImpl simpleEntity = new SimpleEntityImpl();
 		return simpleEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MappingElement createMappingElement() {
+		MappingElementImpl mappingElement = new MappingElementImpl();
+		return mappingElement;
 	}
 
 	/**

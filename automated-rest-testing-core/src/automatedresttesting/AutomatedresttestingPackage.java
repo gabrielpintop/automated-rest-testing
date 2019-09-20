@@ -680,13 +680,22 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int TEST__SERVICE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Mappings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST__MAPPINGS = 4;
+
+	/**
 	 * The number of structural features of the '<em>Test</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_FEATURE_COUNT = 4;
+	int TEST_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Test</em>' class.
@@ -808,6 +817,52 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int SIMPLE_ENTITY_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.MappingElementImpl <em>Mapping Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.MappingElementImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMappingElement()
+	 * @generated
+	 */
+	int MAPPING_ELEMENT = 12;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT__PARAMETER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Mapping Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Mapping Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -815,7 +870,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getAttributeType()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPE = 12;
+	int ATTRIBUTE_TYPE = 13;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.MockTypes <em>Mock Types</em>}' enum.
@@ -825,7 +880,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMockTypes()
 	 * @generated
 	 */
-	int MOCK_TYPES = 13;
+	int MOCK_TYPES = 14;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.MethodType <em>Method Type</em>}' enum.
@@ -835,7 +890,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMethodType()
 	 * @generated
 	 */
-	int METHOD_TYPE = 14;
+	int METHOD_TYPE = 15;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.ParameterType <em>Parameter Type</em>}' enum.
@@ -845,7 +900,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 15;
+	int PARAMETER_TYPE = 16;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.RelationalOperator <em>Relational Operator</em>}' enum.
@@ -855,7 +910,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getRelationalOperator()
 	 * @generated
 	 */
-	int RELATIONAL_OPERATOR = 16;
+	int RELATIONAL_OPERATOR = 17;
 
 
 	/**
@@ -1213,6 +1268,17 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EReference getTest_Service();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link automatedresttesting.Test#getMappings <em>Mappings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Mappings</em>'.
+	 * @see automatedresttesting.Test#getMappings()
+	 * @see #getTest()
+	 * @generated
+	 */
+	EReference getTest_Mappings();
+
+	/**
 	 * Returns the meta object for class '{@link automatedresttesting.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1307,6 +1373,38 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSimpleEntity_EntityAttributes();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.MappingElement <em>Mapping Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mapping Element</em>'.
+	 * @see automatedresttesting.MappingElement
+	 * @generated
+	 */
+	EClass getMappingElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link automatedresttesting.MappingElement#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parameter</em>'.
+	 * @see automatedresttesting.MappingElement#getParameter()
+	 * @see #getMappingElement()
+	 * @generated
+	 */
+	EReference getMappingElement_Parameter();
+
+	/**
+	 * Returns the meta object for the reference '{@link automatedresttesting.MappingElement#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see automatedresttesting.MappingElement#getValue()
+	 * @see #getMappingElement()
+	 * @generated
+	 */
+	EReference getMappingElement_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}'.
@@ -1664,6 +1762,14 @@ public interface AutomatedresttestingPackage extends EPackage {
 		EReference TEST__SERVICE = eINSTANCE.getTest_Service();
 
 		/**
+		 * The meta object literal for the '<em><b>Mappings</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEST__MAPPINGS = eINSTANCE.getTest_Mappings();
+
+		/**
 		 * The meta object literal for the '{@link automatedresttesting.impl.ElementImpl <em>Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1740,6 +1846,32 @@ public interface AutomatedresttestingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_ENTITY__ENTITY_ATTRIBUTES = eINSTANCE.getSimpleEntity_EntityAttributes();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.MappingElementImpl <em>Mapping Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.MappingElementImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMappingElement()
+		 * @generated
+		 */
+		EClass MAPPING_ELEMENT = eINSTANCE.getMappingElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAPPING_ELEMENT__PARAMETER = eINSTANCE.getMappingElement_Parameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAPPING_ELEMENT__VALUE = eINSTANCE.getMappingElement_Value();
 
 		/**
 		 * The meta object literal for the '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}' enum.

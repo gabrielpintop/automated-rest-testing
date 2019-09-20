@@ -12,6 +12,7 @@ import automatedresttesting.DomainAttribute;
 import automatedresttesting.Element;
 import automatedresttesting.Entity;
 import automatedresttesting.Expression;
+import automatedresttesting.MappingElement;
 import automatedresttesting.MethodType;
 import automatedresttesting.MockTypes;
 import automatedresttesting.Parameter;
@@ -120,6 +121,13 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * @generated
 	 */
 	private EClass simpleEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mappingElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -519,6 +527,15 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTest_Mappings() {
+		return (EReference)testEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getElement() {
 		return elementEClass;
 	}
@@ -593,6 +610,33 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 */
 	public EReference getSimpleEntity_EntityAttributes() {
 		return (EReference)simpleEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMappingElement() {
+		return mappingElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappingElement_Parameter() {
+		return (EReference)mappingElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappingElement_Value() {
+		return (EReference)mappingElementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -709,6 +753,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		createEReference(testEClass, TEST__ASSERTIONS);
 		createEAttribute(testEClass, TEST__NAME);
 		createEReference(testEClass, TEST__SERVICE);
+		createEReference(testEClass, TEST__MAPPINGS);
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__NAME);
@@ -721,6 +766,10 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 
 		simpleEntityEClass = createEClass(SIMPLE_ENTITY);
 		createEReference(simpleEntityEClass, SIMPLE_ENTITY__ENTITY_ATTRIBUTES);
+
+		mappingElementEClass = createEClass(MAPPING_ELEMENT);
+		createEReference(mappingElementEClass, MAPPING_ELEMENT__PARAMETER);
+		createEReference(mappingElementEClass, MAPPING_ELEMENT__VALUE);
 
 		// Create enums
 		attributeTypeEEnum = createEEnum(ATTRIBUTE_TYPE);
@@ -806,6 +855,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		initEReference(getTest_Assertions(), this.getAssertion(), null, "assertions", null, 1, -1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTest_Name(), ecorePackage.getEString(), "name", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTest_Service(), this.getRestService(), null, "service", null, 1, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTest_Mappings(), this.getMappingElement(), null, "mappings", null, 0, -1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -818,6 +868,10 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 
 		initEClass(simpleEntityEClass, SimpleEntity.class, "SimpleEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimpleEntity_EntityAttributes(), this.getAttribute(), null, "entityAttributes", null, 0, -1, SimpleEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mappingElementEClass, MappingElement.class, "MappingElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMappingElement_Parameter(), this.getElement(), null, "parameter", null, 1, 1, MappingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMappingElement_Value(), this.getElement(), null, "value", null, 1, 1, MappingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(attributeTypeEEnum, AttributeType.class, "AttributeType");

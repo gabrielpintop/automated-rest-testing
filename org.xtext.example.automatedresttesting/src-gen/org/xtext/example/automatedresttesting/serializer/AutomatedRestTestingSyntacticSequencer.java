@@ -22,18 +22,24 @@ import org.xtext.example.automatedresttesting.services.AutomatedRestTestingGramm
 public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected AutomatedRestTestingGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q;
+	protected AbstractElementAlias match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q;
+	protected AbstractElementAlias match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q;
 	protected AbstractElementAlias match_Parameter___QUESTION_MARKTerminalRuleCall_1_1_0_MONEYTerminalRuleCall_1_1_1___or___SLASHTerminalRuleCall_1_0_0_TWO_DOTSTerminalRuleCall_1_0_1__;
-	protected AbstractElementAlias match_RestService___LeftSquareBracketKeyword_15_0_RightSquareBracketKeyword_15_1__q;
-	protected AbstractElementAlias match_RestService___LeftSquareBracketKeyword_9_5_0_RightSquareBracketKeyword_9_5_1__q;
 	protected AbstractElementAlias match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a;
+	protected AbstractElementAlias match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q;
+	protected AbstractElementAlias match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (AutomatedRestTestingGrammarAccess) access;
+		match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getAssertionAccess().getARROWTerminalRuleCall_1_0_1()), new TokenAlias(false, false, grammarAccess.getAssertionAccess().getDOTTerminalRuleCall_1_0_0()));
+		match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getParameterKeyword_1_0_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getARROWTerminalRuleCall_1_0_1_1()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getDOTTerminalRuleCall_1_0_1_0())));
+		match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMappingElementAccess().getRequestKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getMappingElementAccess().getARROWTerminalRuleCall_7_1()));
 		match_Parameter___QUESTION_MARKTerminalRuleCall_1_1_0_MONEYTerminalRuleCall_1_1_1___or___SLASHTerminalRuleCall_1_0_0_TWO_DOTSTerminalRuleCall_1_0_1__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getParameterAccess().getQUESTION_MARKTerminalRuleCall_1_1_0()), new TokenAlias(false, false, grammarAccess.getParameterAccess().getMONEYTerminalRuleCall_1_1_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getParameterAccess().getSLASHTerminalRuleCall_1_0_0()), new TokenAlias(false, false, grammarAccess.getParameterAccess().getTWO_DOTSTerminalRuleCall_1_0_1())));
-		match_RestService___LeftSquareBracketKeyword_15_0_RightSquareBracketKeyword_15_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getLeftSquareBracketKeyword_15_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getRightSquareBracketKeyword_15_1()));
-		match_RestService___LeftSquareBracketKeyword_9_5_0_RightSquareBracketKeyword_9_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getLeftSquareBracketKeyword_9_5_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getRightSquareBracketKeyword_9_5_1()));
 		match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSLASHTerminalRuleCall_7_0_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getEStringParserRuleCall_7_0_1()));
+		match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_LEFT_BRACKETTerminalRuleCall_15_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_15_1()));
+		match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1()));
 	}
 	
 	@Override
@@ -42,6 +48,8 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 			return getARROWToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCOMMARule())
 			return getCOMMAToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getDOTRule())
+			return getDOTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEQUALRule())
 			return getEQUALToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEStringRule())
@@ -62,6 +70,10 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 			return getSEMICOLONToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSLASHRule())
 			return getSLASHToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getSQUARE_LEFT_BRACKETRule())
+			return getSQUARE_LEFT_BRACKETToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getSQUARE_RIGHT_BRACKETRule())
+			return getSQUARE_RIGHT_BRACKETToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getTWO_DOTSRule())
 			return getTWO_DOTSToken(semanticObject, ruleCall, node);
 		return "";
@@ -83,6 +95,15 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 		if (node != null)
 			return getTokenText(node);
 		return ",";
+	}
+	
+	/**
+	 * terminal DOT : ".";
+	 */
+	protected String getDOTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ".";
 	}
 	
 	/**
@@ -177,6 +198,24 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	}
 	
 	/**
+	 * terminal SQUARE_LEFT_BRACKET : "[";
+	 */
+	protected String getSQUARE_LEFT_BRACKETToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "[";
+	}
+	
+	/**
+	 * terminal SQUARE_RIGHT_BRACKET : "]";
+	 */
+	protected String getSQUARE_RIGHT_BRACKETToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "]";
+	}
+	
+	/**
 	 * terminal TWO_DOTS : ":";
 	 */
 	protected String getTWO_DOTSToken(EObject semanticObject, RuleCall ruleCall, INode node) {
@@ -191,18 +230,57 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Parameter___QUESTION_MARKTerminalRuleCall_1_1_0_MONEYTerminalRuleCall_1_1_1___or___SLASHTerminalRuleCall_1_0_0_TWO_DOTSTerminalRuleCall_1_0_1__.equals(syntax))
+			if (match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q.equals(syntax))
+				emit_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q.equals(syntax))
+				emit_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q.equals(syntax))
+				emit_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Parameter___QUESTION_MARKTerminalRuleCall_1_1_0_MONEYTerminalRuleCall_1_1_1___or___SLASHTerminalRuleCall_1_0_0_TWO_DOTSTerminalRuleCall_1_0_1__.equals(syntax))
 				emit_Parameter___QUESTION_MARKTerminalRuleCall_1_1_0_MONEYTerminalRuleCall_1_1_1___or___SLASHTerminalRuleCall_1_0_0_TWO_DOTSTerminalRuleCall_1_0_1__(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_RestService___LeftSquareBracketKeyword_15_0_RightSquareBracketKeyword_15_1__q.equals(syntax))
-				emit_RestService___LeftSquareBracketKeyword_15_0_RightSquareBracketKeyword_15_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_RestService___LeftSquareBracketKeyword_9_5_0_RightSquareBracketKeyword_9_5_1__q.equals(syntax))
-				emit_RestService___LeftSquareBracketKeyword_9_5_0_RightSquareBracketKeyword_9_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a.equals(syntax))
 				emit_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q.equals(syntax))
+				emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q.equals(syntax))
+				emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     (DOT | ARROW)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) 'response' (ambiguity) dataToTest=[Element|EString]
+	 */
+	protected void emit_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('parameter' (DOT | ARROW))?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     relationalOperator=RelationalOperator (ambiguity) expectedValue=EString
+	 */
+	protected void emit_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('request' ARROW)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     parameter=[Element|EString] COMMA 'value' EQUAL (ambiguity) value=[Element|EString]
+	 */
+	protected void emit_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Ambiguous syntax:
 	 *     (SLASH TWO_DOTS) | (QUESTION_MARK MONEY)
@@ -211,28 +289,6 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	 *     (rule start) (ambiguity) LEFT_BRACKET name=EString
 	 */
 	protected void emit_Parameter___QUESTION_MARKTerminalRuleCall_1_1_0_MONEYTerminalRuleCall_1_1_1___or___SLASHTerminalRuleCall_1_0_0_TWO_DOTSTerminalRuleCall_1_0_1__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ('[' ']')?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     response=[Element|EString] (ambiguity) SEMICOLON RIGHT_BRACKET RIGHT_BRACKET (rule end)
-	 */
-	protected void emit_RestService___LeftSquareBracketKeyword_15_0_RightSquareBracketKeyword_15_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ('[' ']')?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     request=[Element|EString] (ambiguity) SEMICOLON RIGHT_BRACKET 'Response' LEFT_BRACKET 'Type' EQUAL response=[Element|EString]
-	 */
-	protected void emit_RestService___LeftSquareBracketKeyword_9_5_0_RightSquareBracketKeyword_9_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -249,6 +305,28 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	 *     uri=SLASH EString (ambiguity) parameters+=Parameter
 	 */
 	protected void emit_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     response=[Element|EString] (ambiguity) SEMICOLON RIGHT_BRACKET RIGHT_BRACKET (rule end)
+	 */
+	protected void emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     request=[Element|EString] (ambiguity) SEMICOLON RIGHT_BRACKET 'Response' LEFT_BRACKET 'Type' EQUAL response=[Element|EString]
+	 */
+	protected void emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

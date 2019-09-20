@@ -3,9 +3,9 @@
  */
 package org.xtext.example.automatedresttesting.formatting2;
 
-import automatedresttesting.Assertion;
 import automatedresttesting.AutomatedRestTesting;
 import automatedresttesting.Element;
+import automatedresttesting.Parameter;
 import automatedresttesting.RestService;
 import automatedresttesting.Test;
 import com.google.inject.Inject;
@@ -39,10 +39,10 @@ public class AutomatedRestTestingFormatter extends AbstractFormatter2 {
     }
   }
   
-  protected void _format(final Test test, @Extension final IFormattableDocument document) {
-    EList<Assertion> _assertions = test.getAssertions();
-    for (final Assertion assertion : _assertions) {
-      document.<Assertion>format(assertion);
+  protected void _format(final RestService restService, @Extension final IFormattableDocument document) {
+    EList<Parameter> _parameters = restService.getParameters();
+    for (final Parameter parameter : _parameters) {
+      document.<Parameter>format(parameter);
     }
   }
   
@@ -53,8 +53,8 @@ public class AutomatedRestTestingFormatter extends AbstractFormatter2 {
     } else if (automatedRestTesting instanceof AutomatedRestTesting) {
       _format((AutomatedRestTesting)automatedRestTesting, document);
       return;
-    } else if (automatedRestTesting instanceof Test) {
-      _format((Test)automatedRestTesting, document);
+    } else if (automatedRestTesting instanceof RestService) {
+      _format((RestService)automatedRestTesting, document);
       return;
     } else if (automatedRestTesting instanceof EObject) {
       _format((EObject)automatedRestTesting, document);

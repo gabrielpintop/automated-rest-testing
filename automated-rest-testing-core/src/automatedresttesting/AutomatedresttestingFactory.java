@@ -121,6 +121,15 @@ public interface AutomatedresttestingFactory extends EFactory {
 	SimpleEntity createSimpleEntity();
 
 	/**
+	 * Returns a new object of class '<em>Mapping Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mapping Element</em>'.
+	 * @generated
+	 */
+	MappingElement createMappingElement();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

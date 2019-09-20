@@ -4,6 +4,7 @@ package automatedresttesting.impl;
 
 import automatedresttesting.Assertion;
 import automatedresttesting.AutomatedresttestingPackage;
+import automatedresttesting.MappingElement;
 import automatedresttesting.RestService;
 import automatedresttesting.Test;
 
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link automatedresttesting.impl.TestImpl#getAssertions <em>Assertions</em>}</li>
  *   <li>{@link automatedresttesting.impl.TestImpl#getName <em>Name</em>}</li>
  *   <li>{@link automatedresttesting.impl.TestImpl#getService <em>Service</em>}</li>
+ *   <li>{@link automatedresttesting.impl.TestImpl#getMappings <em>Mappings</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +101,16 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * @ordered
 	 */
 	protected RestService service;
+
+	/**
+	 * The cached value of the '{@link #getMappings() <em>Mappings</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMappings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MappingElement> mappings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,11 +228,25 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MappingElement> getMappings() {
+		if (mappings == null) {
+			mappings = new EObjectContainmentEList<MappingElement>(MappingElement.class, this, AutomatedresttestingPackage.TEST__MAPPINGS);
+		}
+		return mappings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AutomatedresttestingPackage.TEST__ASSERTIONS:
 				return ((InternalEList<?>)getAssertions()).basicRemove(otherEnd, msgs);
+			case AutomatedresttestingPackage.TEST__MAPPINGS:
+				return ((InternalEList<?>)getMappings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -242,6 +268,8 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 			case AutomatedresttestingPackage.TEST__SERVICE:
 				if (resolve) return getService();
 				return basicGetService();
+			case AutomatedresttestingPackage.TEST__MAPPINGS:
+				return getMappings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -268,6 +296,10 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 			case AutomatedresttestingPackage.TEST__SERVICE:
 				setService((RestService)newValue);
 				return;
+			case AutomatedresttestingPackage.TEST__MAPPINGS:
+				getMappings().clear();
+				getMappings().addAll((Collection<? extends MappingElement>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -292,6 +324,9 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 			case AutomatedresttestingPackage.TEST__SERVICE:
 				setService((RestService)null);
 				return;
+			case AutomatedresttestingPackage.TEST__MAPPINGS:
+				getMappings().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -312,6 +347,8 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case AutomatedresttestingPackage.TEST__SERVICE:
 				return service != null;
+			case AutomatedresttestingPackage.TEST__MAPPINGS:
+				return mappings != null && !mappings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

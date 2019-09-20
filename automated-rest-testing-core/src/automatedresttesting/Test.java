@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link automatedresttesting.Test#getAssertions <em>Assertions</em>}</li>
  *   <li>{@link automatedresttesting.Test#getName <em>Name</em>}</li>
  *   <li>{@link automatedresttesting.Test#getService <em>Service</em>}</li>
+ *   <li>{@link automatedresttesting.Test#getMappings <em>Mappings</em>}</li>
  * </ul>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getTest()
@@ -103,5 +104,17 @@ public interface Test extends EObject {
 	 * @generated
 	 */
 	void setService(RestService value);
+
+	/**
+	 * Returns the value of the '<em><b>Mappings</b></em>' containment reference list.
+	 * The list contents are of type {@link automatedresttesting.MappingElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Mappings</em>' containment reference list.
+	 * @see automatedresttesting.AutomatedresttestingPackage#getTest_Mappings()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MappingElement> getMappings();
 
 } // Test

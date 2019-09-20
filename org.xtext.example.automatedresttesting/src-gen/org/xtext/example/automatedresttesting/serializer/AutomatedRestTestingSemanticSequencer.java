@@ -10,6 +10,7 @@ import automatedresttesting.AutomatedresttestingPackage;
 import automatedresttesting.DomainAttribute;
 import automatedresttesting.Entity;
 import automatedresttesting.Expression;
+import automatedresttesting.MappingElement;
 import automatedresttesting.RestService;
 import automatedresttesting.Restriction;
 import automatedresttesting.SimpleEntity;
@@ -59,6 +60,9 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 			case AutomatedresttestingPackage.EXPRESSION:
 				sequence_Expression(context, (Expression) semanticObject); 
 				return; 
+			case AutomatedresttestingPackage.MAPPING_ELEMENT:
+				sequence_MappingElement(context, (MappingElement) semanticObject); 
+				return; 
 			case AutomatedresttestingPackage.PARAMETER:
 				sequence_Parameter(context, (automatedresttesting.Parameter) semanticObject); 
 				return; 
@@ -84,19 +88,10 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 	 *     Assertion returns Assertion
 	 *
 	 * Constraint:
-	 *     (dataToTest=[Element|EString] condition=Expression)
+	 *     (dataToTest=[Element|EString]? condition=Expression)
 	 */
 	protected void sequence_Assertion(ISerializationContext context, Assertion semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.ASSERTION__DATA_TO_TEST) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.ASSERTION__DATA_TO_TEST));
-			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.ASSERTION__CONDITION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.ASSERTION__CONDITION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAssertionAccess().getDataToTestElementEStringParserRuleCall_2_0_1(), semanticObject.eGet(AutomatedresttestingPackage.Literals.ASSERTION__DATA_TO_TEST, false));
-		feeder.accept(grammarAccess.getAssertionAccess().getConditionExpressionParserRuleCall_3_0(), semanticObject.getCondition());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -106,7 +101,7 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 	 *     Attribute_Impl returns Attribute
 	 *
 	 * Constraint:
-	 *     (type=AttributeType isArray?='['? name=EString)
+	 *     (type=AttributeType isArray?=SQUARE_LEFT_BRACKET? name=EString)
 	 */
 	protected void sequence_Attribute_Impl(ISerializationContext context, Attribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -130,7 +125,7 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 	 *     DomainAttribute returns DomainAttribute
 	 *
 	 * Constraint:
-	 *     (type=AttributeType isArray?='['? name=EString (primaryKey?='PK'? restrictions+=Restriction)?)
+	 *     (type=AttributeType isArray?=SQUARE_LEFT_BRACKET? name=EString (primaryKey?='PK'? restrictions+=Restriction)?)
 	 */
 	protected void sequence_DomainAttribute(ISerializationContext context, DomainAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -155,18 +150,30 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 	 *     Expression returns Expression
 	 *
 	 * Constraint:
-	 *     (relationalOperator=RelationalOperator expectedValue=EString)
+	 *     (relationalOperator=RelationalOperator expectedValue=EString?)
 	 */
 	protected void sequence_Expression(ISerializationContext context, Expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MappingElement returns MappingElement
+	 *
+	 * Constraint:
+	 *     (parameter=[Element|EString] value=[Element|EString])
+	 */
+	protected void sequence_MappingElement(ISerializationContext context, MappingElement semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.EXPRESSION__RELATIONAL_OPERATOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.EXPRESSION__RELATIONAL_OPERATOR));
-			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.EXPRESSION__EXPECTED_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.EXPRESSION__EXPECTED_VALUE));
+			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.MAPPING_ELEMENT__PARAMETER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.MAPPING_ELEMENT__PARAMETER));
+			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.MAPPING_ELEMENT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.MAPPING_ELEMENT__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getExpressionAccess().getRelationalOperatorRelationalOperatorEnumRuleCall_0_0(), semanticObject.getRelationalOperator());
-		feeder.accept(grammarAccess.getExpressionAccess().getExpectedValueEStringParserRuleCall_1_0(), semanticObject.getExpectedValue());
+		feeder.accept(grammarAccess.getMappingElementAccess().getParameterElementEStringParserRuleCall_3_0_1(), semanticObject.eGet(AutomatedresttestingPackage.Literals.MAPPING_ELEMENT__PARAMETER, false));
+		feeder.accept(grammarAccess.getMappingElementAccess().getValueElementEStringParserRuleCall_8_0_1(), semanticObject.eGet(AutomatedresttestingPackage.Literals.MAPPING_ELEMENT__VALUE, false));
 		feeder.finish();
 	}
 	
@@ -244,7 +251,7 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 	 *     Test returns Test
 	 *
 	 * Constraint:
-	 *     (name=EString service=[RestService|EString] description=EString? assertions+=Assertion+)
+	 *     (name=EString service=[RestService|EString] description=EString? (mappings+=MappingElement mappings+=MappingElement*)? assertions+=Assertion+)
 	 */
 	protected void sequence_Test(ISerializationContext context, Test semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

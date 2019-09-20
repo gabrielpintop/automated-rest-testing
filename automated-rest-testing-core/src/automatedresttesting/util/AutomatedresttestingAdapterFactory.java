@@ -116,6 +116,10 @@ public class AutomatedresttestingAdapterFactory extends AdapterFactoryImpl {
 				return createSimpleEntityAdapter();
 			}
 			@Override
+			public Adapter caseMappingElement(MappingElement object) {
+				return createMappingElementAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -300,6 +304,20 @@ public class AutomatedresttestingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSimpleEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.MappingElement <em>Mapping Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.MappingElement
+	 * @generated
+	 */
+	public Adapter createMappingElementAdapter() {
 		return null;
 	}
 

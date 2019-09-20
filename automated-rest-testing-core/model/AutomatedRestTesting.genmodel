@@ -89,6 +89,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Test/assertions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Test/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Test/service"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Test/mappings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="AutomatedRestTesting.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Element/name"/>
@@ -101,6 +102,10 @@
     </genClasses>
     <genClasses ecoreClass="AutomatedRestTesting.ecore#//SimpleEntity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//SimpleEntity/entityAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//MappingElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//MappingElement/parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//MappingElement/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
