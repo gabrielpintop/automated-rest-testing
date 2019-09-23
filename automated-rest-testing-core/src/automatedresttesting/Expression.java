@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link automatedresttesting.Expression#getType <em>Type</em>}</li>
- *   <li>{@link automatedresttesting.Expression#getExpectedValue <em>Expected Value</em>}</li>
  *   <li>{@link automatedresttesting.Expression#getRelationalOperator <em>Relational Operator</em>}</li>
+ *   <li>{@link automatedresttesting.Expression#getExpectedValue <em>Expected Value</em>}</li>
  * </ul>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getExpression()
@@ -76,28 +76,6 @@ public interface Expression extends EObject {
 	boolean isSetType();
 
 	/**
-	 * Returns the value of the '<em><b>Expected Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expected Value</em>' attribute.
-	 * @see #setExpectedValue(String)
-	 * @see automatedresttesting.AutomatedresttestingPackage#getExpression_ExpectedValue()
-	 * @model
-	 * @generated
-	 */
-	String getExpectedValue();
-
-	/**
-	 * Sets the value of the '{@link automatedresttesting.Expression#getExpectedValue <em>Expected Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expected Value</em>' attribute.
-	 * @see #getExpectedValue()
-	 * @generated
-	 */
-	void setExpectedValue(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Relational Operator</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.RelationalOperator}.
 	 * <!-- begin-user-doc -->
@@ -121,5 +99,27 @@ public interface Expression extends EObject {
 	 * @generated
 	 */
 	void setRelationalOperator(RelationalOperator value);
+
+	/**
+	 * Returns the value of the '<em><b>Expected Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expected Value</em>' containment reference.
+	 * @see #setExpectedValue(Literal)
+	 * @see automatedresttesting.AutomatedresttestingPackage#getExpression_ExpectedValue()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Literal getExpectedValue();
+
+	/**
+	 * Sets the value of the '{@link automatedresttesting.Expression#getExpectedValue <em>Expected Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expected Value</em>' containment reference.
+	 * @see #getExpectedValue()
+	 * @generated
+	 */
+	void setExpectedValue(Literal value);
 
 } // Expression

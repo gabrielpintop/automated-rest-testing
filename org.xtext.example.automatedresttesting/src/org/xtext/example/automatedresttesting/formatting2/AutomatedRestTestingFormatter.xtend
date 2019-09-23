@@ -34,5 +34,5 @@ class AutomatedRestTestingFormatter extends AbstractFormatter2 {
 		}
 	}
 	
-	// TODO: implement for Test, Assertion, Entity, DomainAttribute, SimpleEntity
+	// TODO: implement for Test, Assertion, Expression, MappingElement, Entity, DomainAttribute, SimpleEntity
 }

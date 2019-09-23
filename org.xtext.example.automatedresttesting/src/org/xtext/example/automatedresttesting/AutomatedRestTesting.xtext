@@ -41,24 +41,43 @@ Test returns Test:
 	LEFT_BRACKET
 		'service' EQUAL service=[RestService|EString] SEMICOLON
 		('description' EQUAL description=EString SEMICOLON)?
-		('Mapping' SQUARE_LEFT_BRACKET mappings+=MappingElement (COMMA mappings+=MappingElement)* SQUARE_RIGHT_BRACKET SEMICOLON)?
+		('Mapping' SQUARE_LEFT_BRACKET mappings+=MappingElement (mappings+=MappingElement)* SQUARE_RIGHT_BRACKET)?
 		'Assertions' LEFT_BRACKET (assertions+=Assertion SEMICOLON)+ RIGHT_BRACKET 
 	RIGHT_BRACKET;
 
 
 Assertion returns Assertion:
-	'response' ((DOT | ARROW)? (dataToTest=[Element|EString]))? condition=Expression
+	'response' ((DOT | ARROW)? (dataToTest=[Element | QualifiedName]))? condition=Expression
+;
+
+QualifiedName:
+	ID (DOT ID)*
 ;
 
 Expression returns Expression:
-	relationalOperator=RelationalOperator (('parameter' (DOT | ARROW))? expectedValue=EString)?
+	relationalOperator=RelationalOperator (('parameter' (DOT | ARROW))? expectedValue=Literal)?
 ;
 
+Literal returns Literal:
+	ElementLiteral | StringLiteral | IntegerLiteral ;
+
+IntegerLiteral returns IntegerLiteral:
+	value=INT
+;
+
+StringLiteral returns StringLiteral:
+	value=EString
+;
+
+ElementLiteral returns ElementLiteral:
+	value=[Element|QualifiedName]
+;
+	
 MappingElement returns MappingElement:
 	LEFT_BRACKET
-		'parameter' EQUAL parameter=[Element|EString] 
+		'parameter' EQUAL parameter=[Element|QualifiedName] 
 		COMMA 
-		'value' EQUAL ('request' ARROW)? value=[Element|EString] 
+		'value' EQUAL ('request' ARROW)? value=Literal
 	RIGHT_BRACKET;
 
 enum AttributeType returns AttributeType:
@@ -72,7 +91,7 @@ enum MethodType returns MethodType:
 
 Parameter returns Parameter:
 	{Parameter}
-	(SLASH TWO_DOTS | QUESTION_MARK MONEY) LEFT_BRACKET name=EString RIGHT_BRACKET
+	(SLASH TWO_DOTS | QUESTION_MARK MONEY) LEFT_BRACKET name=ID RIGHT_BRACKET
 	;
 
 EBoolean returns ecore::EBoolean:

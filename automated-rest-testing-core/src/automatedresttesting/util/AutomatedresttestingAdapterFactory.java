@@ -120,6 +120,22 @@ public class AutomatedresttestingAdapterFactory extends AdapterFactoryImpl {
 				return createMappingElementAdapter();
 			}
 			@Override
+			public Adapter caseLiteral(Literal object) {
+				return createLiteralAdapter();
+			}
+			@Override
+			public Adapter caseStringLiteral(StringLiteral object) {
+				return createStringLiteralAdapter();
+			}
+			@Override
+			public Adapter caseElementLiteral(ElementLiteral object) {
+				return createElementLiteralAdapter();
+			}
+			@Override
+			public Adapter caseIntegerLiteral(IntegerLiteral object) {
+				return createIntegerLiteralAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -318,6 +334,62 @@ public class AutomatedresttestingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMappingElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.Literal <em>Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.Literal
+	 * @generated
+	 */
+	public Adapter createLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.StringLiteral <em>String Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.StringLiteral
+	 * @generated
+	 */
+	public Adapter createStringLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.ElementLiteral <em>Element Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.ElementLiteral
+	 * @generated
+	 */
+	public Adapter createElementLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.IntegerLiteral <em>Integer Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.IntegerLiteral
+	 * @generated
+	 */
+	public Adapter createIntegerLiteralAdapter() {
 		return null;
 	}
 

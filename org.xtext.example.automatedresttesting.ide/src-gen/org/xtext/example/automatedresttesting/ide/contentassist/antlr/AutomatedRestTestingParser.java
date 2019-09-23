@@ -36,6 +36,7 @@ public class AutomatedRestTestingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRestServiceAccess().getAlternatives_7(), "rule__RestService__Alternatives_7");
 			builder.put(grammarAccess.getAssertionAccess().getAlternatives_1_0(), "rule__Assertion__Alternatives_1_0");
 			builder.put(grammarAccess.getExpressionAccess().getAlternatives_1_0_1(), "rule__Expression__Alternatives_1_0_1");
+			builder.put(grammarAccess.getLiteralAccess().getAlternatives(), "rule__Literal__Alternatives");
 			builder.put(grammarAccess.getParameterAccess().getAlternatives_1(), "rule__Parameter__Alternatives_1");
 			builder.put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 			builder.put(grammarAccess.getAttributeTypeAccess().getAlternatives(), "rule__AttributeType__Alternatives");
@@ -55,10 +56,11 @@ public class AutomatedRestTestingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTestAccess().getGroup(), "rule__Test__Group__0");
 			builder.put(grammarAccess.getTestAccess().getGroup_7(), "rule__Test__Group_7__0");
 			builder.put(grammarAccess.getTestAccess().getGroup_8(), "rule__Test__Group_8__0");
-			builder.put(grammarAccess.getTestAccess().getGroup_8_3(), "rule__Test__Group_8_3__0");
 			builder.put(grammarAccess.getTestAccess().getGroup_11(), "rule__Test__Group_11__0");
 			builder.put(grammarAccess.getAssertionAccess().getGroup(), "rule__Assertion__Group__0");
 			builder.put(grammarAccess.getAssertionAccess().getGroup_1(), "rule__Assertion__Group_1__0");
+			builder.put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
+			builder.put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 			builder.put(grammarAccess.getExpressionAccess().getGroup(), "rule__Expression__Group__0");
 			builder.put(grammarAccess.getExpressionAccess().getGroup_1(), "rule__Expression__Group_1__0");
 			builder.put(grammarAccess.getExpressionAccess().getGroup_1_0(), "rule__Expression__Group_1_0__0");
@@ -95,12 +97,15 @@ public class AutomatedRestTestingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTestAccess().getServiceAssignment_5(), "rule__Test__ServiceAssignment_5");
 			builder.put(grammarAccess.getTestAccess().getDescriptionAssignment_7_2(), "rule__Test__DescriptionAssignment_7_2");
 			builder.put(grammarAccess.getTestAccess().getMappingsAssignment_8_2(), "rule__Test__MappingsAssignment_8_2");
-			builder.put(grammarAccess.getTestAccess().getMappingsAssignment_8_3_1(), "rule__Test__MappingsAssignment_8_3_1");
+			builder.put(grammarAccess.getTestAccess().getMappingsAssignment_8_3(), "rule__Test__MappingsAssignment_8_3");
 			builder.put(grammarAccess.getTestAccess().getAssertionsAssignment_11_0(), "rule__Test__AssertionsAssignment_11_0");
 			builder.put(grammarAccess.getAssertionAccess().getDataToTestAssignment_1_1(), "rule__Assertion__DataToTestAssignment_1_1");
 			builder.put(grammarAccess.getAssertionAccess().getConditionAssignment_2(), "rule__Assertion__ConditionAssignment_2");
 			builder.put(grammarAccess.getExpressionAccess().getRelationalOperatorAssignment_0(), "rule__Expression__RelationalOperatorAssignment_0");
 			builder.put(grammarAccess.getExpressionAccess().getExpectedValueAssignment_1_1(), "rule__Expression__ExpectedValueAssignment_1_1");
+			builder.put(grammarAccess.getIntegerLiteralAccess().getValueAssignment(), "rule__IntegerLiteral__ValueAssignment");
+			builder.put(grammarAccess.getStringLiteralAccess().getValueAssignment(), "rule__StringLiteral__ValueAssignment");
+			builder.put(grammarAccess.getElementLiteralAccess().getValueAssignment(), "rule__ElementLiteral__ValueAssignment");
 			builder.put(grammarAccess.getMappingElementAccess().getParameterAssignment_3(), "rule__MappingElement__ParameterAssignment_3");
 			builder.put(grammarAccess.getMappingElementAccess().getValueAssignment_8(), "rule__MappingElement__ValueAssignment_8");
 			builder.put(grammarAccess.getParameterAccess().getNameAssignment_3(), "rule__Parameter__NameAssignment_3");

@@ -10,8 +10,11 @@ import automatedresttesting.AutomatedresttestingFactory;
 import automatedresttesting.AutomatedresttestingPackage;
 import automatedresttesting.DomainAttribute;
 import automatedresttesting.Element;
+import automatedresttesting.ElementLiteral;
 import automatedresttesting.Entity;
 import automatedresttesting.Expression;
+import automatedresttesting.IntegerLiteral;
+import automatedresttesting.Literal;
 import automatedresttesting.MappingElement;
 import automatedresttesting.MethodType;
 import automatedresttesting.MockTypes;
@@ -21,6 +24,7 @@ import automatedresttesting.RelationalOperator;
 import automatedresttesting.RestService;
 import automatedresttesting.Restriction;
 import automatedresttesting.SimpleEntity;
+import automatedresttesting.StringLiteral;
 import automatedresttesting.Test;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -128,6 +132,34 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * @generated
 	 */
 	private EClass mappingElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass integerLiteralEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -581,7 +613,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpression_ExpectedValue() {
+	public EAttribute getExpression_RelationalOperator() {
 		return (EAttribute)expressionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -590,8 +622,8 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpression_RelationalOperator() {
-		return (EAttribute)expressionEClass.getEStructuralFeatures().get(2);
+	public EReference getExpression_ExpectedValue() {
+		return (EReference)expressionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -637,6 +669,69 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 */
 	public EReference getMappingElement_Value() {
 		return (EReference)mappingElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteral() {
+		return literalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringLiteral() {
+		return stringLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringLiteral_Value() {
+		return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElementLiteral() {
+		return elementLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementLiteral_Value() {
+		return (EReference)elementLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIntegerLiteral() {
+		return integerLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIntegerLiteral_Value() {
+		return (EAttribute)integerLiteralEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -761,8 +856,8 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 
 		expressionEClass = createEClass(EXPRESSION);
 		createEAttribute(expressionEClass, EXPRESSION__TYPE);
-		createEAttribute(expressionEClass, EXPRESSION__EXPECTED_VALUE);
 		createEAttribute(expressionEClass, EXPRESSION__RELATIONAL_OPERATOR);
+		createEReference(expressionEClass, EXPRESSION__EXPECTED_VALUE);
 
 		simpleEntityEClass = createEClass(SIMPLE_ENTITY);
 		createEReference(simpleEntityEClass, SIMPLE_ENTITY__ENTITY_ATTRIBUTES);
@@ -770,6 +865,17 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		mappingElementEClass = createEClass(MAPPING_ELEMENT);
 		createEReference(mappingElementEClass, MAPPING_ELEMENT__PARAMETER);
 		createEReference(mappingElementEClass, MAPPING_ELEMENT__VALUE);
+
+		literalEClass = createEClass(LITERAL);
+
+		stringLiteralEClass = createEClass(STRING_LITERAL);
+		createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
+
+		elementLiteralEClass = createEClass(ELEMENT_LITERAL);
+		createEReference(elementLiteralEClass, ELEMENT_LITERAL__VALUE);
+
+		integerLiteralEClass = createEClass(INTEGER_LITERAL);
+		createEAttribute(integerLiteralEClass, INTEGER_LITERAL__VALUE);
 
 		// Create enums
 		attributeTypeEEnum = createEEnum(ATTRIBUTE_TYPE);
@@ -812,6 +918,9 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		domainAttributeEClass.getESuperTypes().add(this.getAttribute());
 		parameterEClass.getESuperTypes().add(this.getAttribute());
 		simpleEntityEClass.getESuperTypes().add(this.getElement());
+		stringLiteralEClass.getESuperTypes().add(this.getLiteral());
+		elementLiteralEClass.getESuperTypes().add(this.getLiteral());
+		integerLiteralEClass.getESuperTypes().add(this.getLiteral());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(automatedRestTestingEClass, AutomatedRestTesting.class, "AutomatedRestTesting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -863,15 +972,26 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 
 		initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpression_Type(), this.getAttributeType(), "type", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExpression_ExpectedValue(), ecorePackage.getEString(), "expectedValue", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExpression_RelationalOperator(), this.getRelationalOperator(), "relationalOperator", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpression_ExpectedValue(), this.getLiteral(), null, "expectedValue", null, 1, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleEntityEClass, SimpleEntity.class, "SimpleEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimpleEntity_EntityAttributes(), this.getAttribute(), null, "entityAttributes", null, 0, -1, SimpleEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mappingElementEClass, MappingElement.class, "MappingElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMappingElement_Parameter(), this.getElement(), null, "parameter", null, 1, 1, MappingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMappingElement_Value(), this.getElement(), null, "value", null, 1, 1, MappingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMappingElement_Value(), this.getLiteral(), null, "value", null, 1, 1, MappingElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(literalEClass, Literal.class, "Literal", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(elementLiteralEClass, ElementLiteral.class, "ElementLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getElementLiteral_Value(), this.getElement(), null, "value", null, 1, 1, ElementLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(integerLiteralEClass, IntegerLiteral.class, "IntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, IntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(attributeTypeEEnum, AttributeType.class, "AttributeType");

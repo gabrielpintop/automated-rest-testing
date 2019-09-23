@@ -253,7 +253,7 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	 *     (DOT | ARROW)?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'response' (ambiguity) dataToTest=[Element|EString]
+	 *     (rule start) 'response' (ambiguity) dataToTest=[Element|QualifiedName]
 	 */
 	protected void emit_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -264,7 +264,7 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	 *     ('parameter' (DOT | ARROW))?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     relationalOperator=RelationalOperator (ambiguity) expectedValue=EString
+	 *     relationalOperator=RelationalOperator (ambiguity) expectedValue=Literal
 	 */
 	protected void emit_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -275,7 +275,7 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	 *     ('request' ARROW)?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameter=[Element|EString] COMMA 'value' EQUAL (ambiguity) value=[Element|EString]
+	 *     parameter=[Element|QualifiedName] COMMA 'value' EQUAL (ambiguity) value=Literal
 	 */
 	protected void emit_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -286,7 +286,7 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	 *     (SLASH TWO_DOTS) | (QUESTION_MARK MONEY)
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) LEFT_BRACKET name=EString
+	 *     (rule start) (ambiguity) LEFT_BRACKET name=ID
 	 */
 	protected void emit_Parameter___QUESTION_MARKTerminalRuleCall_1_1_0_MONEYTerminalRuleCall_1_1_1___or___SLASHTerminalRuleCall_1_0_0_TWO_DOTSTerminalRuleCall_1_0_1__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

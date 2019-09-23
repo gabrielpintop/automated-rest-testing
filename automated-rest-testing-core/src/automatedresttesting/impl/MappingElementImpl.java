@@ -4,9 +4,11 @@ package automatedresttesting.impl;
 
 import automatedresttesting.AutomatedresttestingPackage;
 import automatedresttesting.Element;
+import automatedresttesting.Literal;
 import automatedresttesting.MappingElement;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -40,14 +42,14 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 	protected Element parameter;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected Element value;
+	protected Literal value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,15 +113,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element getValue() {
-		if (value != null && value.eIsProxy()) {
-			InternalEObject oldValue = (InternalEObject)value;
-			value = (Element)eResolveProxy(oldValue);
-			if (value != oldValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE, oldValue, value));
-			}
-		}
+	public Literal getValue() {
 		return value;
 	}
 
@@ -128,20 +122,47 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element basicGetValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(Element newValue) {
-		Element oldValue = value;
+	public NotificationChain basicSetValue(Literal newValue, NotificationChain msgs) {
+		Literal oldValue = value;
 		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE, oldValue, value));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE, oldValue, newValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(Literal newValue) {
+		if (newValue != value) {
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE, newValue, newValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE:
+				return basicSetValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -156,8 +177,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 				if (resolve) return getParameter();
 				return basicGetParameter();
 			case AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE:
-				if (resolve) return getValue();
-				return basicGetValue();
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,7 +194,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 				setParameter((Element)newValue);
 				return;
 			case AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE:
-				setValue((Element)newValue);
+				setValue((Literal)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,7 +212,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 				setParameter((Element)null);
 				return;
 			case AutomatedresttestingPackage.MAPPING_ELEMENT__VALUE:
-				setValue((Element)null);
+				setValue((Literal)null);
 				return;
 		}
 		super.eUnset(featureID);

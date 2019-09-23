@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_EQUAL", "RULE_SEMICOLON", "RULE_STRING", "RULE_ID", "RULE_LEFT_BRACKET", "RULE_SLASH", "RULE_SQUARE_LEFT_BRACKET", "RULE_SQUARE_RIGHT_BRACKET", "RULE_RIGHT_BRACKET", "RULE_COMMA", "RULE_DOT", "RULE_ARROW", "RULE_TWO_DOTS", "RULE_QUESTION_MARK", "RULE_MONEY", "RULE_LEFT_PARENTHESIS", "RULE_RIGHT_PARENTHESIS", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'apiURL'", "'URL'", "'Request'", "'Type'", "'Response'", "'Test'", "'service'", "'description'", "'Mapping'", "'Assertions'", "'response'", "'parameter'", "'value'", "'request'", "'mockType'", "'Entity'", "'PK'", "'SimpleEntity'", "'string'", "'boolean'", "'integer'", "'double'", "'date'", "'<'", "'<='", "'=='", "'!='", "'>='", "'>'", "'&&'", "'||'", "'GET'", "'POST'", "'PUT'", "'DELETE'", "'FirstNameType'", "'FirstNameMaleType'", "'FirstNameFemaleType'", "'LastNameType'", "'FamilyNameType'", "'FullNameType'", "'GenderType'", "'EmailAddressType'", "'PhoneType'", "'CountryType'", "'CountryCodeType'", "'CityType'", "'RowNumberType'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_EQUAL", "RULE_SEMICOLON", "RULE_STRING", "RULE_ID", "RULE_LEFT_BRACKET", "RULE_SLASH", "RULE_SQUARE_LEFT_BRACKET", "RULE_SQUARE_RIGHT_BRACKET", "RULE_RIGHT_BRACKET", "RULE_DOT", "RULE_ARROW", "RULE_INT", "RULE_COMMA", "RULE_TWO_DOTS", "RULE_QUESTION_MARK", "RULE_MONEY", "RULE_LEFT_PARENTHESIS", "RULE_RIGHT_PARENTHESIS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'apiURL'", "'URL'", "'Request'", "'Type'", "'Response'", "'Test'", "'service'", "'description'", "'Mapping'", "'Assertions'", "'response'", "'parameter'", "'value'", "'request'", "'mockType'", "'Entity'", "'PK'", "'SimpleEntity'", "'string'", "'boolean'", "'integer'", "'double'", "'date'", "'<'", "'<='", "'=='", "'!='", "'>='", "'>'", "'&&'", "'||'", "'GET'", "'POST'", "'PUT'", "'DELETE'", "'FirstNameType'", "'FirstNameMaleType'", "'FirstNameFemaleType'", "'LastNameType'", "'FamilyNameType'", "'FullNameType'", "'GenderType'", "'EmailAddressType'", "'PhoneType'", "'CountryType'", "'CountryCodeType'", "'CityType'", "'RowNumberType'"
     };
     public static final int RULE_SQUARE_LEFT_BRACKET=10;
     public static final int T__50=50;
@@ -31,8 +31,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
-    public static final int RULE_ARROW=15;
-    public static final int RULE_LEFT_PARENTHESIS=19;
+    public static final int RULE_ARROW=14;
+    public static final int RULE_LEFT_PARENTHESIS=20;
     public static final int T__51=51;
     public static final int T__52=52;
     public static final int T__53=53;
@@ -41,18 +41,18 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
     public static final int T__61=61;
     public static final int RULE_EQUAL=4;
     public static final int RULE_ID=7;
-    public static final int RULE_COMMA=13;
+    public static final int RULE_COMMA=16;
     public static final int RULE_SLASH=9;
     public static final int T__26=26;
-    public static final int RULE_TWO_DOTS=16;
+    public static final int RULE_TWO_DOTS=17;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=21;
+    public static final int RULE_INT=15;
     public static final int T__29=29;
     public static final int T__66=66;
     public static final int RULE_ML_COMMENT=22;
     public static final int T__67=67;
-    public static final int RULE_MONEY=18;
+    public static final int RULE_MONEY=19;
     public static final int T__68=68;
     public static final int T__69=69;
     public static final int RULE_SEMICOLON=5;
@@ -74,19 +74,19 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
     public static final int T__35=35;
     public static final int T__36=36;
     public static final int T__73=73;
-    public static final int RULE_DOT=14;
+    public static final int RULE_DOT=13;
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int RULE_SQUARE_RIGHT_BRACKET=11;
     public static final int T__32=32;
-    public static final int RULE_RIGHT_PARENTHESIS=20;
+    public static final int RULE_RIGHT_PARENTHESIS=21;
     public static final int RULE_WS=24;
     public static final int RULE_LEFT_BRACKET=8;
     public static final int RULE_ANY_OTHER=25;
     public static final int T__48=48;
     public static final int T__49=49;
-    public static final int RULE_QUESTION_MARK=17;
+    public static final int RULE_QUESTION_MARK=18;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int T__46=46;
@@ -1098,11 +1098,11 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                 if ( (LA9_0==RULE_SLASH) ) {
                     int LA9_2 = input.LA(2);
 
-                    if ( ((LA9_2>=RULE_STRING && LA9_2<=RULE_ID)) ) {
-                        alt9=1;
-                    }
-                    else if ( (LA9_2==RULE_TWO_DOTS) ) {
+                    if ( (LA9_2==RULE_TWO_DOTS) ) {
                         alt9=2;
+                    }
+                    else if ( ((LA9_2>=RULE_STRING && LA9_2<=RULE_ID)) ) {
+                        alt9=1;
                     }
 
 
@@ -1421,7 +1421,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleTest"
-    // InternalAutomatedRestTesting.g:583:1: ruleTest returns [EObject current=null] : (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )* this_SQUARE_RIGHT_BRACKET_16= RULE_SQUARE_RIGHT_BRACKET this_SEMICOLON_17= RULE_SEMICOLON )? otherlv_18= 'Assertions' this_LEFT_BRACKET_19= RULE_LEFT_BRACKET ( ( (lv_assertions_20_0= ruleAssertion ) ) this_SEMICOLON_21= RULE_SEMICOLON )+ this_RIGHT_BRACKET_22= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_23= RULE_RIGHT_BRACKET ) ;
+    // InternalAutomatedRestTesting.g:583:1: ruleTest returns [EObject current=null] : (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) ( (lv_mappings_14_0= ruleMappingElement ) )* this_SQUARE_RIGHT_BRACKET_15= RULE_SQUARE_RIGHT_BRACKET )? otherlv_16= 'Assertions' this_LEFT_BRACKET_17= RULE_LEFT_BRACKET ( ( (lv_assertions_18_0= ruleAssertion ) ) this_SEMICOLON_19= RULE_SEMICOLON )+ this_RIGHT_BRACKET_20= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_21= RULE_RIGHT_BRACKET ) ;
     public final EObject ruleTest() throws RecognitionException {
         EObject current = null;
 
@@ -1435,34 +1435,32 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         Token this_SEMICOLON_10=null;
         Token otherlv_11=null;
         Token this_SQUARE_LEFT_BRACKET_12=null;
-        Token this_COMMA_14=null;
-        Token this_SQUARE_RIGHT_BRACKET_16=null;
-        Token this_SEMICOLON_17=null;
-        Token otherlv_18=null;
-        Token this_LEFT_BRACKET_19=null;
-        Token this_SEMICOLON_21=null;
-        Token this_RIGHT_BRACKET_22=null;
-        Token this_RIGHT_BRACKET_23=null;
+        Token this_SQUARE_RIGHT_BRACKET_15=null;
+        Token otherlv_16=null;
+        Token this_LEFT_BRACKET_17=null;
+        Token this_SEMICOLON_19=null;
+        Token this_RIGHT_BRACKET_20=null;
+        Token this_RIGHT_BRACKET_21=null;
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
         AntlrDatatypeRuleToken lv_description_9_0 = null;
 
         EObject lv_mappings_13_0 = null;
 
-        EObject lv_mappings_15_0 = null;
+        EObject lv_mappings_14_0 = null;
 
-        EObject lv_assertions_20_0 = null;
+        EObject lv_assertions_18_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:589:2: ( (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )* this_SQUARE_RIGHT_BRACKET_16= RULE_SQUARE_RIGHT_BRACKET this_SEMICOLON_17= RULE_SEMICOLON )? otherlv_18= 'Assertions' this_LEFT_BRACKET_19= RULE_LEFT_BRACKET ( ( (lv_assertions_20_0= ruleAssertion ) ) this_SEMICOLON_21= RULE_SEMICOLON )+ this_RIGHT_BRACKET_22= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_23= RULE_RIGHT_BRACKET ) )
-            // InternalAutomatedRestTesting.g:590:2: (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )* this_SQUARE_RIGHT_BRACKET_16= RULE_SQUARE_RIGHT_BRACKET this_SEMICOLON_17= RULE_SEMICOLON )? otherlv_18= 'Assertions' this_LEFT_BRACKET_19= RULE_LEFT_BRACKET ( ( (lv_assertions_20_0= ruleAssertion ) ) this_SEMICOLON_21= RULE_SEMICOLON )+ this_RIGHT_BRACKET_22= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_23= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:589:2: ( (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) ( (lv_mappings_14_0= ruleMappingElement ) )* this_SQUARE_RIGHT_BRACKET_15= RULE_SQUARE_RIGHT_BRACKET )? otherlv_16= 'Assertions' this_LEFT_BRACKET_17= RULE_LEFT_BRACKET ( ( (lv_assertions_18_0= ruleAssertion ) ) this_SEMICOLON_19= RULE_SEMICOLON )+ this_RIGHT_BRACKET_20= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_21= RULE_RIGHT_BRACKET ) )
+            // InternalAutomatedRestTesting.g:590:2: (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) ( (lv_mappings_14_0= ruleMappingElement ) )* this_SQUARE_RIGHT_BRACKET_15= RULE_SQUARE_RIGHT_BRACKET )? otherlv_16= 'Assertions' this_LEFT_BRACKET_17= RULE_LEFT_BRACKET ( ( (lv_assertions_18_0= ruleAssertion ) ) this_SEMICOLON_19= RULE_SEMICOLON )+ this_RIGHT_BRACKET_20= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_21= RULE_RIGHT_BRACKET )
             {
-            // InternalAutomatedRestTesting.g:590:2: (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )* this_SQUARE_RIGHT_BRACKET_16= RULE_SQUARE_RIGHT_BRACKET this_SEMICOLON_17= RULE_SEMICOLON )? otherlv_18= 'Assertions' this_LEFT_BRACKET_19= RULE_LEFT_BRACKET ( ( (lv_assertions_20_0= ruleAssertion ) ) this_SEMICOLON_21= RULE_SEMICOLON )+ this_RIGHT_BRACKET_22= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_23= RULE_RIGHT_BRACKET )
-            // InternalAutomatedRestTesting.g:591:3: otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )* this_SQUARE_RIGHT_BRACKET_16= RULE_SQUARE_RIGHT_BRACKET this_SEMICOLON_17= RULE_SEMICOLON )? otherlv_18= 'Assertions' this_LEFT_BRACKET_19= RULE_LEFT_BRACKET ( ( (lv_assertions_20_0= ruleAssertion ) ) this_SEMICOLON_21= RULE_SEMICOLON )+ this_RIGHT_BRACKET_22= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_23= RULE_RIGHT_BRACKET
+            // InternalAutomatedRestTesting.g:590:2: (otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) ( (lv_mappings_14_0= ruleMappingElement ) )* this_SQUARE_RIGHT_BRACKET_15= RULE_SQUARE_RIGHT_BRACKET )? otherlv_16= 'Assertions' this_LEFT_BRACKET_17= RULE_LEFT_BRACKET ( ( (lv_assertions_18_0= ruleAssertion ) ) this_SEMICOLON_19= RULE_SEMICOLON )+ this_RIGHT_BRACKET_20= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_21= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:591:3: otherlv_0= 'Test' ( (lv_name_1_0= ruleEString ) ) this_LEFT_BRACKET_2= RULE_LEFT_BRACKET otherlv_3= 'service' this_EQUAL_4= RULE_EQUAL ( ( ruleEString ) ) this_SEMICOLON_6= RULE_SEMICOLON (otherlv_7= 'description' this_EQUAL_8= RULE_EQUAL ( (lv_description_9_0= ruleEString ) ) this_SEMICOLON_10= RULE_SEMICOLON )? (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) ( (lv_mappings_14_0= ruleMappingElement ) )* this_SQUARE_RIGHT_BRACKET_15= RULE_SQUARE_RIGHT_BRACKET )? otherlv_16= 'Assertions' this_LEFT_BRACKET_17= RULE_LEFT_BRACKET ( ( (lv_assertions_18_0= ruleAssertion ) ) this_SEMICOLON_19= RULE_SEMICOLON )+ this_RIGHT_BRACKET_20= RULE_RIGHT_BRACKET this_RIGHT_BRACKET_21= RULE_RIGHT_BRACKET
             {
             otherlv_0=(Token)match(input,31,FOLLOW_4); 
 
@@ -1603,7 +1601,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:679:3: (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )* this_SQUARE_RIGHT_BRACKET_16= RULE_SQUARE_RIGHT_BRACKET this_SEMICOLON_17= RULE_SEMICOLON )?
+            // InternalAutomatedRestTesting.g:679:3: (otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) ( (lv_mappings_14_0= ruleMappingElement ) )* this_SQUARE_RIGHT_BRACKET_15= RULE_SQUARE_RIGHT_BRACKET )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1612,7 +1610,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
             }
             switch (alt15) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:680:4: otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )* this_SQUARE_RIGHT_BRACKET_16= RULE_SQUARE_RIGHT_BRACKET this_SEMICOLON_17= RULE_SEMICOLON
+                    // InternalAutomatedRestTesting.g:680:4: otherlv_11= 'Mapping' this_SQUARE_LEFT_BRACKET_12= RULE_SQUARE_LEFT_BRACKET ( (lv_mappings_13_0= ruleMappingElement ) ) ( (lv_mappings_14_0= ruleMappingElement ) )* this_SQUARE_RIGHT_BRACKET_15= RULE_SQUARE_RIGHT_BRACKET
                     {
                     otherlv_11=(Token)match(input,34,FOLLOW_22); 
 
@@ -1653,53 +1651,43 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
                     }
 
-                    // InternalAutomatedRestTesting.g:707:4: (this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) ) )*
+                    // InternalAutomatedRestTesting.g:707:4: ( (lv_mappings_14_0= ruleMappingElement ) )*
                     loop14:
                     do {
                         int alt14=2;
                         int LA14_0 = input.LA(1);
 
-                        if ( (LA14_0==RULE_COMMA) ) {
+                        if ( (LA14_0==RULE_LEFT_BRACKET) ) {
                             alt14=1;
                         }
 
 
                         switch (alt14) {
                     	case 1 :
-                    	    // InternalAutomatedRestTesting.g:708:5: this_COMMA_14= RULE_COMMA ( (lv_mappings_15_0= ruleMappingElement ) )
+                    	    // InternalAutomatedRestTesting.g:708:5: (lv_mappings_14_0= ruleMappingElement )
                     	    {
-                    	    this_COMMA_14=(Token)match(input,RULE_COMMA,FOLLOW_9); 
-
-                    	    					newLeafNode(this_COMMA_14, grammarAccess.getTestAccess().getCOMMATerminalRuleCall_8_3_0());
-                    	    				
-                    	    // InternalAutomatedRestTesting.g:712:5: ( (lv_mappings_15_0= ruleMappingElement ) )
-                    	    // InternalAutomatedRestTesting.g:713:6: (lv_mappings_15_0= ruleMappingElement )
-                    	    {
-                    	    // InternalAutomatedRestTesting.g:713:6: (lv_mappings_15_0= ruleMappingElement )
-                    	    // InternalAutomatedRestTesting.g:714:7: lv_mappings_15_0= ruleMappingElement
+                    	    // InternalAutomatedRestTesting.g:708:5: (lv_mappings_14_0= ruleMappingElement )
+                    	    // InternalAutomatedRestTesting.g:709:6: lv_mappings_14_0= ruleMappingElement
                     	    {
 
-                    	    							newCompositeNode(grammarAccess.getTestAccess().getMappingsMappingElementParserRuleCall_8_3_1_0());
-                    	    						
+                    	    						newCompositeNode(grammarAccess.getTestAccess().getMappingsMappingElementParserRuleCall_8_3_0());
+                    	    					
                     	    pushFollow(FOLLOW_23);
-                    	    lv_mappings_15_0=ruleMappingElement();
+                    	    lv_mappings_14_0=ruleMappingElement();
 
                     	    state._fsp--;
 
 
-                    	    							if (current==null) {
-                    	    								current = createModelElementForParent(grammarAccess.getTestRule());
-                    	    							}
-                    	    							add(
-                    	    								current,
-                    	    								"mappings",
-                    	    								lv_mappings_15_0,
-                    	    								"org.xtext.example.automatedresttesting.AutomatedRestTesting.MappingElement");
-                    	    							afterParserOrEnumRuleCall();
-                    	    						
-
-                    	    }
-
+                    	    						if (current==null) {
+                    	    							current = createModelElementForParent(grammarAccess.getTestRule());
+                    	    						}
+                    	    						add(
+                    	    							current,
+                    	    							"mappings",
+                    	    							lv_mappings_14_0,
+                    	    							"org.xtext.example.automatedresttesting.AutomatedRestTesting.MappingElement");
+                    	    						afterParserOrEnumRuleCall();
+                    	    					
 
                     	    }
 
@@ -1712,13 +1700,9 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                         }
                     } while (true);
 
-                    this_SQUARE_RIGHT_BRACKET_16=(Token)match(input,RULE_SQUARE_RIGHT_BRACKET,FOLLOW_5); 
+                    this_SQUARE_RIGHT_BRACKET_15=(Token)match(input,RULE_SQUARE_RIGHT_BRACKET,FOLLOW_24); 
 
-                    				newLeafNode(this_SQUARE_RIGHT_BRACKET_16, grammarAccess.getTestAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_8_4());
-                    			
-                    this_SEMICOLON_17=(Token)match(input,RULE_SEMICOLON,FOLLOW_24); 
-
-                    				newLeafNode(this_SEMICOLON_17, grammarAccess.getTestAccess().getSEMICOLONTerminalRuleCall_8_5());
+                    				newLeafNode(this_SQUARE_RIGHT_BRACKET_15, grammarAccess.getTestAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_8_4());
                     			
 
                     }
@@ -1726,15 +1710,15 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            otherlv_18=(Token)match(input,35,FOLLOW_9); 
+            otherlv_16=(Token)match(input,35,FOLLOW_9); 
 
-            			newLeafNode(otherlv_18, grammarAccess.getTestAccess().getAssertionsKeyword_9());
+            			newLeafNode(otherlv_16, grammarAccess.getTestAccess().getAssertionsKeyword_9());
             		
-            this_LEFT_BRACKET_19=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_25); 
+            this_LEFT_BRACKET_17=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_25); 
 
-            			newLeafNode(this_LEFT_BRACKET_19, grammarAccess.getTestAccess().getLEFT_BRACKETTerminalRuleCall_10());
+            			newLeafNode(this_LEFT_BRACKET_17, grammarAccess.getTestAccess().getLEFT_BRACKETTerminalRuleCall_10());
             		
-            // InternalAutomatedRestTesting.g:749:3: ( ( (lv_assertions_20_0= ruleAssertion ) ) this_SEMICOLON_21= RULE_SEMICOLON )+
+            // InternalAutomatedRestTesting.g:739:3: ( ( (lv_assertions_18_0= ruleAssertion ) ) this_SEMICOLON_19= RULE_SEMICOLON )+
             int cnt16=0;
             loop16:
             do {
@@ -1748,19 +1732,19 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
                 switch (alt16) {
             	case 1 :
-            	    // InternalAutomatedRestTesting.g:750:4: ( (lv_assertions_20_0= ruleAssertion ) ) this_SEMICOLON_21= RULE_SEMICOLON
+            	    // InternalAutomatedRestTesting.g:740:4: ( (lv_assertions_18_0= ruleAssertion ) ) this_SEMICOLON_19= RULE_SEMICOLON
             	    {
-            	    // InternalAutomatedRestTesting.g:750:4: ( (lv_assertions_20_0= ruleAssertion ) )
-            	    // InternalAutomatedRestTesting.g:751:5: (lv_assertions_20_0= ruleAssertion )
+            	    // InternalAutomatedRestTesting.g:740:4: ( (lv_assertions_18_0= ruleAssertion ) )
+            	    // InternalAutomatedRestTesting.g:741:5: (lv_assertions_18_0= ruleAssertion )
             	    {
-            	    // InternalAutomatedRestTesting.g:751:5: (lv_assertions_20_0= ruleAssertion )
-            	    // InternalAutomatedRestTesting.g:752:6: lv_assertions_20_0= ruleAssertion
+            	    // InternalAutomatedRestTesting.g:741:5: (lv_assertions_18_0= ruleAssertion )
+            	    // InternalAutomatedRestTesting.g:742:6: lv_assertions_18_0= ruleAssertion
             	    {
 
             	    						newCompositeNode(grammarAccess.getTestAccess().getAssertionsAssertionParserRuleCall_11_0_0());
             	    					
             	    pushFollow(FOLLOW_5);
-            	    lv_assertions_20_0=ruleAssertion();
+            	    lv_assertions_18_0=ruleAssertion();
 
             	    state._fsp--;
 
@@ -1771,7 +1755,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
             	    						add(
             	    							current,
             	    							"assertions",
-            	    							lv_assertions_20_0,
+            	    							lv_assertions_18_0,
             	    							"org.xtext.example.automatedresttesting.AutomatedRestTesting.Assertion");
             	    						afterParserOrEnumRuleCall();
             	    					
@@ -1781,9 +1765,9 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             	    }
 
-            	    this_SEMICOLON_21=(Token)match(input,RULE_SEMICOLON,FOLLOW_26); 
+            	    this_SEMICOLON_19=(Token)match(input,RULE_SEMICOLON,FOLLOW_26); 
 
-            	    				newLeafNode(this_SEMICOLON_21, grammarAccess.getTestAccess().getSEMICOLONTerminalRuleCall_11_1());
+            	    				newLeafNode(this_SEMICOLON_19, grammarAccess.getTestAccess().getSEMICOLONTerminalRuleCall_11_1());
             	    			
 
             	    }
@@ -1798,13 +1782,13 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                 cnt16++;
             } while (true);
 
-            this_RIGHT_BRACKET_22=(Token)match(input,RULE_RIGHT_BRACKET,FOLLOW_17); 
+            this_RIGHT_BRACKET_20=(Token)match(input,RULE_RIGHT_BRACKET,FOLLOW_17); 
 
-            			newLeafNode(this_RIGHT_BRACKET_22, grammarAccess.getTestAccess().getRIGHT_BRACKETTerminalRuleCall_12());
+            			newLeafNode(this_RIGHT_BRACKET_20, grammarAccess.getTestAccess().getRIGHT_BRACKETTerminalRuleCall_12());
             		
-            this_RIGHT_BRACKET_23=(Token)match(input,RULE_RIGHT_BRACKET,FOLLOW_2); 
+            this_RIGHT_BRACKET_21=(Token)match(input,RULE_RIGHT_BRACKET,FOLLOW_2); 
 
-            			newLeafNode(this_RIGHT_BRACKET_23, grammarAccess.getTestAccess().getRIGHT_BRACKETTerminalRuleCall_13());
+            			newLeafNode(this_RIGHT_BRACKET_21, grammarAccess.getTestAccess().getRIGHT_BRACKETTerminalRuleCall_13());
             		
 
             }
@@ -1829,7 +1813,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleAssertion"
-    // InternalAutomatedRestTesting.g:786:1: entryRuleAssertion returns [EObject current=null] : iv_ruleAssertion= ruleAssertion EOF ;
+    // InternalAutomatedRestTesting.g:776:1: entryRuleAssertion returns [EObject current=null] : iv_ruleAssertion= ruleAssertion EOF ;
     public final EObject entryRuleAssertion() throws RecognitionException {
         EObject current = null;
 
@@ -1837,8 +1821,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:786:50: (iv_ruleAssertion= ruleAssertion EOF )
-            // InternalAutomatedRestTesting.g:787:2: iv_ruleAssertion= ruleAssertion EOF
+            // InternalAutomatedRestTesting.g:776:50: (iv_ruleAssertion= ruleAssertion EOF )
+            // InternalAutomatedRestTesting.g:777:2: iv_ruleAssertion= ruleAssertion EOF
             {
              newCompositeNode(grammarAccess.getAssertionRule()); 
             pushFollow(FOLLOW_1);
@@ -1865,7 +1849,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleAssertion"
-    // InternalAutomatedRestTesting.g:793:1: ruleAssertion returns [EObject current=null] : (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleEString ) ) )? ( (lv_condition_4_0= ruleExpression ) ) ) ;
+    // InternalAutomatedRestTesting.g:783:1: ruleAssertion returns [EObject current=null] : (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleQualifiedName ) ) )? ( (lv_condition_4_0= ruleExpression ) ) ) ;
     public final EObject ruleAssertion() throws RecognitionException {
         EObject current = null;
 
@@ -1879,28 +1863,28 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:799:2: ( (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleEString ) ) )? ( (lv_condition_4_0= ruleExpression ) ) ) )
-            // InternalAutomatedRestTesting.g:800:2: (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleEString ) ) )? ( (lv_condition_4_0= ruleExpression ) ) )
+            // InternalAutomatedRestTesting.g:789:2: ( (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleQualifiedName ) ) )? ( (lv_condition_4_0= ruleExpression ) ) ) )
+            // InternalAutomatedRestTesting.g:790:2: (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleQualifiedName ) ) )? ( (lv_condition_4_0= ruleExpression ) ) )
             {
-            // InternalAutomatedRestTesting.g:800:2: (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleEString ) ) )? ( (lv_condition_4_0= ruleExpression ) ) )
-            // InternalAutomatedRestTesting.g:801:3: otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleEString ) ) )? ( (lv_condition_4_0= ruleExpression ) )
+            // InternalAutomatedRestTesting.g:790:2: (otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleQualifiedName ) ) )? ( (lv_condition_4_0= ruleExpression ) ) )
+            // InternalAutomatedRestTesting.g:791:3: otherlv_0= 'response' ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleQualifiedName ) ) )? ( (lv_condition_4_0= ruleExpression ) )
             {
             otherlv_0=(Token)match(input,36,FOLLOW_27); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAssertionAccess().getResponseKeyword_0());
             		
-            // InternalAutomatedRestTesting.g:805:3: ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleEString ) ) )?
+            // InternalAutomatedRestTesting.g:795:3: ( (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleQualifiedName ) ) )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( ((LA18_0>=RULE_STRING && LA18_0<=RULE_ID)||(LA18_0>=RULE_DOT && LA18_0<=RULE_ARROW)) ) {
+            if ( (LA18_0==RULE_ID||(LA18_0>=RULE_DOT && LA18_0<=RULE_ARROW)) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:806:4: (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleEString ) )
+                    // InternalAutomatedRestTesting.g:796:4: (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )? ( ( ruleQualifiedName ) )
                     {
-                    // InternalAutomatedRestTesting.g:806:4: (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )?
+                    // InternalAutomatedRestTesting.g:796:4: (this_DOT_1= RULE_DOT | this_ARROW_2= RULE_ARROW )?
                     int alt17=3;
                     int LA17_0 = input.LA(1);
 
@@ -1912,9 +1896,9 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     switch (alt17) {
                         case 1 :
-                            // InternalAutomatedRestTesting.g:807:5: this_DOT_1= RULE_DOT
+                            // InternalAutomatedRestTesting.g:797:5: this_DOT_1= RULE_DOT
                             {
-                            this_DOT_1=(Token)match(input,RULE_DOT,FOLLOW_4); 
+                            this_DOT_1=(Token)match(input,RULE_DOT,FOLLOW_28); 
 
                             					newLeafNode(this_DOT_1, grammarAccess.getAssertionAccess().getDOTTerminalRuleCall_1_0_0());
                             				
@@ -1922,9 +1906,9 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                             }
                             break;
                         case 2 :
-                            // InternalAutomatedRestTesting.g:812:5: this_ARROW_2= RULE_ARROW
+                            // InternalAutomatedRestTesting.g:802:5: this_ARROW_2= RULE_ARROW
                             {
-                            this_ARROW_2=(Token)match(input,RULE_ARROW,FOLLOW_4); 
+                            this_ARROW_2=(Token)match(input,RULE_ARROW,FOLLOW_28); 
 
                             					newLeafNode(this_ARROW_2, grammarAccess.getAssertionAccess().getARROWTerminalRuleCall_1_0_1());
                             				
@@ -1934,11 +1918,11 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
                     }
 
-                    // InternalAutomatedRestTesting.g:817:4: ( ( ruleEString ) )
-                    // InternalAutomatedRestTesting.g:818:5: ( ruleEString )
+                    // InternalAutomatedRestTesting.g:807:4: ( ( ruleQualifiedName ) )
+                    // InternalAutomatedRestTesting.g:808:5: ( ruleQualifiedName )
                     {
-                    // InternalAutomatedRestTesting.g:818:5: ( ruleEString )
-                    // InternalAutomatedRestTesting.g:819:6: ruleEString
+                    // InternalAutomatedRestTesting.g:808:5: ( ruleQualifiedName )
+                    // InternalAutomatedRestTesting.g:809:6: ruleQualifiedName
                     {
 
                     						if (current==null) {
@@ -1949,7 +1933,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     						newCompositeNode(grammarAccess.getAssertionAccess().getDataToTestElementCrossReference_1_1_0());
                     					
                     pushFollow(FOLLOW_27);
-                    ruleEString();
+                    ruleQualifiedName();
 
                     state._fsp--;
 
@@ -1968,11 +1952,11 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:834:3: ( (lv_condition_4_0= ruleExpression ) )
-            // InternalAutomatedRestTesting.g:835:4: (lv_condition_4_0= ruleExpression )
+            // InternalAutomatedRestTesting.g:824:3: ( (lv_condition_4_0= ruleExpression ) )
+            // InternalAutomatedRestTesting.g:825:4: (lv_condition_4_0= ruleExpression )
             {
-            // InternalAutomatedRestTesting.g:835:4: (lv_condition_4_0= ruleExpression )
-            // InternalAutomatedRestTesting.g:836:5: lv_condition_4_0= ruleExpression
+            // InternalAutomatedRestTesting.g:825:4: (lv_condition_4_0= ruleExpression )
+            // InternalAutomatedRestTesting.g:826:5: lv_condition_4_0= ruleExpression
             {
 
             					newCompositeNode(grammarAccess.getAssertionAccess().getConditionExpressionParserRuleCall_2_0());
@@ -2021,8 +2005,130 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
     // $ANTLR end "ruleAssertion"
 
 
+    // $ANTLR start "entryRuleQualifiedName"
+    // InternalAutomatedRestTesting.g:847:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    public final String entryRuleQualifiedName() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleQualifiedName = null;
+
+
+        try {
+            // InternalAutomatedRestTesting.g:847:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalAutomatedRestTesting.g:848:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            {
+             newCompositeNode(grammarAccess.getQualifiedNameRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleQualifiedName=ruleQualifiedName();
+
+            state._fsp--;
+
+             current =iv_ruleQualifiedName.getText(); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleQualifiedName"
+
+
+    // $ANTLR start "ruleQualifiedName"
+    // InternalAutomatedRestTesting.g:854:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (this_DOT_1= RULE_DOT this_ID_2= RULE_ID )* ) ;
+    public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token this_ID_0=null;
+        Token this_DOT_1=null;
+        Token this_ID_2=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalAutomatedRestTesting.g:860:2: ( (this_ID_0= RULE_ID (this_DOT_1= RULE_DOT this_ID_2= RULE_ID )* ) )
+            // InternalAutomatedRestTesting.g:861:2: (this_ID_0= RULE_ID (this_DOT_1= RULE_DOT this_ID_2= RULE_ID )* )
+            {
+            // InternalAutomatedRestTesting.g:861:2: (this_ID_0= RULE_ID (this_DOT_1= RULE_DOT this_ID_2= RULE_ID )* )
+            // InternalAutomatedRestTesting.g:862:3: this_ID_0= RULE_ID (this_DOT_1= RULE_DOT this_ID_2= RULE_ID )*
+            {
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_29); 
+
+            			current.merge(this_ID_0);
+            		
+
+            			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
+            		
+            // InternalAutomatedRestTesting.g:869:3: (this_DOT_1= RULE_DOT this_ID_2= RULE_ID )*
+            loop19:
+            do {
+                int alt19=2;
+                int LA19_0 = input.LA(1);
+
+                if ( (LA19_0==RULE_DOT) ) {
+                    alt19=1;
+                }
+
+
+                switch (alt19) {
+            	case 1 :
+            	    // InternalAutomatedRestTesting.g:870:4: this_DOT_1= RULE_DOT this_ID_2= RULE_ID
+            	    {
+            	    this_DOT_1=(Token)match(input,RULE_DOT,FOLLOW_30); 
+
+            	    				current.merge(this_DOT_1);
+            	    			
+
+            	    				newLeafNode(this_DOT_1, grammarAccess.getQualifiedNameAccess().getDOTTerminalRuleCall_1_0());
+            	    			
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_29); 
+
+            	    				current.merge(this_ID_2);
+            	    			
+
+            	    				newLeafNode(this_ID_2, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1());
+            	    			
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop19;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleQualifiedName"
+
+
     // $ANTLR start "entryRuleExpression"
-    // InternalAutomatedRestTesting.g:857:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // InternalAutomatedRestTesting.g:889:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final EObject entryRuleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2030,8 +2136,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:857:51: (iv_ruleExpression= ruleExpression EOF )
-            // InternalAutomatedRestTesting.g:858:2: iv_ruleExpression= ruleExpression EOF
+            // InternalAutomatedRestTesting.g:889:51: (iv_ruleExpression= ruleExpression EOF )
+            // InternalAutomatedRestTesting.g:890:2: iv_ruleExpression= ruleExpression EOF
             {
              newCompositeNode(grammarAccess.getExpressionRule()); 
             pushFollow(FOLLOW_1);
@@ -2058,7 +2164,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleExpression"
-    // InternalAutomatedRestTesting.g:864:1: ruleExpression returns [EObject current=null] : ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleEString ) ) )? ) ;
+    // InternalAutomatedRestTesting.g:896:1: ruleExpression returns [EObject current=null] : ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleLiteral ) ) )? ) ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2067,29 +2173,29 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         Token this_ARROW_3=null;
         Enumerator lv_relationalOperator_0_0 = null;
 
-        AntlrDatatypeRuleToken lv_expectedValue_4_0 = null;
+        EObject lv_expectedValue_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:870:2: ( ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleEString ) ) )? ) )
-            // InternalAutomatedRestTesting.g:871:2: ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleEString ) ) )? )
+            // InternalAutomatedRestTesting.g:902:2: ( ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleLiteral ) ) )? ) )
+            // InternalAutomatedRestTesting.g:903:2: ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleLiteral ) ) )? )
             {
-            // InternalAutomatedRestTesting.g:871:2: ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleEString ) ) )? )
-            // InternalAutomatedRestTesting.g:872:3: ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleEString ) ) )?
+            // InternalAutomatedRestTesting.g:903:2: ( ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleLiteral ) ) )? )
+            // InternalAutomatedRestTesting.g:904:3: ( (lv_relationalOperator_0_0= ruleRelationalOperator ) ) ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleLiteral ) ) )?
             {
-            // InternalAutomatedRestTesting.g:872:3: ( (lv_relationalOperator_0_0= ruleRelationalOperator ) )
-            // InternalAutomatedRestTesting.g:873:4: (lv_relationalOperator_0_0= ruleRelationalOperator )
+            // InternalAutomatedRestTesting.g:904:3: ( (lv_relationalOperator_0_0= ruleRelationalOperator ) )
+            // InternalAutomatedRestTesting.g:905:4: (lv_relationalOperator_0_0= ruleRelationalOperator )
             {
-            // InternalAutomatedRestTesting.g:873:4: (lv_relationalOperator_0_0= ruleRelationalOperator )
-            // InternalAutomatedRestTesting.g:874:5: lv_relationalOperator_0_0= ruleRelationalOperator
+            // InternalAutomatedRestTesting.g:905:4: (lv_relationalOperator_0_0= ruleRelationalOperator )
+            // InternalAutomatedRestTesting.g:906:5: lv_relationalOperator_0_0= ruleRelationalOperator
             {
 
             					newCompositeNode(grammarAccess.getExpressionAccess().getRelationalOperatorRelationalOperatorEnumRuleCall_0_0());
             				
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_31);
             lv_relationalOperator_0_0=ruleRelationalOperator();
 
             state._fsp--;
@@ -2111,53 +2217,53 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:891:3: ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleEString ) ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalAutomatedRestTesting.g:923:3: ( (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleLiteral ) ) )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( ((LA21_0>=RULE_STRING && LA21_0<=RULE_ID)||LA21_0==37) ) {
-                alt21=1;
+            if ( ((LA22_0>=RULE_STRING && LA22_0<=RULE_ID)||LA22_0==RULE_INT||LA22_0==37) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:892:4: (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleEString ) )
+                    // InternalAutomatedRestTesting.g:924:4: (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )? ( (lv_expectedValue_4_0= ruleLiteral ) )
                     {
-                    // InternalAutomatedRestTesting.g:892:4: (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )?
-                    int alt20=2;
-                    int LA20_0 = input.LA(1);
+                    // InternalAutomatedRestTesting.g:924:4: (otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW ) )?
+                    int alt21=2;
+                    int LA21_0 = input.LA(1);
 
-                    if ( (LA20_0==37) ) {
-                        alt20=1;
+                    if ( (LA21_0==37) ) {
+                        alt21=1;
                     }
-                    switch (alt20) {
+                    switch (alt21) {
                         case 1 :
-                            // InternalAutomatedRestTesting.g:893:5: otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW )
+                            // InternalAutomatedRestTesting.g:925:5: otherlv_1= 'parameter' (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW )
                             {
-                            otherlv_1=(Token)match(input,37,FOLLOW_29); 
+                            otherlv_1=(Token)match(input,37,FOLLOW_32); 
 
                             					newLeafNode(otherlv_1, grammarAccess.getExpressionAccess().getParameterKeyword_1_0_0());
                             				
-                            // InternalAutomatedRestTesting.g:897:5: (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW )
-                            int alt19=2;
-                            int LA19_0 = input.LA(1);
+                            // InternalAutomatedRestTesting.g:929:5: (this_DOT_2= RULE_DOT | this_ARROW_3= RULE_ARROW )
+                            int alt20=2;
+                            int LA20_0 = input.LA(1);
 
-                            if ( (LA19_0==RULE_DOT) ) {
-                                alt19=1;
+                            if ( (LA20_0==RULE_DOT) ) {
+                                alt20=1;
                             }
-                            else if ( (LA19_0==RULE_ARROW) ) {
-                                alt19=2;
+                            else if ( (LA20_0==RULE_ARROW) ) {
+                                alt20=2;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 19, 0, input);
+                                    new NoViableAltException("", 20, 0, input);
 
                                 throw nvae;
                             }
-                            switch (alt19) {
+                            switch (alt20) {
                                 case 1 :
-                                    // InternalAutomatedRestTesting.g:898:6: this_DOT_2= RULE_DOT
+                                    // InternalAutomatedRestTesting.g:930:6: this_DOT_2= RULE_DOT
                                     {
-                                    this_DOT_2=(Token)match(input,RULE_DOT,FOLLOW_4); 
+                                    this_DOT_2=(Token)match(input,RULE_DOT,FOLLOW_33); 
 
                                     						newLeafNode(this_DOT_2, grammarAccess.getExpressionAccess().getDOTTerminalRuleCall_1_0_1_0());
                                     					
@@ -2165,9 +2271,9 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                                     }
                                     break;
                                 case 2 :
-                                    // InternalAutomatedRestTesting.g:903:6: this_ARROW_3= RULE_ARROW
+                                    // InternalAutomatedRestTesting.g:935:6: this_ARROW_3= RULE_ARROW
                                     {
-                                    this_ARROW_3=(Token)match(input,RULE_ARROW,FOLLOW_4); 
+                                    this_ARROW_3=(Token)match(input,RULE_ARROW,FOLLOW_33); 
 
                                     						newLeafNode(this_ARROW_3, grammarAccess.getExpressionAccess().getARROWTerminalRuleCall_1_0_1_1());
                                     					
@@ -2183,17 +2289,17 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
                     }
 
-                    // InternalAutomatedRestTesting.g:909:4: ( (lv_expectedValue_4_0= ruleEString ) )
-                    // InternalAutomatedRestTesting.g:910:5: (lv_expectedValue_4_0= ruleEString )
+                    // InternalAutomatedRestTesting.g:941:4: ( (lv_expectedValue_4_0= ruleLiteral ) )
+                    // InternalAutomatedRestTesting.g:942:5: (lv_expectedValue_4_0= ruleLiteral )
                     {
-                    // InternalAutomatedRestTesting.g:910:5: (lv_expectedValue_4_0= ruleEString )
-                    // InternalAutomatedRestTesting.g:911:6: lv_expectedValue_4_0= ruleEString
+                    // InternalAutomatedRestTesting.g:942:5: (lv_expectedValue_4_0= ruleLiteral )
+                    // InternalAutomatedRestTesting.g:943:6: lv_expectedValue_4_0= ruleLiteral
                     {
 
-                    						newCompositeNode(grammarAccess.getExpressionAccess().getExpectedValueEStringParserRuleCall_1_1_0());
+                    						newCompositeNode(grammarAccess.getExpressionAccess().getExpectedValueLiteralParserRuleCall_1_1_0());
                     					
                     pushFollow(FOLLOW_2);
-                    lv_expectedValue_4_0=ruleEString();
+                    lv_expectedValue_4_0=ruleLiteral();
 
                     state._fsp--;
 
@@ -2205,7 +2311,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     							current,
                     							"expectedValue",
                     							lv_expectedValue_4_0,
-                    							"org.xtext.example.automatedresttesting.AutomatedRestTesting.EString");
+                    							"org.xtext.example.automatedresttesting.AutomatedRestTesting.Literal");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -2242,8 +2348,456 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
     // $ANTLR end "ruleExpression"
 
 
+    // $ANTLR start "entryRuleLiteral"
+    // InternalAutomatedRestTesting.g:965:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
+    public final EObject entryRuleLiteral() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleLiteral = null;
+
+
+        try {
+            // InternalAutomatedRestTesting.g:965:48: (iv_ruleLiteral= ruleLiteral EOF )
+            // InternalAutomatedRestTesting.g:966:2: iv_ruleLiteral= ruleLiteral EOF
+            {
+             newCompositeNode(grammarAccess.getLiteralRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleLiteral=ruleLiteral();
+
+            state._fsp--;
+
+             current =iv_ruleLiteral; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleLiteral"
+
+
+    // $ANTLR start "ruleLiteral"
+    // InternalAutomatedRestTesting.g:972:1: ruleLiteral returns [EObject current=null] : (this_ElementLiteral_0= ruleElementLiteral | this_StringLiteral_1= ruleStringLiteral | this_IntegerLiteral_2= ruleIntegerLiteral ) ;
+    public final EObject ruleLiteral() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_ElementLiteral_0 = null;
+
+        EObject this_StringLiteral_1 = null;
+
+        EObject this_IntegerLiteral_2 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalAutomatedRestTesting.g:978:2: ( (this_ElementLiteral_0= ruleElementLiteral | this_StringLiteral_1= ruleStringLiteral | this_IntegerLiteral_2= ruleIntegerLiteral ) )
+            // InternalAutomatedRestTesting.g:979:2: (this_ElementLiteral_0= ruleElementLiteral | this_StringLiteral_1= ruleStringLiteral | this_IntegerLiteral_2= ruleIntegerLiteral )
+            {
+            // InternalAutomatedRestTesting.g:979:2: (this_ElementLiteral_0= ruleElementLiteral | this_StringLiteral_1= ruleStringLiteral | this_IntegerLiteral_2= ruleIntegerLiteral )
+            int alt23=3;
+            switch ( input.LA(1) ) {
+            case RULE_ID:
+                {
+                alt23=1;
+                }
+                break;
+            case RULE_STRING:
+                {
+                alt23=2;
+                }
+                break;
+            case RULE_INT:
+                {
+                alt23=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 23, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt23) {
+                case 1 :
+                    // InternalAutomatedRestTesting.g:980:3: this_ElementLiteral_0= ruleElementLiteral
+                    {
+
+                    			newCompositeNode(grammarAccess.getLiteralAccess().getElementLiteralParserRuleCall_0());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_ElementLiteral_0=ruleElementLiteral();
+
+                    state._fsp--;
+
+
+                    			current = this_ElementLiteral_0;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalAutomatedRestTesting.g:989:3: this_StringLiteral_1= ruleStringLiteral
+                    {
+
+                    			newCompositeNode(grammarAccess.getLiteralAccess().getStringLiteralParserRuleCall_1());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_StringLiteral_1=ruleStringLiteral();
+
+                    state._fsp--;
+
+
+                    			current = this_StringLiteral_1;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 3 :
+                    // InternalAutomatedRestTesting.g:998:3: this_IntegerLiteral_2= ruleIntegerLiteral
+                    {
+
+                    			newCompositeNode(grammarAccess.getLiteralAccess().getIntegerLiteralParserRuleCall_2());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_IntegerLiteral_2=ruleIntegerLiteral();
+
+                    state._fsp--;
+
+
+                    			current = this_IntegerLiteral_2;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleLiteral"
+
+
+    // $ANTLR start "entryRuleIntegerLiteral"
+    // InternalAutomatedRestTesting.g:1010:1: entryRuleIntegerLiteral returns [EObject current=null] : iv_ruleIntegerLiteral= ruleIntegerLiteral EOF ;
+    public final EObject entryRuleIntegerLiteral() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleIntegerLiteral = null;
+
+
+        try {
+            // InternalAutomatedRestTesting.g:1010:55: (iv_ruleIntegerLiteral= ruleIntegerLiteral EOF )
+            // InternalAutomatedRestTesting.g:1011:2: iv_ruleIntegerLiteral= ruleIntegerLiteral EOF
+            {
+             newCompositeNode(grammarAccess.getIntegerLiteralRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleIntegerLiteral=ruleIntegerLiteral();
+
+            state._fsp--;
+
+             current =iv_ruleIntegerLiteral; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleIntegerLiteral"
+
+
+    // $ANTLR start "ruleIntegerLiteral"
+    // InternalAutomatedRestTesting.g:1017:1: ruleIntegerLiteral returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
+    public final EObject ruleIntegerLiteral() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_value_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalAutomatedRestTesting.g:1023:2: ( ( (lv_value_0_0= RULE_INT ) ) )
+            // InternalAutomatedRestTesting.g:1024:2: ( (lv_value_0_0= RULE_INT ) )
+            {
+            // InternalAutomatedRestTesting.g:1024:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalAutomatedRestTesting.g:1025:3: (lv_value_0_0= RULE_INT )
+            {
+            // InternalAutomatedRestTesting.g:1025:3: (lv_value_0_0= RULE_INT )
+            // InternalAutomatedRestTesting.g:1026:4: lv_value_0_0= RULE_INT
+            {
+            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+            				newLeafNode(lv_value_0_0, grammarAccess.getIntegerLiteralAccess().getValueINTTerminalRuleCall_0());
+            			
+
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getIntegerLiteralRule());
+            				}
+            				setWithLastConsumed(
+            					current,
+            					"value",
+            					lv_value_0_0,
+            					"org.eclipse.xtext.common.Terminals.INT");
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleIntegerLiteral"
+
+
+    // $ANTLR start "entryRuleStringLiteral"
+    // InternalAutomatedRestTesting.g:1045:1: entryRuleStringLiteral returns [EObject current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
+    public final EObject entryRuleStringLiteral() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleStringLiteral = null;
+
+
+        try {
+            // InternalAutomatedRestTesting.g:1045:54: (iv_ruleStringLiteral= ruleStringLiteral EOF )
+            // InternalAutomatedRestTesting.g:1046:2: iv_ruleStringLiteral= ruleStringLiteral EOF
+            {
+             newCompositeNode(grammarAccess.getStringLiteralRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleStringLiteral=ruleStringLiteral();
+
+            state._fsp--;
+
+             current =iv_ruleStringLiteral; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleStringLiteral"
+
+
+    // $ANTLR start "ruleStringLiteral"
+    // InternalAutomatedRestTesting.g:1052:1: ruleStringLiteral returns [EObject current=null] : ( (lv_value_0_0= ruleEString ) ) ;
+    public final EObject ruleStringLiteral() throws RecognitionException {
+        EObject current = null;
+
+        AntlrDatatypeRuleToken lv_value_0_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalAutomatedRestTesting.g:1058:2: ( ( (lv_value_0_0= ruleEString ) ) )
+            // InternalAutomatedRestTesting.g:1059:2: ( (lv_value_0_0= ruleEString ) )
+            {
+            // InternalAutomatedRestTesting.g:1059:2: ( (lv_value_0_0= ruleEString ) )
+            // InternalAutomatedRestTesting.g:1060:3: (lv_value_0_0= ruleEString )
+            {
+            // InternalAutomatedRestTesting.g:1060:3: (lv_value_0_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1061:4: lv_value_0_0= ruleEString
+            {
+
+            				newCompositeNode(grammarAccess.getStringLiteralAccess().getValueEStringParserRuleCall_0());
+            			
+            pushFollow(FOLLOW_2);
+            lv_value_0_0=ruleEString();
+
+            state._fsp--;
+
+
+            				if (current==null) {
+            					current = createModelElementForParent(grammarAccess.getStringLiteralRule());
+            				}
+            				set(
+            					current,
+            					"value",
+            					lv_value_0_0,
+            					"org.xtext.example.automatedresttesting.AutomatedRestTesting.EString");
+            				afterParserOrEnumRuleCall();
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleStringLiteral"
+
+
+    // $ANTLR start "entryRuleElementLiteral"
+    // InternalAutomatedRestTesting.g:1081:1: entryRuleElementLiteral returns [EObject current=null] : iv_ruleElementLiteral= ruleElementLiteral EOF ;
+    public final EObject entryRuleElementLiteral() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleElementLiteral = null;
+
+
+        try {
+            // InternalAutomatedRestTesting.g:1081:55: (iv_ruleElementLiteral= ruleElementLiteral EOF )
+            // InternalAutomatedRestTesting.g:1082:2: iv_ruleElementLiteral= ruleElementLiteral EOF
+            {
+             newCompositeNode(grammarAccess.getElementLiteralRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleElementLiteral=ruleElementLiteral();
+
+            state._fsp--;
+
+             current =iv_ruleElementLiteral; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleElementLiteral"
+
+
+    // $ANTLR start "ruleElementLiteral"
+    // InternalAutomatedRestTesting.g:1088:1: ruleElementLiteral returns [EObject current=null] : ( ( ruleQualifiedName ) ) ;
+    public final EObject ruleElementLiteral() throws RecognitionException {
+        EObject current = null;
+
+
+        	enterRule();
+
+        try {
+            // InternalAutomatedRestTesting.g:1094:2: ( ( ( ruleQualifiedName ) ) )
+            // InternalAutomatedRestTesting.g:1095:2: ( ( ruleQualifiedName ) )
+            {
+            // InternalAutomatedRestTesting.g:1095:2: ( ( ruleQualifiedName ) )
+            // InternalAutomatedRestTesting.g:1096:3: ( ruleQualifiedName )
+            {
+            // InternalAutomatedRestTesting.g:1096:3: ( ruleQualifiedName )
+            // InternalAutomatedRestTesting.g:1097:4: ruleQualifiedName
+            {
+
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getElementLiteralRule());
+            				}
+            			
+
+            				newCompositeNode(grammarAccess.getElementLiteralAccess().getValueElementCrossReference_0());
+            			
+            pushFollow(FOLLOW_2);
+            ruleQualifiedName();
+
+            state._fsp--;
+
+
+            				afterParserOrEnumRuleCall();
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleElementLiteral"
+
+
     // $ANTLR start "entryRuleMappingElement"
-    // InternalAutomatedRestTesting.g:933:1: entryRuleMappingElement returns [EObject current=null] : iv_ruleMappingElement= ruleMappingElement EOF ;
+    // InternalAutomatedRestTesting.g:1114:1: entryRuleMappingElement returns [EObject current=null] : iv_ruleMappingElement= ruleMappingElement EOF ;
     public final EObject entryRuleMappingElement() throws RecognitionException {
         EObject current = null;
 
@@ -2251,8 +2805,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:933:55: (iv_ruleMappingElement= ruleMappingElement EOF )
-            // InternalAutomatedRestTesting.g:934:2: iv_ruleMappingElement= ruleMappingElement EOF
+            // InternalAutomatedRestTesting.g:1114:55: (iv_ruleMappingElement= ruleMappingElement EOF )
+            // InternalAutomatedRestTesting.g:1115:2: iv_ruleMappingElement= ruleMappingElement EOF
             {
              newCompositeNode(grammarAccess.getMappingElementRule()); 
             pushFollow(FOLLOW_1);
@@ -2279,7 +2833,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleMappingElement"
-    // InternalAutomatedRestTesting.g:940:1: ruleMappingElement returns [EObject current=null] : (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleEString ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( ( ruleEString ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET ) ;
+    // InternalAutomatedRestTesting.g:1121:1: ruleMappingElement returns [EObject current=null] : (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleQualifiedName ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( (lv_value_9_0= ruleLiteral ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET ) ;
     public final EObject ruleMappingElement() throws RecognitionException {
         EObject current = null;
 
@@ -2292,18 +2846,20 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         Token otherlv_7=null;
         Token this_ARROW_8=null;
         Token this_RIGHT_BRACKET_10=null;
+        EObject lv_value_9_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:946:2: ( (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleEString ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( ( ruleEString ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET ) )
-            // InternalAutomatedRestTesting.g:947:2: (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleEString ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( ( ruleEString ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1127:2: ( (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleQualifiedName ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( (lv_value_9_0= ruleLiteral ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET ) )
+            // InternalAutomatedRestTesting.g:1128:2: (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleQualifiedName ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( (lv_value_9_0= ruleLiteral ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET )
             {
-            // InternalAutomatedRestTesting.g:947:2: (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleEString ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( ( ruleEString ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET )
-            // InternalAutomatedRestTesting.g:948:3: this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleEString ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( ( ruleEString ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET
+            // InternalAutomatedRestTesting.g:1128:2: (this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleQualifiedName ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( (lv_value_9_0= ruleLiteral ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1129:3: this_LEFT_BRACKET_0= RULE_LEFT_BRACKET otherlv_1= 'parameter' this_EQUAL_2= RULE_EQUAL ( ( ruleQualifiedName ) ) this_COMMA_4= RULE_COMMA otherlv_5= 'value' this_EQUAL_6= RULE_EQUAL (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )? ( (lv_value_9_0= ruleLiteral ) ) this_RIGHT_BRACKET_10= RULE_RIGHT_BRACKET
             {
-            this_LEFT_BRACKET_0=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_30); 
+            this_LEFT_BRACKET_0=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_34); 
 
             			newLeafNode(this_LEFT_BRACKET_0, grammarAccess.getMappingElementAccess().getLEFT_BRACKETTerminalRuleCall_0());
             		
@@ -2311,15 +2867,15 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             			newLeafNode(otherlv_1, grammarAccess.getMappingElementAccess().getParameterKeyword_1());
             		
-            this_EQUAL_2=(Token)match(input,RULE_EQUAL,FOLLOW_4); 
+            this_EQUAL_2=(Token)match(input,RULE_EQUAL,FOLLOW_28); 
 
             			newLeafNode(this_EQUAL_2, grammarAccess.getMappingElementAccess().getEQUALTerminalRuleCall_2());
             		
-            // InternalAutomatedRestTesting.g:960:3: ( ( ruleEString ) )
-            // InternalAutomatedRestTesting.g:961:4: ( ruleEString )
+            // InternalAutomatedRestTesting.g:1141:3: ( ( ruleQualifiedName ) )
+            // InternalAutomatedRestTesting.g:1142:4: ( ruleQualifiedName )
             {
-            // InternalAutomatedRestTesting.g:961:4: ( ruleEString )
-            // InternalAutomatedRestTesting.g:962:5: ruleEString
+            // InternalAutomatedRestTesting.g:1142:4: ( ruleQualifiedName )
+            // InternalAutomatedRestTesting.g:1143:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -2329,8 +2885,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             					newCompositeNode(grammarAccess.getMappingElementAccess().getParameterElementCrossReference_3_0());
             				
-            pushFollow(FOLLOW_31);
-            ruleEString();
+            pushFollow(FOLLOW_35);
+            ruleQualifiedName();
 
             state._fsp--;
 
@@ -2343,7 +2899,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            this_COMMA_4=(Token)match(input,RULE_COMMA,FOLLOW_32); 
+            this_COMMA_4=(Token)match(input,RULE_COMMA,FOLLOW_36); 
 
             			newLeafNode(this_COMMA_4, grammarAccess.getMappingElementAccess().getCOMMATerminalRuleCall_4());
             		
@@ -2351,26 +2907,26 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             			newLeafNode(otherlv_5, grammarAccess.getMappingElementAccess().getValueKeyword_5());
             		
-            this_EQUAL_6=(Token)match(input,RULE_EQUAL,FOLLOW_33); 
+            this_EQUAL_6=(Token)match(input,RULE_EQUAL,FOLLOW_37); 
 
             			newLeafNode(this_EQUAL_6, grammarAccess.getMappingElementAccess().getEQUALTerminalRuleCall_6());
             		
-            // InternalAutomatedRestTesting.g:988:3: (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // InternalAutomatedRestTesting.g:1169:3: (otherlv_7= 'request' this_ARROW_8= RULE_ARROW )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA22_0==39) ) {
-                alt22=1;
+            if ( (LA24_0==39) ) {
+                alt24=1;
             }
-            switch (alt22) {
+            switch (alt24) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:989:4: otherlv_7= 'request' this_ARROW_8= RULE_ARROW
+                    // InternalAutomatedRestTesting.g:1170:4: otherlv_7= 'request' this_ARROW_8= RULE_ARROW
                     {
-                    otherlv_7=(Token)match(input,39,FOLLOW_34); 
+                    otherlv_7=(Token)match(input,39,FOLLOW_38); 
 
                     				newLeafNode(otherlv_7, grammarAccess.getMappingElementAccess().getRequestKeyword_7_0());
                     			
-                    this_ARROW_8=(Token)match(input,RULE_ARROW,FOLLOW_4); 
+                    this_ARROW_8=(Token)match(input,RULE_ARROW,FOLLOW_33); 
 
                     				newLeafNode(this_ARROW_8, grammarAccess.getMappingElementAccess().getARROWTerminalRuleCall_7_1());
                     			
@@ -2380,26 +2936,29 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:998:3: ( ( ruleEString ) )
-            // InternalAutomatedRestTesting.g:999:4: ( ruleEString )
+            // InternalAutomatedRestTesting.g:1179:3: ( (lv_value_9_0= ruleLiteral ) )
+            // InternalAutomatedRestTesting.g:1180:4: (lv_value_9_0= ruleLiteral )
             {
-            // InternalAutomatedRestTesting.g:999:4: ( ruleEString )
-            // InternalAutomatedRestTesting.g:1000:5: ruleEString
+            // InternalAutomatedRestTesting.g:1180:4: (lv_value_9_0= ruleLiteral )
+            // InternalAutomatedRestTesting.g:1181:5: lv_value_9_0= ruleLiteral
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getMappingElementRule());
-            					}
-            				
-
-            					newCompositeNode(grammarAccess.getMappingElementAccess().getValueElementCrossReference_8_0());
+            					newCompositeNode(grammarAccess.getMappingElementAccess().getValueLiteralParserRuleCall_8_0());
             				
             pushFollow(FOLLOW_17);
-            ruleEString();
+            lv_value_9_0=ruleLiteral();
 
             state._fsp--;
 
 
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getMappingElementRule());
+            					}
+            					set(
+            						current,
+            						"value",
+            						lv_value_9_0,
+            						"org.xtext.example.automatedresttesting.AutomatedRestTesting.Literal");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2435,7 +2994,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleParameter"
-    // InternalAutomatedRestTesting.g:1022:1: entryRuleParameter returns [EObject current=null] : iv_ruleParameter= ruleParameter EOF ;
+    // InternalAutomatedRestTesting.g:1206:1: entryRuleParameter returns [EObject current=null] : iv_ruleParameter= ruleParameter EOF ;
     public final EObject entryRuleParameter() throws RecognitionException {
         EObject current = null;
 
@@ -2443,8 +3002,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:1022:50: (iv_ruleParameter= ruleParameter EOF )
-            // InternalAutomatedRestTesting.g:1023:2: iv_ruleParameter= ruleParameter EOF
+            // InternalAutomatedRestTesting.g:1206:50: (iv_ruleParameter= ruleParameter EOF )
+            // InternalAutomatedRestTesting.g:1207:2: iv_ruleParameter= ruleParameter EOF
             {
              newCompositeNode(grammarAccess.getParameterRule()); 
             pushFollow(FOLLOW_1);
@@ -2471,7 +3030,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleParameter"
-    // InternalAutomatedRestTesting.g:1029:1: ruleParameter returns [EObject current=null] : ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= ruleEString ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET ) ;
+    // InternalAutomatedRestTesting.g:1213:1: ruleParameter returns [EObject current=null] : ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= RULE_ID ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET ) ;
     public final EObject ruleParameter() throws RecognitionException {
         EObject current = null;
 
@@ -2480,22 +3039,21 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         Token this_QUESTION_MARK_3=null;
         Token this_MONEY_4=null;
         Token this_LEFT_BRACKET_5=null;
+        Token lv_name_6_0=null;
         Token this_RIGHT_BRACKET_7=null;
-        AntlrDatatypeRuleToken lv_name_6_0 = null;
-
 
 
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1035:2: ( ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= ruleEString ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET ) )
-            // InternalAutomatedRestTesting.g:1036:2: ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= ruleEString ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1219:2: ( ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= RULE_ID ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET ) )
+            // InternalAutomatedRestTesting.g:1220:2: ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= RULE_ID ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET )
             {
-            // InternalAutomatedRestTesting.g:1036:2: ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= ruleEString ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET )
-            // InternalAutomatedRestTesting.g:1037:3: () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= ruleEString ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET
+            // InternalAutomatedRestTesting.g:1220:2: ( () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= RULE_ID ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1221:3: () ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) ) this_LEFT_BRACKET_5= RULE_LEFT_BRACKET ( (lv_name_6_0= RULE_ID ) ) this_RIGHT_BRACKET_7= RULE_RIGHT_BRACKET
             {
-            // InternalAutomatedRestTesting.g:1037:3: ()
-            // InternalAutomatedRestTesting.g:1038:4: 
+            // InternalAutomatedRestTesting.g:1221:3: ()
+            // InternalAutomatedRestTesting.g:1222:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2505,30 +3063,30 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1044:3: ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) )
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // InternalAutomatedRestTesting.g:1228:3: ( (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS ) | (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY ) )
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA23_0==RULE_SLASH) ) {
-                alt23=1;
+            if ( (LA25_0==RULE_SLASH) ) {
+                alt25=1;
             }
-            else if ( (LA23_0==RULE_QUESTION_MARK) ) {
-                alt23=2;
+            else if ( (LA25_0==RULE_QUESTION_MARK) ) {
+                alt25=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
-            switch (alt23) {
+            switch (alt25) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1045:4: (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS )
+                    // InternalAutomatedRestTesting.g:1229:4: (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS )
                     {
-                    // InternalAutomatedRestTesting.g:1045:4: (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS )
-                    // InternalAutomatedRestTesting.g:1046:5: this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS
+                    // InternalAutomatedRestTesting.g:1229:4: (this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS )
+                    // InternalAutomatedRestTesting.g:1230:5: this_SLASH_1= RULE_SLASH this_TWO_DOTS_2= RULE_TWO_DOTS
                     {
-                    this_SLASH_1=(Token)match(input,RULE_SLASH,FOLLOW_35); 
+                    this_SLASH_1=(Token)match(input,RULE_SLASH,FOLLOW_39); 
 
                     					newLeafNode(this_SLASH_1, grammarAccess.getParameterAccess().getSLASHTerminalRuleCall_1_0_0());
                     				
@@ -2543,12 +3101,12 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalAutomatedRestTesting.g:1056:4: (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY )
+                    // InternalAutomatedRestTesting.g:1240:4: (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY )
                     {
-                    // InternalAutomatedRestTesting.g:1056:4: (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY )
-                    // InternalAutomatedRestTesting.g:1057:5: this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY
+                    // InternalAutomatedRestTesting.g:1240:4: (this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY )
+                    // InternalAutomatedRestTesting.g:1241:5: this_QUESTION_MARK_3= RULE_QUESTION_MARK this_MONEY_4= RULE_MONEY
                     {
-                    this_QUESTION_MARK_3=(Token)match(input,RULE_QUESTION_MARK,FOLLOW_36); 
+                    this_QUESTION_MARK_3=(Token)match(input,RULE_QUESTION_MARK,FOLLOW_40); 
 
                     					newLeafNode(this_QUESTION_MARK_3, grammarAccess.getParameterAccess().getQUESTION_MARKTerminalRuleCall_1_1_0());
                     				
@@ -2565,34 +3123,29 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            this_LEFT_BRACKET_5=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_4); 
+            this_LEFT_BRACKET_5=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_30); 
 
             			newLeafNode(this_LEFT_BRACKET_5, grammarAccess.getParameterAccess().getLEFT_BRACKETTerminalRuleCall_2());
             		
-            // InternalAutomatedRestTesting.g:1071:3: ( (lv_name_6_0= ruleEString ) )
-            // InternalAutomatedRestTesting.g:1072:4: (lv_name_6_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1255:3: ( (lv_name_6_0= RULE_ID ) )
+            // InternalAutomatedRestTesting.g:1256:4: (lv_name_6_0= RULE_ID )
             {
-            // InternalAutomatedRestTesting.g:1072:4: (lv_name_6_0= ruleEString )
-            // InternalAutomatedRestTesting.g:1073:5: lv_name_6_0= ruleEString
+            // InternalAutomatedRestTesting.g:1256:4: (lv_name_6_0= RULE_ID )
+            // InternalAutomatedRestTesting.g:1257:5: lv_name_6_0= RULE_ID
             {
+            lv_name_6_0=(Token)match(input,RULE_ID,FOLLOW_17); 
 
-            					newCompositeNode(grammarAccess.getParameterAccess().getNameEStringParserRuleCall_3_0());
+            					newLeafNode(lv_name_6_0, grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_3_0());
             				
-            pushFollow(FOLLOW_17);
-            lv_name_6_0=ruleEString();
-
-            state._fsp--;
-
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getParameterRule());
+            						current = createModelElement(grammarAccess.getParameterRule());
             					}
-            					set(
+            					setWithLastConsumed(
             						current,
             						"name",
             						lv_name_6_0,
-            						"org.xtext.example.automatedresttesting.AutomatedRestTesting.EString");
-            					afterParserOrEnumRuleCall();
+            						"org.eclipse.xtext.common.Terminals.ID");
             				
 
             }
@@ -2627,7 +3180,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleRestriction"
-    // InternalAutomatedRestTesting.g:1098:1: entryRuleRestriction returns [EObject current=null] : iv_ruleRestriction= ruleRestriction EOF ;
+    // InternalAutomatedRestTesting.g:1281:1: entryRuleRestriction returns [EObject current=null] : iv_ruleRestriction= ruleRestriction EOF ;
     public final EObject entryRuleRestriction() throws RecognitionException {
         EObject current = null;
 
@@ -2635,8 +3188,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:1098:52: (iv_ruleRestriction= ruleRestriction EOF )
-            // InternalAutomatedRestTesting.g:1099:2: iv_ruleRestriction= ruleRestriction EOF
+            // InternalAutomatedRestTesting.g:1281:52: (iv_ruleRestriction= ruleRestriction EOF )
+            // InternalAutomatedRestTesting.g:1282:2: iv_ruleRestriction= ruleRestriction EOF
             {
              newCompositeNode(grammarAccess.getRestrictionRule()); 
             pushFollow(FOLLOW_1);
@@ -2663,7 +3216,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleRestriction"
-    // InternalAutomatedRestTesting.g:1105:1: ruleRestriction returns [EObject current=null] : ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) ) ;
+    // InternalAutomatedRestTesting.g:1288:1: ruleRestriction returns [EObject current=null] : ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) ) ;
     public final EObject ruleRestriction() throws RecognitionException {
         EObject current = null;
 
@@ -2676,14 +3229,14 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1111:2: ( ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) ) )
-            // InternalAutomatedRestTesting.g:1112:2: ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) )
+            // InternalAutomatedRestTesting.g:1294:2: ( ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) ) )
+            // InternalAutomatedRestTesting.g:1295:2: ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) )
             {
-            // InternalAutomatedRestTesting.g:1112:2: ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) )
-            // InternalAutomatedRestTesting.g:1113:3: () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) )
+            // InternalAutomatedRestTesting.g:1295:2: ( () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) ) )
+            // InternalAutomatedRestTesting.g:1296:3: () otherlv_1= 'mockType' this_EQUAL_2= RULE_EQUAL ( (lv_mockType_3_0= ruleMockTypes ) )
             {
-            // InternalAutomatedRestTesting.g:1113:3: ()
-            // InternalAutomatedRestTesting.g:1114:4: 
+            // InternalAutomatedRestTesting.g:1296:3: ()
+            // InternalAutomatedRestTesting.g:1297:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2697,15 +3250,15 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             			newLeafNode(otherlv_1, grammarAccess.getRestrictionAccess().getMockTypeKeyword_1());
             		
-            this_EQUAL_2=(Token)match(input,RULE_EQUAL,FOLLOW_37); 
+            this_EQUAL_2=(Token)match(input,RULE_EQUAL,FOLLOW_41); 
 
             			newLeafNode(this_EQUAL_2, grammarAccess.getRestrictionAccess().getEQUALTerminalRuleCall_2());
             		
-            // InternalAutomatedRestTesting.g:1128:3: ( (lv_mockType_3_0= ruleMockTypes ) )
-            // InternalAutomatedRestTesting.g:1129:4: (lv_mockType_3_0= ruleMockTypes )
+            // InternalAutomatedRestTesting.g:1311:3: ( (lv_mockType_3_0= ruleMockTypes ) )
+            // InternalAutomatedRestTesting.g:1312:4: (lv_mockType_3_0= ruleMockTypes )
             {
-            // InternalAutomatedRestTesting.g:1129:4: (lv_mockType_3_0= ruleMockTypes )
-            // InternalAutomatedRestTesting.g:1130:5: lv_mockType_3_0= ruleMockTypes
+            // InternalAutomatedRestTesting.g:1312:4: (lv_mockType_3_0= ruleMockTypes )
+            // InternalAutomatedRestTesting.g:1313:5: lv_mockType_3_0= ruleMockTypes
             {
 
             					newCompositeNode(grammarAccess.getRestrictionAccess().getMockTypeMockTypesEnumRuleCall_3_0());
@@ -2755,7 +3308,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleEntity"
-    // InternalAutomatedRestTesting.g:1151:1: entryRuleEntity returns [EObject current=null] : iv_ruleEntity= ruleEntity EOF ;
+    // InternalAutomatedRestTesting.g:1334:1: entryRuleEntity returns [EObject current=null] : iv_ruleEntity= ruleEntity EOF ;
     public final EObject entryRuleEntity() throws RecognitionException {
         EObject current = null;
 
@@ -2763,8 +3316,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:1151:47: (iv_ruleEntity= ruleEntity EOF )
-            // InternalAutomatedRestTesting.g:1152:2: iv_ruleEntity= ruleEntity EOF
+            // InternalAutomatedRestTesting.g:1334:47: (iv_ruleEntity= ruleEntity EOF )
+            // InternalAutomatedRestTesting.g:1335:2: iv_ruleEntity= ruleEntity EOF
             {
              newCompositeNode(grammarAccess.getEntityRule()); 
             pushFollow(FOLLOW_1);
@@ -2791,7 +3344,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleEntity"
-    // InternalAutomatedRestTesting.g:1158:1: ruleEntity returns [EObject current=null] : ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) ;
+    // InternalAutomatedRestTesting.g:1341:1: ruleEntity returns [EObject current=null] : ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) ;
     public final EObject ruleEntity() throws RecognitionException {
         EObject current = null;
 
@@ -2811,14 +3364,14 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1164:2: ( ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) )
-            // InternalAutomatedRestTesting.g:1165:2: ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1347:2: ( ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) )
+            // InternalAutomatedRestTesting.g:1348:2: ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
             {
-            // InternalAutomatedRestTesting.g:1165:2: ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
-            // InternalAutomatedRestTesting.g:1166:3: () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET
+            // InternalAutomatedRestTesting.g:1348:2: ( () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1349:3: () otherlv_1= 'Entity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleDomainAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET
             {
-            // InternalAutomatedRestTesting.g:1166:3: ()
-            // InternalAutomatedRestTesting.g:1167:4: 
+            // InternalAutomatedRestTesting.g:1349:3: ()
+            // InternalAutomatedRestTesting.g:1350:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2832,11 +3385,11 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             			newLeafNode(otherlv_1, grammarAccess.getEntityAccess().getEntityKeyword_1());
             		
-            // InternalAutomatedRestTesting.g:1177:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalAutomatedRestTesting.g:1178:4: (lv_name_2_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1360:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalAutomatedRestTesting.g:1361:4: (lv_name_2_0= ruleEString )
             {
-            // InternalAutomatedRestTesting.g:1178:4: (lv_name_2_0= ruleEString )
-            // InternalAutomatedRestTesting.g:1179:5: lv_name_2_0= ruleEString
+            // InternalAutomatedRestTesting.g:1361:4: (lv_name_2_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1362:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getEntityAccess().getNameEStringParserRuleCall_2_0());
@@ -2863,15 +3416,15 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            this_LEFT_BRACKET_3=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_38); 
+            this_LEFT_BRACKET_3=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_42); 
 
             			newLeafNode(this_LEFT_BRACKET_3, grammarAccess.getEntityAccess().getLEFT_BRACKETTerminalRuleCall_3());
             		
-            // InternalAutomatedRestTesting.g:1200:3: ( (lv_entityAttributes_4_0= ruleDomainAttribute ) )
-            // InternalAutomatedRestTesting.g:1201:4: (lv_entityAttributes_4_0= ruleDomainAttribute )
+            // InternalAutomatedRestTesting.g:1383:3: ( (lv_entityAttributes_4_0= ruleDomainAttribute ) )
+            // InternalAutomatedRestTesting.g:1384:4: (lv_entityAttributes_4_0= ruleDomainAttribute )
             {
-            // InternalAutomatedRestTesting.g:1201:4: (lv_entityAttributes_4_0= ruleDomainAttribute )
-            // InternalAutomatedRestTesting.g:1202:5: lv_entityAttributes_4_0= ruleDomainAttribute
+            // InternalAutomatedRestTesting.g:1384:4: (lv_entityAttributes_4_0= ruleDomainAttribute )
+            // InternalAutomatedRestTesting.g:1385:5: lv_entityAttributes_4_0= ruleDomainAttribute
             {
 
             					newCompositeNode(grammarAccess.getEntityAccess().getEntityAttributesDomainAttributeParserRuleCall_4_0());
@@ -2898,30 +3451,30 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            this_SEMICOLON_5=(Token)match(input,RULE_SEMICOLON,FOLLOW_39); 
+            this_SEMICOLON_5=(Token)match(input,RULE_SEMICOLON,FOLLOW_43); 
 
             			newLeafNode(this_SEMICOLON_5, grammarAccess.getEntityAccess().getSEMICOLONTerminalRuleCall_5());
             		
-            // InternalAutomatedRestTesting.g:1223:3: ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )*
-            loop24:
+            // InternalAutomatedRestTesting.g:1406:3: ( ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )*
+            loop26:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( ((LA24_0>=44 && LA24_0<=48)) ) {
-                    alt24=1;
+                if ( ((LA26_0>=44 && LA26_0<=48)) ) {
+                    alt26=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt26) {
             	case 1 :
-            	    // InternalAutomatedRestTesting.g:1224:4: ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON
+            	    // InternalAutomatedRestTesting.g:1407:4: ( (lv_entityAttributes_6_0= ruleDomainAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON
             	    {
-            	    // InternalAutomatedRestTesting.g:1224:4: ( (lv_entityAttributes_6_0= ruleDomainAttribute ) )
-            	    // InternalAutomatedRestTesting.g:1225:5: (lv_entityAttributes_6_0= ruleDomainAttribute )
+            	    // InternalAutomatedRestTesting.g:1407:4: ( (lv_entityAttributes_6_0= ruleDomainAttribute ) )
+            	    // InternalAutomatedRestTesting.g:1408:5: (lv_entityAttributes_6_0= ruleDomainAttribute )
             	    {
-            	    // InternalAutomatedRestTesting.g:1225:5: (lv_entityAttributes_6_0= ruleDomainAttribute )
-            	    // InternalAutomatedRestTesting.g:1226:6: lv_entityAttributes_6_0= ruleDomainAttribute
+            	    // InternalAutomatedRestTesting.g:1408:5: (lv_entityAttributes_6_0= ruleDomainAttribute )
+            	    // InternalAutomatedRestTesting.g:1409:6: lv_entityAttributes_6_0= ruleDomainAttribute
             	    {
 
             	    						newCompositeNode(grammarAccess.getEntityAccess().getEntityAttributesDomainAttributeParserRuleCall_6_0_0());
@@ -2948,7 +3501,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             	    }
 
-            	    this_SEMICOLON_7=(Token)match(input,RULE_SEMICOLON,FOLLOW_39); 
+            	    this_SEMICOLON_7=(Token)match(input,RULE_SEMICOLON,FOLLOW_43); 
 
             	    				newLeafNode(this_SEMICOLON_7, grammarAccess.getEntityAccess().getSEMICOLONTerminalRuleCall_6_1());
             	    			
@@ -2957,7 +3510,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop26;
                 }
             } while (true);
 
@@ -2988,7 +3541,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleAttribute_Impl"
-    // InternalAutomatedRestTesting.g:1256:1: entryRuleAttribute_Impl returns [EObject current=null] : iv_ruleAttribute_Impl= ruleAttribute_Impl EOF ;
+    // InternalAutomatedRestTesting.g:1439:1: entryRuleAttribute_Impl returns [EObject current=null] : iv_ruleAttribute_Impl= ruleAttribute_Impl EOF ;
     public final EObject entryRuleAttribute_Impl() throws RecognitionException {
         EObject current = null;
 
@@ -2996,8 +3549,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:1256:55: (iv_ruleAttribute_Impl= ruleAttribute_Impl EOF )
-            // InternalAutomatedRestTesting.g:1257:2: iv_ruleAttribute_Impl= ruleAttribute_Impl EOF
+            // InternalAutomatedRestTesting.g:1439:55: (iv_ruleAttribute_Impl= ruleAttribute_Impl EOF )
+            // InternalAutomatedRestTesting.g:1440:2: iv_ruleAttribute_Impl= ruleAttribute_Impl EOF
             {
              newCompositeNode(grammarAccess.getAttribute_ImplRule()); 
             pushFollow(FOLLOW_1);
@@ -3024,7 +3577,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleAttribute_Impl"
-    // InternalAutomatedRestTesting.g:1263:1: ruleAttribute_Impl returns [EObject current=null] : ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) ) ;
+    // InternalAutomatedRestTesting.g:1446:1: ruleAttribute_Impl returns [EObject current=null] : ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) ) ;
     public final EObject ruleAttribute_Impl() throws RecognitionException {
         EObject current = null;
 
@@ -3039,14 +3592,14 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1269:2: ( ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) ) )
-            // InternalAutomatedRestTesting.g:1270:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) )
+            // InternalAutomatedRestTesting.g:1452:2: ( ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) ) )
+            // InternalAutomatedRestTesting.g:1453:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) )
             {
-            // InternalAutomatedRestTesting.g:1270:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) )
-            // InternalAutomatedRestTesting.g:1271:3: () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) )
+            // InternalAutomatedRestTesting.g:1453:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) )
+            // InternalAutomatedRestTesting.g:1454:3: () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) )
             {
-            // InternalAutomatedRestTesting.g:1271:3: ()
-            // InternalAutomatedRestTesting.g:1272:4: 
+            // InternalAutomatedRestTesting.g:1454:3: ()
+            // InternalAutomatedRestTesting.g:1455:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3056,16 +3609,16 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1278:3: ( (lv_type_1_0= ruleAttributeType ) )
-            // InternalAutomatedRestTesting.g:1279:4: (lv_type_1_0= ruleAttributeType )
+            // InternalAutomatedRestTesting.g:1461:3: ( (lv_type_1_0= ruleAttributeType ) )
+            // InternalAutomatedRestTesting.g:1462:4: (lv_type_1_0= ruleAttributeType )
             {
-            // InternalAutomatedRestTesting.g:1279:4: (lv_type_1_0= ruleAttributeType )
-            // InternalAutomatedRestTesting.g:1280:5: lv_type_1_0= ruleAttributeType
+            // InternalAutomatedRestTesting.g:1462:4: (lv_type_1_0= ruleAttributeType )
+            // InternalAutomatedRestTesting.g:1463:5: lv_type_1_0= ruleAttributeType
             {
 
             					newCompositeNode(grammarAccess.getAttribute_ImplAccess().getTypeAttributeTypeEnumRuleCall_1_0());
             				
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_44);
             lv_type_1_0=ruleAttributeType();
 
             state._fsp--;
@@ -3087,22 +3640,22 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1297:3: ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // InternalAutomatedRestTesting.g:1480:3: ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA25_0==RULE_SQUARE_LEFT_BRACKET) ) {
-                alt25=1;
+            if ( (LA27_0==RULE_SQUARE_LEFT_BRACKET) ) {
+                alt27=1;
             }
-            switch (alt25) {
+            switch (alt27) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1298:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET
+                    // InternalAutomatedRestTesting.g:1481:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET
                     {
-                    // InternalAutomatedRestTesting.g:1298:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) )
-                    // InternalAutomatedRestTesting.g:1299:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
+                    // InternalAutomatedRestTesting.g:1481:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) )
+                    // InternalAutomatedRestTesting.g:1482:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
                     {
-                    // InternalAutomatedRestTesting.g:1299:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
-                    // InternalAutomatedRestTesting.g:1300:6: lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET
+                    // InternalAutomatedRestTesting.g:1482:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
+                    // InternalAutomatedRestTesting.g:1483:6: lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET
                     {
                     lv_isArray_2_0=(Token)match(input,RULE_SQUARE_LEFT_BRACKET,FOLLOW_16); 
 
@@ -3134,11 +3687,11 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1321:3: ( (lv_name_4_0= ruleEString ) )
-            // InternalAutomatedRestTesting.g:1322:4: (lv_name_4_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1504:3: ( (lv_name_4_0= ruleEString ) )
+            // InternalAutomatedRestTesting.g:1505:4: (lv_name_4_0= ruleEString )
             {
-            // InternalAutomatedRestTesting.g:1322:4: (lv_name_4_0= ruleEString )
-            // InternalAutomatedRestTesting.g:1323:5: lv_name_4_0= ruleEString
+            // InternalAutomatedRestTesting.g:1505:4: (lv_name_4_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1506:5: lv_name_4_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getAttribute_ImplAccess().getNameEStringParserRuleCall_3_0());
@@ -3188,7 +3741,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleDomainAttribute"
-    // InternalAutomatedRestTesting.g:1344:1: entryRuleDomainAttribute returns [EObject current=null] : iv_ruleDomainAttribute= ruleDomainAttribute EOF ;
+    // InternalAutomatedRestTesting.g:1527:1: entryRuleDomainAttribute returns [EObject current=null] : iv_ruleDomainAttribute= ruleDomainAttribute EOF ;
     public final EObject entryRuleDomainAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -3196,8 +3749,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:1344:56: (iv_ruleDomainAttribute= ruleDomainAttribute EOF )
-            // InternalAutomatedRestTesting.g:1345:2: iv_ruleDomainAttribute= ruleDomainAttribute EOF
+            // InternalAutomatedRestTesting.g:1527:56: (iv_ruleDomainAttribute= ruleDomainAttribute EOF )
+            // InternalAutomatedRestTesting.g:1528:2: iv_ruleDomainAttribute= ruleDomainAttribute EOF
             {
              newCompositeNode(grammarAccess.getDomainAttributeRule()); 
             pushFollow(FOLLOW_1);
@@ -3224,7 +3777,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleDomainAttribute"
-    // InternalAutomatedRestTesting.g:1351:1: ruleDomainAttribute returns [EObject current=null] : ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? ) ;
+    // InternalAutomatedRestTesting.g:1534:1: ruleDomainAttribute returns [EObject current=null] : ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? ) ;
     public final EObject ruleDomainAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -3245,14 +3798,14 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1357:2: ( ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? ) )
-            // InternalAutomatedRestTesting.g:1358:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? )
+            // InternalAutomatedRestTesting.g:1540:2: ( ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? ) )
+            // InternalAutomatedRestTesting.g:1541:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? )
             {
-            // InternalAutomatedRestTesting.g:1358:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? )
-            // InternalAutomatedRestTesting.g:1359:3: () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )?
+            // InternalAutomatedRestTesting.g:1541:2: ( () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )? )
+            // InternalAutomatedRestTesting.g:1542:3: () ( (lv_type_1_0= ruleAttributeType ) ) ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )? ( (lv_name_4_0= ruleEString ) ) (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )?
             {
-            // InternalAutomatedRestTesting.g:1359:3: ()
-            // InternalAutomatedRestTesting.g:1360:4: 
+            // InternalAutomatedRestTesting.g:1542:3: ()
+            // InternalAutomatedRestTesting.g:1543:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3262,16 +3815,16 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1366:3: ( (lv_type_1_0= ruleAttributeType ) )
-            // InternalAutomatedRestTesting.g:1367:4: (lv_type_1_0= ruleAttributeType )
+            // InternalAutomatedRestTesting.g:1549:3: ( (lv_type_1_0= ruleAttributeType ) )
+            // InternalAutomatedRestTesting.g:1550:4: (lv_type_1_0= ruleAttributeType )
             {
-            // InternalAutomatedRestTesting.g:1367:4: (lv_type_1_0= ruleAttributeType )
-            // InternalAutomatedRestTesting.g:1368:5: lv_type_1_0= ruleAttributeType
+            // InternalAutomatedRestTesting.g:1550:4: (lv_type_1_0= ruleAttributeType )
+            // InternalAutomatedRestTesting.g:1551:5: lv_type_1_0= ruleAttributeType
             {
 
             					newCompositeNode(grammarAccess.getDomainAttributeAccess().getTypeAttributeTypeEnumRuleCall_1_0());
             				
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_44);
             lv_type_1_0=ruleAttributeType();
 
             state._fsp--;
@@ -3293,22 +3846,22 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1385:3: ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // InternalAutomatedRestTesting.g:1568:3: ( ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA26_0==RULE_SQUARE_LEFT_BRACKET) ) {
-                alt26=1;
+            if ( (LA28_0==RULE_SQUARE_LEFT_BRACKET) ) {
+                alt28=1;
             }
-            switch (alt26) {
+            switch (alt28) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1386:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET
+                    // InternalAutomatedRestTesting.g:1569:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) ) this_SQUARE_RIGHT_BRACKET_3= RULE_SQUARE_RIGHT_BRACKET
                     {
-                    // InternalAutomatedRestTesting.g:1386:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) )
-                    // InternalAutomatedRestTesting.g:1387:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
+                    // InternalAutomatedRestTesting.g:1569:4: ( (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET ) )
+                    // InternalAutomatedRestTesting.g:1570:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
                     {
-                    // InternalAutomatedRestTesting.g:1387:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
-                    // InternalAutomatedRestTesting.g:1388:6: lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET
+                    // InternalAutomatedRestTesting.g:1570:5: (lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET )
+                    // InternalAutomatedRestTesting.g:1571:6: lv_isArray_2_0= RULE_SQUARE_LEFT_BRACKET
                     {
                     lv_isArray_2_0=(Token)match(input,RULE_SQUARE_LEFT_BRACKET,FOLLOW_16); 
 
@@ -3340,16 +3893,16 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1409:3: ( (lv_name_4_0= ruleEString ) )
-            // InternalAutomatedRestTesting.g:1410:4: (lv_name_4_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1592:3: ( (lv_name_4_0= ruleEString ) )
+            // InternalAutomatedRestTesting.g:1593:4: (lv_name_4_0= ruleEString )
             {
-            // InternalAutomatedRestTesting.g:1410:4: (lv_name_4_0= ruleEString )
-            // InternalAutomatedRestTesting.g:1411:5: lv_name_4_0= ruleEString
+            // InternalAutomatedRestTesting.g:1593:4: (lv_name_4_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1594:5: lv_name_4_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getDomainAttributeAccess().getNameEStringParserRuleCall_3_0());
             				
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_45);
             lv_name_4_0=ruleEString();
 
             state._fsp--;
@@ -3371,39 +3924,39 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalAutomatedRestTesting.g:1428:3: (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // InternalAutomatedRestTesting.g:1611:3: (this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA28_0==RULE_LEFT_PARENTHESIS) ) {
-                alt28=1;
+            if ( (LA30_0==RULE_LEFT_PARENTHESIS) ) {
+                alt30=1;
             }
-            switch (alt28) {
+            switch (alt30) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1429:4: this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS
+                    // InternalAutomatedRestTesting.g:1612:4: this_LEFT_PARENTHESIS_5= RULE_LEFT_PARENTHESIS ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )? ( (lv_restrictions_8_0= ruleRestriction ) ) this_RIGHT_PARENTHESIS_9= RULE_RIGHT_PARENTHESIS
                     {
-                    this_LEFT_PARENTHESIS_5=(Token)match(input,RULE_LEFT_PARENTHESIS,FOLLOW_42); 
+                    this_LEFT_PARENTHESIS_5=(Token)match(input,RULE_LEFT_PARENTHESIS,FOLLOW_46); 
 
                     				newLeafNode(this_LEFT_PARENTHESIS_5, grammarAccess.getDomainAttributeAccess().getLEFT_PARENTHESISTerminalRuleCall_4_0());
                     			
-                    // InternalAutomatedRestTesting.g:1433:4: ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )?
-                    int alt27=2;
-                    int LA27_0 = input.LA(1);
+                    // InternalAutomatedRestTesting.g:1616:4: ( ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA )?
+                    int alt29=2;
+                    int LA29_0 = input.LA(1);
 
-                    if ( (LA27_0==42) ) {
-                        alt27=1;
+                    if ( (LA29_0==42) ) {
+                        alt29=1;
                     }
-                    switch (alt27) {
+                    switch (alt29) {
                         case 1 :
-                            // InternalAutomatedRestTesting.g:1434:5: ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA
+                            // InternalAutomatedRestTesting.g:1617:5: ( (lv_primaryKey_6_0= 'PK' ) ) this_COMMA_7= RULE_COMMA
                             {
-                            // InternalAutomatedRestTesting.g:1434:5: ( (lv_primaryKey_6_0= 'PK' ) )
-                            // InternalAutomatedRestTesting.g:1435:6: (lv_primaryKey_6_0= 'PK' )
+                            // InternalAutomatedRestTesting.g:1617:5: ( (lv_primaryKey_6_0= 'PK' ) )
+                            // InternalAutomatedRestTesting.g:1618:6: (lv_primaryKey_6_0= 'PK' )
                             {
-                            // InternalAutomatedRestTesting.g:1435:6: (lv_primaryKey_6_0= 'PK' )
-                            // InternalAutomatedRestTesting.g:1436:7: lv_primaryKey_6_0= 'PK'
+                            // InternalAutomatedRestTesting.g:1618:6: (lv_primaryKey_6_0= 'PK' )
+                            // InternalAutomatedRestTesting.g:1619:7: lv_primaryKey_6_0= 'PK'
                             {
-                            lv_primaryKey_6_0=(Token)match(input,42,FOLLOW_31); 
+                            lv_primaryKey_6_0=(Token)match(input,42,FOLLOW_35); 
 
                             							newLeafNode(lv_primaryKey_6_0, grammarAccess.getDomainAttributeAccess().getPrimaryKeyPKKeyword_4_1_0_0());
                             						
@@ -3419,7 +3972,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
                             }
 
-                            this_COMMA_7=(Token)match(input,RULE_COMMA,FOLLOW_42); 
+                            this_COMMA_7=(Token)match(input,RULE_COMMA,FOLLOW_46); 
 
                             					newLeafNode(this_COMMA_7, grammarAccess.getDomainAttributeAccess().getCOMMATerminalRuleCall_4_1_1());
                             				
@@ -3429,16 +3982,16 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
                     }
 
-                    // InternalAutomatedRestTesting.g:1453:4: ( (lv_restrictions_8_0= ruleRestriction ) )
-                    // InternalAutomatedRestTesting.g:1454:5: (lv_restrictions_8_0= ruleRestriction )
+                    // InternalAutomatedRestTesting.g:1636:4: ( (lv_restrictions_8_0= ruleRestriction ) )
+                    // InternalAutomatedRestTesting.g:1637:5: (lv_restrictions_8_0= ruleRestriction )
                     {
-                    // InternalAutomatedRestTesting.g:1454:5: (lv_restrictions_8_0= ruleRestriction )
-                    // InternalAutomatedRestTesting.g:1455:6: lv_restrictions_8_0= ruleRestriction
+                    // InternalAutomatedRestTesting.g:1637:5: (lv_restrictions_8_0= ruleRestriction )
+                    // InternalAutomatedRestTesting.g:1638:6: lv_restrictions_8_0= ruleRestriction
                     {
 
                     						newCompositeNode(grammarAccess.getDomainAttributeAccess().getRestrictionsRestrictionParserRuleCall_4_2_0());
                     					
-                    pushFollow(FOLLOW_43);
+                    pushFollow(FOLLOW_47);
                     lv_restrictions_8_0=ruleRestriction();
 
                     state._fsp--;
@@ -3493,7 +4046,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleSimpleEntity"
-    // InternalAutomatedRestTesting.g:1481:1: entryRuleSimpleEntity returns [EObject current=null] : iv_ruleSimpleEntity= ruleSimpleEntity EOF ;
+    // InternalAutomatedRestTesting.g:1664:1: entryRuleSimpleEntity returns [EObject current=null] : iv_ruleSimpleEntity= ruleSimpleEntity EOF ;
     public final EObject entryRuleSimpleEntity() throws RecognitionException {
         EObject current = null;
 
@@ -3501,8 +4054,8 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalAutomatedRestTesting.g:1481:53: (iv_ruleSimpleEntity= ruleSimpleEntity EOF )
-            // InternalAutomatedRestTesting.g:1482:2: iv_ruleSimpleEntity= ruleSimpleEntity EOF
+            // InternalAutomatedRestTesting.g:1664:53: (iv_ruleSimpleEntity= ruleSimpleEntity EOF )
+            // InternalAutomatedRestTesting.g:1665:2: iv_ruleSimpleEntity= ruleSimpleEntity EOF
             {
              newCompositeNode(grammarAccess.getSimpleEntityRule()); 
             pushFollow(FOLLOW_1);
@@ -3529,7 +4082,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleSimpleEntity"
-    // InternalAutomatedRestTesting.g:1488:1: ruleSimpleEntity returns [EObject current=null] : ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) ;
+    // InternalAutomatedRestTesting.g:1671:1: ruleSimpleEntity returns [EObject current=null] : ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) ;
     public final EObject ruleSimpleEntity() throws RecognitionException {
         EObject current = null;
 
@@ -3549,14 +4102,14 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1494:2: ( ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) )
-            // InternalAutomatedRestTesting.g:1495:2: ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1677:2: ( ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET ) )
+            // InternalAutomatedRestTesting.g:1678:2: ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
             {
-            // InternalAutomatedRestTesting.g:1495:2: ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
-            // InternalAutomatedRestTesting.g:1496:3: () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET
+            // InternalAutomatedRestTesting.g:1678:2: ( () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET )
+            // InternalAutomatedRestTesting.g:1679:3: () otherlv_1= 'SimpleEntity' ( (lv_name_2_0= ruleEString ) ) this_LEFT_BRACKET_3= RULE_LEFT_BRACKET ( (lv_entityAttributes_4_0= ruleAttribute ) ) this_SEMICOLON_5= RULE_SEMICOLON ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )* this_RIGHT_BRACKET_8= RULE_RIGHT_BRACKET
             {
-            // InternalAutomatedRestTesting.g:1496:3: ()
-            // InternalAutomatedRestTesting.g:1497:4: 
+            // InternalAutomatedRestTesting.g:1679:3: ()
+            // InternalAutomatedRestTesting.g:1680:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3570,11 +4123,11 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             			newLeafNode(otherlv_1, grammarAccess.getSimpleEntityAccess().getSimpleEntityKeyword_1());
             		
-            // InternalAutomatedRestTesting.g:1507:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalAutomatedRestTesting.g:1508:4: (lv_name_2_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1690:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalAutomatedRestTesting.g:1691:4: (lv_name_2_0= ruleEString )
             {
-            // InternalAutomatedRestTesting.g:1508:4: (lv_name_2_0= ruleEString )
-            // InternalAutomatedRestTesting.g:1509:5: lv_name_2_0= ruleEString
+            // InternalAutomatedRestTesting.g:1691:4: (lv_name_2_0= ruleEString )
+            // InternalAutomatedRestTesting.g:1692:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getSimpleEntityAccess().getNameEStringParserRuleCall_2_0());
@@ -3601,15 +4154,15 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            this_LEFT_BRACKET_3=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_38); 
+            this_LEFT_BRACKET_3=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_42); 
 
             			newLeafNode(this_LEFT_BRACKET_3, grammarAccess.getSimpleEntityAccess().getLEFT_BRACKETTerminalRuleCall_3());
             		
-            // InternalAutomatedRestTesting.g:1530:3: ( (lv_entityAttributes_4_0= ruleAttribute ) )
-            // InternalAutomatedRestTesting.g:1531:4: (lv_entityAttributes_4_0= ruleAttribute )
+            // InternalAutomatedRestTesting.g:1713:3: ( (lv_entityAttributes_4_0= ruleAttribute ) )
+            // InternalAutomatedRestTesting.g:1714:4: (lv_entityAttributes_4_0= ruleAttribute )
             {
-            // InternalAutomatedRestTesting.g:1531:4: (lv_entityAttributes_4_0= ruleAttribute )
-            // InternalAutomatedRestTesting.g:1532:5: lv_entityAttributes_4_0= ruleAttribute
+            // InternalAutomatedRestTesting.g:1714:4: (lv_entityAttributes_4_0= ruleAttribute )
+            // InternalAutomatedRestTesting.g:1715:5: lv_entityAttributes_4_0= ruleAttribute
             {
 
             					newCompositeNode(grammarAccess.getSimpleEntityAccess().getEntityAttributesAttributeParserRuleCall_4_0());
@@ -3636,30 +4189,30 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             }
 
-            this_SEMICOLON_5=(Token)match(input,RULE_SEMICOLON,FOLLOW_39); 
+            this_SEMICOLON_5=(Token)match(input,RULE_SEMICOLON,FOLLOW_43); 
 
             			newLeafNode(this_SEMICOLON_5, grammarAccess.getSimpleEntityAccess().getSEMICOLONTerminalRuleCall_5());
             		
-            // InternalAutomatedRestTesting.g:1553:3: ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )*
-            loop29:
+            // InternalAutomatedRestTesting.g:1736:3: ( ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON )*
+            loop31:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt31=2;
+                int LA31_0 = input.LA(1);
 
-                if ( ((LA29_0>=44 && LA29_0<=48)) ) {
-                    alt29=1;
+                if ( ((LA31_0>=44 && LA31_0<=48)) ) {
+                    alt31=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt31) {
             	case 1 :
-            	    // InternalAutomatedRestTesting.g:1554:4: ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON
+            	    // InternalAutomatedRestTesting.g:1737:4: ( (lv_entityAttributes_6_0= ruleAttribute ) ) this_SEMICOLON_7= RULE_SEMICOLON
             	    {
-            	    // InternalAutomatedRestTesting.g:1554:4: ( (lv_entityAttributes_6_0= ruleAttribute ) )
-            	    // InternalAutomatedRestTesting.g:1555:5: (lv_entityAttributes_6_0= ruleAttribute )
+            	    // InternalAutomatedRestTesting.g:1737:4: ( (lv_entityAttributes_6_0= ruleAttribute ) )
+            	    // InternalAutomatedRestTesting.g:1738:5: (lv_entityAttributes_6_0= ruleAttribute )
             	    {
-            	    // InternalAutomatedRestTesting.g:1555:5: (lv_entityAttributes_6_0= ruleAttribute )
-            	    // InternalAutomatedRestTesting.g:1556:6: lv_entityAttributes_6_0= ruleAttribute
+            	    // InternalAutomatedRestTesting.g:1738:5: (lv_entityAttributes_6_0= ruleAttribute )
+            	    // InternalAutomatedRestTesting.g:1739:6: lv_entityAttributes_6_0= ruleAttribute
             	    {
 
             	    						newCompositeNode(grammarAccess.getSimpleEntityAccess().getEntityAttributesAttributeParserRuleCall_6_0_0());
@@ -3686,7 +4239,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
             	    }
 
-            	    this_SEMICOLON_7=(Token)match(input,RULE_SEMICOLON,FOLLOW_39); 
+            	    this_SEMICOLON_7=(Token)match(input,RULE_SEMICOLON,FOLLOW_43); 
 
             	    				newLeafNode(this_SEMICOLON_7, grammarAccess.getSimpleEntityAccess().getSEMICOLONTerminalRuleCall_6_1());
             	    			
@@ -3695,7 +4248,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop31;
                 }
             } while (true);
 
@@ -3726,7 +4279,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleAttributeType"
-    // InternalAutomatedRestTesting.g:1586:1: ruleAttributeType returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) ) ;
+    // InternalAutomatedRestTesting.g:1769:1: ruleAttributeType returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) ) ;
     public final Enumerator ruleAttributeType() throws RecognitionException {
         Enumerator current = null;
 
@@ -3740,50 +4293,50 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1592:2: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) ) )
-            // InternalAutomatedRestTesting.g:1593:2: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) )
+            // InternalAutomatedRestTesting.g:1775:2: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) ) )
+            // InternalAutomatedRestTesting.g:1776:2: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) )
             {
-            // InternalAutomatedRestTesting.g:1593:2: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) )
-            int alt30=5;
+            // InternalAutomatedRestTesting.g:1776:2: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'boolean' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'double' ) | (enumLiteral_4= 'date' ) )
+            int alt32=5;
             switch ( input.LA(1) ) {
             case 44:
                 {
-                alt30=1;
+                alt32=1;
                 }
                 break;
             case 45:
                 {
-                alt30=2;
+                alt32=2;
                 }
                 break;
             case 46:
                 {
-                alt30=3;
+                alt32=3;
                 }
                 break;
             case 47:
                 {
-                alt30=4;
+                alt32=4;
                 }
                 break;
             case 48:
                 {
-                alt30=5;
+                alt32=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 32, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt30) {
+            switch (alt32) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1594:3: (enumLiteral_0= 'string' )
+                    // InternalAutomatedRestTesting.g:1777:3: (enumLiteral_0= 'string' )
                     {
-                    // InternalAutomatedRestTesting.g:1594:3: (enumLiteral_0= 'string' )
-                    // InternalAutomatedRestTesting.g:1595:4: enumLiteral_0= 'string'
+                    // InternalAutomatedRestTesting.g:1777:3: (enumLiteral_0= 'string' )
+                    // InternalAutomatedRestTesting.g:1778:4: enumLiteral_0= 'string'
                     {
                     enumLiteral_0=(Token)match(input,44,FOLLOW_2); 
 
@@ -3797,10 +4350,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalAutomatedRestTesting.g:1602:3: (enumLiteral_1= 'boolean' )
+                    // InternalAutomatedRestTesting.g:1785:3: (enumLiteral_1= 'boolean' )
                     {
-                    // InternalAutomatedRestTesting.g:1602:3: (enumLiteral_1= 'boolean' )
-                    // InternalAutomatedRestTesting.g:1603:4: enumLiteral_1= 'boolean'
+                    // InternalAutomatedRestTesting.g:1785:3: (enumLiteral_1= 'boolean' )
+                    // InternalAutomatedRestTesting.g:1786:4: enumLiteral_1= 'boolean'
                     {
                     enumLiteral_1=(Token)match(input,45,FOLLOW_2); 
 
@@ -3814,10 +4367,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 3 :
-                    // InternalAutomatedRestTesting.g:1610:3: (enumLiteral_2= 'integer' )
+                    // InternalAutomatedRestTesting.g:1793:3: (enumLiteral_2= 'integer' )
                     {
-                    // InternalAutomatedRestTesting.g:1610:3: (enumLiteral_2= 'integer' )
-                    // InternalAutomatedRestTesting.g:1611:4: enumLiteral_2= 'integer'
+                    // InternalAutomatedRestTesting.g:1793:3: (enumLiteral_2= 'integer' )
+                    // InternalAutomatedRestTesting.g:1794:4: enumLiteral_2= 'integer'
                     {
                     enumLiteral_2=(Token)match(input,46,FOLLOW_2); 
 
@@ -3831,10 +4384,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 4 :
-                    // InternalAutomatedRestTesting.g:1618:3: (enumLiteral_3= 'double' )
+                    // InternalAutomatedRestTesting.g:1801:3: (enumLiteral_3= 'double' )
                     {
-                    // InternalAutomatedRestTesting.g:1618:3: (enumLiteral_3= 'double' )
-                    // InternalAutomatedRestTesting.g:1619:4: enumLiteral_3= 'double'
+                    // InternalAutomatedRestTesting.g:1801:3: (enumLiteral_3= 'double' )
+                    // InternalAutomatedRestTesting.g:1802:4: enumLiteral_3= 'double'
                     {
                     enumLiteral_3=(Token)match(input,47,FOLLOW_2); 
 
@@ -3848,10 +4401,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 5 :
-                    // InternalAutomatedRestTesting.g:1626:3: (enumLiteral_4= 'date' )
+                    // InternalAutomatedRestTesting.g:1809:3: (enumLiteral_4= 'date' )
                     {
-                    // InternalAutomatedRestTesting.g:1626:3: (enumLiteral_4= 'date' )
-                    // InternalAutomatedRestTesting.g:1627:4: enumLiteral_4= 'date'
+                    // InternalAutomatedRestTesting.g:1809:3: (enumLiteral_4= 'date' )
+                    // InternalAutomatedRestTesting.g:1810:4: enumLiteral_4= 'date'
                     {
                     enumLiteral_4=(Token)match(input,48,FOLLOW_2); 
 
@@ -3887,7 +4440,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleRelationalOperator"
-    // InternalAutomatedRestTesting.g:1637:1: ruleRelationalOperator returns [Enumerator current=null] : ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) ;
+    // InternalAutomatedRestTesting.g:1820:1: ruleRelationalOperator returns [Enumerator current=null] : ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) ;
     public final Enumerator ruleRelationalOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -3904,65 +4457,65 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1643:2: ( ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) )
-            // InternalAutomatedRestTesting.g:1644:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
+            // InternalAutomatedRestTesting.g:1826:2: ( ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) )
+            // InternalAutomatedRestTesting.g:1827:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
             {
-            // InternalAutomatedRestTesting.g:1644:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
-            int alt31=8;
+            // InternalAutomatedRestTesting.g:1827:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '!=' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '>' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
+            int alt33=8;
             switch ( input.LA(1) ) {
             case 49:
                 {
-                alt31=1;
+                alt33=1;
                 }
                 break;
             case 50:
                 {
-                alt31=2;
+                alt33=2;
                 }
                 break;
             case 51:
                 {
-                alt31=3;
+                alt33=3;
                 }
                 break;
             case 52:
                 {
-                alt31=4;
+                alt33=4;
                 }
                 break;
             case 53:
                 {
-                alt31=5;
+                alt33=5;
                 }
                 break;
             case 54:
                 {
-                alt31=6;
+                alt33=6;
                 }
                 break;
             case 55:
                 {
-                alt31=7;
+                alt33=7;
                 }
                 break;
             case 56:
                 {
-                alt31=8;
+                alt33=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 33, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt31) {
+            switch (alt33) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1645:3: (enumLiteral_0= '<' )
+                    // InternalAutomatedRestTesting.g:1828:3: (enumLiteral_0= '<' )
                     {
-                    // InternalAutomatedRestTesting.g:1645:3: (enumLiteral_0= '<' )
-                    // InternalAutomatedRestTesting.g:1646:4: enumLiteral_0= '<'
+                    // InternalAutomatedRestTesting.g:1828:3: (enumLiteral_0= '<' )
+                    // InternalAutomatedRestTesting.g:1829:4: enumLiteral_0= '<'
                     {
                     enumLiteral_0=(Token)match(input,49,FOLLOW_2); 
 
@@ -3976,10 +4529,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalAutomatedRestTesting.g:1653:3: (enumLiteral_1= '<=' )
+                    // InternalAutomatedRestTesting.g:1836:3: (enumLiteral_1= '<=' )
                     {
-                    // InternalAutomatedRestTesting.g:1653:3: (enumLiteral_1= '<=' )
-                    // InternalAutomatedRestTesting.g:1654:4: enumLiteral_1= '<='
+                    // InternalAutomatedRestTesting.g:1836:3: (enumLiteral_1= '<=' )
+                    // InternalAutomatedRestTesting.g:1837:4: enumLiteral_1= '<='
                     {
                     enumLiteral_1=(Token)match(input,50,FOLLOW_2); 
 
@@ -3993,10 +4546,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 3 :
-                    // InternalAutomatedRestTesting.g:1661:3: (enumLiteral_2= '==' )
+                    // InternalAutomatedRestTesting.g:1844:3: (enumLiteral_2= '==' )
                     {
-                    // InternalAutomatedRestTesting.g:1661:3: (enumLiteral_2= '==' )
-                    // InternalAutomatedRestTesting.g:1662:4: enumLiteral_2= '=='
+                    // InternalAutomatedRestTesting.g:1844:3: (enumLiteral_2= '==' )
+                    // InternalAutomatedRestTesting.g:1845:4: enumLiteral_2= '=='
                     {
                     enumLiteral_2=(Token)match(input,51,FOLLOW_2); 
 
@@ -4010,10 +4563,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 4 :
-                    // InternalAutomatedRestTesting.g:1669:3: (enumLiteral_3= '!=' )
+                    // InternalAutomatedRestTesting.g:1852:3: (enumLiteral_3= '!=' )
                     {
-                    // InternalAutomatedRestTesting.g:1669:3: (enumLiteral_3= '!=' )
-                    // InternalAutomatedRestTesting.g:1670:4: enumLiteral_3= '!='
+                    // InternalAutomatedRestTesting.g:1852:3: (enumLiteral_3= '!=' )
+                    // InternalAutomatedRestTesting.g:1853:4: enumLiteral_3= '!='
                     {
                     enumLiteral_3=(Token)match(input,52,FOLLOW_2); 
 
@@ -4027,10 +4580,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 5 :
-                    // InternalAutomatedRestTesting.g:1677:3: (enumLiteral_4= '>=' )
+                    // InternalAutomatedRestTesting.g:1860:3: (enumLiteral_4= '>=' )
                     {
-                    // InternalAutomatedRestTesting.g:1677:3: (enumLiteral_4= '>=' )
-                    // InternalAutomatedRestTesting.g:1678:4: enumLiteral_4= '>='
+                    // InternalAutomatedRestTesting.g:1860:3: (enumLiteral_4= '>=' )
+                    // InternalAutomatedRestTesting.g:1861:4: enumLiteral_4= '>='
                     {
                     enumLiteral_4=(Token)match(input,53,FOLLOW_2); 
 
@@ -4044,10 +4597,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 6 :
-                    // InternalAutomatedRestTesting.g:1685:3: (enumLiteral_5= '>' )
+                    // InternalAutomatedRestTesting.g:1868:3: (enumLiteral_5= '>' )
                     {
-                    // InternalAutomatedRestTesting.g:1685:3: (enumLiteral_5= '>' )
-                    // InternalAutomatedRestTesting.g:1686:4: enumLiteral_5= '>'
+                    // InternalAutomatedRestTesting.g:1868:3: (enumLiteral_5= '>' )
+                    // InternalAutomatedRestTesting.g:1869:4: enumLiteral_5= '>'
                     {
                     enumLiteral_5=(Token)match(input,54,FOLLOW_2); 
 
@@ -4061,10 +4614,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 7 :
-                    // InternalAutomatedRestTesting.g:1693:3: (enumLiteral_6= '&&' )
+                    // InternalAutomatedRestTesting.g:1876:3: (enumLiteral_6= '&&' )
                     {
-                    // InternalAutomatedRestTesting.g:1693:3: (enumLiteral_6= '&&' )
-                    // InternalAutomatedRestTesting.g:1694:4: enumLiteral_6= '&&'
+                    // InternalAutomatedRestTesting.g:1876:3: (enumLiteral_6= '&&' )
+                    // InternalAutomatedRestTesting.g:1877:4: enumLiteral_6= '&&'
                     {
                     enumLiteral_6=(Token)match(input,55,FOLLOW_2); 
 
@@ -4078,10 +4631,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 8 :
-                    // InternalAutomatedRestTesting.g:1701:3: (enumLiteral_7= '||' )
+                    // InternalAutomatedRestTesting.g:1884:3: (enumLiteral_7= '||' )
                     {
-                    // InternalAutomatedRestTesting.g:1701:3: (enumLiteral_7= '||' )
-                    // InternalAutomatedRestTesting.g:1702:4: enumLiteral_7= '||'
+                    // InternalAutomatedRestTesting.g:1884:3: (enumLiteral_7= '||' )
+                    // InternalAutomatedRestTesting.g:1885:4: enumLiteral_7= '||'
                     {
                     enumLiteral_7=(Token)match(input,56,FOLLOW_2); 
 
@@ -4117,7 +4670,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleMethodType"
-    // InternalAutomatedRestTesting.g:1712:1: ruleMethodType returns [Enumerator current=null] : ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) ;
+    // InternalAutomatedRestTesting.g:1895:1: ruleMethodType returns [Enumerator current=null] : ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) ;
     public final Enumerator ruleMethodType() throws RecognitionException {
         Enumerator current = null;
 
@@ -4130,45 +4683,45 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1718:2: ( ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) )
-            // InternalAutomatedRestTesting.g:1719:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
+            // InternalAutomatedRestTesting.g:1901:2: ( ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) )
+            // InternalAutomatedRestTesting.g:1902:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
             {
-            // InternalAutomatedRestTesting.g:1719:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
-            int alt32=4;
+            // InternalAutomatedRestTesting.g:1902:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
+            int alt34=4;
             switch ( input.LA(1) ) {
             case 57:
                 {
-                alt32=1;
+                alt34=1;
                 }
                 break;
             case 58:
                 {
-                alt32=2;
+                alt34=2;
                 }
                 break;
             case 59:
                 {
-                alt32=3;
+                alt34=3;
                 }
                 break;
             case 60:
                 {
-                alt32=4;
+                alt34=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 34, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt32) {
+            switch (alt34) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1720:3: (enumLiteral_0= 'GET' )
+                    // InternalAutomatedRestTesting.g:1903:3: (enumLiteral_0= 'GET' )
                     {
-                    // InternalAutomatedRestTesting.g:1720:3: (enumLiteral_0= 'GET' )
-                    // InternalAutomatedRestTesting.g:1721:4: enumLiteral_0= 'GET'
+                    // InternalAutomatedRestTesting.g:1903:3: (enumLiteral_0= 'GET' )
+                    // InternalAutomatedRestTesting.g:1904:4: enumLiteral_0= 'GET'
                     {
                     enumLiteral_0=(Token)match(input,57,FOLLOW_2); 
 
@@ -4182,10 +4735,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalAutomatedRestTesting.g:1728:3: (enumLiteral_1= 'POST' )
+                    // InternalAutomatedRestTesting.g:1911:3: (enumLiteral_1= 'POST' )
                     {
-                    // InternalAutomatedRestTesting.g:1728:3: (enumLiteral_1= 'POST' )
-                    // InternalAutomatedRestTesting.g:1729:4: enumLiteral_1= 'POST'
+                    // InternalAutomatedRestTesting.g:1911:3: (enumLiteral_1= 'POST' )
+                    // InternalAutomatedRestTesting.g:1912:4: enumLiteral_1= 'POST'
                     {
                     enumLiteral_1=(Token)match(input,58,FOLLOW_2); 
 
@@ -4199,10 +4752,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 3 :
-                    // InternalAutomatedRestTesting.g:1736:3: (enumLiteral_2= 'PUT' )
+                    // InternalAutomatedRestTesting.g:1919:3: (enumLiteral_2= 'PUT' )
                     {
-                    // InternalAutomatedRestTesting.g:1736:3: (enumLiteral_2= 'PUT' )
-                    // InternalAutomatedRestTesting.g:1737:4: enumLiteral_2= 'PUT'
+                    // InternalAutomatedRestTesting.g:1919:3: (enumLiteral_2= 'PUT' )
+                    // InternalAutomatedRestTesting.g:1920:4: enumLiteral_2= 'PUT'
                     {
                     enumLiteral_2=(Token)match(input,59,FOLLOW_2); 
 
@@ -4216,10 +4769,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 4 :
-                    // InternalAutomatedRestTesting.g:1744:3: (enumLiteral_3= 'DELETE' )
+                    // InternalAutomatedRestTesting.g:1927:3: (enumLiteral_3= 'DELETE' )
                     {
-                    // InternalAutomatedRestTesting.g:1744:3: (enumLiteral_3= 'DELETE' )
-                    // InternalAutomatedRestTesting.g:1745:4: enumLiteral_3= 'DELETE'
+                    // InternalAutomatedRestTesting.g:1927:3: (enumLiteral_3= 'DELETE' )
+                    // InternalAutomatedRestTesting.g:1928:4: enumLiteral_3= 'DELETE'
                     {
                     enumLiteral_3=(Token)match(input,60,FOLLOW_2); 
 
@@ -4255,7 +4808,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleMockTypes"
-    // InternalAutomatedRestTesting.g:1755:1: ruleMockTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) ) ;
+    // InternalAutomatedRestTesting.g:1938:1: ruleMockTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) ) ;
     public final Enumerator ruleMockTypes() throws RecognitionException {
         Enumerator current = null;
 
@@ -4277,90 +4830,90 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
         	enterRule();
 
         try {
-            // InternalAutomatedRestTesting.g:1761:2: ( ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) ) )
-            // InternalAutomatedRestTesting.g:1762:2: ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) )
+            // InternalAutomatedRestTesting.g:1944:2: ( ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) ) )
+            // InternalAutomatedRestTesting.g:1945:2: ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) )
             {
-            // InternalAutomatedRestTesting.g:1762:2: ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) )
-            int alt33=13;
+            // InternalAutomatedRestTesting.g:1945:2: ( (enumLiteral_0= 'FirstNameType' ) | (enumLiteral_1= 'FirstNameMaleType' ) | (enumLiteral_2= 'FirstNameFemaleType' ) | (enumLiteral_3= 'LastNameType' ) | (enumLiteral_4= 'FamilyNameType' ) | (enumLiteral_5= 'FullNameType' ) | (enumLiteral_6= 'GenderType' ) | (enumLiteral_7= 'EmailAddressType' ) | (enumLiteral_8= 'PhoneType' ) | (enumLiteral_9= 'CountryType' ) | (enumLiteral_10= 'CountryCodeType' ) | (enumLiteral_11= 'CityType' ) | (enumLiteral_12= 'RowNumberType' ) )
+            int alt35=13;
             switch ( input.LA(1) ) {
             case 61:
                 {
-                alt33=1;
+                alt35=1;
                 }
                 break;
             case 62:
                 {
-                alt33=2;
+                alt35=2;
                 }
                 break;
             case 63:
                 {
-                alt33=3;
+                alt35=3;
                 }
                 break;
             case 64:
                 {
-                alt33=4;
+                alt35=4;
                 }
                 break;
             case 65:
                 {
-                alt33=5;
+                alt35=5;
                 }
                 break;
             case 66:
                 {
-                alt33=6;
+                alt35=6;
                 }
                 break;
             case 67:
                 {
-                alt33=7;
+                alt35=7;
                 }
                 break;
             case 68:
                 {
-                alt33=8;
+                alt35=8;
                 }
                 break;
             case 69:
                 {
-                alt33=9;
+                alt35=9;
                 }
                 break;
             case 70:
                 {
-                alt33=10;
+                alt35=10;
                 }
                 break;
             case 71:
                 {
-                alt33=11;
+                alt35=11;
                 }
                 break;
             case 72:
                 {
-                alt33=12;
+                alt35=12;
                 }
                 break;
             case 73:
                 {
-                alt33=13;
+                alt35=13;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 35, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt33) {
+            switch (alt35) {
                 case 1 :
-                    // InternalAutomatedRestTesting.g:1763:3: (enumLiteral_0= 'FirstNameType' )
+                    // InternalAutomatedRestTesting.g:1946:3: (enumLiteral_0= 'FirstNameType' )
                     {
-                    // InternalAutomatedRestTesting.g:1763:3: (enumLiteral_0= 'FirstNameType' )
-                    // InternalAutomatedRestTesting.g:1764:4: enumLiteral_0= 'FirstNameType'
+                    // InternalAutomatedRestTesting.g:1946:3: (enumLiteral_0= 'FirstNameType' )
+                    // InternalAutomatedRestTesting.g:1947:4: enumLiteral_0= 'FirstNameType'
                     {
                     enumLiteral_0=(Token)match(input,61,FOLLOW_2); 
 
@@ -4374,10 +4927,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalAutomatedRestTesting.g:1771:3: (enumLiteral_1= 'FirstNameMaleType' )
+                    // InternalAutomatedRestTesting.g:1954:3: (enumLiteral_1= 'FirstNameMaleType' )
                     {
-                    // InternalAutomatedRestTesting.g:1771:3: (enumLiteral_1= 'FirstNameMaleType' )
-                    // InternalAutomatedRestTesting.g:1772:4: enumLiteral_1= 'FirstNameMaleType'
+                    // InternalAutomatedRestTesting.g:1954:3: (enumLiteral_1= 'FirstNameMaleType' )
+                    // InternalAutomatedRestTesting.g:1955:4: enumLiteral_1= 'FirstNameMaleType'
                     {
                     enumLiteral_1=(Token)match(input,62,FOLLOW_2); 
 
@@ -4391,10 +4944,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 3 :
-                    // InternalAutomatedRestTesting.g:1779:3: (enumLiteral_2= 'FirstNameFemaleType' )
+                    // InternalAutomatedRestTesting.g:1962:3: (enumLiteral_2= 'FirstNameFemaleType' )
                     {
-                    // InternalAutomatedRestTesting.g:1779:3: (enumLiteral_2= 'FirstNameFemaleType' )
-                    // InternalAutomatedRestTesting.g:1780:4: enumLiteral_2= 'FirstNameFemaleType'
+                    // InternalAutomatedRestTesting.g:1962:3: (enumLiteral_2= 'FirstNameFemaleType' )
+                    // InternalAutomatedRestTesting.g:1963:4: enumLiteral_2= 'FirstNameFemaleType'
                     {
                     enumLiteral_2=(Token)match(input,63,FOLLOW_2); 
 
@@ -4408,10 +4961,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 4 :
-                    // InternalAutomatedRestTesting.g:1787:3: (enumLiteral_3= 'LastNameType' )
+                    // InternalAutomatedRestTesting.g:1970:3: (enumLiteral_3= 'LastNameType' )
                     {
-                    // InternalAutomatedRestTesting.g:1787:3: (enumLiteral_3= 'LastNameType' )
-                    // InternalAutomatedRestTesting.g:1788:4: enumLiteral_3= 'LastNameType'
+                    // InternalAutomatedRestTesting.g:1970:3: (enumLiteral_3= 'LastNameType' )
+                    // InternalAutomatedRestTesting.g:1971:4: enumLiteral_3= 'LastNameType'
                     {
                     enumLiteral_3=(Token)match(input,64,FOLLOW_2); 
 
@@ -4425,10 +4978,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 5 :
-                    // InternalAutomatedRestTesting.g:1795:3: (enumLiteral_4= 'FamilyNameType' )
+                    // InternalAutomatedRestTesting.g:1978:3: (enumLiteral_4= 'FamilyNameType' )
                     {
-                    // InternalAutomatedRestTesting.g:1795:3: (enumLiteral_4= 'FamilyNameType' )
-                    // InternalAutomatedRestTesting.g:1796:4: enumLiteral_4= 'FamilyNameType'
+                    // InternalAutomatedRestTesting.g:1978:3: (enumLiteral_4= 'FamilyNameType' )
+                    // InternalAutomatedRestTesting.g:1979:4: enumLiteral_4= 'FamilyNameType'
                     {
                     enumLiteral_4=(Token)match(input,65,FOLLOW_2); 
 
@@ -4442,10 +4995,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 6 :
-                    // InternalAutomatedRestTesting.g:1803:3: (enumLiteral_5= 'FullNameType' )
+                    // InternalAutomatedRestTesting.g:1986:3: (enumLiteral_5= 'FullNameType' )
                     {
-                    // InternalAutomatedRestTesting.g:1803:3: (enumLiteral_5= 'FullNameType' )
-                    // InternalAutomatedRestTesting.g:1804:4: enumLiteral_5= 'FullNameType'
+                    // InternalAutomatedRestTesting.g:1986:3: (enumLiteral_5= 'FullNameType' )
+                    // InternalAutomatedRestTesting.g:1987:4: enumLiteral_5= 'FullNameType'
                     {
                     enumLiteral_5=(Token)match(input,66,FOLLOW_2); 
 
@@ -4459,10 +5012,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 7 :
-                    // InternalAutomatedRestTesting.g:1811:3: (enumLiteral_6= 'GenderType' )
+                    // InternalAutomatedRestTesting.g:1994:3: (enumLiteral_6= 'GenderType' )
                     {
-                    // InternalAutomatedRestTesting.g:1811:3: (enumLiteral_6= 'GenderType' )
-                    // InternalAutomatedRestTesting.g:1812:4: enumLiteral_6= 'GenderType'
+                    // InternalAutomatedRestTesting.g:1994:3: (enumLiteral_6= 'GenderType' )
+                    // InternalAutomatedRestTesting.g:1995:4: enumLiteral_6= 'GenderType'
                     {
                     enumLiteral_6=(Token)match(input,67,FOLLOW_2); 
 
@@ -4476,10 +5029,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 8 :
-                    // InternalAutomatedRestTesting.g:1819:3: (enumLiteral_7= 'EmailAddressType' )
+                    // InternalAutomatedRestTesting.g:2002:3: (enumLiteral_7= 'EmailAddressType' )
                     {
-                    // InternalAutomatedRestTesting.g:1819:3: (enumLiteral_7= 'EmailAddressType' )
-                    // InternalAutomatedRestTesting.g:1820:4: enumLiteral_7= 'EmailAddressType'
+                    // InternalAutomatedRestTesting.g:2002:3: (enumLiteral_7= 'EmailAddressType' )
+                    // InternalAutomatedRestTesting.g:2003:4: enumLiteral_7= 'EmailAddressType'
                     {
                     enumLiteral_7=(Token)match(input,68,FOLLOW_2); 
 
@@ -4493,10 +5046,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 9 :
-                    // InternalAutomatedRestTesting.g:1827:3: (enumLiteral_8= 'PhoneType' )
+                    // InternalAutomatedRestTesting.g:2010:3: (enumLiteral_8= 'PhoneType' )
                     {
-                    // InternalAutomatedRestTesting.g:1827:3: (enumLiteral_8= 'PhoneType' )
-                    // InternalAutomatedRestTesting.g:1828:4: enumLiteral_8= 'PhoneType'
+                    // InternalAutomatedRestTesting.g:2010:3: (enumLiteral_8= 'PhoneType' )
+                    // InternalAutomatedRestTesting.g:2011:4: enumLiteral_8= 'PhoneType'
                     {
                     enumLiteral_8=(Token)match(input,69,FOLLOW_2); 
 
@@ -4510,10 +5063,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 10 :
-                    // InternalAutomatedRestTesting.g:1835:3: (enumLiteral_9= 'CountryType' )
+                    // InternalAutomatedRestTesting.g:2018:3: (enumLiteral_9= 'CountryType' )
                     {
-                    // InternalAutomatedRestTesting.g:1835:3: (enumLiteral_9= 'CountryType' )
-                    // InternalAutomatedRestTesting.g:1836:4: enumLiteral_9= 'CountryType'
+                    // InternalAutomatedRestTesting.g:2018:3: (enumLiteral_9= 'CountryType' )
+                    // InternalAutomatedRestTesting.g:2019:4: enumLiteral_9= 'CountryType'
                     {
                     enumLiteral_9=(Token)match(input,70,FOLLOW_2); 
 
@@ -4527,10 +5080,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 11 :
-                    // InternalAutomatedRestTesting.g:1843:3: (enumLiteral_10= 'CountryCodeType' )
+                    // InternalAutomatedRestTesting.g:2026:3: (enumLiteral_10= 'CountryCodeType' )
                     {
-                    // InternalAutomatedRestTesting.g:1843:3: (enumLiteral_10= 'CountryCodeType' )
-                    // InternalAutomatedRestTesting.g:1844:4: enumLiteral_10= 'CountryCodeType'
+                    // InternalAutomatedRestTesting.g:2026:3: (enumLiteral_10= 'CountryCodeType' )
+                    // InternalAutomatedRestTesting.g:2027:4: enumLiteral_10= 'CountryCodeType'
                     {
                     enumLiteral_10=(Token)match(input,71,FOLLOW_2); 
 
@@ -4544,10 +5097,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 12 :
-                    // InternalAutomatedRestTesting.g:1851:3: (enumLiteral_11= 'CityType' )
+                    // InternalAutomatedRestTesting.g:2034:3: (enumLiteral_11= 'CityType' )
                     {
-                    // InternalAutomatedRestTesting.g:1851:3: (enumLiteral_11= 'CityType' )
-                    // InternalAutomatedRestTesting.g:1852:4: enumLiteral_11= 'CityType'
+                    // InternalAutomatedRestTesting.g:2034:3: (enumLiteral_11= 'CityType' )
+                    // InternalAutomatedRestTesting.g:2035:4: enumLiteral_11= 'CityType'
                     {
                     enumLiteral_11=(Token)match(input,72,FOLLOW_2); 
 
@@ -4561,10 +5114,10 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 13 :
-                    // InternalAutomatedRestTesting.g:1859:3: (enumLiteral_12= 'RowNumberType' )
+                    // InternalAutomatedRestTesting.g:2042:3: (enumLiteral_12= 'RowNumberType' )
                     {
-                    // InternalAutomatedRestTesting.g:1859:3: (enumLiteral_12= 'RowNumberType' )
-                    // InternalAutomatedRestTesting.g:1860:4: enumLiteral_12= 'RowNumberType'
+                    // InternalAutomatedRestTesting.g:2042:3: (enumLiteral_12= 'RowNumberType' )
+                    // InternalAutomatedRestTesting.g:2043:4: enumLiteral_12= 'RowNumberType'
                     {
                     enumLiteral_12=(Token)match(input,73,FOLLOW_2); 
 
@@ -4614,7 +5167,7 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000020220L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000040220L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000050000000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000420L});
@@ -4625,26 +5178,30 @@ public class InternalAutomatedRestTestingParser extends AbstractInternalAntlrPar
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000E00000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000C00000000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000002800L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000900L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000001000000000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000001000001000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x01FE00000000C0C0L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x00000020000000C2L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x00000080000000C0L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x01FE000000006080L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000000006080L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x000000200000E0C2L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x000000200000E0C0L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000002000000000L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0xE000000000000000L,0x00000000000003FFL});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0001F00000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0001F00000001000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x00000000000004C0L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000050000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x000000A00000E0C0L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0xE000000000000000L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0001F00000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0001F00000001000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x00000000000004C0L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000050000000000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000200000L});
 
 }

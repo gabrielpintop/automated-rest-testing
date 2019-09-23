@@ -5,11 +5,14 @@ package automatedresttesting.impl;
 import automatedresttesting.AttributeType;
 import automatedresttesting.AutomatedresttestingPackage;
 import automatedresttesting.Expression;
+import automatedresttesting.Literal;
 import automatedresttesting.RelationalOperator;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -23,8 +26,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.ExpressionImpl#getType <em>Type</em>}</li>
- *   <li>{@link automatedresttesting.impl.ExpressionImpl#getExpectedValue <em>Expected Value</em>}</li>
  *   <li>{@link automatedresttesting.impl.ExpressionImpl#getRelationalOperator <em>Relational Operator</em>}</li>
+ *   <li>{@link automatedresttesting.impl.ExpressionImpl#getExpectedValue <em>Expected Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,26 +63,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	protected boolean typeESet;
 
 	/**
-	 * The default value of the '{@link #getExpectedValue() <em>Expected Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpectedValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EXPECTED_VALUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getExpectedValue() <em>Expected Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpectedValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected String expectedValue = EXPECTED_VALUE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getRelationalOperator() <em>Relational Operator</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,6 +81,16 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * @ordered
 	 */
 	protected RelationalOperator relationalOperator = RELATIONAL_OPERATOR_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getExpectedValue() <em>Expected Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpectedValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected Literal expectedValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,27 +162,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getExpectedValue() {
-		return expectedValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExpectedValue(String newExpectedValue) {
-		String oldExpectedValue = expectedValue;
-		expectedValue = newExpectedValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE, oldExpectedValue, expectedValue));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RelationalOperator getRelationalOperator() {
 		return relationalOperator;
 	}
@@ -211,15 +183,72 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Literal getExpectedValue() {
+		return expectedValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExpectedValue(Literal newExpectedValue, NotificationChain msgs) {
+		Literal oldExpectedValue = expectedValue;
+		expectedValue = newExpectedValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE, oldExpectedValue, newExpectedValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpectedValue(Literal newExpectedValue) {
+		if (newExpectedValue != expectedValue) {
+			NotificationChain msgs = null;
+			if (expectedValue != null)
+				msgs = ((InternalEObject)expectedValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE, null, msgs);
+			if (newExpectedValue != null)
+				msgs = ((InternalEObject)newExpectedValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE, null, msgs);
+			msgs = basicSetExpectedValue(newExpectedValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE, newExpectedValue, newExpectedValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
+				return basicSetExpectedValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AutomatedresttestingPackage.EXPRESSION__TYPE:
 				return getType();
-			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
-				return getExpectedValue();
 			case AutomatedresttestingPackage.EXPRESSION__RELATIONAL_OPERATOR:
 				return getRelationalOperator();
+			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
+				return getExpectedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -235,11 +264,11 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 			case AutomatedresttestingPackage.EXPRESSION__TYPE:
 				setType((AttributeType)newValue);
 				return;
-			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
-				setExpectedValue((String)newValue);
-				return;
 			case AutomatedresttestingPackage.EXPRESSION__RELATIONAL_OPERATOR:
 				setRelationalOperator((RelationalOperator)newValue);
+				return;
+			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
+				setExpectedValue((Literal)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -256,11 +285,11 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 			case AutomatedresttestingPackage.EXPRESSION__TYPE:
 				unsetType();
 				return;
-			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
-				setExpectedValue(EXPECTED_VALUE_EDEFAULT);
-				return;
 			case AutomatedresttestingPackage.EXPRESSION__RELATIONAL_OPERATOR:
 				setRelationalOperator(RELATIONAL_OPERATOR_EDEFAULT);
+				return;
+			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
+				setExpectedValue((Literal)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -276,10 +305,10 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 		switch (featureID) {
 			case AutomatedresttestingPackage.EXPRESSION__TYPE:
 				return isSetType();
-			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
-				return EXPECTED_VALUE_EDEFAULT == null ? expectedValue != null : !EXPECTED_VALUE_EDEFAULT.equals(expectedValue);
 			case AutomatedresttestingPackage.EXPRESSION__RELATIONAL_OPERATOR:
 				return relationalOperator != RELATIONAL_OPERATOR_EDEFAULT;
+			case AutomatedresttestingPackage.EXPRESSION__EXPECTED_VALUE:
+				return expectedValue != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -296,8 +325,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		if (typeESet) result.append(type); else result.append("<unset>");
-		result.append(", expectedValue: ");
-		result.append(expectedValue);
 		result.append(", relationalOperator: ");
 		result.append(relationalOperator);
 		result.append(')');

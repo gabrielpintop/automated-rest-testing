@@ -130,6 +130,33 @@ public interface AutomatedresttestingFactory extends EFactory {
 	MappingElement createMappingElement();
 
 	/**
+	 * Returns a new object of class '<em>String Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String Literal</em>'.
+	 * @generated
+	 */
+	StringLiteral createStringLiteral();
+
+	/**
+	 * Returns a new object of class '<em>Element Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element Literal</em>'.
+	 * @generated
+	 */
+	ElementLiteral createElementLiteral();
+
+	/**
+	 * Returns a new object of class '<em>Integer Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Integer Literal</em>'.
+	 * @generated
+	 */
+	IntegerLiteral createIntegerLiteral();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
