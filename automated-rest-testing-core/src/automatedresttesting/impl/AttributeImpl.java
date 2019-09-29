@@ -28,12 +28,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.AttributeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link automatedresttesting.impl.AttributeImpl#getRestrictions <em>Restrictions</em>}</li>
  *   <li>{@link automatedresttesting.impl.AttributeImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -298,7 +298,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(", type: ");

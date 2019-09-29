@@ -671,13 +671,31 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int TEST__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Service</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST__SERVICE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Mappings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST__MAPPINGS = 4;
+
+	/**
 	 * The number of structural features of the '<em>Test</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_FEATURE_COUNT = 3;
+	int TEST_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Test</em>' class.
@@ -708,22 +726,22 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int EXPRESSION__TYPE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Expected Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION__EXPECTED_VALUE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Relational Operator</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION__RELATIONAL_OPERATOR = 2;
+	int EXPRESSION__RELATIONAL_OPERATOR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Expected Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__EXPECTED_VALUE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
@@ -799,6 +817,191 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int SIMPLE_ENTITY_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.MappingElementImpl <em>Mapping Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.MappingElementImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMappingElement()
+	 * @generated
+	 */
+	int MAPPING_ELEMENT = 12;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT__PARAMETER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Mapping Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Mapping Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.LiteralImpl <em>Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.LiteralImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getLiteral()
+	 * @generated
+	 */
+	int LITERAL = 13;
+
+	/**
+	 * The number of structural features of the '<em>Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.StringLiteralImpl <em>String Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.StringLiteralImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getStringLiteral()
+	 * @generated
+	 */
+	int STRING_LITERAL = 14;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>String Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>String Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.ElementLiteralImpl <em>Element Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.ElementLiteralImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getElementLiteral()
+	 * @generated
+	 */
+	int ELEMENT_LITERAL = 15;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Element Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Element Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.IntegerLiteralImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getIntegerLiteral()
+	 * @generated
+	 */
+	int INTEGER_LITERAL = 16;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Integer Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Integer Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -806,7 +1009,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getAttributeType()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPE = 12;
+	int ATTRIBUTE_TYPE = 17;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.MockTypes <em>Mock Types</em>}' enum.
@@ -816,7 +1019,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMockTypes()
 	 * @generated
 	 */
-	int MOCK_TYPES = 13;
+	int MOCK_TYPES = 18;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.MethodType <em>Method Type</em>}' enum.
@@ -826,7 +1029,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMethodType()
 	 * @generated
 	 */
-	int METHOD_TYPE = 14;
+	int METHOD_TYPE = 19;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.ParameterType <em>Parameter Type</em>}' enum.
@@ -836,7 +1039,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 15;
+	int PARAMETER_TYPE = 20;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.RelationalOperator <em>Relational Operator</em>}' enum.
@@ -846,7 +1049,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getRelationalOperator()
 	 * @generated
 	 */
-	int RELATIONAL_OPERATOR = 16;
+	int RELATIONAL_OPERATOR = 21;
 
 
 	/**
@@ -1193,6 +1396,28 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EAttribute getTest_Name();
 
 	/**
+	 * Returns the meta object for the reference '{@link automatedresttesting.Test#getService <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Service</em>'.
+	 * @see automatedresttesting.Test#getService()
+	 * @see #getTest()
+	 * @generated
+	 */
+	EReference getTest_Service();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link automatedresttesting.Test#getMappings <em>Mappings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Mappings</em>'.
+	 * @see automatedresttesting.Test#getMappings()
+	 * @see #getTest()
+	 * @generated
+	 */
+	EReference getTest_Mappings();
+
+	/**
 	 * Returns the meta object for class '{@link automatedresttesting.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1246,17 +1471,6 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EAttribute getExpression_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link automatedresttesting.Expression#getExpectedValue <em>Expected Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Expected Value</em>'.
-	 * @see automatedresttesting.Expression#getExpectedValue()
-	 * @see #getExpression()
-	 * @generated
-	 */
-	EAttribute getExpression_ExpectedValue();
-
-	/**
 	 * Returns the meta object for the attribute '{@link automatedresttesting.Expression#getRelationalOperator <em>Relational Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1266,6 +1480,17 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExpression_RelationalOperator();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link automatedresttesting.Expression#getExpectedValue <em>Expected Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expected Value</em>'.
+	 * @see automatedresttesting.Expression#getExpectedValue()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EReference getExpression_ExpectedValue();
 
 	/**
 	 * Returns the meta object for class '{@link automatedresttesting.SimpleEntity <em>Simple Entity</em>}'.
@@ -1287,6 +1512,111 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSimpleEntity_EntityAttributes();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.MappingElement <em>Mapping Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mapping Element</em>'.
+	 * @see automatedresttesting.MappingElement
+	 * @generated
+	 */
+	EClass getMappingElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link automatedresttesting.MappingElement#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parameter</em>'.
+	 * @see automatedresttesting.MappingElement#getParameter()
+	 * @see #getMappingElement()
+	 * @generated
+	 */
+	EReference getMappingElement_Parameter();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link automatedresttesting.MappingElement#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see automatedresttesting.MappingElement#getValue()
+	 * @see #getMappingElement()
+	 * @generated
+	 */
+	EReference getMappingElement_Value();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.Literal <em>Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Literal</em>'.
+	 * @see automatedresttesting.Literal
+	 * @generated
+	 */
+	EClass getLiteral();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.StringLiteral <em>String Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String Literal</em>'.
+	 * @see automatedresttesting.StringLiteral
+	 * @generated
+	 */
+	EClass getStringLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link automatedresttesting.StringLiteral#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see automatedresttesting.StringLiteral#getValue()
+	 * @see #getStringLiteral()
+	 * @generated
+	 */
+	EAttribute getStringLiteral_Value();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.ElementLiteral <em>Element Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element Literal</em>'.
+	 * @see automatedresttesting.ElementLiteral
+	 * @generated
+	 */
+	EClass getElementLiteral();
+
+	/**
+	 * Returns the meta object for the reference '{@link automatedresttesting.ElementLiteral#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see automatedresttesting.ElementLiteral#getValue()
+	 * @see #getElementLiteral()
+	 * @generated
+	 */
+	EReference getElementLiteral_Value();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.IntegerLiteral <em>Integer Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Integer Literal</em>'.
+	 * @see automatedresttesting.IntegerLiteral
+	 * @generated
+	 */
+	EClass getIntegerLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link automatedresttesting.IntegerLiteral#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see automatedresttesting.IntegerLiteral#getValue()
+	 * @see #getIntegerLiteral()
+	 * @generated
+	 */
+	EAttribute getIntegerLiteral_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}'.
@@ -1636,6 +1966,22 @@ public interface AutomatedresttestingPackage extends EPackage {
 		EAttribute TEST__NAME = eINSTANCE.getTest_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Service</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEST__SERVICE = eINSTANCE.getTest_Service();
+
+		/**
+		 * The meta object literal for the '<em><b>Mappings</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEST__MAPPINGS = eINSTANCE.getTest_Mappings();
+
+		/**
 		 * The meta object literal for the '{@link automatedresttesting.impl.ElementImpl <em>Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1680,20 +2026,20 @@ public interface AutomatedresttestingPackage extends EPackage {
 		EAttribute EXPRESSION__TYPE = eINSTANCE.getExpression_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Expected Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXPRESSION__EXPECTED_VALUE = eINSTANCE.getExpression_ExpectedValue();
-
-		/**
 		 * The meta object literal for the '<em><b>Relational Operator</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute EXPRESSION__RELATIONAL_OPERATOR = eINSTANCE.getExpression_RelationalOperator();
+
+		/**
+		 * The meta object literal for the '<em><b>Expected Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION__EXPECTED_VALUE = eINSTANCE.getExpression_ExpectedValue();
 
 		/**
 		 * The meta object literal for the '{@link automatedresttesting.impl.SimpleEntityImpl <em>Simple Entity</em>}' class.
@@ -1712,6 +2058,96 @@ public interface AutomatedresttestingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_ENTITY__ENTITY_ATTRIBUTES = eINSTANCE.getSimpleEntity_EntityAttributes();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.MappingElementImpl <em>Mapping Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.MappingElementImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMappingElement()
+		 * @generated
+		 */
+		EClass MAPPING_ELEMENT = eINSTANCE.getMappingElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAPPING_ELEMENT__PARAMETER = eINSTANCE.getMappingElement_Parameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAPPING_ELEMENT__VALUE = eINSTANCE.getMappingElement_Value();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.LiteralImpl <em>Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.LiteralImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getLiteral()
+		 * @generated
+		 */
+		EClass LITERAL = eINSTANCE.getLiteral();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.StringLiteralImpl <em>String Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.StringLiteralImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getStringLiteral()
+		 * @generated
+		 */
+		EClass STRING_LITERAL = eINSTANCE.getStringLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_LITERAL__VALUE = eINSTANCE.getStringLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.ElementLiteralImpl <em>Element Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.ElementLiteralImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getElementLiteral()
+		 * @generated
+		 */
+		EClass ELEMENT_LITERAL = eINSTANCE.getElementLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT_LITERAL__VALUE = eINSTANCE.getElementLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.IntegerLiteralImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getIntegerLiteral()
+		 * @generated
+		 */
+		EClass INTEGER_LITERAL = eINSTANCE.getIntegerLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_LITERAL__VALUE = eINSTANCE.getIntegerLiteral_Value();
 
 		/**
 		 * The meta object literal for the '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}' enum.

@@ -47,7 +47,7 @@ public class AutomatedresttestingSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -142,6 +142,39 @@ public class AutomatedresttestingSwitch<T> extends Switch<T> {
 				SimpleEntity simpleEntity = (SimpleEntity)theEObject;
 				T result = caseSimpleEntity(simpleEntity);
 				if (result == null) result = caseElement(simpleEntity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.MAPPING_ELEMENT: {
+				MappingElement mappingElement = (MappingElement)theEObject;
+				T result = caseMappingElement(mappingElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.LITERAL: {
+				Literal literal = (Literal)theEObject;
+				T result = caseLiteral(literal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.STRING_LITERAL: {
+				StringLiteral stringLiteral = (StringLiteral)theEObject;
+				T result = caseStringLiteral(stringLiteral);
+				if (result == null) result = caseLiteral(stringLiteral);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.ELEMENT_LITERAL: {
+				ElementLiteral elementLiteral = (ElementLiteral)theEObject;
+				T result = caseElementLiteral(elementLiteral);
+				if (result == null) result = caseLiteral(elementLiteral);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.INTEGER_LITERAL: {
+				IntegerLiteral integerLiteral = (IntegerLiteral)theEObject;
+				T result = caseIntegerLiteral(integerLiteral);
+				if (result == null) result = caseLiteral(integerLiteral);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -326,6 +359,81 @@ public class AutomatedresttestingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSimpleEntity(SimpleEntity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mapping Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mapping Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMappingElement(MappingElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLiteral(Literal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringLiteral(StringLiteral object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Element Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Element Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElementLiteral(ElementLiteral object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Integer Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Integer Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntegerLiteral(IntegerLiteral object) {
 		return null;
 	}
 

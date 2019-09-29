@@ -151,10 +151,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>First Name Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>First Name Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FIRST_NAME_TYPE
 	 * @model name="FirstNameType"
@@ -166,10 +162,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>First Name Male Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>First Name Male Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FIRST_NAME_MALE_TYPE
 	 * @model name="FirstNameMaleType"
@@ -181,10 +173,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>First Name Female Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>First Name Female Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FIRST_NAME_FEMALE_TYPE
 	 * @model name="FirstNameFemaleType"
@@ -196,10 +184,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Last Name Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Last Name Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LAST_NAME_TYPE
 	 * @model name="LastNameType"
@@ -211,10 +195,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Family Name Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Family Name Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FAMILY_NAME_TYPE
 	 * @model name="FamilyNameType"
@@ -226,10 +206,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Full Name Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Full Name Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FULL_NAME_TYPE
 	 * @model name="FullNameType"
@@ -241,10 +217,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Gender Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Gender Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GENDER_TYPE
 	 * @model name="GenderType"
@@ -256,10 +228,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Email Address Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Email Address Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #EMAIL_ADDRESS_TYPE
 	 * @model name="EmailAddressType"
@@ -271,10 +239,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Phone Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Phone Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PHONE_TYPE
 	 * @model name="PhoneType"
@@ -286,10 +250,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Country Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Country Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #COUNTRY_TYPE
 	 * @model name="CountryType"
@@ -301,10 +261,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Country Code Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Country Code Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #COUNTRY_CODE_TYPE
 	 * @model name="CountryCodeType"
@@ -316,10 +272,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>City Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>City Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CITY_TYPE
 	 * @model name="CityType"
@@ -331,10 +283,6 @@ public enum MockTypes implements Enumerator {
 	/**
 	 * The '<em><b>Row Number Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Row Number Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ROW_NUMBER_TYPE
 	 * @model name="RowNumberType"
@@ -378,6 +326,8 @@ public enum MockTypes implements Enumerator {
 	 * Returns the '<em><b>Mock Types</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MockTypes get(String literal) {
@@ -394,6 +344,8 @@ public enum MockTypes implements Enumerator {
 	 * Returns the '<em><b>Mock Types</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MockTypes getByName(String name) {
@@ -410,6 +362,8 @@ public enum MockTypes implements Enumerator {
 	 * Returns the '<em><b>Mock Types</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MockTypes get(int value) {

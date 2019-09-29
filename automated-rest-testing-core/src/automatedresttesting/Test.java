@@ -13,12 +13,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.Test#getDescription <em>Description</em>}</li>
  *   <li>{@link automatedresttesting.Test#getAssertions <em>Assertions</em>}</li>
  *   <li>{@link automatedresttesting.Test#getName <em>Name</em>}</li>
+ *   <li>{@link automatedresttesting.Test#getService <em>Service</em>}</li>
+ *   <li>{@link automatedresttesting.Test#getMappings <em>Mappings</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getTest()
  * @model
@@ -28,10 +30,6 @@ public interface Test extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
@@ -55,10 +53,6 @@ public interface Test extends EObject {
 	 * Returns the value of the '<em><b>Assertions</b></em>' containment reference list.
 	 * The list contents are of type {@link automatedresttesting.Assertion}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Assertions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assertions</em>' containment reference list.
 	 * @see automatedresttesting.AutomatedresttestingPackage#getTest_Assertions()
@@ -70,10 +64,6 @@ public interface Test extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
@@ -92,5 +82,39 @@ public interface Test extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Service</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Service</em>' reference.
+	 * @see #setService(RestService)
+	 * @see automatedresttesting.AutomatedresttestingPackage#getTest_Service()
+	 * @model required="true"
+	 * @generated
+	 */
+	RestService getService();
+
+	/**
+	 * Sets the value of the '{@link automatedresttesting.Test#getService <em>Service</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Service</em>' reference.
+	 * @see #getService()
+	 * @generated
+	 */
+	void setService(RestService value);
+
+	/**
+	 * Returns the value of the '<em><b>Mappings</b></em>' containment reference list.
+	 * The list contents are of type {@link automatedresttesting.MappingElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Mappings</em>' containment reference list.
+	 * @see automatedresttesting.AutomatedresttestingPackage#getTest_Mappings()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MappingElement> getMappings();
 
 } // Test

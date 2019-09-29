@@ -61,10 +61,6 @@ public enum MethodType implements Enumerator {
 	/**
 	 * The '<em><b>GET</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>GET</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GET
 	 * @model
@@ -76,10 +72,6 @@ public enum MethodType implements Enumerator {
 	/**
 	 * The '<em><b>POST</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>POST</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #POST
 	 * @model
@@ -91,10 +83,6 @@ public enum MethodType implements Enumerator {
 	/**
 	 * The '<em><b>PUT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>PUT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PUT
 	 * @model
@@ -106,10 +94,6 @@ public enum MethodType implements Enumerator {
 	/**
 	 * The '<em><b>DELETE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DELETE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DELETE
 	 * @model
@@ -144,6 +128,8 @@ public enum MethodType implements Enumerator {
 	 * Returns the '<em><b>Method Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MethodType get(String literal) {
@@ -160,6 +146,8 @@ public enum MethodType implements Enumerator {
 	 * Returns the '<em><b>Method Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MethodType getByName(String name) {
@@ -176,6 +164,8 @@ public enum MethodType implements Enumerator {
 	 * Returns the '<em><b>Method Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MethodType get(int value) {

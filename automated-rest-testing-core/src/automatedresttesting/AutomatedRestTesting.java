@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.AutomatedRestTesting#getUrl <em>Url</em>}</li>
  *   <li>{@link automatedresttesting.AutomatedRestTesting#getTests <em>Tests</em>}</li>
  *   <li>{@link automatedresttesting.AutomatedRestTesting#getServices <em>Services</em>}</li>
  *   <li>{@link automatedresttesting.AutomatedRestTesting#getDataElements <em>Data Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getAutomatedRestTesting()
  * @model
@@ -29,10 +29,6 @@ public interface AutomatedRestTesting extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
@@ -56,10 +52,6 @@ public interface AutomatedRestTesting extends EObject {
 	 * Returns the value of the '<em><b>Tests</b></em>' containment reference list.
 	 * The list contents are of type {@link automatedresttesting.Test}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tests</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tests</em>' containment reference list.
 	 * @see automatedresttesting.AutomatedresttestingPackage#getAutomatedRestTesting_Tests()
@@ -72,10 +64,6 @@ public interface AutomatedRestTesting extends EObject {
 	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
 	 * The list contents are of type {@link automatedresttesting.RestService}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Services</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Services</em>' containment reference list.
 	 * @see automatedresttesting.AutomatedresttestingPackage#getAutomatedRestTesting_Services()
@@ -88,10 +76,6 @@ public interface AutomatedRestTesting extends EObject {
 	 * Returns the value of the '<em><b>Data Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link automatedresttesting.Element}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Data Elements</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Elements</em>' containment reference list.
 	 * @see automatedresttesting.AutomatedresttestingPackage#getAutomatedRestTesting_DataElements()

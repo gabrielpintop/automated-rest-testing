@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.SimpleEntity#getEntityAttributes <em>Entity Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getSimpleEntity()
  * @model
@@ -25,10 +25,6 @@ public interface SimpleEntity extends Element {
 	 * Returns the value of the '<em><b>Entity Attributes</b></em>' containment reference list.
 	 * The list contents are of type {@link automatedresttesting.Attribute}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Entity Attributes</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity Attributes</em>' containment reference list.
 	 * @see automatedresttesting.AutomatedresttestingPackage#getSimpleEntity_EntityAttributes()

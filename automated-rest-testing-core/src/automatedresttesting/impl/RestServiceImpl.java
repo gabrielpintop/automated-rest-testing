@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getUri <em>Uri</em>}</li>
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getMethod <em>Method</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -438,7 +438,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (uri: ");
 		result.append(uri);
 		result.append(", method: ");

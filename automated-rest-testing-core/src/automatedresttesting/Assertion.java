@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.Assertion#getCondition <em>Condition</em>}</li>
  *   <li>{@link automatedresttesting.Assertion#getDataToTest <em>Data To Test</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getAssertion()
  * @model
@@ -25,10 +25,6 @@ public interface Assertion extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Condition</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Condition</em>' containment reference.
 	 * @see #setCondition(Expression)
@@ -51,10 +47,6 @@ public interface Assertion extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Data To Test</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Data To Test</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data To Test</em>' reference.
 	 * @see #setDataToTest(Element)

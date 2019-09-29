@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.impl.RestrictionImpl#isValid <em>Valid</em>}</li>
  *   <li>{@link automatedresttesting.impl.RestrictionImpl#getMockType <em>Mock Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -206,7 +206,7 @@ public class RestrictionImpl extends MinimalEObjectImpl.Container implements Res
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (valid: ");
 		result.append(valid);
 		result.append(", mockType: ");

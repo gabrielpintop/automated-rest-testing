@@ -101,13 +101,9 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>Minor</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Minor</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MINOR
-	 * @model name="Minor" literal="<"
+	 * @model name="Minor" literal="&lt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -116,13 +112,9 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>Minor Equal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Minor Equal</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MINOR_EQUAL
-	 * @model name="MinorEqual" literal="<="
+	 * @model name="MinorEqual" literal="&lt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -131,10 +123,6 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>Equal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Equal</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #EQUAL
 	 * @model name="Equal" literal="="
@@ -146,13 +134,9 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>Different</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Different</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DIFFERENT
-	 * @model name="Different" literal="<>"
+	 * @model name="Different" literal="&lt;&gt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -161,13 +145,9 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>Major Equal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Major Equal</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAJOR_EQUAL
-	 * @model name="MajorEqual" literal=">="
+	 * @model name="MajorEqual" literal="&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -176,13 +156,9 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>Major</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Major</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAJOR
-	 * @model name="Major" literal=">"
+	 * @model name="Major" literal="&gt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -191,10 +167,6 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>AND</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>AND</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #AND
 	 * @model literal="and"
@@ -206,10 +178,6 @@ public enum RelationalOperator implements Enumerator {
 	/**
 	 * The '<em><b>OR</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>OR</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #OR
 	 * @model literal="or"
@@ -248,6 +216,8 @@ public enum RelationalOperator implements Enumerator {
 	 * Returns the '<em><b>Relational Operator</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RelationalOperator get(String literal) {
@@ -264,6 +234,8 @@ public enum RelationalOperator implements Enumerator {
 	 * Returns the '<em><b>Relational Operator</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RelationalOperator getByName(String name) {
@@ -280,6 +252,8 @@ public enum RelationalOperator implements Enumerator {
 	 * Returns the '<em><b>Relational Operator</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RelationalOperator get(int value) {

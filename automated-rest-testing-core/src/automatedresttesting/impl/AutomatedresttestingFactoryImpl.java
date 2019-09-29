@@ -68,6 +68,10 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 			case AutomatedresttestingPackage.TEST: return createTest();
 			case AutomatedresttestingPackage.EXPRESSION: return createExpression();
 			case AutomatedresttestingPackage.SIMPLE_ENTITY: return createSimpleEntity();
+			case AutomatedresttestingPackage.MAPPING_ELEMENT: return createMappingElement();
+			case AutomatedresttestingPackage.STRING_LITERAL: return createStringLiteral();
+			case AutomatedresttestingPackage.ELEMENT_LITERAL: return createElementLiteral();
+			case AutomatedresttestingPackage.INTEGER_LITERAL: return createIntegerLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -227,6 +231,46 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	public SimpleEntity createSimpleEntity() {
 		SimpleEntityImpl simpleEntity = new SimpleEntityImpl();
 		return simpleEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MappingElement createMappingElement() {
+		MappingElementImpl mappingElement = new MappingElementImpl();
+		return mappingElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringLiteral createStringLiteral() {
+		StringLiteralImpl stringLiteral = new StringLiteralImpl();
+		return stringLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementLiteral createElementLiteral() {
+		ElementLiteralImpl elementLiteral = new ElementLiteralImpl();
+		return elementLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntegerLiteral createIntegerLiteral() {
+		IntegerLiteralImpl integerLiteral = new IntegerLiteralImpl();
+		return integerLiteral;
 	}
 
 	/**

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link automatedresttesting.RestService#getUri <em>Uri</em>}</li>
  *   <li>{@link automatedresttesting.RestService#getMethod <em>Method</em>}</li>
@@ -21,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link automatedresttesting.RestService#getParameters <em>Parameters</em>}</li>
  *   <li>{@link automatedresttesting.RestService#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getRestService()
  * @model
@@ -31,10 +31,6 @@ public interface RestService extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uri</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Uri</em>' attribute.
 	 * @see #setUri(String)
@@ -58,10 +54,6 @@ public interface RestService extends EObject {
 	 * Returns the value of the '<em><b>Method</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.MethodType}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Method</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method</em>' attribute.
 	 * @see automatedresttesting.MethodType
@@ -86,10 +78,6 @@ public interface RestService extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Response</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Response</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Response</em>' reference.
 	 * @see #setResponse(Element)
@@ -112,10 +100,6 @@ public interface RestService extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Request</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Request</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Request</em>' reference.
 	 * @see #setRequest(Element)
@@ -139,10 +123,6 @@ public interface RestService extends EObject {
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
 	 * The list contents are of type {@link automatedresttesting.Parameter}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference list.
 	 * @see automatedresttesting.AutomatedresttestingPackage#getRestService_Parameters()
@@ -154,10 +134,6 @@ public interface RestService extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
