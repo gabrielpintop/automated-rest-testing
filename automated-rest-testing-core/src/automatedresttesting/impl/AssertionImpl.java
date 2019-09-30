@@ -3,6 +3,7 @@
 package automatedresttesting.impl;
 
 import automatedresttesting.Assertion;
+import automatedresttesting.AssertionType;
 import automatedresttesting.AutomatedresttestingPackage;
 import automatedresttesting.Element;
 import automatedresttesting.Expression;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link automatedresttesting.impl.AssertionImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link automatedresttesting.impl.AssertionImpl#getDataToTest <em>Data To Test</em>}</li>
+ *   <li>{@link automatedresttesting.impl.AssertionImpl#getAssertionType <em>Assertion Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,6 +54,26 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 	protected Element dataToTest;
 
 	/**
+	 * The default value of the '{@link #getAssertionType() <em>Assertion Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssertionType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final AssertionType ASSERTION_TYPE_EDEFAULT = AssertionType.RESPONSE;
+
+	/**
+	 * The cached value of the '{@link #getAssertionType() <em>Assertion Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssertionType()
+	 * @generated
+	 * @ordered
+	 */
+	protected AssertionType assertionType = ASSERTION_TYPE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -75,6 +97,7 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getCondition() {
 		return condition;
 	}
@@ -99,6 +122,7 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Expression newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -118,6 +142,7 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element getDataToTest() {
 		if (dataToTest != null && dataToTest.eIsProxy()) {
 			InternalEObject oldDataToTest = (InternalEObject)dataToTest;
@@ -144,11 +169,35 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDataToTest(Element newDataToTest) {
 		Element oldDataToTest = dataToTest;
 		dataToTest = newDataToTest;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.ASSERTION__DATA_TO_TEST, oldDataToTest, dataToTest));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AssertionType getAssertionType() {
+		return assertionType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAssertionType(AssertionType newAssertionType) {
+		AssertionType oldAssertionType = assertionType;
+		assertionType = newAssertionType == null ? ASSERTION_TYPE_EDEFAULT : newAssertionType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.ASSERTION__ASSERTION_TYPE, oldAssertionType, assertionType));
 	}
 
 	/**
@@ -178,6 +227,8 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 			case AutomatedresttestingPackage.ASSERTION__DATA_TO_TEST:
 				if (resolve) return getDataToTest();
 				return basicGetDataToTest();
+			case AutomatedresttestingPackage.ASSERTION__ASSERTION_TYPE:
+				return getAssertionType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -195,6 +246,9 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 				return;
 			case AutomatedresttestingPackage.ASSERTION__DATA_TO_TEST:
 				setDataToTest((Element)newValue);
+				return;
+			case AutomatedresttestingPackage.ASSERTION__ASSERTION_TYPE:
+				setAssertionType((AssertionType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -214,6 +268,9 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 			case AutomatedresttestingPackage.ASSERTION__DATA_TO_TEST:
 				setDataToTest((Element)null);
 				return;
+			case AutomatedresttestingPackage.ASSERTION__ASSERTION_TYPE:
+				setAssertionType(ASSERTION_TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -230,8 +287,26 @@ public class AssertionImpl extends MinimalEObjectImpl.Container implements Asser
 				return condition != null;
 			case AutomatedresttestingPackage.ASSERTION__DATA_TO_TEST:
 				return dataToTest != null;
+			case AutomatedresttestingPackage.ASSERTION__ASSERTION_TYPE:
+				return assertionType != ASSERTION_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (assertionType: ");
+		result.append(assertionType);
+		result.append(')');
+		return result.toString();
 	}
 
 } //AssertionImpl

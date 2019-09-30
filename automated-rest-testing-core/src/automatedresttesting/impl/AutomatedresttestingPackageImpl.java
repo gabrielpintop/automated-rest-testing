@@ -3,6 +3,7 @@
 package automatedresttesting.impl;
 
 import automatedresttesting.Assertion;
+import automatedresttesting.AssertionType;
 import automatedresttesting.Attribute;
 import automatedresttesting.AttributeType;
 import automatedresttesting.AutomatedRestTesting;
@@ -197,6 +198,13 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	private EEnum relationalOperatorEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum assertionTypeEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -262,6 +270,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAutomatedRestTesting() {
 		return automatedRestTestingEClass;
 	}
@@ -271,6 +280,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAutomatedRestTesting_Url() {
 		return (EAttribute)automatedRestTestingEClass.getEStructuralFeatures().get(0);
 	}
@@ -280,6 +290,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAutomatedRestTesting_Tests() {
 		return (EReference)automatedRestTestingEClass.getEStructuralFeatures().get(1);
 	}
@@ -289,6 +300,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAutomatedRestTesting_Services() {
 		return (EReference)automatedRestTestingEClass.getEStructuralFeatures().get(2);
 	}
@@ -298,6 +310,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAutomatedRestTesting_DataElements() {
 		return (EReference)automatedRestTestingEClass.getEStructuralFeatures().get(3);
 	}
@@ -307,6 +320,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEntity() {
 		return entityEClass;
 	}
@@ -316,6 +330,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_EntityAttributes() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(0);
 	}
@@ -325,6 +340,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRestService() {
 		return restServiceEClass;
 	}
@@ -334,6 +350,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRestService_Uri() {
 		return (EAttribute)restServiceEClass.getEStructuralFeatures().get(0);
 	}
@@ -343,6 +360,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRestService_Method() {
 		return (EAttribute)restServiceEClass.getEStructuralFeatures().get(1);
 	}
@@ -352,6 +370,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRestService_Response() {
 		return (EReference)restServiceEClass.getEStructuralFeatures().get(2);
 	}
@@ -361,6 +380,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRestService_Request() {
 		return (EReference)restServiceEClass.getEStructuralFeatures().get(3);
 	}
@@ -370,6 +390,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRestService_Parameters() {
 		return (EReference)restServiceEClass.getEStructuralFeatures().get(4);
 	}
@@ -379,6 +400,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRestService_Name() {
 		return (EAttribute)restServiceEClass.getEStructuralFeatures().get(5);
 	}
@@ -388,6 +410,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -397,6 +420,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Value() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -406,6 +430,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttribute_Restrictions() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -415,6 +440,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Type() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
 	}
@@ -424,6 +450,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRestriction() {
 		return restrictionEClass;
 	}
@@ -433,6 +460,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRestriction_Valid() {
 		return (EAttribute)restrictionEClass.getEStructuralFeatures().get(0);
 	}
@@ -442,6 +470,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRestriction_MockType() {
 		return (EAttribute)restrictionEClass.getEStructuralFeatures().get(1);
 	}
@@ -451,6 +480,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssertion() {
 		return assertionEClass;
 	}
@@ -460,6 +490,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssertion_Condition() {
 		return (EReference)assertionEClass.getEStructuralFeatures().get(0);
 	}
@@ -469,6 +500,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssertion_DataToTest() {
 		return (EReference)assertionEClass.getEStructuralFeatures().get(1);
 	}
@@ -478,6 +510,17 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EAttribute getAssertion_AssertionType() {
+		return (EAttribute)assertionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomainAttribute() {
 		return domainAttributeEClass;
 	}
@@ -487,6 +530,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDomainAttribute_PrimaryKey() {
 		return (EAttribute)domainAttributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -496,6 +540,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -505,6 +550,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameter_ParamType() {
 		return (EAttribute)parameterEClass.getEStructuralFeatures().get(0);
 	}
@@ -514,6 +560,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTest() {
 		return testEClass;
 	}
@@ -523,6 +570,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTest_Description() {
 		return (EAttribute)testEClass.getEStructuralFeatures().get(0);
 	}
@@ -532,6 +580,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTest_Assertions() {
 		return (EReference)testEClass.getEStructuralFeatures().get(1);
 	}
@@ -541,6 +590,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTest_Name() {
 		return (EAttribute)testEClass.getEStructuralFeatures().get(2);
 	}
@@ -550,6 +600,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTest_Service() {
 		return (EReference)testEClass.getEStructuralFeatures().get(3);
 	}
@@ -559,6 +610,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTest_Mappings() {
 		return (EReference)testEClass.getEStructuralFeatures().get(4);
 	}
@@ -568,6 +620,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getElement() {
 		return elementEClass;
 	}
@@ -577,6 +630,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getElement_Name() {
 		return (EAttribute)elementEClass.getEStructuralFeatures().get(0);
 	}
@@ -586,6 +640,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getElement_IsArray() {
 		return (EAttribute)elementEClass.getEStructuralFeatures().get(1);
 	}
@@ -595,6 +650,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpression() {
 		return expressionEClass;
 	}
@@ -604,6 +660,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExpression_Type() {
 		return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -613,6 +670,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExpression_RelationalOperator() {
 		return (EAttribute)expressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -622,6 +680,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpression_ExpectedValue() {
 		return (EReference)expressionEClass.getEStructuralFeatures().get(2);
 	}
@@ -631,6 +690,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSimpleEntity() {
 		return simpleEntityEClass;
 	}
@@ -640,6 +700,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSimpleEntity_EntityAttributes() {
 		return (EReference)simpleEntityEClass.getEStructuralFeatures().get(0);
 	}
@@ -649,6 +710,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMappingElement() {
 		return mappingElementEClass;
 	}
@@ -658,6 +720,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMappingElement_Parameter() {
 		return (EReference)mappingElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -667,6 +730,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMappingElement_Value() {
 		return (EReference)mappingElementEClass.getEStructuralFeatures().get(1);
 	}
@@ -676,6 +740,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLiteral() {
 		return literalEClass;
 	}
@@ -685,6 +750,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringLiteral() {
 		return stringLiteralEClass;
 	}
@@ -694,6 +760,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringLiteral_Value() {
 		return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -703,6 +770,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getElementLiteral() {
 		return elementLiteralEClass;
 	}
@@ -712,6 +780,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getElementLiteral_Value() {
 		return (EReference)elementLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -721,6 +790,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIntegerLiteral() {
 		return integerLiteralEClass;
 	}
@@ -730,6 +800,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIntegerLiteral_Value() {
 		return (EAttribute)integerLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -739,6 +810,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAttributeType() {
 		return attributeTypeEEnum;
 	}
@@ -748,6 +820,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMockTypes() {
 		return mockTypesEEnum;
 	}
@@ -757,6 +830,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMethodType() {
 		return methodTypeEEnum;
 	}
@@ -766,6 +840,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getParameterType() {
 		return parameterTypeEEnum;
 	}
@@ -775,6 +850,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getRelationalOperator() {
 		return relationalOperatorEEnum;
 	}
@@ -784,6 +860,17 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EEnum getAssertionType() {
+		return assertionTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public AutomatedresttestingFactory getAutomatedresttestingFactory() {
 		return (AutomatedresttestingFactory)getEFactoryInstance();
 	}
@@ -836,6 +923,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		assertionEClass = createEClass(ASSERTION);
 		createEReference(assertionEClass, ASSERTION__CONDITION);
 		createEReference(assertionEClass, ASSERTION__DATA_TO_TEST);
+		createEAttribute(assertionEClass, ASSERTION__ASSERTION_TYPE);
 
 		domainAttributeEClass = createEClass(DOMAIN_ATTRIBUTE);
 		createEAttribute(domainAttributeEClass, DOMAIN_ATTRIBUTE__PRIMARY_KEY);
@@ -883,6 +971,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		methodTypeEEnum = createEEnum(METHOD_TYPE);
 		parameterTypeEEnum = createEEnum(PARAMETER_TYPE);
 		relationalOperatorEEnum = createEEnum(RELATIONAL_OPERATOR);
+		assertionTypeEEnum = createEEnum(ASSERTION_TYPE);
 	}
 
 	/**
@@ -952,6 +1041,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		initEClass(assertionEClass, Assertion.class, "Assertion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssertion_Condition(), this.getExpression(), null, "condition", null, 1, 1, Assertion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssertion_DataToTest(), this.getElement(), null, "dataToTest", null, 1, 1, Assertion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssertion_AssertionType(), this.getAssertionType(), "assertionType", null, 0, 1, Assertion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainAttributeEClass, DomainAttribute.class, "DomainAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainAttribute_PrimaryKey(), ecorePackage.getEBoolean(), "primaryKey", null, 0, 1, DomainAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1035,6 +1125,10 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		addEEnumLiteral(relationalOperatorEEnum, RelationalOperator.MAJOR);
 		addEEnumLiteral(relationalOperatorEEnum, RelationalOperator.AND);
 		addEEnumLiteral(relationalOperatorEEnum, RelationalOperator.OR);
+
+		initEEnum(assertionTypeEEnum, AssertionType.class, "AssertionType");
+		addEEnumLiteral(assertionTypeEEnum, AssertionType.RESPONSE);
+		addEEnumLiteral(assertionTypeEEnum, AssertionType.INFORMATION);
 
 		// Create resource
 		createResource(eNS_URI);

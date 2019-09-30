@@ -75,6 +75,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -101,6 +102,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(Element newParameter) {
 		Element oldParameter = parameter;
 		parameter = newParameter;
@@ -113,6 +115,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Literal getValue() {
 		return value;
 	}
@@ -137,6 +140,7 @@ public class MappingElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Literal newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

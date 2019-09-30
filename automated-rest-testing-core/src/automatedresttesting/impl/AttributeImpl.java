@@ -121,6 +121,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -130,6 +131,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -142,6 +144,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Restriction> getRestrictions() {
 		if (restrictions == null) {
 			restrictions = new EObjectContainmentEList<Restriction>(Restriction.class, this, AutomatedresttestingPackage.ATTRIBUTE__RESTRICTIONS);
@@ -154,6 +157,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AttributeType getType() {
 		return type;
 	}
@@ -163,6 +167,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(AttributeType newType) {
 		AttributeType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -177,6 +182,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetType() {
 		AttributeType oldType = type;
 		boolean oldTypeESet = typeESet;
@@ -191,6 +197,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetType() {
 		return typeESet;
 	}

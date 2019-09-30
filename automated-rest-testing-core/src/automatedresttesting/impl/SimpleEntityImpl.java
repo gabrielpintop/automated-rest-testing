@@ -66,6 +66,7 @@ public class SimpleEntityImpl extends ElementImpl implements SimpleEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getEntityAttributes() {
 		if (entityAttributes == null) {
 			entityAttributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, AutomatedresttestingPackage.SIMPLE_ENTITY__ENTITY_ATTRIBUTES);

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link automatedresttesting.Assertion#getCondition <em>Condition</em>}</li>
  *   <li>{@link automatedresttesting.Assertion#getDataToTest <em>Data To Test</em>}</li>
+ *   <li>{@link automatedresttesting.Assertion#getAssertionType <em>Assertion Type</em>}</li>
  * </ul>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getAssertion()
@@ -65,5 +66,30 @@ public interface Assertion extends EObject {
 	 * @generated
 	 */
 	void setDataToTest(Element value);
+
+	/**
+	 * Returns the value of the '<em><b>Assertion Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link automatedresttesting.AssertionType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Assertion Type</em>' attribute.
+	 * @see automatedresttesting.AssertionType
+	 * @see #setAssertionType(AssertionType)
+	 * @see automatedresttesting.AutomatedresttestingPackage#getAssertion_AssertionType()
+	 * @model
+	 * @generated
+	 */
+	AssertionType getAssertionType();
+
+	/**
+	 * Sets the value of the '{@link automatedresttesting.Assertion#getAssertionType <em>Assertion Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Assertion Type</em>' attribute.
+	 * @see automatedresttesting.AssertionType
+	 * @see #getAssertionType()
+	 * @generated
+	 */
+	void setAssertionType(AssertionType value);
 
 } // Assertion

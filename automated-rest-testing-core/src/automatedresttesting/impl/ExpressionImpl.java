@@ -116,6 +116,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AttributeType getType() {
 		return type;
 	}
@@ -125,6 +126,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(AttributeType newType) {
 		AttributeType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -139,6 +141,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetType() {
 		AttributeType oldType = type;
 		boolean oldTypeESet = typeESet;
@@ -153,6 +156,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetType() {
 		return typeESet;
 	}
@@ -162,6 +166,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelationalOperator getRelationalOperator() {
 		return relationalOperator;
 	}
@@ -171,6 +176,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelationalOperator(RelationalOperator newRelationalOperator) {
 		RelationalOperator oldRelationalOperator = relationalOperator;
 		relationalOperator = newRelationalOperator == null ? RELATIONAL_OPERATOR_EDEFAULT : newRelationalOperator;
@@ -183,6 +189,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Literal getExpectedValue() {
 		return expectedValue;
 	}
@@ -207,6 +214,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpectedValue(Literal newExpectedValue) {
 		if (newExpectedValue != expectedValue) {
 			NotificationChain msgs = null;

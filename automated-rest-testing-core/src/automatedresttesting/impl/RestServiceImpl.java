@@ -157,6 +157,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUri() {
 		return uri;
 	}
@@ -166,6 +167,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUri(String newUri) {
 		String oldUri = uri;
 		uri = newUri;
@@ -178,6 +180,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodType getMethod() {
 		return method;
 	}
@@ -187,6 +190,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(MethodType newMethod) {
 		MethodType oldMethod = method;
 		method = newMethod == null ? METHOD_EDEFAULT : newMethod;
@@ -199,6 +203,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element getResponse() {
 		if (response != null && response.eIsProxy()) {
 			InternalEObject oldResponse = (InternalEObject)response;
@@ -225,6 +230,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResponse(Element newResponse) {
 		Element oldResponse = response;
 		response = newResponse;
@@ -237,6 +243,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element getRequest() {
 		if (request != null && request.eIsProxy()) {
 			InternalEObject oldRequest = (InternalEObject)request;
@@ -263,6 +270,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequest(Element newRequest) {
 		Element oldRequest = request;
 		request = newRequest;
@@ -275,6 +283,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, AutomatedresttestingPackage.REST_SERVICE__PARAMETERS);
@@ -287,6 +296,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -296,6 +306,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;

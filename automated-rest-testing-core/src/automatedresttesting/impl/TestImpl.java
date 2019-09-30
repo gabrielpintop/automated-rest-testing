@@ -136,6 +136,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -145,6 +146,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -157,6 +159,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Assertion> getAssertions() {
 		if (assertions == null) {
 			assertions = new EObjectContainmentEList<Assertion>(Assertion.class, this, AutomatedresttestingPackage.TEST__ASSERTIONS);
@@ -169,6 +172,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -178,6 +182,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -190,6 +195,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RestService getService() {
 		if (service != null && service.eIsProxy()) {
 			InternalEObject oldService = (InternalEObject)service;
@@ -216,6 +222,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setService(RestService newService) {
 		RestService oldService = service;
 		service = newService;
@@ -228,6 +235,7 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MappingElement> getMappings() {
 		if (mappings == null) {
 			mappings = new EObjectContainmentEList<MappingElement>(MappingElement.class, this, AutomatedresttestingPackage.TEST__MAPPINGS);

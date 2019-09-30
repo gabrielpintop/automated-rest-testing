@@ -452,13 +452,22 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int ASSERTION__DATA_TO_TEST = 1;
 
 	/**
+	 * The feature id for the '<em><b>Assertion Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSERTION__ASSERTION_TYPE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Assertion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSERTION_FEATURE_COUNT = 2;
+	int ASSERTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Assertion</em>' class.
@@ -1051,6 +1060,16 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 */
 	int RELATIONAL_OPERATOR = 21;
 
+	/**
+	 * The meta object id for the '{@link automatedresttesting.AssertionType <em>Assertion Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.AssertionType
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getAssertionType()
+	 * @generated
+	 */
+	int ASSERTION_TYPE = 22;
+
 
 	/**
 	 * Returns the meta object for class '{@link automatedresttesting.AutomatedRestTesting <em>Automated Rest Testing</em>}'.
@@ -1309,6 +1328,17 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAssertion_DataToTest();
+
+	/**
+	 * Returns the meta object for the attribute '{@link automatedresttesting.Assertion#getAssertionType <em>Assertion Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Assertion Type</em>'.
+	 * @see automatedresttesting.Assertion#getAssertionType()
+	 * @see #getAssertion()
+	 * @generated
+	 */
+	EAttribute getAssertion_AssertionType();
 
 	/**
 	 * Returns the meta object for class '{@link automatedresttesting.DomainAttribute <em>Domain Attribute</em>}'.
@@ -1669,6 +1699,16 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EEnum getRelationalOperator();
 
 	/**
+	 * Returns the meta object for enum '{@link automatedresttesting.AssertionType <em>Assertion Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Assertion Type</em>'.
+	 * @see automatedresttesting.AssertionType
+	 * @generated
+	 */
+	EEnum getAssertionType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1894,6 +1934,14 @@ public interface AutomatedresttestingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSERTION__DATA_TO_TEST = eINSTANCE.getAssertion_DataToTest();
+
+		/**
+		 * The meta object literal for the '<em><b>Assertion Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSERTION__ASSERTION_TYPE = eINSTANCE.getAssertion_AssertionType();
 
 		/**
 		 * The meta object literal for the '{@link automatedresttesting.impl.DomainAttributeImpl <em>Domain Attribute</em>}' class.
@@ -2198,6 +2246,16 @@ public interface AutomatedresttestingPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum RELATIONAL_OPERATOR = eINSTANCE.getRelationalOperator();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.AssertionType <em>Assertion Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.AssertionType
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getAssertionType()
+		 * @generated
+		 */
+		EEnum ASSERTION_TYPE = eINSTANCE.getAssertionType();
 
 	}
 

@@ -92,6 +92,7 @@ public class RestrictionImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isValid() {
 		return valid;
 	}
@@ -101,6 +102,7 @@ public class RestrictionImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValid(boolean newValid) {
 		boolean oldValid = valid;
 		valid = newValid;
@@ -113,6 +115,7 @@ public class RestrictionImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MockTypes getMockType() {
 		return mockType;
 	}
@@ -122,6 +125,7 @@ public class RestrictionImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMockType(MockTypes newMockType) {
 		MockTypes oldMockType = mockType;
 		mockType = newMockType == null ? MOCK_TYPE_EDEFAULT : newMockType;

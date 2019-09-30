@@ -69,6 +69,7 @@ public class DomainAttributeImpl extends AttributeImpl implements DomainAttribut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isPrimaryKey() {
 		return primaryKey;
 	}
@@ -78,6 +79,7 @@ public class DomainAttributeImpl extends AttributeImpl implements DomainAttribut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrimaryKey(boolean newPrimaryKey) {
 		boolean oldPrimaryKey = primaryKey;
 		primaryKey = newPrimaryKey;

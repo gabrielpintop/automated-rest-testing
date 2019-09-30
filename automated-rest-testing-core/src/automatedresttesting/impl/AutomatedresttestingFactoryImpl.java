@@ -95,6 +95,8 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 				return createParameterTypeFromString(eDataType, initialValue);
 			case AutomatedresttestingPackage.RELATIONAL_OPERATOR:
 				return createRelationalOperatorFromString(eDataType, initialValue);
+			case AutomatedresttestingPackage.ASSERTION_TYPE:
+				return createAssertionTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -118,6 +120,8 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 				return convertParameterTypeToString(eDataType, instanceValue);
 			case AutomatedresttestingPackage.RELATIONAL_OPERATOR:
 				return convertRelationalOperatorToString(eDataType, instanceValue);
+			case AutomatedresttestingPackage.ASSERTION_TYPE:
+				return convertAssertionTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -128,6 +132,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AutomatedRestTesting createAutomatedRestTesting() {
 		AutomatedRestTestingImpl automatedRestTesting = new AutomatedRestTestingImpl();
 		return automatedRestTesting;
@@ -138,6 +143,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity createEntity() {
 		EntityImpl entity = new EntityImpl();
 		return entity;
@@ -148,6 +154,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RestService createRestService() {
 		RestServiceImpl restService = new RestServiceImpl();
 		return restService;
@@ -158,6 +165,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute createAttribute() {
 		AttributeImpl attribute = new AttributeImpl();
 		return attribute;
@@ -168,6 +176,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Restriction createRestriction() {
 		RestrictionImpl restriction = new RestrictionImpl();
 		return restriction;
@@ -178,6 +187,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Assertion createAssertion() {
 		AssertionImpl assertion = new AssertionImpl();
 		return assertion;
@@ -188,6 +198,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DomainAttribute createDomainAttribute() {
 		DomainAttributeImpl domainAttribute = new DomainAttributeImpl();
 		return domainAttribute;
@@ -198,6 +209,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
@@ -208,6 +220,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Test createTest() {
 		TestImpl test = new TestImpl();
 		return test;
@@ -218,6 +231,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression createExpression() {
 		ExpressionImpl expression = new ExpressionImpl();
 		return expression;
@@ -228,6 +242,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SimpleEntity createSimpleEntity() {
 		SimpleEntityImpl simpleEntity = new SimpleEntityImpl();
 		return simpleEntity;
@@ -238,6 +253,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MappingElement createMappingElement() {
 		MappingElementImpl mappingElement = new MappingElementImpl();
 		return mappingElement;
@@ -248,6 +264,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringLiteral createStringLiteral() {
 		StringLiteralImpl stringLiteral = new StringLiteralImpl();
 		return stringLiteral;
@@ -258,6 +275,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementLiteral createElementLiteral() {
 		ElementLiteralImpl elementLiteral = new ElementLiteralImpl();
 		return elementLiteral;
@@ -268,6 +286,7 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntegerLiteral createIntegerLiteral() {
 		IntegerLiteralImpl integerLiteral = new IntegerLiteralImpl();
 		return integerLiteral;
@@ -378,6 +397,27 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AssertionType createAssertionTypeFromString(EDataType eDataType, String initialValue) {
+		AssertionType result = AssertionType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAssertionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public AutomatedresttestingPackage getAutomatedresttestingPackage() {
 		return (AutomatedresttestingPackage)getEPackage();
 	}

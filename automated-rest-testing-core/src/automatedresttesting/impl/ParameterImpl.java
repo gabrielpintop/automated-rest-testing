@@ -70,6 +70,7 @@ public class ParameterImpl extends AttributeImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterType getParamType() {
 		return paramType;
 	}
@@ -79,6 +80,7 @@ public class ParameterImpl extends AttributeImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParamType(ParameterType newParamType) {
 		ParameterType oldParamType = paramType;
 		paramType = newParamType == null ? PARAM_TYPE_EDEFAULT : newParamType;

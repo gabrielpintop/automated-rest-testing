@@ -47,8 +47,11 @@ Test returns Test:
 
 
 Assertion returns Assertion:
-	'response' ((DOT | ARROW)? (dataToTest=[Element | QualifiedName]))? condition=Expression
+	(assertionType=AssertionType (dataToTest=[Element | QualifiedName]))? condition=Expression
 ;
+
+enum AssertionType returns AssertionType:
+				response = 'response->' | information = 'response.';
 
 QualifiedName:
 	ID (DOT ID)*
@@ -91,7 +94,7 @@ enum MethodType returns MethodType:
 
 Parameter returns Parameter:
 	{Parameter}
-	(SLASH TWO_DOTS | QUESTION_MARK MONEY) LEFT_BRACKET name=ID RIGHT_BRACKET
+	paramType=ParameterType LEFT_BRACKET value=ID RIGHT_BRACKET
 	;
 
 EBoolean returns ecore::EBoolean:
@@ -103,7 +106,7 @@ Restriction returns Restriction:
 	'mockType' EQUAL mockType=MockTypes;
 
 enum ParameterType returns ParameterType:
-				path = 'path' | query = 'query';
+				path = '/:' | query = '?$';
 
 enum MockTypes returns MockTypes:
 				FirstNameType = 'FirstNameType' | FirstNameMaleType = 'FirstNameMaleType' | FirstNameFemaleType = 'FirstNameFemaleType' | LastNameType = 'LastNameType' | FamilyNameType = 'FamilyNameType' | FullNameType = 'FullNameType' | GenderType = 'GenderType' | EmailAddressType = 'EmailAddressType' | PhoneType = 'PhoneType' | CountryType = 'CountryType' | CountryCodeType = 'CountryCodeType' | CityType = 'CityType' | RowNumberType = 'RowNumberType';

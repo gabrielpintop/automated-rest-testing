@@ -115,6 +115,7 @@ public class AutomatedRestTestingImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUrl() {
 		return url;
 	}
@@ -124,6 +125,7 @@ public class AutomatedRestTestingImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(String newUrl) {
 		String oldUrl = url;
 		url = newUrl;
@@ -136,6 +138,7 @@ public class AutomatedRestTestingImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Test> getTests() {
 		if (tests == null) {
 			tests = new EObjectContainmentEList<Test>(Test.class, this, AutomatedresttestingPackage.AUTOMATED_REST_TESTING__TESTS);
@@ -148,6 +151,7 @@ public class AutomatedRestTestingImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RestService> getServices() {
 		if (services == null) {
 			services = new EObjectContainmentEList<RestService>(RestService.class, this, AutomatedresttestingPackage.AUTOMATED_REST_TESTING__SERVICES);
@@ -160,6 +164,7 @@ public class AutomatedRestTestingImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getDataElements() {
 		if (dataElements == null) {
 			dataElements = new EObjectContainmentEList<Element>(Element.class, this, AutomatedresttestingPackage.AUTOMATED_REST_TESTING__DATA_ELEMENTS);

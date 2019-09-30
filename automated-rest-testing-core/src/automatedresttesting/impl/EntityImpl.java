@@ -66,6 +66,7 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DomainAttribute> getEntityAttributes() {
 		if (entityAttributes == null) {
 			entityAttributes = new EObjectContainmentEList<DomainAttribute>(DomainAttribute.class, this, AutomatedresttestingPackage.ENTITY__ENTITY_ATTRIBUTES);

@@ -61,6 +61,7 @@ public class ElementLiteralImpl extends LiteralImpl implements ElementLiteral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject)value;
@@ -87,6 +88,7 @@ public class ElementLiteralImpl extends LiteralImpl implements ElementLiteral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Element newValue) {
 		Element oldValue = value;
 		value = newValue;
