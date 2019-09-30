@@ -23,7 +23,7 @@ EString returns ecore::EString:
 RestService returns RestService:
 	(method=MethodType) name=EString
 	LEFT_BRACKET
-		'URL' EQUAL uri=SLASH EString (SLASH EString | parameters+=Parameter)* SEMICOLON
+		'URL' EQUAL uri=URL SEMICOLON
 		('Request' 
 			LEFT_BRACKET
 			'Type' EQUAL request=([Element|EString]) (SQUARE_LEFT_BRACKET  SQUARE_RIGHT_BRACKET)? SEMICOLON
@@ -34,6 +34,30 @@ RestService returns RestService:
 			'Type' EQUAL response=[Element|EString] (SQUARE_LEFT_BRACKET  SQUARE_RIGHT_BRACKET)? SEMICOLON
 		RIGHT_BRACKET
 	RIGHT_BRACKET;
+	
+URL returns URL:
+		urlexpression+=URLExpression (urlexpression+=URLExpression)*
+;
+
+URLExpression returns URLExpression:
+	Parameter | Separator | URLText;
+	
+Parameter returns Parameter:
+	{Parameter}
+	paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET
+;
+	
+Separator returns Separator:
+	{Separator}
+	separatorType=SeparatorType
+;
+
+enum SeparatorType returns SeparatorType:
+	Slash = '/' | Et = '&' | QuestionMark = '?';
+	
+URLText returns URLText:
+	text=EString
+;
 
 Test returns Test:
 	'Test'
@@ -92,10 +116,7 @@ enum RelationalOperator returns RelationalOperator:
 enum MethodType returns MethodType:
 				GET = 'GET' | POST = 'POST' | PUT = 'PUT' | DELETE = 'DELETE';
 
-Parameter returns Parameter:
-	{Parameter}
-	paramType=ParameterType LEFT_BRACKET value=ID RIGHT_BRACKET
-	;
+
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
@@ -106,10 +127,10 @@ Restriction returns Restriction:
 	'mockType' EQUAL mockType=MockTypes;
 
 enum ParameterType returns ParameterType:
-				path = '/:' | query = '?$';
+				path = ':' | query = '$';
 
 enum MockTypes returns MockTypes:
-				FirstNameType = 'FirstNameType' | FirstNameMaleType = 'FirstNameMaleType' | FirstNameFemaleType = 'FirstNameFemaleType' | LastNameType = 'LastNameType' | FamilyNameType = 'FamilyNameType' | FullNameType = 'FullNameType' | GenderType = 'GenderType' | EmailAddressType = 'EmailAddressType' | PhoneType = 'PhoneType' | CountryType = 'CountryType' | CountryCodeType = 'CountryCodeType' | CityType = 'CityType' | RowNumberType = 'RowNumberType';
+				FirstNameType = 'FirstNameType' | FirstNameMaleType = 'FirstNameMaleType' | FirstNameFemaleType = 'FirstNameFemaleType' | LastNameType = 'LastNameType' | UniversityType = 'University' | FullNameType = 'FullNameType' | GenderType = 'GenderType' | EmailAddressType = 'EmailAddressType' | PhoneType = 'PhoneType' | CountryType = 'CountryType' | CountryCodeType = 'CountryCodeType' | CityType = 'CityType' | RowNumberType = 'RowNumberType';
 
 Entity returns Entity:
 	{Entity}
@@ -158,12 +179,4 @@ terminal SQUARE_RIGHT_BRACKET : "]";
 
 terminal COMMA : ",";
 
-terminal SLASH : "/";
-
 terminal DOT : ".";
-
-terminal TWO_DOTS : ":";
-
-terminal MONEY : "$";
-
-terminal QUESTION_MARK : "?";

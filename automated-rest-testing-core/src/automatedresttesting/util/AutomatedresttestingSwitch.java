@@ -115,7 +115,7 @@ public class AutomatedresttestingSwitch<T> extends Switch<T> {
 			case AutomatedresttestingPackage.PARAMETER: {
 				Parameter parameter = (Parameter)theEObject;
 				T result = caseParameter(parameter);
-				if (result == null) result = caseAttribute(parameter);
+				if (result == null) result = caseURLExpression(parameter);
 				if (result == null) result = caseElement(parameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -175,6 +175,35 @@ public class AutomatedresttestingSwitch<T> extends Switch<T> {
 				IntegerLiteral integerLiteral = (IntegerLiteral)theEObject;
 				T result = caseIntegerLiteral(integerLiteral);
 				if (result == null) result = caseLiteral(integerLiteral);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.URL: {
+				URL url = (URL)theEObject;
+				T result = caseURL(url);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.URL_EXPRESSION: {
+				URLExpression urlExpression = (URLExpression)theEObject;
+				T result = caseURLExpression(urlExpression);
+				if (result == null) result = caseElement(urlExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.SEPARATOR: {
+				Separator separator = (Separator)theEObject;
+				T result = caseSeparator(separator);
+				if (result == null) result = caseURLExpression(separator);
+				if (result == null) result = caseElement(separator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AutomatedresttestingPackage.URL_TEXT: {
+				URLText urlText = (URLText)theEObject;
+				T result = caseURLText(urlText);
+				if (result == null) result = caseURLExpression(urlText);
+				if (result == null) result = caseElement(urlText);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -434,6 +463,66 @@ public class AutomatedresttestingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIntegerLiteral(IntegerLiteral object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>URL</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>URL</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseURL(URL object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>URL Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>URL Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseURLExpression(URLExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Separator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Separator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSeparator(Separator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>URL Text</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>URL Text</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseURLText(URLText object) {
 		return null;
 	}
 

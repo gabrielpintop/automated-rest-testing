@@ -185,46 +185,39 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		private final Keyword cURLKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final RuleCall cEQUALTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		private final Assignment cUriAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cUriSLASHTerminalRuleCall_5_0 = (RuleCall)cUriAssignment_5.eContents().get(0);
-		private final RuleCall cEStringParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
-		private final Alternatives cAlternatives_7 = (Alternatives)cGroup.eContents().get(7);
-		private final Group cGroup_7_0 = (Group)cAlternatives_7.eContents().get(0);
-		private final RuleCall cSLASHTerminalRuleCall_7_0_0 = (RuleCall)cGroup_7_0.eContents().get(0);
-		private final RuleCall cEStringParserRuleCall_7_0_1 = (RuleCall)cGroup_7_0.eContents().get(1);
-		private final Assignment cParametersAssignment_7_1 = (Assignment)cAlternatives_7.eContents().get(1);
-		private final RuleCall cParametersParameterParserRuleCall_7_1_0 = (RuleCall)cParametersAssignment_7_1.eContents().get(0);
-		private final RuleCall cSEMICOLONTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cRequestKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final RuleCall cLEFT_BRACKETTerminalRuleCall_9_1 = (RuleCall)cGroup_9.eContents().get(1);
-		private final Keyword cTypeKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
-		private final RuleCall cEQUALTerminalRuleCall_9_3 = (RuleCall)cGroup_9.eContents().get(3);
-		private final Assignment cRequestAssignment_9_4 = (Assignment)cGroup_9.eContents().get(4);
-		private final CrossReference cRequestElementCrossReference_9_4_0 = (CrossReference)cRequestAssignment_9_4.eContents().get(0);
-		private final RuleCall cRequestElementEStringParserRuleCall_9_4_0_1 = (RuleCall)cRequestElementCrossReference_9_4_0.eContents().get(1);
-		private final Group cGroup_9_5 = (Group)cGroup_9.eContents().get(5);
-		private final RuleCall cSQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0 = (RuleCall)cGroup_9_5.eContents().get(0);
-		private final RuleCall cSQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1 = (RuleCall)cGroup_9_5.eContents().get(1);
-		private final RuleCall cSEMICOLONTerminalRuleCall_9_6 = (RuleCall)cGroup_9.eContents().get(6);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_9_7 = (RuleCall)cGroup_9.eContents().get(7);
-		private final Keyword cResponseKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final RuleCall cLEFT_BRACKETTerminalRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
-		private final Keyword cTypeKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final RuleCall cEQUALTerminalRuleCall_13 = (RuleCall)cGroup.eContents().get(13);
-		private final Assignment cResponseAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final CrossReference cResponseElementCrossReference_14_0 = (CrossReference)cResponseAssignment_14.eContents().get(0);
-		private final RuleCall cResponseElementEStringParserRuleCall_14_0_1 = (RuleCall)cResponseElementCrossReference_14_0.eContents().get(1);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final RuleCall cSQUARE_LEFT_BRACKETTerminalRuleCall_15_0 = (RuleCall)cGroup_15.eContents().get(0);
-		private final RuleCall cSQUARE_RIGHT_BRACKETTerminalRuleCall_15_1 = (RuleCall)cGroup_15.eContents().get(1);
-		private final RuleCall cSEMICOLONTerminalRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_17 = (RuleCall)cGroup.eContents().get(17);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_18 = (RuleCall)cGroup.eContents().get(18);
+		private final RuleCall cUriURLParserRuleCall_5_0 = (RuleCall)cUriAssignment_5.eContents().get(0);
+		private final RuleCall cSEMICOLONTerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cRequestKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final RuleCall cLEFT_BRACKETTerminalRuleCall_7_1 = (RuleCall)cGroup_7.eContents().get(1);
+		private final Keyword cTypeKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
+		private final RuleCall cEQUALTerminalRuleCall_7_3 = (RuleCall)cGroup_7.eContents().get(3);
+		private final Assignment cRequestAssignment_7_4 = (Assignment)cGroup_7.eContents().get(4);
+		private final CrossReference cRequestElementCrossReference_7_4_0 = (CrossReference)cRequestAssignment_7_4.eContents().get(0);
+		private final RuleCall cRequestElementEStringParserRuleCall_7_4_0_1 = (RuleCall)cRequestElementCrossReference_7_4_0.eContents().get(1);
+		private final Group cGroup_7_5 = (Group)cGroup_7.eContents().get(5);
+		private final RuleCall cSQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0 = (RuleCall)cGroup_7_5.eContents().get(0);
+		private final RuleCall cSQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1 = (RuleCall)cGroup_7_5.eContents().get(1);
+		private final RuleCall cSEMICOLONTerminalRuleCall_7_6 = (RuleCall)cGroup_7.eContents().get(6);
+		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_7_7 = (RuleCall)cGroup_7.eContents().get(7);
+		private final Keyword cResponseKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final RuleCall cLEFT_BRACKETTerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
+		private final Keyword cTypeKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final RuleCall cEQUALTerminalRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
+		private final Assignment cResponseAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final CrossReference cResponseElementCrossReference_12_0 = (CrossReference)cResponseAssignment_12.eContents().get(0);
+		private final RuleCall cResponseElementEStringParserRuleCall_12_0_1 = (RuleCall)cResponseElementCrossReference_12_0.eContents().get(1);
+		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
+		private final RuleCall cSQUARE_LEFT_BRACKETTerminalRuleCall_13_0 = (RuleCall)cGroup_13.eContents().get(0);
+		private final RuleCall cSQUARE_RIGHT_BRACKETTerminalRuleCall_13_1 = (RuleCall)cGroup_13.eContents().get(1);
+		private final RuleCall cSEMICOLONTerminalRuleCall_14 = (RuleCall)cGroup.eContents().get(14);
+		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_15 = (RuleCall)cGroup.eContents().get(15);
+		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
 		
 		//RestService:
 		//	method=MethodType name=EString
 		//	LEFT_BRACKET
-		//	'URL' EQUAL uri=SLASH EString (SLASH EString | parameters+=Parameter)* SEMICOLON ('Request'
+		//	'URL' EQUAL uri=URL SEMICOLON ('Request'
 		//	LEFT_BRACKET
 		//	'Type' EQUAL request=[Element|EString] (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)? SEMICOLON
 		//	RIGHT_BRACKET)?
@@ -235,10 +228,10 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		//	RIGHT_BRACKET;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//method=MethodType name=EString LEFT_BRACKET 'URL' EQUAL uri=SLASH EString (SLASH EString | parameters+=Parameter)*
-		//SEMICOLON ('Request' LEFT_BRACKET 'Type' EQUAL request=[Element|EString] (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)?
-		//SEMICOLON RIGHT_BRACKET)? 'Response' LEFT_BRACKET 'Type' EQUAL response=[Element|EString] (SQUARE_LEFT_BRACKET
-		//SQUARE_RIGHT_BRACKET)? SEMICOLON RIGHT_BRACKET RIGHT_BRACKET
+		//method=MethodType name=EString LEFT_BRACKET 'URL' EQUAL uri=URL SEMICOLON ('Request' LEFT_BRACKET 'Type' EQUAL
+		//request=[Element|EString] (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)? SEMICOLON RIGHT_BRACKET)? 'Response'
+		//LEFT_BRACKET 'Type' EQUAL response=[Element|EString] (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)? SEMICOLON
+		//RIGHT_BRACKET RIGHT_BRACKET
 		public Group getGroup() { return cGroup; }
 		
 		//method=MethodType
@@ -262,114 +255,220 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		//EQUAL
 		public RuleCall getEQUALTerminalRuleCall_4() { return cEQUALTerminalRuleCall_4; }
 		
-		//uri=SLASH
+		//uri=URL
 		public Assignment getUriAssignment_5() { return cUriAssignment_5; }
 		
-		//SLASH
-		public RuleCall getUriSLASHTerminalRuleCall_5_0() { return cUriSLASHTerminalRuleCall_5_0; }
-		
-		//EString
-		public RuleCall getEStringParserRuleCall_6() { return cEStringParserRuleCall_6; }
-		
-		//(SLASH EString | parameters+=Parameter)*
-		public Alternatives getAlternatives_7() { return cAlternatives_7; }
-		
-		//SLASH EString
-		public Group getGroup_7_0() { return cGroup_7_0; }
-		
-		//SLASH
-		public RuleCall getSLASHTerminalRuleCall_7_0_0() { return cSLASHTerminalRuleCall_7_0_0; }
-		
-		//EString
-		public RuleCall getEStringParserRuleCall_7_0_1() { return cEStringParserRuleCall_7_0_1; }
-		
-		//parameters+=Parameter
-		public Assignment getParametersAssignment_7_1() { return cParametersAssignment_7_1; }
-		
-		//Parameter
-		public RuleCall getParametersParameterParserRuleCall_7_1_0() { return cParametersParameterParserRuleCall_7_1_0; }
+		//URL
+		public RuleCall getUriURLParserRuleCall_5_0() { return cUriURLParserRuleCall_5_0; }
 		
 		//SEMICOLON
-		public RuleCall getSEMICOLONTerminalRuleCall_8() { return cSEMICOLONTerminalRuleCall_8; }
+		public RuleCall getSEMICOLONTerminalRuleCall_6() { return cSEMICOLONTerminalRuleCall_6; }
 		
 		//('Request' LEFT_BRACKET 'Type' EQUAL request=[Element|EString] (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)? SEMICOLON
 		//RIGHT_BRACKET)?
-		public Group getGroup_9() { return cGroup_9; }
+		public Group getGroup_7() { return cGroup_7; }
 		
 		//'Request'
-		public Keyword getRequestKeyword_9_0() { return cRequestKeyword_9_0; }
+		public Keyword getRequestKeyword_7_0() { return cRequestKeyword_7_0; }
 		
 		//LEFT_BRACKET
-		public RuleCall getLEFT_BRACKETTerminalRuleCall_9_1() { return cLEFT_BRACKETTerminalRuleCall_9_1; }
+		public RuleCall getLEFT_BRACKETTerminalRuleCall_7_1() { return cLEFT_BRACKETTerminalRuleCall_7_1; }
 		
 		//'Type'
-		public Keyword getTypeKeyword_9_2() { return cTypeKeyword_9_2; }
+		public Keyword getTypeKeyword_7_2() { return cTypeKeyword_7_2; }
 		
 		//EQUAL
-		public RuleCall getEQUALTerminalRuleCall_9_3() { return cEQUALTerminalRuleCall_9_3; }
+		public RuleCall getEQUALTerminalRuleCall_7_3() { return cEQUALTerminalRuleCall_7_3; }
 		
 		//request=[Element|EString]
-		public Assignment getRequestAssignment_9_4() { return cRequestAssignment_9_4; }
+		public Assignment getRequestAssignment_7_4() { return cRequestAssignment_7_4; }
 		
 		//[Element|EString]
-		public CrossReference getRequestElementCrossReference_9_4_0() { return cRequestElementCrossReference_9_4_0; }
+		public CrossReference getRequestElementCrossReference_7_4_0() { return cRequestElementCrossReference_7_4_0; }
 		
 		//EString
-		public RuleCall getRequestElementEStringParserRuleCall_9_4_0_1() { return cRequestElementEStringParserRuleCall_9_4_0_1; }
+		public RuleCall getRequestElementEStringParserRuleCall_7_4_0_1() { return cRequestElementEStringParserRuleCall_7_4_0_1; }
 		
 		//(SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)?
-		public Group getGroup_9_5() { return cGroup_9_5; }
+		public Group getGroup_7_5() { return cGroup_7_5; }
 		
 		//SQUARE_LEFT_BRACKET
-		public RuleCall getSQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0() { return cSQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0; }
+		public RuleCall getSQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0() { return cSQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0; }
 		
 		//SQUARE_RIGHT_BRACKET
-		public RuleCall getSQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1() { return cSQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1; }
+		public RuleCall getSQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1() { return cSQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1; }
 		
 		//SEMICOLON
-		public RuleCall getSEMICOLONTerminalRuleCall_9_6() { return cSEMICOLONTerminalRuleCall_9_6; }
+		public RuleCall getSEMICOLONTerminalRuleCall_7_6() { return cSEMICOLONTerminalRuleCall_7_6; }
 		
 		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_9_7() { return cRIGHT_BRACKETTerminalRuleCall_9_7; }
+		public RuleCall getRIGHT_BRACKETTerminalRuleCall_7_7() { return cRIGHT_BRACKETTerminalRuleCall_7_7; }
 		
 		//'Response'
-		public Keyword getResponseKeyword_10() { return cResponseKeyword_10; }
+		public Keyword getResponseKeyword_8() { return cResponseKeyword_8; }
 		
 		//LEFT_BRACKET
-		public RuleCall getLEFT_BRACKETTerminalRuleCall_11() { return cLEFT_BRACKETTerminalRuleCall_11; }
+		public RuleCall getLEFT_BRACKETTerminalRuleCall_9() { return cLEFT_BRACKETTerminalRuleCall_9; }
 		
 		//'Type'
-		public Keyword getTypeKeyword_12() { return cTypeKeyword_12; }
+		public Keyword getTypeKeyword_10() { return cTypeKeyword_10; }
 		
 		//EQUAL
-		public RuleCall getEQUALTerminalRuleCall_13() { return cEQUALTerminalRuleCall_13; }
+		public RuleCall getEQUALTerminalRuleCall_11() { return cEQUALTerminalRuleCall_11; }
 		
 		//response=[Element|EString]
-		public Assignment getResponseAssignment_14() { return cResponseAssignment_14; }
+		public Assignment getResponseAssignment_12() { return cResponseAssignment_12; }
 		
 		//[Element|EString]
-		public CrossReference getResponseElementCrossReference_14_0() { return cResponseElementCrossReference_14_0; }
+		public CrossReference getResponseElementCrossReference_12_0() { return cResponseElementCrossReference_12_0; }
 		
 		//EString
-		public RuleCall getResponseElementEStringParserRuleCall_14_0_1() { return cResponseElementEStringParserRuleCall_14_0_1; }
+		public RuleCall getResponseElementEStringParserRuleCall_12_0_1() { return cResponseElementEStringParserRuleCall_12_0_1; }
 		
 		//(SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)?
-		public Group getGroup_15() { return cGroup_15; }
+		public Group getGroup_13() { return cGroup_13; }
 		
 		//SQUARE_LEFT_BRACKET
-		public RuleCall getSQUARE_LEFT_BRACKETTerminalRuleCall_15_0() { return cSQUARE_LEFT_BRACKETTerminalRuleCall_15_0; }
+		public RuleCall getSQUARE_LEFT_BRACKETTerminalRuleCall_13_0() { return cSQUARE_LEFT_BRACKETTerminalRuleCall_13_0; }
 		
 		//SQUARE_RIGHT_BRACKET
-		public RuleCall getSQUARE_RIGHT_BRACKETTerminalRuleCall_15_1() { return cSQUARE_RIGHT_BRACKETTerminalRuleCall_15_1; }
+		public RuleCall getSQUARE_RIGHT_BRACKETTerminalRuleCall_13_1() { return cSQUARE_RIGHT_BRACKETTerminalRuleCall_13_1; }
 		
 		//SEMICOLON
-		public RuleCall getSEMICOLONTerminalRuleCall_16() { return cSEMICOLONTerminalRuleCall_16; }
+		public RuleCall getSEMICOLONTerminalRuleCall_14() { return cSEMICOLONTerminalRuleCall_14; }
 		
 		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_17() { return cRIGHT_BRACKETTerminalRuleCall_17; }
+		public RuleCall getRIGHT_BRACKETTerminalRuleCall_15() { return cRIGHT_BRACKETTerminalRuleCall_15; }
 		
 		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_18() { return cRIGHT_BRACKETTerminalRuleCall_18; }
+		public RuleCall getRIGHT_BRACKETTerminalRuleCall_16() { return cRIGHT_BRACKETTerminalRuleCall_16; }
+	}
+	public class URLElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.URL");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cUrlexpressionAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cUrlexpressionURLExpressionParserRuleCall_0_0 = (RuleCall)cUrlexpressionAssignment_0.eContents().get(0);
+		private final Assignment cUrlexpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cUrlexpressionURLExpressionParserRuleCall_1_0 = (RuleCall)cUrlexpressionAssignment_1.eContents().get(0);
+		
+		//URL:
+		//	urlexpression+=URLExpression urlexpression+=URLExpression*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//urlexpression+=URLExpression urlexpression+=URLExpression*
+		public Group getGroup() { return cGroup; }
+		
+		//urlexpression+=URLExpression
+		public Assignment getUrlexpressionAssignment_0() { return cUrlexpressionAssignment_0; }
+		
+		//URLExpression
+		public RuleCall getUrlexpressionURLExpressionParserRuleCall_0_0() { return cUrlexpressionURLExpressionParserRuleCall_0_0; }
+		
+		//urlexpression+=URLExpression*
+		public Assignment getUrlexpressionAssignment_1() { return cUrlexpressionAssignment_1; }
+		
+		//URLExpression
+		public RuleCall getUrlexpressionURLExpressionParserRuleCall_1_0() { return cUrlexpressionURLExpressionParserRuleCall_1_0; }
+	}
+	public class URLExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.URLExpression");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cParameterParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSeparatorParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cURLTextParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//URLExpression:
+		//	Parameter | Separator | URLText;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Parameter | Separator | URLText
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//Parameter
+		public RuleCall getParameterParserRuleCall_0() { return cParameterParserRuleCall_0; }
+		
+		//Separator
+		public RuleCall getSeparatorParserRuleCall_1() { return cSeparatorParserRuleCall_1; }
+		
+		//URLText
+		public RuleCall getURLTextParserRuleCall_2() { return cURLTextParserRuleCall_2; }
+	}
+	public class ParameterElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.Parameter");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cParameterAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cParamTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cParamTypeParameterTypeEnumRuleCall_1_0 = (RuleCall)cParamTypeAssignment_1.eContents().get(0);
+		private final RuleCall cLEFT_BRACKETTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		
+		//Parameter:
+		//	{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET
+		public Group getGroup() { return cGroup; }
+		
+		//{Parameter}
+		public Action getParameterAction_0() { return cParameterAction_0; }
+		
+		//paramType=ParameterType
+		public Assignment getParamTypeAssignment_1() { return cParamTypeAssignment_1; }
+		
+		//ParameterType
+		public RuleCall getParamTypeParameterTypeEnumRuleCall_1_0() { return cParamTypeParameterTypeEnumRuleCall_1_0; }
+		
+		//LEFT_BRACKET
+		public RuleCall getLEFT_BRACKETTerminalRuleCall_2() { return cLEFT_BRACKETTerminalRuleCall_2; }
+		
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+		
+		//RIGHT_BRACKET
+		public RuleCall getRIGHT_BRACKETTerminalRuleCall_4() { return cRIGHT_BRACKETTerminalRuleCall_4; }
+	}
+	public class SeparatorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.Separator");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cSeparatorAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cSeparatorTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSeparatorTypeSeparatorTypeEnumRuleCall_1_0 = (RuleCall)cSeparatorTypeAssignment_1.eContents().get(0);
+		
+		//Separator:
+		//	{Separator} separatorType=SeparatorType;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{Separator} separatorType=SeparatorType
+		public Group getGroup() { return cGroup; }
+		
+		//{Separator}
+		public Action getSeparatorAction_0() { return cSeparatorAction_0; }
+		
+		//separatorType=SeparatorType
+		public Assignment getSeparatorTypeAssignment_1() { return cSeparatorTypeAssignment_1; }
+		
+		//SeparatorType
+		public RuleCall getSeparatorTypeSeparatorTypeEnumRuleCall_1_0() { return cSeparatorTypeSeparatorTypeEnumRuleCall_1_0; }
+	}
+	public class URLTextElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.URLText");
+		private final Assignment cTextAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cTextEStringParserRuleCall_0 = (RuleCall)cTextAssignment.eContents().get(0);
+		
+		//URLText:
+		//	text=EString;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//text=EString
+		public Assignment getTextAssignment() { return cTextAssignment; }
+		
+		//EString
+		public RuleCall getTextEStringParserRuleCall_0() { return cTextEStringParserRuleCall_0; }
 	}
 	public class TestElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.Test");
@@ -521,53 +620,45 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	public class AssertionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.Assertion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cResponseKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_1_0 = (Alternatives)cGroup_1.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_1_0_0 = (RuleCall)cAlternatives_1_0.eContents().get(0);
-		private final RuleCall cARROWTerminalRuleCall_1_0_1 = (RuleCall)cAlternatives_1_0.eContents().get(1);
-		private final Assignment cDataToTestAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final CrossReference cDataToTestElementCrossReference_1_1_0 = (CrossReference)cDataToTestAssignment_1_1.eContents().get(0);
-		private final RuleCall cDataToTestElementQualifiedNameParserRuleCall_1_1_0_1 = (RuleCall)cDataToTestElementCrossReference_1_1_0.eContents().get(1);
-		private final Assignment cConditionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cConditionExpressionParserRuleCall_2_0 = (RuleCall)cConditionAssignment_2.eContents().get(0);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Assignment cAssertionTypeAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cAssertionTypeAssertionTypeEnumRuleCall_0_0_0 = (RuleCall)cAssertionTypeAssignment_0_0.eContents().get(0);
+		private final Assignment cDataToTestAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final CrossReference cDataToTestElementCrossReference_0_1_0 = (CrossReference)cDataToTestAssignment_0_1.eContents().get(0);
+		private final RuleCall cDataToTestElementQualifiedNameParserRuleCall_0_1_0_1 = (RuleCall)cDataToTestElementCrossReference_0_1_0.eContents().get(1);
+		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cConditionExpressionParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
 		
 		//Assertion:
-		//	'response' ((DOT | ARROW)? dataToTest=[Element|QualifiedName])? condition=Expression;
+		//	(assertionType=AssertionType dataToTest=[Element|QualifiedName])? condition=Expression;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'response' ((DOT | ARROW)? dataToTest=[Element|QualifiedName])? condition=Expression
+		//(assertionType=AssertionType dataToTest=[Element|QualifiedName])? condition=Expression
 		public Group getGroup() { return cGroup; }
 		
-		//'response'
-		public Keyword getResponseKeyword_0() { return cResponseKeyword_0; }
+		//(assertionType=AssertionType dataToTest=[Element|QualifiedName])?
+		public Group getGroup_0() { return cGroup_0; }
 		
-		//((DOT | ARROW)? dataToTest=[Element|QualifiedName])?
-		public Group getGroup_1() { return cGroup_1; }
+		//assertionType=AssertionType
+		public Assignment getAssertionTypeAssignment_0_0() { return cAssertionTypeAssignment_0_0; }
 		
-		//(DOT | ARROW)?
-		public Alternatives getAlternatives_1_0() { return cAlternatives_1_0; }
-		
-		//DOT
-		public RuleCall getDOTTerminalRuleCall_1_0_0() { return cDOTTerminalRuleCall_1_0_0; }
-		
-		//ARROW
-		public RuleCall getARROWTerminalRuleCall_1_0_1() { return cARROWTerminalRuleCall_1_0_1; }
+		//AssertionType
+		public RuleCall getAssertionTypeAssertionTypeEnumRuleCall_0_0_0() { return cAssertionTypeAssertionTypeEnumRuleCall_0_0_0; }
 		
 		//dataToTest=[Element|QualifiedName]
-		public Assignment getDataToTestAssignment_1_1() { return cDataToTestAssignment_1_1; }
+		public Assignment getDataToTestAssignment_0_1() { return cDataToTestAssignment_0_1; }
 		
 		//[Element|QualifiedName]
-		public CrossReference getDataToTestElementCrossReference_1_1_0() { return cDataToTestElementCrossReference_1_1_0; }
+		public CrossReference getDataToTestElementCrossReference_0_1_0() { return cDataToTestElementCrossReference_0_1_0; }
 		
 		//QualifiedName
-		public RuleCall getDataToTestElementQualifiedNameParserRuleCall_1_1_0_1() { return cDataToTestElementQualifiedNameParserRuleCall_1_1_0_1; }
+		public RuleCall getDataToTestElementQualifiedNameParserRuleCall_0_1_0_1() { return cDataToTestElementQualifiedNameParserRuleCall_0_1_0_1; }
 		
 		//condition=Expression
-		public Assignment getConditionAssignment_2() { return cConditionAssignment_2; }
+		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
 		
 		//Expression
-		public RuleCall getConditionExpressionParserRuleCall_2_0() { return cConditionExpressionParserRuleCall_2_0; }
+		public RuleCall getConditionExpressionParserRuleCall_1_0() { return cConditionExpressionParserRuleCall_1_0; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.QualifiedName");
@@ -793,45 +884,6 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		
 		//RIGHT_BRACKET
 		public RuleCall getRIGHT_BRACKETTerminalRuleCall_9() { return cRIGHT_BRACKETTerminalRuleCall_9; }
-	}
-	public class ParameterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.Parameter");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cParameterAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cParamTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cParamTypeParameterTypeEnumRuleCall_1_0 = (RuleCall)cParamTypeAssignment_1.eContents().get(0);
-		private final RuleCall cLEFT_BRACKETTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
-		
-		//Parameter:
-		//	{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET
-		public Group getGroup() { return cGroup; }
-		
-		//{Parameter}
-		public Action getParameterAction_0() { return cParameterAction_0; }
-		
-		//paramType=ParameterType
-		public Assignment getParamTypeAssignment_1() { return cParamTypeAssignment_1; }
-		
-		//ParameterType
-		public RuleCall getParamTypeParameterTypeEnumRuleCall_1_0() { return cParamTypeParameterTypeEnumRuleCall_1_0; }
-		
-		//LEFT_BRACKET
-		public RuleCall getLEFT_BRACKETTerminalRuleCall_2() { return cLEFT_BRACKETTerminalRuleCall_2; }
-		
-		//name=ID
-		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
-		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
-		
-		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_4() { return cRIGHT_BRACKETTerminalRuleCall_4; }
 	}
 	public class EBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.EBoolean");
@@ -1156,32 +1208,67 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		public RuleCall getRIGHT_BRACKETTerminalRuleCall_7() { return cRIGHT_BRACKETTerminalRuleCall_7; }
 	}
 	
+	public class SeparatorTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.SeparatorType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cSlashEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cSlashSolidusKeyword_0_0 = (Keyword)cSlashEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cEtEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cEtAmpersandKeyword_1_0 = (Keyword)cEtEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cQuestionMarkEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cQuestionMarkQuestionMarkKeyword_2_0 = (Keyword)cQuestionMarkEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum SeparatorType:
+		//	Slash='/' | Et='&' | QuestionMark='?';
+		public EnumRule getRule() { return rule; }
+		
+		//Slash='/' | Et='&' | QuestionMark='?'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//Slash='/'
+		public EnumLiteralDeclaration getSlashEnumLiteralDeclaration_0() { return cSlashEnumLiteralDeclaration_0; }
+		
+		//'/'
+		public Keyword getSlashSolidusKeyword_0_0() { return cSlashSolidusKeyword_0_0; }
+		
+		//Et='&'
+		public EnumLiteralDeclaration getEtEnumLiteralDeclaration_1() { return cEtEnumLiteralDeclaration_1; }
+		
+		//'&'
+		public Keyword getEtAmpersandKeyword_1_0() { return cEtAmpersandKeyword_1_0; }
+		
+		//QuestionMark='?'
+		public EnumLiteralDeclaration getQuestionMarkEnumLiteralDeclaration_2() { return cQuestionMarkEnumLiteralDeclaration_2; }
+		
+		//'?'
+		public Keyword getQuestionMarkQuestionMarkKeyword_2_0() { return cQuestionMarkQuestionMarkKeyword_2_0; }
+	}
 	public class AssertionTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.AssertionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cResponseEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cResponseResponseKeyword_0_0 = (Keyword)cResponseEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cInformationEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cInformationInformationKeyword_1_0 = (Keyword)cInformationEnumLiteralDeclaration_1.eContents().get(0);
+		private final Keyword cInformationResponseKeyword_1_0 = (Keyword)cInformationEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum AssertionType:
-		//	response | information;
+		//	response='response->' | information='response.';
 		public EnumRule getRule() { return rule; }
 		
-		//response | information
+		//response='response->' | information='response.'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//response
+		//response='response->'
 		public EnumLiteralDeclaration getResponseEnumLiteralDeclaration_0() { return cResponseEnumLiteralDeclaration_0; }
 		
-		//'response'
+		//'response->'
 		public Keyword getResponseResponseKeyword_0_0() { return cResponseResponseKeyword_0_0; }
 		
-		//information
+		//information='response.'
 		public EnumLiteralDeclaration getInformationEnumLiteralDeclaration_1() { return cInformationEnumLiteralDeclaration_1; }
 		
-		//'information'
-		public Keyword getInformationInformationKeyword_1_0() { return cInformationInformationKeyword_1_0; }
+		//'response.'
+		public Keyword getInformationResponseKeyword_1_0() { return cInformationResponseKeyword_1_0; }
 	}
 	public class AttributeTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.AttributeType");
@@ -1356,28 +1443,28 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.ParameterType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cPathEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cPathSolidusColonKeyword_0_0 = (Keyword)cPathEnumLiteralDeclaration_0.eContents().get(0);
+		private final Keyword cPathColonKeyword_0_0 = (Keyword)cPathEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cQueryEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cQueryQuestionMarkDollarSignKeyword_1_0 = (Keyword)cQueryEnumLiteralDeclaration_1.eContents().get(0);
+		private final Keyword cQueryDollarSignKeyword_1_0 = (Keyword)cQueryEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum ParameterType:
-		//	path='/:' | query='?$';
+		//	path=':' | query='$';
 		public EnumRule getRule() { return rule; }
 		
-		//path='/:' | query='?$'
+		//path=':' | query='$'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//path='/:'
+		//path=':'
 		public EnumLiteralDeclaration getPathEnumLiteralDeclaration_0() { return cPathEnumLiteralDeclaration_0; }
 		
-		//'/:'
-		public Keyword getPathSolidusColonKeyword_0_0() { return cPathSolidusColonKeyword_0_0; }
+		//':'
+		public Keyword getPathColonKeyword_0_0() { return cPathColonKeyword_0_0; }
 		
-		//query='?$'
+		//query='$'
 		public EnumLiteralDeclaration getQueryEnumLiteralDeclaration_1() { return cQueryEnumLiteralDeclaration_1; }
 		
-		//'?$'
-		public Keyword getQueryQuestionMarkDollarSignKeyword_1_0() { return cQueryQuestionMarkDollarSignKeyword_1_0; }
+		//'$'
+		public Keyword getQueryDollarSignKeyword_1_0() { return cQueryDollarSignKeyword_1_0; }
 	}
 	public class MockTypesElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.MockTypes");
@@ -1390,8 +1477,8 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		private final Keyword cFirstNameFemaleTypeFirstNameFemaleTypeKeyword_2_0 = (Keyword)cFirstNameFemaleTypeEnumLiteralDeclaration_2.eContents().get(0);
 		private final EnumLiteralDeclaration cLastNameTypeEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
 		private final Keyword cLastNameTypeLastNameTypeKeyword_3_0 = (Keyword)cLastNameTypeEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cFamilyNameTypeEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cFamilyNameTypeFamilyNameTypeKeyword_4_0 = (Keyword)cFamilyNameTypeEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cUniversityTypeEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cUniversityTypeUniversityKeyword_4_0 = (Keyword)cUniversityTypeEnumLiteralDeclaration_4.eContents().get(0);
 		private final EnumLiteralDeclaration cFullNameTypeEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
 		private final Keyword cFullNameTypeFullNameTypeKeyword_5_0 = (Keyword)cFullNameTypeEnumLiteralDeclaration_5.eContents().get(0);
 		private final EnumLiteralDeclaration cGenderTypeEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
@@ -1410,12 +1497,12 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		private final Keyword cRowNumberTypeRowNumberTypeKeyword_12_0 = (Keyword)cRowNumberTypeEnumLiteralDeclaration_12.eContents().get(0);
 		
 		//enum MockTypes:
-		//	FirstNameType | FirstNameMaleType | FirstNameFemaleType | LastNameType | FamilyNameType | FullNameType | GenderType |
-		//	EmailAddressType | PhoneType | CountryType | CountryCodeType | CityType | RowNumberType;
+		//	FirstNameType | FirstNameMaleType | FirstNameFemaleType | LastNameType | UniversityType='University' | FullNameType |
+		//	GenderType | EmailAddressType | PhoneType | CountryType | CountryCodeType | CityType | RowNumberType;
 		public EnumRule getRule() { return rule; }
 		
-		//FirstNameType | FirstNameMaleType | FirstNameFemaleType | LastNameType | FamilyNameType | FullNameType | GenderType |
-		//EmailAddressType | PhoneType | CountryType | CountryCodeType | CityType | RowNumberType
+		//FirstNameType | FirstNameMaleType | FirstNameFemaleType | LastNameType | UniversityType='University' | FullNameType |
+		//GenderType | EmailAddressType | PhoneType | CountryType | CountryCodeType | CityType | RowNumberType
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//FirstNameType
@@ -1442,11 +1529,11 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		//'LastNameType'
 		public Keyword getLastNameTypeLastNameTypeKeyword_3_0() { return cLastNameTypeLastNameTypeKeyword_3_0; }
 		
-		//FamilyNameType
-		public EnumLiteralDeclaration getFamilyNameTypeEnumLiteralDeclaration_4() { return cFamilyNameTypeEnumLiteralDeclaration_4; }
+		//UniversityType='University'
+		public EnumLiteralDeclaration getUniversityTypeEnumLiteralDeclaration_4() { return cUniversityTypeEnumLiteralDeclaration_4; }
 		
-		//'FamilyNameType'
-		public Keyword getFamilyNameTypeFamilyNameTypeKeyword_4_0() { return cFamilyNameTypeFamilyNameTypeKeyword_4_0; }
+		//'University'
+		public Keyword getUniversityTypeUniversityKeyword_4_0() { return cUniversityTypeUniversityKeyword_4_0; }
 		
 		//FullNameType
 		public EnumLiteralDeclaration getFullNameTypeEnumLiteralDeclaration_5() { return cFullNameTypeEnumLiteralDeclaration_5; }
@@ -1502,6 +1589,12 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	private final AttributeElements pAttribute;
 	private final EStringElements pEString;
 	private final RestServiceElements pRestService;
+	private final URLElements pURL;
+	private final URLExpressionElements pURLExpression;
+	private final ParameterElements pParameter;
+	private final SeparatorElements pSeparator;
+	private final SeparatorTypeElements eSeparatorType;
+	private final URLTextElements pURLText;
 	private final TestElements pTest;
 	private final AssertionElements pAssertion;
 	private final AssertionTypeElements eAssertionType;
@@ -1515,7 +1608,6 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	private final AttributeTypeElements eAttributeType;
 	private final RelationalOperatorElements eRelationalOperator;
 	private final MethodTypeElements eMethodType;
-	private final ParameterElements pParameter;
 	private final EBooleanElements pEBoolean;
 	private final RestrictionElements pRestriction;
 	private final ParameterTypeElements eParameterType;
@@ -1534,11 +1626,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	private final TerminalRule tSQUARE_LEFT_BRACKET;
 	private final TerminalRule tSQUARE_RIGHT_BRACKET;
 	private final TerminalRule tCOMMA;
-	private final TerminalRule tSLASH;
 	private final TerminalRule tDOT;
-	private final TerminalRule tTWO_DOTS;
-	private final TerminalRule tMONEY;
-	private final TerminalRule tQUESTION_MARK;
 	
 	private final Grammar grammar;
 	
@@ -1554,6 +1642,12 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		this.pAttribute = new AttributeElements();
 		this.pEString = new EStringElements();
 		this.pRestService = new RestServiceElements();
+		this.pURL = new URLElements();
+		this.pURLExpression = new URLExpressionElements();
+		this.pParameter = new ParameterElements();
+		this.pSeparator = new SeparatorElements();
+		this.eSeparatorType = new SeparatorTypeElements();
+		this.pURLText = new URLTextElements();
 		this.pTest = new TestElements();
 		this.pAssertion = new AssertionElements();
 		this.eAssertionType = new AssertionTypeElements();
@@ -1567,7 +1661,6 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		this.eAttributeType = new AttributeTypeElements();
 		this.eRelationalOperator = new RelationalOperatorElements();
 		this.eMethodType = new MethodTypeElements();
-		this.pParameter = new ParameterElements();
 		this.pEBoolean = new EBooleanElements();
 		this.pRestriction = new RestrictionElements();
 		this.eParameterType = new ParameterTypeElements();
@@ -1586,11 +1679,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		this.tSQUARE_LEFT_BRACKET = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.SQUARE_LEFT_BRACKET");
 		this.tSQUARE_RIGHT_BRACKET = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.SQUARE_RIGHT_BRACKET");
 		this.tCOMMA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.COMMA");
-		this.tSLASH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.SLASH");
 		this.tDOT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.DOT");
-		this.tTWO_DOTS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.TWO_DOTS");
-		this.tMONEY = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.MONEY");
-		this.tQUESTION_MARK = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.QUESTION_MARK");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1665,7 +1754,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	//RestService:
 	//	method=MethodType name=EString
 	//	LEFT_BRACKET
-	//	'URL' EQUAL uri=SLASH EString (SLASH EString | parameters+=Parameter)* SEMICOLON ('Request'
+	//	'URL' EQUAL uri=URL SEMICOLON ('Request'
 	//	LEFT_BRACKET
 	//	'Type' EQUAL request=[Element|EString] (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)? SEMICOLON
 	//	RIGHT_BRACKET)?
@@ -1680,6 +1769,66 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	
 	public ParserRule getRestServiceRule() {
 		return getRestServiceAccess().getRule();
+	}
+	
+	//URL:
+	//	urlexpression+=URLExpression urlexpression+=URLExpression*;
+	public URLElements getURLAccess() {
+		return pURL;
+	}
+	
+	public ParserRule getURLRule() {
+		return getURLAccess().getRule();
+	}
+	
+	//URLExpression:
+	//	Parameter | Separator | URLText;
+	public URLExpressionElements getURLExpressionAccess() {
+		return pURLExpression;
+	}
+	
+	public ParserRule getURLExpressionRule() {
+		return getURLExpressionAccess().getRule();
+	}
+	
+	//Parameter:
+	//	{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET;
+	public ParameterElements getParameterAccess() {
+		return pParameter;
+	}
+	
+	public ParserRule getParameterRule() {
+		return getParameterAccess().getRule();
+	}
+	
+	//Separator:
+	//	{Separator} separatorType=SeparatorType;
+	public SeparatorElements getSeparatorAccess() {
+		return pSeparator;
+	}
+	
+	public ParserRule getSeparatorRule() {
+		return getSeparatorAccess().getRule();
+	}
+	
+	//enum SeparatorType:
+	//	Slash='/' | Et='&' | QuestionMark='?';
+	public SeparatorTypeElements getSeparatorTypeAccess() {
+		return eSeparatorType;
+	}
+	
+	public EnumRule getSeparatorTypeRule() {
+		return getSeparatorTypeAccess().getRule();
+	}
+	
+	//URLText:
+	//	text=EString;
+	public URLTextElements getURLTextAccess() {
+		return pURLText;
+	}
+	
+	public ParserRule getURLTextRule() {
+		return getURLTextAccess().getRule();
 	}
 	
 	//Test:
@@ -1699,7 +1848,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	}
 	
 	//Assertion:
-	//	'response' ((DOT | ARROW)? dataToTest=[Element|QualifiedName])? condition=Expression;
+	//	(assertionType=AssertionType dataToTest=[Element|QualifiedName])? condition=Expression;
 	public AssertionElements getAssertionAccess() {
 		return pAssertion;
 	}
@@ -1709,7 +1858,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	}
 	
 	//enum AssertionType:
-	//	response | information;
+	//	response='response->' | information='response.';
 	public AssertionTypeElements getAssertionTypeAccess() {
 		return eAssertionType;
 	}
@@ -1821,16 +1970,6 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		return getMethodTypeAccess().getRule();
 	}
 	
-	//Parameter:
-	//	{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET;
-	public ParameterElements getParameterAccess() {
-		return pParameter;
-	}
-	
-	public ParserRule getParameterRule() {
-		return getParameterAccess().getRule();
-	}
-	
 	//EBoolean ecore::EBoolean:
 	//	'true' | 'false';
 	public EBooleanElements getEBooleanAccess() {
@@ -1854,7 +1993,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	}
 	
 	//enum ParameterType:
-	//	path='/:' | query='?$';
+	//	path=':' | query='$';
 	public ParameterTypeElements getParameterTypeAccess() {
 		return eParameterType;
 	}
@@ -1864,8 +2003,8 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	}
 	
 	//enum MockTypes:
-	//	FirstNameType | FirstNameMaleType | FirstNameFemaleType | LastNameType | FamilyNameType | FullNameType | GenderType |
-	//	EmailAddressType | PhoneType | CountryType | CountryCodeType | CityType | RowNumberType;
+	//	FirstNameType | FirstNameMaleType | FirstNameFemaleType | LastNameType | UniversityType='University' | FullNameType |
+	//	GenderType | EmailAddressType | PhoneType | CountryType | CountryCodeType | CityType | RowNumberType;
 	public MockTypesElements getMockTypesAccess() {
 		return eMockTypes;
 	}
@@ -1983,34 +2122,10 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		return tCOMMA;
 	}
 	
-	//terminal SLASH:
-	//	"/";
-	public TerminalRule getSLASHRule() {
-		return tSLASH;
-	}
-	
 	//terminal DOT:
 	//	".";
 	public TerminalRule getDOTRule() {
 		return tDOT;
-	}
-	
-	//terminal TWO_DOTS:
-	//	":";
-	public TerminalRule getTWO_DOTSRule() {
-		return tTWO_DOTS;
-	}
-	
-	//terminal MONEY:
-	//	"$";
-	public TerminalRule getMONEYRule() {
-		return tMONEY;
-	}
-	
-	//terminal QUESTION_MARK:
-	//	"?";
-	public TerminalRule getQUESTION_MARKRule() {
-		return tQUESTION_MARK;
 	}
 	
 	//terminal ID:

@@ -29,10 +29,8 @@ class AutomatedRestTestingFormatter extends AbstractFormatter2 {
 
 	def dispatch void format(RestService restService, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		for (parameter : restService.parameters) {
-			parameter.format
-		}
+		restService.uri.format
 	}
 	
-	// TODO: implement for Test, Assertion, Expression, MappingElement, Entity, DomainAttribute, SimpleEntity
+	// TODO: implement for URL, Test, Assertion, Expression, MappingElement, Entity, DomainAttribute, SimpleEntity
 }

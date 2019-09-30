@@ -6,9 +6,7 @@ package automatedresttesting.validation;
 
 import automatedresttesting.Element;
 import automatedresttesting.MethodType;
-import automatedresttesting.Parameter;
-
-import org.eclipse.emf.common.util.EList;
+import automatedresttesting.URL;
 
 /**
  * A sample validator interface for {@link automatedresttesting.RestService}.
@@ -19,10 +17,9 @@ import org.eclipse.emf.common.util.EList;
 public interface RestServiceValidator {
 	boolean validate();
 
-	boolean validateUri(String value);
 	boolean validateMethod(MethodType value);
 	boolean validateResponse(Element value);
 	boolean validateRequest(Element value);
-	boolean validateParameters(EList<Parameter> value);
 	boolean validateName(String value);
+	boolean validateUri(URL value);
 }

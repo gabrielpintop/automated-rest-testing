@@ -5,24 +5,17 @@ package automatedresttesting.impl;
 import automatedresttesting.AutomatedresttestingPackage;
 import automatedresttesting.Element;
 import automatedresttesting.MethodType;
-import automatedresttesting.Parameter;
 import automatedresttesting.RestService;
-
-import java.util.Collection;
+import automatedresttesting.URL;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,37 +25,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link automatedresttesting.impl.RestServiceImpl#getUri <em>Uri</em>}</li>
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getResponse <em>Response</em>}</li>
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getRequest <em>Request</em>}</li>
- *   <li>{@link automatedresttesting.impl.RestServiceImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link automatedresttesting.impl.RestServiceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link automatedresttesting.impl.RestServiceImpl#getUri <em>Uri</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RestServiceImpl extends MinimalEObjectImpl.Container implements RestService {
-	/**
-	 * The default value of the '{@link #getUri() <em>Uri</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUri()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URI_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUri() <em>Uri</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUri()
-	 * @generated
-	 * @ordered
-	 */
-	protected String uri = URI_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -104,16 +76,6 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	protected Element request;
 
 	/**
-	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameters()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Parameter> parameters;
-
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134,6 +96,16 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getUri() <em>Uri</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUri()
+	 * @generated
+	 * @ordered
+	 */
+	protected URL uri;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,29 +122,6 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	protected EClass eStaticClass() {
 		return AutomatedresttestingPackage.Literals.REST_SERVICE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getUri() {
-		return uri;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setUri(String newUri) {
-		String oldUri = uri;
-		uri = newUri;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.REST_SERVICE__URI, oldUri, uri));
 	}
 
 	/**
@@ -284,19 +233,6 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 */
 	@Override
-	public EList<Parameter> getParameters() {
-		if (parameters == null) {
-			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, AutomatedresttestingPackage.REST_SERVICE__PARAMETERS);
-		}
-		return parameters;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -320,10 +256,55 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 */
 	@Override
+	public URL getUri() {
+		return uri;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUri(URL newUri, NotificationChain msgs) {
+		URL oldUri = uri;
+		uri = newUri;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.REST_SERVICE__URI, oldUri, newUri);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUri(URL newUri) {
+		if (newUri != uri) {
+			NotificationChain msgs = null;
+			if (uri != null)
+				msgs = ((InternalEObject)uri).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AutomatedresttestingPackage.REST_SERVICE__URI, null, msgs);
+			if (newUri != null)
+				msgs = ((InternalEObject)newUri).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AutomatedresttestingPackage.REST_SERVICE__URI, null, msgs);
+			msgs = basicSetUri(newUri, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.REST_SERVICE__URI, newUri, newUri));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.REST_SERVICE__PARAMETERS:
-				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+			case AutomatedresttestingPackage.REST_SERVICE__URI:
+				return basicSetUri(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -336,8 +317,6 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.REST_SERVICE__URI:
-				return getUri();
 			case AutomatedresttestingPackage.REST_SERVICE__METHOD:
 				return getMethod();
 			case AutomatedresttestingPackage.REST_SERVICE__RESPONSE:
@@ -346,10 +325,10 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 			case AutomatedresttestingPackage.REST_SERVICE__REQUEST:
 				if (resolve) return getRequest();
 				return basicGetRequest();
-			case AutomatedresttestingPackage.REST_SERVICE__PARAMETERS:
-				return getParameters();
 			case AutomatedresttestingPackage.REST_SERVICE__NAME:
 				return getName();
+			case AutomatedresttestingPackage.REST_SERVICE__URI:
+				return getUri();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -359,13 +338,9 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.REST_SERVICE__URI:
-				setUri((String)newValue);
-				return;
 			case AutomatedresttestingPackage.REST_SERVICE__METHOD:
 				setMethod((MethodType)newValue);
 				return;
@@ -375,12 +350,11 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 			case AutomatedresttestingPackage.REST_SERVICE__REQUEST:
 				setRequest((Element)newValue);
 				return;
-			case AutomatedresttestingPackage.REST_SERVICE__PARAMETERS:
-				getParameters().clear();
-				getParameters().addAll((Collection<? extends Parameter>)newValue);
-				return;
 			case AutomatedresttestingPackage.REST_SERVICE__NAME:
 				setName((String)newValue);
+				return;
+			case AutomatedresttestingPackage.REST_SERVICE__URI:
+				setUri((URL)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -394,9 +368,6 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.REST_SERVICE__URI:
-				setUri(URI_EDEFAULT);
-				return;
 			case AutomatedresttestingPackage.REST_SERVICE__METHOD:
 				setMethod(METHOD_EDEFAULT);
 				return;
@@ -406,11 +377,11 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 			case AutomatedresttestingPackage.REST_SERVICE__REQUEST:
 				setRequest((Element)null);
 				return;
-			case AutomatedresttestingPackage.REST_SERVICE__PARAMETERS:
-				getParameters().clear();
-				return;
 			case AutomatedresttestingPackage.REST_SERVICE__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case AutomatedresttestingPackage.REST_SERVICE__URI:
+				setUri((URL)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -424,18 +395,16 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.REST_SERVICE__URI:
-				return URI_EDEFAULT == null ? uri != null : !URI_EDEFAULT.equals(uri);
 			case AutomatedresttestingPackage.REST_SERVICE__METHOD:
 				return method != METHOD_EDEFAULT;
 			case AutomatedresttestingPackage.REST_SERVICE__RESPONSE:
 				return response != null;
 			case AutomatedresttestingPackage.REST_SERVICE__REQUEST:
 				return request != null;
-			case AutomatedresttestingPackage.REST_SERVICE__PARAMETERS:
-				return parameters != null && !parameters.isEmpty();
 			case AutomatedresttestingPackage.REST_SERVICE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case AutomatedresttestingPackage.REST_SERVICE__URI:
+				return uri != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -450,9 +419,7 @@ public class RestServiceImpl extends MinimalEObjectImpl.Container implements Res
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (uri: ");
-		result.append(uri);
-		result.append(", method: ");
+		result.append(" (method: ");
 		result.append(method);
 		result.append(", name: ");
 		result.append(name);

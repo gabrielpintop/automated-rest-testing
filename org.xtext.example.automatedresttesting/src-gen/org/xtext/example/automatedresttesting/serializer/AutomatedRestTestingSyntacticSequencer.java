@@ -22,22 +22,18 @@ import org.xtext.example.automatedresttesting.services.AutomatedRestTestingGramm
 public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected AutomatedRestTestingGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q;
 	protected AbstractElementAlias match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q;
 	protected AbstractElementAlias match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q;
-	protected AbstractElementAlias match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a;
-	protected AbstractElementAlias match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q;
-	protected AbstractElementAlias match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q;
+	protected AbstractElementAlias match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_13_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_13_1__q;
+	protected AbstractElementAlias match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (AutomatedRestTestingGrammarAccess) access;
-		match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getAssertionAccess().getARROWTerminalRuleCall_1_0_1()), new TokenAlias(false, false, grammarAccess.getAssertionAccess().getDOTTerminalRuleCall_1_0_0()));
 		match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getParameterKeyword_1_0_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getARROWTerminalRuleCall_1_0_1_1()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getDOTTerminalRuleCall_1_0_1_0())));
 		match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMappingElementAccess().getRequestKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getMappingElementAccess().getARROWTerminalRuleCall_7_1()));
-		match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSLASHTerminalRuleCall_7_0_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getEStringParserRuleCall_7_0_1()));
-		match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_LEFT_BRACKETTerminalRuleCall_15_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_15_1()));
-		match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1()));
+		match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_13_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_13_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_LEFT_BRACKETTerminalRuleCall_13_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_13_1()));
+		match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1()));
 	}
 	
 	@Override
@@ -50,8 +46,6 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 			return getDOTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEQUALRule())
 			return getEQUALToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getEStringRule())
-			return getEStringToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLEFT_BRACKETRule())
 			return getLEFT_BRACKETToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLEFT_PARENTHESISRule())
@@ -62,8 +56,6 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 			return getRIGHT_PARENTHESISToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSEMICOLONRule())
 			return getSEMICOLONToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getSLASHRule())
-			return getSLASHToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSQUARE_LEFT_BRACKETRule())
 			return getSQUARE_LEFT_BRACKETToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSQUARE_RIGHT_BRACKETRule())
@@ -105,16 +97,6 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 		if (node != null)
 			return getTokenText(node);
 		return "=";
-	}
-	
-	/**
-	 * EString returns ecore::EString:
-	 * 	STRING | ID;
-	 */
-	protected String getEStringToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\"\"";
 	}
 	
 	/**
@@ -163,15 +145,6 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	}
 	
 	/**
-	 * terminal SLASH : "/";
-	 */
-	protected String getSLASHToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "/";
-	}
-	
-	/**
 	 * terminal SQUARE_LEFT_BRACKET : "[";
 	 */
 	protected String getSQUARE_LEFT_BRACKETToken(EObject semanticObject, RuleCall ruleCall, INode node) {
@@ -195,33 +168,18 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q.equals(syntax))
-				emit_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q.equals(syntax))
+			if (match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q.equals(syntax))
 				emit_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q.equals(syntax))
 				emit_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a.equals(syntax))
-				emit_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q.equals(syntax))
-				emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q.equals(syntax))
-				emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_13_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_13_1__q.equals(syntax))
+				emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_13_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_13_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1__q.equals(syntax))
+				emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     (DOT | ARROW)?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'response' (ambiguity) dataToTest=[Element|QualifiedName]
-	 */
-	protected void emit_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     ('parameter' (DOT | ARROW))?
@@ -246,28 +204,12 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (SLASH EString)*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     parameters+=Parameter (ambiguity) SEMICOLON 'Request' LEFT_BRACKET 'Type' EQUAL request=[Element|EString]
-	 *     parameters+=Parameter (ambiguity) SEMICOLON 'Response' LEFT_BRACKET 'Type' EQUAL response=[Element|EString]
-	 *     parameters+=Parameter (ambiguity) parameters+=Parameter
-	 *     uri=SLASH EString (ambiguity) SEMICOLON 'Request' LEFT_BRACKET 'Type' EQUAL request=[Element|EString]
-	 *     uri=SLASH EString (ambiguity) SEMICOLON 'Response' LEFT_BRACKET 'Type' EQUAL response=[Element|EString]
-	 *     uri=SLASH EString (ambiguity) parameters+=Parameter
-	 */
-	protected void emit_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     (SQUARE_LEFT_BRACKET SQUARE_RIGHT_BRACKET)?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     response=[Element|EString] (ambiguity) SEMICOLON RIGHT_BRACKET RIGHT_BRACKET (rule end)
 	 */
-	protected void emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_15_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_15_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_13_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_13_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -278,7 +220,7 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	 * This ambiguous syntax occurs at:
 	 *     request=[Element|EString] (ambiguity) SEMICOLON RIGHT_BRACKET 'Response' LEFT_BRACKET 'Type' EQUAL response=[Element|EString]
 	 */
-	protected void emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_9_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_9_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_RestService___SQUARE_LEFT_BRACKETTerminalRuleCall_7_5_0_SQUARE_RIGHT_BRACKETTerminalRuleCall_7_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

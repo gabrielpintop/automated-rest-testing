@@ -2,8 +2,6 @@
  */
 package automatedresttesting;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,12 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link automatedresttesting.RestService#getUri <em>Uri</em>}</li>
  *   <li>{@link automatedresttesting.RestService#getMethod <em>Method</em>}</li>
  *   <li>{@link automatedresttesting.RestService#getResponse <em>Response</em>}</li>
  *   <li>{@link automatedresttesting.RestService#getRequest <em>Request</em>}</li>
- *   <li>{@link automatedresttesting.RestService#getParameters <em>Parameters</em>}</li>
  *   <li>{@link automatedresttesting.RestService#getName <em>Name</em>}</li>
+ *   <li>{@link automatedresttesting.RestService#getUri <em>Uri</em>}</li>
  * </ul>
  *
  * @see automatedresttesting.AutomatedresttestingPackage#getRestService()
@@ -28,28 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface RestService extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Uri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uri</em>' attribute.
-	 * @see #setUri(String)
-	 * @see automatedresttesting.AutomatedresttestingPackage#getRestService_Uri()
-	 * @model
-	 * @generated
-	 */
-	String getUri();
-
-	/**
-	 * Sets the value of the '{@link automatedresttesting.RestService#getUri <em>Uri</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Uri</em>' attribute.
-	 * @see #getUri()
-	 * @generated
-	 */
-	void setUri(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.MethodType}.
@@ -120,18 +95,6 @@ public interface RestService extends EObject {
 	void setRequest(Element value);
 
 	/**
-	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link automatedresttesting.Parameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parameters</em>' containment reference list.
-	 * @see automatedresttesting.AutomatedresttestingPackage#getRestService_Parameters()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Parameter> getParameters();
-
-	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,5 +115,27 @@ public interface RestService extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Uri</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uri</em>' containment reference.
+	 * @see #setUri(URL)
+	 * @see automatedresttesting.AutomatedresttestingPackage#getRestService_Uri()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	URL getUri();
+
+	/**
+	 * Sets the value of the '{@link automatedresttesting.RestService#getUri <em>Uri</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uri</em>' containment reference.
+	 * @see #getUri()
+	 * @generated
+	 */
+	void setUri(URL value);
 
 } // RestService

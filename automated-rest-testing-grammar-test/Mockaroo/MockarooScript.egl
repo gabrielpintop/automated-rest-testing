@@ -3,8 +3,9 @@ const mockaroo = require('mockaroo');
 const fs = require('fs');
 const json2xls = require('json2xls');
 const client = new mockaroo.Client({
-  apiKey: ''
+  apiKey: '9aa4bd60'
 });
+const dataDirectory = './data';
 [%
 for(entity in ART!Entity.all) {
 %]
@@ -20,6 +21,12 @@ const [%=entity.name.toLowerCase()%] = client.generate({
     {
       name: '[%=attribute.name%]',
 [%  	
+		if(attribute.isArray) {
+%]
+      array: true,
+[%			
+		}
+		
 		if(attribute.restrictions.isDefined() and attribute.restrictions.size > 0) {
 %]
       type: '[%=attribute.restrictions[0].mockType%]'
@@ -41,7 +48,9 @@ const [%=entity.name.toLowerCase()%] = client.generate({
 [%
 }
 %]
-
+if (!fs.existsSync(dataDirectory)) {
+  fs.mkdirSync(dataDirectory);
+}
 [%
 for(entity in ART!Entity.all) {
 %]
@@ -49,9 +58,9 @@ for(entity in ART!Entity.all) {
 [%=entity.name.toLowerCase()%].then(([%=entity.name.toLowerCase()%]Data) => {
   const [%=entity.name.toLowerCase()%]Xls = json2xls([%=entity.name.toLowerCase()%]Data);
   fs.writeFileSync('./data/[%=entity.name.toLowerCase()%]Data.xlsx', [%=entity.name.toLowerCase()%]Xls, 'binary');
+}).catch(err => {
+  console.error(err);
 });
 [%
 }
 %]
-
-

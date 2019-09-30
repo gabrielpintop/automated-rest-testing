@@ -19,7 +19,7 @@ package automatedresttesting;
  * @model
  * @generated
  */
-public interface Parameter extends Attribute {
+public interface Parameter extends URLExpression {
 	/**
 	 * Returns the value of the '<em><b>Param Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link automatedresttesting.ParameterType}.

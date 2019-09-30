@@ -16,14 +16,13 @@
         eType="#//DomainAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RestService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//MethodType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="response" lowerBound="1"
         eType="#//Element"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="request" eType="#//Element"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//Parameter" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uri" lowerBound="1" eType="#//URL"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AttributeType">
     <eLiterals name="string" literal="string"/>
@@ -54,19 +53,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaryKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MockTypes">
-    <eLiterals name="FirstNameType" literal="FirstNameType"/>
-    <eLiterals name="FirstNameMaleType" value="1" literal="FirstNameMaleType"/>
-    <eLiterals name="FirstNameFemaleType" value="2"/>
-    <eLiterals name="LastNameType" value="3" literal="LastNameType"/>
-    <eLiterals name="FamilyNameType" value="4" literal="FamilyNameType"/>
-    <eLiterals name="FullNameType" value="5" literal="FullNameType"/>
-    <eLiterals name="GenderType" value="6" literal="GenderType"/>
-    <eLiterals name="EmailAddressType" value="7" literal="EmailAddressType"/>
-    <eLiterals name="PhoneType" value="8" literal="PhoneType"/>
-    <eLiterals name="CountryType" value="9" literal="CountryType"/>
-    <eLiterals name="CountryCodeType" value="10" literal="CountryCodeType"/>
-    <eLiterals name="CityType" value="11" literal="CityType"/>
-    <eLiterals name="RowNumberType" value="12" literal="RowNumberType"/>
+    <eLiterals name="FirstNameType" literal="First Name"/>
+    <eLiterals name="FirstNameMaleType" value="1" literal="First Name (Male)"/>
+    <eLiterals name="FirstNameFemaleType" value="2" literal="First Name (Female)"/>
+    <eLiterals name="LastNameType" value="3" literal="Last Name"/>
+    <eLiterals name="UniversityType" value="4" literal="University"/>
+    <eLiterals name="FullNameType" value="5" literal="Full Name"/>
+    <eLiterals name="GenderType" value="6" literal="Gender"/>
+    <eLiterals name="EmailAddressType" value="7" literal="Email Address"/>
+    <eLiterals name="PhoneType" value="8" literal="Phone"/>
+    <eLiterals name="CountryType" value="9" literal="Country"/>
+    <eLiterals name="CountryCodeType" value="10" literal="Country Code"/>
+    <eLiterals name="CityType" value="11" literal="City"/>
+    <eLiterals name="RowNumberType" value="12" literal="Row Number"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MethodType">
     <eLiterals name="GET" literal="GET"/>
@@ -74,7 +73,7 @@
     <eLiterals name="PUT" value="2" literal="PUT"/>
     <eLiterals name="DELETE" value="3" literal="DELETE"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//Attribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//URLExpression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="paramType" eType="#//ParameterType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Test">
@@ -92,8 +91,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isArray" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ParameterType">
-    <eLiterals name="path"/>
-    <eLiterals name="query" value="1" literal="query"/>
+    <eLiterals name="path" literal=":"/>
+    <eLiterals name="query" value="1" literal="$"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationalOperator">
     <eLiterals name="Minor" literal="&lt;"/>
@@ -135,5 +134,21 @@
   <eClassifiers xsi:type="ecore:EEnum" name="AssertionType">
     <eLiterals name="response" literal="response"/>
     <eLiterals name="information" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SeparatorType">
+    <eLiterals name="Slash" literal="/"/>
+    <eLiterals name="Et" value="1" literal="&amp;"/>
+    <eLiterals name="QuestionMark" value="2" literal="?"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="URL">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="urlexpression" lowerBound="1"
+        upperBound="-1" eType="#//URLExpression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="URLExpression" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Separator" eSuperTypes="#//URLExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="separatorType" eType="#//SeparatorType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="URLText" eSuperTypes="#//URLExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

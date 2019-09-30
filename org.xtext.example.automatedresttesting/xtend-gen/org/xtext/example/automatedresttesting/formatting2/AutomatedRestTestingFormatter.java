@@ -5,9 +5,9 @@ package org.xtext.example.automatedresttesting.formatting2;
 
 import automatedresttesting.AutomatedRestTesting;
 import automatedresttesting.Element;
-import automatedresttesting.Parameter;
 import automatedresttesting.RestService;
 import automatedresttesting.Test;
+import automatedresttesting.URL;
 import com.google.inject.Inject;
 import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
@@ -40,10 +40,7 @@ public class AutomatedRestTestingFormatter extends AbstractFormatter2 {
   }
   
   protected void _format(final RestService restService, @Extension final IFormattableDocument document) {
-    EList<Parameter> _parameters = restService.getParameters();
-    for (final Parameter parameter : _parameters) {
-      document.<Parameter>format(parameter);
-    }
+    document.<URL>format(restService.getUri());
   }
   
   public void format(final Object automatedRestTesting, final IFormattableDocument document) {

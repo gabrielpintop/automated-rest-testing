@@ -24,9 +24,13 @@ import automatedresttesting.ParameterType;
 import automatedresttesting.RelationalOperator;
 import automatedresttesting.RestService;
 import automatedresttesting.Restriction;
+import automatedresttesting.Separator;
+import automatedresttesting.SeparatorType;
 import automatedresttesting.SimpleEntity;
 import automatedresttesting.StringLiteral;
 import automatedresttesting.Test;
+import automatedresttesting.URLExpression;
+import automatedresttesting.URLText;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -167,6 +171,34 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass urlEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass urlExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass separatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass urlTextEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum attributeTypeEEnum = null;
 
 	/**
@@ -203,6 +235,13 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * @generated
 	 */
 	private EEnum assertionTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum separatorTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -351,7 +390,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestService_Uri() {
+	public EAttribute getRestService_Method() {
 		return (EAttribute)restServiceEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -361,18 +400,8 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestService_Method() {
-		return (EAttribute)restServiceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getRestService_Response() {
-		return (EReference)restServiceEClass.getEStructuralFeatures().get(2);
+		return (EReference)restServiceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -382,17 +411,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 */
 	@Override
 	public EReference getRestService_Request() {
-		return (EReference)restServiceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRestService_Parameters() {
-		return (EReference)restServiceEClass.getEStructuralFeatures().get(4);
+		return (EReference)restServiceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -402,7 +421,17 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 */
 	@Override
 	public EAttribute getRestService_Name() {
-		return (EAttribute)restServiceEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)restServiceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRestService_Uri() {
+		return (EReference)restServiceEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -811,6 +840,76 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * @generated
 	 */
 	@Override
+	public EClass getURL() {
+		return urlEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getURL_Urlexpression() {
+		return (EReference)urlEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getURLExpression() {
+		return urlExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSeparator() {
+		return separatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSeparator_SeparatorType() {
+		return (EAttribute)separatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getURLText() {
+		return urlTextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getURLText_Text() {
+		return (EAttribute)urlTextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getAttributeType() {
 		return attributeTypeEEnum;
 	}
@@ -871,6 +970,16 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 	 * @generated
 	 */
 	@Override
+	public EEnum getSeparatorType() {
+		return separatorTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public AutomatedresttestingFactory getAutomatedresttestingFactory() {
 		return (AutomatedresttestingFactory)getEFactoryInstance();
 	}
@@ -904,12 +1013,11 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		createEReference(entityEClass, ENTITY__ENTITY_ATTRIBUTES);
 
 		restServiceEClass = createEClass(REST_SERVICE);
-		createEAttribute(restServiceEClass, REST_SERVICE__URI);
 		createEAttribute(restServiceEClass, REST_SERVICE__METHOD);
 		createEReference(restServiceEClass, REST_SERVICE__RESPONSE);
 		createEReference(restServiceEClass, REST_SERVICE__REQUEST);
-		createEReference(restServiceEClass, REST_SERVICE__PARAMETERS);
 		createEAttribute(restServiceEClass, REST_SERVICE__NAME);
+		createEReference(restServiceEClass, REST_SERVICE__URI);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__VALUE);
@@ -965,6 +1073,17 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		integerLiteralEClass = createEClass(INTEGER_LITERAL);
 		createEAttribute(integerLiteralEClass, INTEGER_LITERAL__VALUE);
 
+		urlEClass = createEClass(URL);
+		createEReference(urlEClass, URL__URLEXPRESSION);
+
+		urlExpressionEClass = createEClass(URL_EXPRESSION);
+
+		separatorEClass = createEClass(SEPARATOR);
+		createEAttribute(separatorEClass, SEPARATOR__SEPARATOR_TYPE);
+
+		urlTextEClass = createEClass(URL_TEXT);
+		createEAttribute(urlTextEClass, URL_TEXT__TEXT);
+
 		// Create enums
 		attributeTypeEEnum = createEEnum(ATTRIBUTE_TYPE);
 		mockTypesEEnum = createEEnum(MOCK_TYPES);
@@ -972,6 +1091,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		parameterTypeEEnum = createEEnum(PARAMETER_TYPE);
 		relationalOperatorEEnum = createEEnum(RELATIONAL_OPERATOR);
 		assertionTypeEEnum = createEEnum(ASSERTION_TYPE);
+		separatorTypeEEnum = createEEnum(SEPARATOR_TYPE);
 	}
 
 	/**
@@ -1005,11 +1125,14 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		entityEClass.getESuperTypes().add(this.getElement());
 		attributeEClass.getESuperTypes().add(this.getElement());
 		domainAttributeEClass.getESuperTypes().add(this.getAttribute());
-		parameterEClass.getESuperTypes().add(this.getAttribute());
+		parameterEClass.getESuperTypes().add(this.getURLExpression());
 		simpleEntityEClass.getESuperTypes().add(this.getElement());
 		stringLiteralEClass.getESuperTypes().add(this.getLiteral());
 		elementLiteralEClass.getESuperTypes().add(this.getLiteral());
 		integerLiteralEClass.getESuperTypes().add(this.getLiteral());
+		urlExpressionEClass.getESuperTypes().add(this.getElement());
+		separatorEClass.getESuperTypes().add(this.getURLExpression());
+		urlTextEClass.getESuperTypes().add(this.getURLExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(automatedRestTestingEClass, AutomatedRestTesting.class, "AutomatedRestTesting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1022,12 +1145,11 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		initEReference(getEntity_EntityAttributes(), this.getDomainAttribute(), null, "entityAttributes", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restServiceEClass, RestService.class, "RestService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRestService_Uri(), ecorePackage.getEString(), "uri", null, 0, 1, RestService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRestService_Method(), this.getMethodType(), "method", null, 0, 1, RestService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestService_Response(), this.getElement(), null, "response", null, 1, 1, RestService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestService_Request(), this.getElement(), null, "request", null, 0, 1, RestService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRestService_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, RestService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRestService_Name(), ecorePackage.getEString(), "name", null, 0, 1, RestService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRestService_Uri(), this.getURL(), null, "uri", null, 1, 1, RestService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttribute_Value(), ecorePackage.getEString(), "value", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1083,6 +1205,17 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		initEClass(integerLiteralEClass, IntegerLiteral.class, "IntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, IntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(urlEClass, automatedresttesting.URL.class, "URL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getURL_Urlexpression(), this.getURLExpression(), null, "urlexpression", null, 1, -1, automatedresttesting.URL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(urlExpressionEClass, URLExpression.class, "URLExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(separatorEClass, Separator.class, "Separator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSeparator_SeparatorType(), this.getSeparatorType(), "separatorType", null, 0, 1, Separator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(urlTextEClass, URLText.class, "URLText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getURLText_Text(), ecorePackage.getEString(), "text", null, 0, 1, URLText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(attributeTypeEEnum, AttributeType.class, "AttributeType");
 		addEEnumLiteral(attributeTypeEEnum, AttributeType.STRING);
@@ -1096,7 +1229,7 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		addEEnumLiteral(mockTypesEEnum, MockTypes.FIRST_NAME_MALE_TYPE);
 		addEEnumLiteral(mockTypesEEnum, MockTypes.FIRST_NAME_FEMALE_TYPE);
 		addEEnumLiteral(mockTypesEEnum, MockTypes.LAST_NAME_TYPE);
-		addEEnumLiteral(mockTypesEEnum, MockTypes.FAMILY_NAME_TYPE);
+		addEEnumLiteral(mockTypesEEnum, MockTypes.UNIVERSITY_TYPE);
 		addEEnumLiteral(mockTypesEEnum, MockTypes.FULL_NAME_TYPE);
 		addEEnumLiteral(mockTypesEEnum, MockTypes.GENDER_TYPE);
 		addEEnumLiteral(mockTypesEEnum, MockTypes.EMAIL_ADDRESS_TYPE);
@@ -1129,6 +1262,11 @@ public class AutomatedresttestingPackageImpl extends EPackageImpl implements Aut
 		initEEnum(assertionTypeEEnum, AssertionType.class, "AssertionType");
 		addEEnumLiteral(assertionTypeEEnum, AssertionType.RESPONSE);
 		addEEnumLiteral(assertionTypeEEnum, AssertionType.INFORMATION);
+
+		initEEnum(separatorTypeEEnum, SeparatorType.class, "SeparatorType");
+		addEEnumLiteral(separatorTypeEEnum, SeparatorType.SLASH);
+		addEEnumLiteral(separatorTypeEEnum, SeparatorType.ET);
+		addEEnumLiteral(separatorTypeEEnum, SeparatorType.QUESTION_MARK);
 
 		// Create resource
 		createResource(eNS_URI);

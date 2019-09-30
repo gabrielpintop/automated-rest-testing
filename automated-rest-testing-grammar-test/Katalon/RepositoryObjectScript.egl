@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+	<description></description>
+    <name>[%=restService.name%]</name>
+    <tag></tag>
+    <elementGuidId>2744c6ab-[%=restServiceId%]-4dc9-94c9-04bb45d5046a</elementGuidId>
+    <selectorMethod>BASIC</selectorMethod>
+    <useRalativeImagePath>false</useRalativeImagePath>
+  	<followRedirects>false</followRedirects>
+    <httpBody></httpBody>
+    [%
+    	// Body content is defined
+    	var bodyContent = '';
+    	if((restService.method.name == 'POST' or restService.method.name == 'PUT') and restService.request.isDefined()) {
+   			bodyContent = '\n    {\n    &quot;text&quot;: &quot;{\\n  ';
+   			var attribute;
+   			for(i in 0.to(restService.request.entityAttributes.size() -1)) {
+   				attribute = restService.request.entityAttributes[i];
+   				bodyContent += '\\' + '&quot;' + attribute.name + '&quot;: &quot;${' + attribute.name + '}&quot;';
+	   			if(i < restService.request.entityAttributes.size() - 1) {
+	   				bodyContent += ',\\n  ';
+	   			}
+   			}
+   			bodyContent += '\\n}&quot;,\n    &quot;contentType&quot;: &quot;application/json&quot;,\n    &quot;charset&quot;: &quot;UTF-8&quot;\n    }\n    ';
+   		}
+   	%]
+    <httpBodyContent>[%=bodyContent%]</httpBodyContent>
+  	<httpBodyType>text</httpBodyType>
+  	<httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/json</value>
+   	</httpHeaderProperties>
+  	<migratedVersion>5.4.1</migratedVersion>
+	<restRequestMethod>[%=restService.method%]</restRequestMethod>
+   	[%
+   		// URL is defined
+   		var url = '';
+   		var urlExpressionType = '';
+   		for(urlExpression in restService.uri.urlExpression) {
+   		urlExpressionType = urlExpression.type().name;
+   			if(urlExpressionType == 'Separator') {
+   				url += urlExpression.separatorType;
+   			} else if(urlExpressionType == 'URLText') {
+   				url += urlExpression.text;
+   			} else if(urlExpressionType == 'Parameter') {
+   				url += urlExpression.paramType + '{' + urlExpression.name + '}';
+   			}
+   		}
+   	%]
+   	<restUrl>https://miso4202-apitest.herokuapp.com/api/v1[%=url%]</restUrl>
+   	<serviceType>RESTful</serviceType>
+   	<soapBody></soapBody>
+   	<soapHeader></soapHeader>
+   	<soapRequestMethod></soapRequestMethod>
+   	<soapServiceFunction></soapServiceFunction>
+   	[%
+   		// Variables are defined for both parameters and request entity
+   		var parameters = restService.uri.urlExpression.select(ue | ue.type().name == 'Parameter');
+   		if(parameters.size() > 0 or ((restService.method.name == 'POST' or restService.method.name == 'PUT') and restService.request.isDefined())) {
+   			var idZeros = '0000';
+   			var variableId;
+   			if(parameters.size() > 0) {
+   				// Get all the mappings that assigns default values
+   				var mappings = ART!Test.all.select(t | t.service.name == restService.name).collect(t | t.mappings).flatten().select(m | m.value.type().name == 'StringLiteral' or m.value.type().name == 'IntegerLiteral');
+   				var parameter;
+   				var mapping;
+   				var defaultValue;
+   				for(i in 0.to(parameters.size - 1)) {
+   					parameter = parameters[i];
+   					variableId = idZeros.substring((i + '').length()) + i;
+   	%]
+   	<variables>
+      	<description></description>
+      	[%
+      		if(mappings.size() > 0) {
+      			mapping = mappings.select(m | m.parameter.name == parameter.name).first();
+      			if(mapping.isDefined()) {
+      				defaultValue = mapping.value.value;
+      				if(mapping.value.type().name == 'StringLiteral') {
+      					defaultValue = "'" + defaultValue + "'";
+      				}
+      			
+      	%]
+      	<defaultValue>[%=defaultValue%]</defaultValue>
+      	[%
+      			}
+      		}
+      	%]
+      	<id>3744c6ab-[%=restServiceId%]-4dc9-[%=variableId%]-04bb45d5046a</id>
+      	<masked>false</masked>
+      	<name>[%=parameter.name%]</name>
+   	</variables>				
+   	[%
+   				}
+   			}
+   			
+   			if((restService.method.name == 'POST' or restService.method.name == 'PUT') and restService.request.isDefined()) {
+   				var attribute;
+   				for(i in 0.to(restService.request.entityAttributes.size() -1)) {
+   					attribute = restService.request.entityAttributes[i];
+   					variableId = idZeros.substring((i + '').length()) + i;
+   	%]
+   	<variables>
+      	<description></description>
+      	<id>4744c6ab-[%=restServiceId%]-4dc9-[%=variableId%]-04bb45d5046a</id>
+      	<masked>false</masked>
+      	<name>[%=attribute.name%]</name>
+   	</variables>				
+   	[%
+   				}
+   			}
+   			
+   		}
+   	%]
+   	<verificationScript>
+   		import com.kms.katalon.core.testobject.RequestObject
+		import com.kms.katalon.core.testobject.ResponseObject
+		import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+		import com.kms.katalon.core.webservice.verification.WSResponseManager
+		RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+		ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+   	</verificationScript>
+   	<wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

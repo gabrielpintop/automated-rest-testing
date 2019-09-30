@@ -10,87 +10,109 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Parameter Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Separator Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see automatedresttesting.AutomatedresttestingPackage#getParameterType()
+ * @see automatedresttesting.AutomatedresttestingPackage#getSeparatorType()
  * @model
  * @generated
  */
-public enum ParameterType implements Enumerator {
+public enum SeparatorType implements Enumerator {
 	/**
-	 * The '<em><b>Path</b></em>' literal object.
+	 * The '<em><b>Slash</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PATH_VALUE
+	 * @see #SLASH_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PATH(0, "path", ":"),
+	SLASH(0, "Slash", "/"),
 
 	/**
-	 * The '<em><b>Query</b></em>' literal object.
+	 * The '<em><b>Et</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #QUERY_VALUE
+	 * @see #ET_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	QUERY(1, "query", "$");
+	ET(1, "Et", "&"),
 
 	/**
-	 * The '<em><b>Path</b></em>' literal value.
+	 * The '<em><b>Question Mark</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PATH
-	 * @model name="path" literal=":"
+	 * @see #QUESTION_MARK_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PATH_VALUE = 0;
+	QUESTION_MARK(2, "QuestionMark", "?");
 
 	/**
-	 * The '<em><b>Query</b></em>' literal value.
+	 * The '<em><b>Slash</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #QUERY
-	 * @model name="query" literal="$"
+	 * @see #SLASH
+	 * @model name="Slash" literal="/"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int QUERY_VALUE = 1;
+	public static final int SLASH_VALUE = 0;
 
 	/**
-	 * An array of all the '<em><b>Parameter Type</b></em>' enumerators.
+	 * The '<em><b>Et</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ET
+	 * @model name="Et" literal="&amp;"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ET_VALUE = 1;
+
+	/**
+	 * The '<em><b>Question Mark</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #QUESTION_MARK
+	 * @model name="QuestionMark" literal="?"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int QUESTION_MARK_VALUE = 2;
+
+	/**
+	 * An array of all the '<em><b>Separator Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ParameterType[] VALUES_ARRAY =
-		new ParameterType[] {
-			PATH,
-			QUERY,
+	private static final SeparatorType[] VALUES_ARRAY =
+		new SeparatorType[] {
+			SLASH,
+			ET,
+			QUESTION_MARK,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Parameter Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Separator Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<ParameterType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<SeparatorType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Parameter Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Separator Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ParameterType get(String literal) {
+	public static SeparatorType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ParameterType result = VALUES_ARRAY[i];
+			SeparatorType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -99,16 +121,16 @@ public enum ParameterType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Parameter Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Separator Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ParameterType getByName(String name) {
+	public static SeparatorType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ParameterType result = VALUES_ARRAY[i];
+			SeparatorType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -117,17 +139,18 @@ public enum ParameterType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Parameter Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Separator Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ParameterType get(int value) {
+	public static SeparatorType get(int value) {
 		switch (value) {
-			case PATH_VALUE: return PATH;
-			case QUERY_VALUE: return QUERY;
+			case SLASH_VALUE: return SLASH;
+			case ET_VALUE: return ET;
+			case QUESTION_MARK_VALUE: return QUESTION_MARK;
 		}
 		return null;
 	}
@@ -159,7 +182,7 @@ public enum ParameterType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private ParameterType(int value, String name, String literal) {
+	private SeparatorType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -206,4 +229,4 @@ public enum ParameterType implements Enumerator {
 		return literal;
 	}
 	
-} //ParameterType
+} //SeparatorType

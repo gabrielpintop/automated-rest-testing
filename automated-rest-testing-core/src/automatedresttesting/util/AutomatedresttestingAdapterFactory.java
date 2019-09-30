@@ -136,6 +136,22 @@ public class AutomatedresttestingAdapterFactory extends AdapterFactoryImpl {
 				return createIntegerLiteralAdapter();
 			}
 			@Override
+			public Adapter caseURL(URL object) {
+				return createURLAdapter();
+			}
+			@Override
+			public Adapter caseURLExpression(URLExpression object) {
+				return createURLExpressionAdapter();
+			}
+			@Override
+			public Adapter caseSeparator(Separator object) {
+				return createSeparatorAdapter();
+			}
+			@Override
+			public Adapter caseURLText(URLText object) {
+				return createURLTextAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -390,6 +406,62 @@ public class AutomatedresttestingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIntegerLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.URL <em>URL</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.URL
+	 * @generated
+	 */
+	public Adapter createURLAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.URLExpression <em>URL Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.URLExpression
+	 * @generated
+	 */
+	public Adapter createURLExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.Separator <em>Separator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.Separator
+	 * @generated
+	 */
+	public Adapter createSeparatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link automatedresttesting.URLText <em>URL Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see automatedresttesting.URLText
+	 * @generated
+	 */
+	public Adapter createURLTextAdapter() {
 		return null;
 	}
 

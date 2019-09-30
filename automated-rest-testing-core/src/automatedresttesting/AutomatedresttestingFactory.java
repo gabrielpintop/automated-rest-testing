@@ -157,6 +157,42 @@ public interface AutomatedresttestingFactory extends EFactory {
 	IntegerLiteral createIntegerLiteral();
 
 	/**
+	 * Returns a new object of class '<em>URL</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>URL</em>'.
+	 * @generated
+	 */
+	URL createURL();
+
+	/**
+	 * Returns a new object of class '<em>URL Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>URL Expression</em>'.
+	 * @generated
+	 */
+	URLExpression createURLExpression();
+
+	/**
+	 * Returns a new object of class '<em>Separator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Separator</em>'.
+	 * @generated
+	 */
+	Separator createSeparator();
+
+	/**
+	 * Returns a new object of class '<em>URL Text</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>URL Text</em>'.
+	 * @generated
+	 */
+	URLText createURLText();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -18,7 +18,7 @@
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FirstNameMaleType"/>
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FirstNameFemaleType"/>
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/LastNameType"/>
-      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FamilyNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/UniversityType"/>
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/FullNameType"/>
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/GenderType"/>
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//MockTypes/EmailAddressType"/>
@@ -52,6 +52,11 @@
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//AssertionType/response"/>
       <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//AssertionType/information"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AutomatedRestTesting.ecore#//SeparatorType">
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//SeparatorType/Slash"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//SeparatorType/Et"/>
+      <genEnumLiterals ecoreEnumLiteral="AutomatedRestTesting.ecore#//SeparatorType/QuestionMark"/>
+    </genEnums>
     <genClasses ecoreClass="AutomatedRestTesting.ecore#//AutomatedRestTesting">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//AutomatedRestTesting/url"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//AutomatedRestTesting/tests"/>
@@ -62,12 +67,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//Entity/entityAttributes"/>
     </genClasses>
     <genClasses ecoreClass="AutomatedRestTesting.ecore#//RestService">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//RestService/uri"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//RestService/method"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//RestService/response"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//RestService/request"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//RestService/parameters"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//RestService/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//RestService/uri"/>
     </genClasses>
     <genClasses ecoreClass="AutomatedRestTesting.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Attribute/value"/>
@@ -121,6 +125,16 @@
     </genClasses>
     <genClasses ecoreClass="AutomatedRestTesting.ecore#//IntegerLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//IntegerLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//URL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomatedRestTesting.ecore#//URL/urlexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//URLExpression"/>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//Separator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//Separator/separatorType"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomatedRestTesting.ecore#//URLText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomatedRestTesting.ecore#//URLText/text"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

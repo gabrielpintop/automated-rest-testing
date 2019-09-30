@@ -233,22 +233,13 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int REST_SERVICE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Uri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_SERVICE__URI = 0;
-
-	/**
 	 * The feature id for the '<em><b>Method</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST_SERVICE__METHOD = 1;
+	int REST_SERVICE__METHOD = 0;
 
 	/**
 	 * The feature id for the '<em><b>Response</b></em>' reference.
@@ -257,7 +248,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REST_SERVICE__RESPONSE = 2;
+	int REST_SERVICE__RESPONSE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Request</b></em>' reference.
@@ -266,16 +257,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REST_SERVICE__REQUEST = 3;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_SERVICE__PARAMETERS = 4;
+	int REST_SERVICE__REQUEST = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -284,7 +266,16 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REST_SERVICE__NAME = 5;
+	int REST_SERVICE__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Uri</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_SERVICE__URI = 4;
 
 	/**
 	 * The number of structural features of the '<em>Rest Service</em>' class.
@@ -293,7 +284,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REST_SERVICE_FEATURE_COUNT = 6;
+	int REST_SERVICE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Rest Service</em>' class.
@@ -561,6 +552,52 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int DOMAIN_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.URLExpressionImpl <em>URL Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.URLExpressionImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getURLExpression()
+	 * @generated
+	 */
+	int URL_EXPRESSION = 18;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESSION__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Array</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESSION__IS_ARRAY = ELEMENT__IS_ARRAY;
+
+	/**
+	 * The number of structural features of the '<em>URL Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESSION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>URL Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESSION_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link automatedresttesting.impl.ParameterImpl <em>Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -577,7 +614,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__NAME = ATTRIBUTE__NAME;
+	int PARAMETER__NAME = URL_EXPRESSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Is Array</b></em>' attribute.
@@ -586,34 +623,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__IS_ARRAY = ATTRIBUTE__IS_ARRAY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__VALUE = ATTRIBUTE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__RESTRICTIONS = ATTRIBUTE__RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__TYPE = ATTRIBUTE__TYPE;
+	int PARAMETER__IS_ARRAY = URL_EXPRESSION__IS_ARRAY;
 
 	/**
 	 * The feature id for the '<em><b>Param Type</b></em>' attribute.
@@ -622,7 +632,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__PARAM_TYPE = ATTRIBUTE_FEATURE_COUNT + 0;
+	int PARAMETER__PARAM_TYPE = URL_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Parameter</em>' class.
@@ -631,7 +641,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 1;
+	int PARAMETER_FEATURE_COUNT = URL_EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Parameter</em>' class.
@@ -640,7 +650,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
+	int PARAMETER_OPERATION_COUNT = URL_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.impl.TestImpl <em>Test</em>}' class.
@@ -1011,6 +1021,153 @@ public interface AutomatedresttestingPackage extends EPackage {
 	int INTEGER_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.URLImpl <em>URL</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.URLImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getURL()
+	 * @generated
+	 */
+	int URL = 17;
+
+	/**
+	 * The feature id for the '<em><b>Urlexpression</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL__URLEXPRESSION = 0;
+
+	/**
+	 * The number of structural features of the '<em>URL</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>URL</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.SeparatorImpl <em>Separator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.SeparatorImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getSeparator()
+	 * @generated
+	 */
+	int SEPARATOR = 19;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEPARATOR__NAME = URL_EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Array</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEPARATOR__IS_ARRAY = URL_EXPRESSION__IS_ARRAY;
+
+	/**
+	 * The feature id for the '<em><b>Separator Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEPARATOR__SEPARATOR_TYPE = URL_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Separator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEPARATOR_FEATURE_COUNT = URL_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Separator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEPARATOR_OPERATION_COUNT = URL_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link automatedresttesting.impl.URLTextImpl <em>URL Text</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.impl.URLTextImpl
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getURLText()
+	 * @generated
+	 */
+	int URL_TEXT = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TEXT__NAME = URL_EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Array</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TEXT__IS_ARRAY = URL_EXPRESSION__IS_ARRAY;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TEXT__TEXT = URL_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>URL Text</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TEXT_FEATURE_COUNT = URL_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>URL Text</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TEXT_OPERATION_COUNT = URL_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1018,7 +1175,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getAttributeType()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPE = 17;
+	int ATTRIBUTE_TYPE = 21;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.MockTypes <em>Mock Types</em>}' enum.
@@ -1028,7 +1185,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMockTypes()
 	 * @generated
 	 */
-	int MOCK_TYPES = 18;
+	int MOCK_TYPES = 22;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.MethodType <em>Method Type</em>}' enum.
@@ -1038,7 +1195,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getMethodType()
 	 * @generated
 	 */
-	int METHOD_TYPE = 19;
+	int METHOD_TYPE = 23;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.ParameterType <em>Parameter Type</em>}' enum.
@@ -1048,7 +1205,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 20;
+	int PARAMETER_TYPE = 24;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.RelationalOperator <em>Relational Operator</em>}' enum.
@@ -1058,7 +1215,7 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getRelationalOperator()
 	 * @generated
 	 */
-	int RELATIONAL_OPERATOR = 21;
+	int RELATIONAL_OPERATOR = 25;
 
 	/**
 	 * The meta object id for the '{@link automatedresttesting.AssertionType <em>Assertion Type</em>}' enum.
@@ -1068,7 +1225,17 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getAssertionType()
 	 * @generated
 	 */
-	int ASSERTION_TYPE = 22;
+	int ASSERTION_TYPE = 26;
+
+	/**
+	 * The meta object id for the '{@link automatedresttesting.SeparatorType <em>Separator Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see automatedresttesting.SeparatorType
+	 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getSeparatorType()
+	 * @generated
+	 */
+	int SEPARATOR_TYPE = 27;
 
 
 	/**
@@ -1157,17 +1324,6 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EClass getRestService();
 
 	/**
-	 * Returns the meta object for the attribute '{@link automatedresttesting.RestService#getUri <em>Uri</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Uri</em>'.
-	 * @see automatedresttesting.RestService#getUri()
-	 * @see #getRestService()
-	 * @generated
-	 */
-	EAttribute getRestService_Uri();
-
-	/**
 	 * Returns the meta object for the attribute '{@link automatedresttesting.RestService#getMethod <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1201,17 +1357,6 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EReference getRestService_Request();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link automatedresttesting.RestService#getParameters <em>Parameters</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
-	 * @see automatedresttesting.RestService#getParameters()
-	 * @see #getRestService()
-	 * @generated
-	 */
-	EReference getRestService_Parameters();
-
-	/**
 	 * Returns the meta object for the attribute '{@link automatedresttesting.RestService#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1221,6 +1366,17 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRestService_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link automatedresttesting.RestService#getUri <em>Uri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Uri</em>'.
+	 * @see automatedresttesting.RestService#getUri()
+	 * @see #getRestService()
+	 * @generated
+	 */
+	EReference getRestService_Uri();
 
 	/**
 	 * Returns the meta object for class '{@link automatedresttesting.Attribute <em>Attribute</em>}'.
@@ -1649,6 +1805,79 @@ public interface AutomatedresttestingPackage extends EPackage {
 	EAttribute getIntegerLiteral_Value();
 
 	/**
+	 * Returns the meta object for class '{@link automatedresttesting.URL <em>URL</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>URL</em>'.
+	 * @see automatedresttesting.URL
+	 * @generated
+	 */
+	EClass getURL();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link automatedresttesting.URL#getUrlexpression <em>Urlexpression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Urlexpression</em>'.
+	 * @see automatedresttesting.URL#getUrlexpression()
+	 * @see #getURL()
+	 * @generated
+	 */
+	EReference getURL_Urlexpression();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.URLExpression <em>URL Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>URL Expression</em>'.
+	 * @see automatedresttesting.URLExpression
+	 * @generated
+	 */
+	EClass getURLExpression();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.Separator <em>Separator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Separator</em>'.
+	 * @see automatedresttesting.Separator
+	 * @generated
+	 */
+	EClass getSeparator();
+
+	/**
+	 * Returns the meta object for the attribute '{@link automatedresttesting.Separator#getSeparatorType <em>Separator Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Separator Type</em>'.
+	 * @see automatedresttesting.Separator#getSeparatorType()
+	 * @see #getSeparator()
+	 * @generated
+	 */
+	EAttribute getSeparator_SeparatorType();
+
+	/**
+	 * Returns the meta object for class '{@link automatedresttesting.URLText <em>URL Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>URL Text</em>'.
+	 * @see automatedresttesting.URLText
+	 * @generated
+	 */
+	EClass getURLText();
+
+	/**
+	 * Returns the meta object for the attribute '{@link automatedresttesting.URLText#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see automatedresttesting.URLText#getText()
+	 * @see #getURLText()
+	 * @generated
+	 */
+	EAttribute getURLText_Text();
+
+	/**
 	 * Returns the meta object for enum '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1707,6 +1936,16 @@ public interface AutomatedresttestingPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getAssertionType();
+
+	/**
+	 * Returns the meta object for enum '{@link automatedresttesting.SeparatorType <em>Separator Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Separator Type</em>'.
+	 * @see automatedresttesting.SeparatorType
+	 * @generated
+	 */
+	EEnum getSeparatorType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1802,14 +2041,6 @@ public interface AutomatedresttestingPackage extends EPackage {
 		EClass REST_SERVICE = eINSTANCE.getRestService();
 
 		/**
-		 * The meta object literal for the '<em><b>Uri</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REST_SERVICE__URI = eINSTANCE.getRestService_Uri();
-
-		/**
 		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1834,20 +2065,20 @@ public interface AutomatedresttestingPackage extends EPackage {
 		EReference REST_SERVICE__REQUEST = eINSTANCE.getRestService_Request();
 
 		/**
-		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REST_SERVICE__PARAMETERS = eINSTANCE.getRestService_Parameters();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute REST_SERVICE__NAME = eINSTANCE.getRestService_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Uri</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_SERVICE__URI = eINSTANCE.getRestService_Uri();
 
 		/**
 		 * The meta object literal for the '{@link automatedresttesting.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -2198,6 +2429,70 @@ public interface AutomatedresttestingPackage extends EPackage {
 		EAttribute INTEGER_LITERAL__VALUE = eINSTANCE.getIntegerLiteral_Value();
 
 		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.URLImpl <em>URL</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.URLImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getURL()
+		 * @generated
+		 */
+		EClass URL = eINSTANCE.getURL();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlexpression</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference URL__URLEXPRESSION = eINSTANCE.getURL_Urlexpression();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.URLExpressionImpl <em>URL Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.URLExpressionImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getURLExpression()
+		 * @generated
+		 */
+		EClass URL_EXPRESSION = eINSTANCE.getURLExpression();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.SeparatorImpl <em>Separator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.SeparatorImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getSeparator()
+		 * @generated
+		 */
+		EClass SEPARATOR = eINSTANCE.getSeparator();
+
+		/**
+		 * The meta object literal for the '<em><b>Separator Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEPARATOR__SEPARATOR_TYPE = eINSTANCE.getSeparator_SeparatorType();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.impl.URLTextImpl <em>URL Text</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.impl.URLTextImpl
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getURLText()
+		 * @generated
+		 */
+		EClass URL_TEXT = eINSTANCE.getURLText();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute URL_TEXT__TEXT = eINSTANCE.getURLText_Text();
+
+		/**
 		 * The meta object literal for the '{@link automatedresttesting.AttributeType <em>Attribute Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2256,6 +2551,16 @@ public interface AutomatedresttestingPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ASSERTION_TYPE = eINSTANCE.getAssertionType();
+
+		/**
+		 * The meta object literal for the '{@link automatedresttesting.SeparatorType <em>Separator Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see automatedresttesting.SeparatorType
+		 * @see automatedresttesting.impl.AutomatedresttestingPackageImpl#getSeparatorType()
+		 * @generated
+		 */
+		EEnum SEPARATOR_TYPE = eINSTANCE.getSeparatorType();
 
 	}
 

@@ -72,6 +72,10 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 			case AutomatedresttestingPackage.STRING_LITERAL: return createStringLiteral();
 			case AutomatedresttestingPackage.ELEMENT_LITERAL: return createElementLiteral();
 			case AutomatedresttestingPackage.INTEGER_LITERAL: return createIntegerLiteral();
+			case AutomatedresttestingPackage.URL: return createURL();
+			case AutomatedresttestingPackage.URL_EXPRESSION: return createURLExpression();
+			case AutomatedresttestingPackage.SEPARATOR: return createSeparator();
+			case AutomatedresttestingPackage.URL_TEXT: return createURLText();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -97,6 +101,8 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 				return createRelationalOperatorFromString(eDataType, initialValue);
 			case AutomatedresttestingPackage.ASSERTION_TYPE:
 				return createAssertionTypeFromString(eDataType, initialValue);
+			case AutomatedresttestingPackage.SEPARATOR_TYPE:
+				return createSeparatorTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -122,6 +128,8 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 				return convertRelationalOperatorToString(eDataType, instanceValue);
 			case AutomatedresttestingPackage.ASSERTION_TYPE:
 				return convertAssertionTypeToString(eDataType, instanceValue);
+			case AutomatedresttestingPackage.SEPARATOR_TYPE:
+				return convertSeparatorTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -297,6 +305,50 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public URL createURL() {
+		URLImpl url = new URLImpl();
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public URLExpression createURLExpression() {
+		URLExpressionImpl urlExpression = new URLExpressionImpl();
+		return urlExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Separator createSeparator() {
+		SeparatorImpl separator = new SeparatorImpl();
+		return separator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public URLText createURLText() {
+		URLTextImpl urlText = new URLTextImpl();
+		return urlText;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AttributeType createAttributeTypeFromString(EDataType eDataType, String initialValue) {
 		AttributeType result = AttributeType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -409,6 +461,26 @@ public class AutomatedresttestingFactoryImpl extends EFactoryImpl implements Aut
 	 * @generated
 	 */
 	public String convertAssertionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SeparatorType createSeparatorTypeFromString(EDataType eDataType, String initialValue) {
+		SeparatorType result = SeparatorType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSeparatorTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

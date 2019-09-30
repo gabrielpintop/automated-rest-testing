@@ -17,12 +17,11 @@ Package automatedresttesting <http://www.example.org/automatedrestesting>
     Reference entityAttributes : DomainAttribute<<0..*>>
 
   Class RestService
-    Attribute uri : EString
     Attribute method : MethodType
     Reference response : Element<<1..1>>
     Reference request : Element
-    Reference parameters : Parameter<<0..*>>
     Attribute name : EString
+    Reference uri : URL<<1..1>>
 
   Class Attribute -> Element
     Attribute value : EString
@@ -41,7 +40,7 @@ Package automatedresttesting <http://www.example.org/automatedrestesting>
   Class DomainAttribute -> Attribute
     Attribute primaryKey : EBoolean
 
-  Class Parameter -> Attribute
+  Class Parameter -> URLExpression
     Attribute paramType : ParameterType
 
   Class Test
@@ -78,6 +77,17 @@ Package automatedresttesting <http://www.example.org/automatedrestesting>
   Class IntegerLiteral -> Literal
     Attribute value : EInt<<1..1>>
 
+  Class URL
+    Reference urlexpression : URLExpression<<1..*>>
+
+  Class URLExpression -> Element
+
+  Class Separator -> URLExpression
+    Attribute separatorType : SeparatorType
+
+  Class URLText -> URLExpression
+    Attribute text : EString
+
   Enum AttributeType
     Literal string = 0
     Literal boolean = 1
@@ -90,7 +100,7 @@ Package automatedresttesting <http://www.example.org/automatedrestesting>
     Literal FirstNameMaleType = 1
     Literal FirstNameFemaleType = 2
     Literal LastNameType = 3
-    Literal FamilyNameType = 4
+    Literal UniversityType = 4
     Literal FullNameType = 5
     Literal GenderType = 6
     Literal EmailAddressType = 7
@@ -123,3 +133,8 @@ Package automatedresttesting <http://www.example.org/automatedrestesting>
   Enum AssertionType
     Literal response = 0
     Literal information = 1
+
+  Enum SeparatorType
+    Literal Slash = 0
+    Literal Et = 1
+    Literal QuestionMark = 2

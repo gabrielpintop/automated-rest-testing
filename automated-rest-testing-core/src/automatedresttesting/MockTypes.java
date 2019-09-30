@@ -26,7 +26,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FIRST_NAME_TYPE(0, "FirstNameType", "FirstNameType"),
+	FIRST_NAME_TYPE(0, "FirstNameType", "First Name"),
 
 	/**
 	 * The '<em><b>First Name Male Type</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FIRST_NAME_MALE_TYPE(1, "FirstNameMaleType", "FirstNameMaleType"),
+	FIRST_NAME_MALE_TYPE(1, "FirstNameMaleType", "First Name (Male)"),
 
 	/**
 	 * The '<em><b>First Name Female Type</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FIRST_NAME_FEMALE_TYPE(2, "FirstNameFemaleType", "FirstNameFemaleType"),
+	FIRST_NAME_FEMALE_TYPE(2, "FirstNameFemaleType", "First Name (Female)"),
 
 	/**
 	 * The '<em><b>Last Name Type</b></em>' literal object.
@@ -56,17 +56,17 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LAST_NAME_TYPE(3, "LastNameType", "LastNameType"),
+	LAST_NAME_TYPE(3, "LastNameType", "Last Name"),
 
 	/**
-	 * The '<em><b>Family Name Type</b></em>' literal object.
+	 * The '<em><b>University Type</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #FAMILY_NAME_TYPE_VALUE
+	 * @see #UNIVERSITY_TYPE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	FAMILY_NAME_TYPE(4, "FamilyNameType", "FamilyNameType"),
+	UNIVERSITY_TYPE(4, "UniversityType", "University"),
 
 	/**
 	 * The '<em><b>Full Name Type</b></em>' literal object.
@@ -76,7 +76,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FULL_NAME_TYPE(5, "FullNameType", "FullNameType"),
+	FULL_NAME_TYPE(5, "FullNameType", "Full Name"),
 
 	/**
 	 * The '<em><b>Gender Type</b></em>' literal object.
@@ -86,7 +86,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GENDER_TYPE(6, "GenderType", "GenderType"),
+	GENDER_TYPE(6, "GenderType", "Gender"),
 
 	/**
 	 * The '<em><b>Email Address Type</b></em>' literal object.
@@ -96,7 +96,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EMAIL_ADDRESS_TYPE(7, "EmailAddressType", "EmailAddressType"),
+	EMAIL_ADDRESS_TYPE(7, "EmailAddressType", "Email Address"),
 
 	/**
 	 * The '<em><b>Phone Type</b></em>' literal object.
@@ -106,7 +106,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PHONE_TYPE(8, "PhoneType", "PhoneType"),
+	PHONE_TYPE(8, "PhoneType", "Phone"),
 
 	/**
 	 * The '<em><b>Country Type</b></em>' literal object.
@@ -116,7 +116,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	COUNTRY_TYPE(9, "CountryType", "CountryType"),
+	COUNTRY_TYPE(9, "CountryType", "Country"),
 
 	/**
 	 * The '<em><b>Country Code Type</b></em>' literal object.
@@ -126,7 +126,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	COUNTRY_CODE_TYPE(10, "CountryCodeType", "CountryCodeType"),
+	COUNTRY_CODE_TYPE(10, "CountryCodeType", "Country Code"),
 
 	/**
 	 * The '<em><b>City Type</b></em>' literal object.
@@ -136,7 +136,7 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CITY_TYPE(11, "CityType", "CityType"),
+	CITY_TYPE(11, "CityType", "City"),
 
 	/**
 	 * The '<em><b>Row Number Type</b></em>' literal object.
@@ -146,14 +146,14 @@ public enum MockTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ROW_NUMBER_TYPE(12, "RowNumberType", "RowNumberType");
+	ROW_NUMBER_TYPE(12, "RowNumberType", "Row Number");
 
 	/**
 	 * The '<em><b>First Name Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #FIRST_NAME_TYPE
-	 * @model name="FirstNameType"
+	 * @model name="FirstNameType" literal="First Name"
 	 * @generated
 	 * @ordered
 	 */
@@ -164,7 +164,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #FIRST_NAME_MALE_TYPE
-	 * @model name="FirstNameMaleType"
+	 * @model name="FirstNameMaleType" literal="First Name (Male)"
 	 * @generated
 	 * @ordered
 	 */
@@ -175,7 +175,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #FIRST_NAME_FEMALE_TYPE
-	 * @model name="FirstNameFemaleType"
+	 * @model name="FirstNameFemaleType" literal="First Name (Female)"
 	 * @generated
 	 * @ordered
 	 */
@@ -186,29 +186,29 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #LAST_NAME_TYPE
-	 * @model name="LastNameType"
+	 * @model name="LastNameType" literal="Last Name"
 	 * @generated
 	 * @ordered
 	 */
 	public static final int LAST_NAME_TYPE_VALUE = 3;
 
 	/**
-	 * The '<em><b>Family Name Type</b></em>' literal value.
+	 * The '<em><b>University Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #FAMILY_NAME_TYPE
-	 * @model name="FamilyNameType"
+	 * @see #UNIVERSITY_TYPE
+	 * @model name="UniversityType" literal="University"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int FAMILY_NAME_TYPE_VALUE = 4;
+	public static final int UNIVERSITY_TYPE_VALUE = 4;
 
 	/**
 	 * The '<em><b>Full Name Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #FULL_NAME_TYPE
-	 * @model name="FullNameType"
+	 * @model name="FullNameType" literal="Full Name"
 	 * @generated
 	 * @ordered
 	 */
@@ -219,7 +219,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #GENDER_TYPE
-	 * @model name="GenderType"
+	 * @model name="GenderType" literal="Gender"
 	 * @generated
 	 * @ordered
 	 */
@@ -230,7 +230,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #EMAIL_ADDRESS_TYPE
-	 * @model name="EmailAddressType"
+	 * @model name="EmailAddressType" literal="Email Address"
 	 * @generated
 	 * @ordered
 	 */
@@ -241,7 +241,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #PHONE_TYPE
-	 * @model name="PhoneType"
+	 * @model name="PhoneType" literal="Phone"
 	 * @generated
 	 * @ordered
 	 */
@@ -252,7 +252,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #COUNTRY_TYPE
-	 * @model name="CountryType"
+	 * @model name="CountryType" literal="Country"
 	 * @generated
 	 * @ordered
 	 */
@@ -263,7 +263,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #COUNTRY_CODE_TYPE
-	 * @model name="CountryCodeType"
+	 * @model name="CountryCodeType" literal="Country Code"
 	 * @generated
 	 * @ordered
 	 */
@@ -274,7 +274,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #CITY_TYPE
-	 * @model name="CityType"
+	 * @model name="CityType" literal="City"
 	 * @generated
 	 * @ordered
 	 */
@@ -285,7 +285,7 @@ public enum MockTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ROW_NUMBER_TYPE
-	 * @model name="RowNumberType"
+	 * @model name="RowNumberType" literal="Row Number"
 	 * @generated
 	 * @ordered
 	 */
@@ -303,7 +303,7 @@ public enum MockTypes implements Enumerator {
 			FIRST_NAME_MALE_TYPE,
 			FIRST_NAME_FEMALE_TYPE,
 			LAST_NAME_TYPE,
-			FAMILY_NAME_TYPE,
+			UNIVERSITY_TYPE,
 			FULL_NAME_TYPE,
 			GENDER_TYPE,
 			EMAIL_ADDRESS_TYPE,
@@ -372,7 +372,7 @@ public enum MockTypes implements Enumerator {
 			case FIRST_NAME_MALE_TYPE_VALUE: return FIRST_NAME_MALE_TYPE;
 			case FIRST_NAME_FEMALE_TYPE_VALUE: return FIRST_NAME_FEMALE_TYPE;
 			case LAST_NAME_TYPE_VALUE: return LAST_NAME_TYPE;
-			case FAMILY_NAME_TYPE_VALUE: return FAMILY_NAME_TYPE;
+			case UNIVERSITY_TYPE_VALUE: return UNIVERSITY_TYPE;
 			case FULL_NAME_TYPE_VALUE: return FULL_NAME_TYPE;
 			case GENDER_TYPE_VALUE: return GENDER_TYPE;
 			case EMAIL_ADDRESS_TYPE_VALUE: return EMAIL_ADDRESS_TYPE;

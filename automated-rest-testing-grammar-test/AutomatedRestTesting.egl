@@ -1,6 +1,22 @@
 [% 
+	// Mockaroo
 	var mockarooPackage:Template:= TemplateFactory.load('Mockaroo/MockarooPackage.egl');
-	// mockarooPackage.generate('result/get-mockaroo-data/package.json');
+	mockarooPackage.generate('result/get-mockaroo-data/package.json');
 	var mockarooScript:Template:= TemplateFactory.load('Mockaroo/MockarooScript.egl');
 	mockarooScript.generate('result/get-mockaroo-data/index.js');
+	
+	// Katalon
+	var katalonFolder = 'result/katalon/';
+	var restService;
+	var restServiceId;
+	var idZeros = '0000';
+	for(i in 0.to(ART!RestService.all.size() - 1)) {
+		var restServiceRepositoryObject : Template;
+		restServiceId = idZeros.substring((i + '').length()) + i;
+		restService = ART!RestService.all[i];
+		restServiceRepositoryObject := TemplateFactory.load('Katalon/RepositoryObjectScript.egl');
+		restServiceRepositoryObject.populate('restService', restService);
+		restServiceRepositoryObject.populate('restServiceId', restServiceId);
+		restServiceRepositoryObject.generate(katalonFolder + 'Object Repository/' + restService.name +'.rs');
+	}
 %]

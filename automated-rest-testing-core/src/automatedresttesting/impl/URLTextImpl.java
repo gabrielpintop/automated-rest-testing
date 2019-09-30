@@ -3,8 +3,7 @@
 package automatedresttesting.impl;
 
 import automatedresttesting.AutomatedresttestingPackage;
-import automatedresttesting.Parameter;
-import automatedresttesting.ParameterType;
+import automatedresttesting.URLText;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,44 +13,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Parameter</b></em>'.
+ * An implementation of the model object '<em><b>URL Text</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link automatedresttesting.impl.ParameterImpl#getParamType <em>Param Type</em>}</li>
+ *   <li>{@link automatedresttesting.impl.URLTextImpl#getText <em>Text</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ParameterImpl extends URLExpressionImpl implements Parameter {
+public class URLTextImpl extends URLExpressionImpl implements URLText {
 	/**
-	 * The default value of the '{@link #getParamType() <em>Param Type</em>}' attribute.
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParamType()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ParameterType PARAM_TYPE_EDEFAULT = ParameterType.PATH;
+	protected static final String TEXT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getParamType() <em>Param Type</em>}' attribute.
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParamType()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected ParameterType paramType = PARAM_TYPE_EDEFAULT;
+	protected String text = TEXT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterImpl() {
+	protected URLTextImpl() {
 		super();
 	}
 
@@ -62,7 +61,7 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AutomatedresttestingPackage.Literals.PARAMETER;
+		return AutomatedresttestingPackage.Literals.URL_TEXT;
 	}
 
 	/**
@@ -71,8 +70,8 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	public ParameterType getParamType() {
-		return paramType;
+	public String getText() {
+		return text;
 	}
 
 	/**
@@ -81,11 +80,11 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	public void setParamType(ParameterType newParamType) {
-		ParameterType oldParamType = paramType;
-		paramType = newParamType == null ? PARAM_TYPE_EDEFAULT : newParamType;
+	public void setText(String newText) {
+		String oldText = text;
+		text = newText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.PARAMETER__PARAM_TYPE, oldParamType, paramType));
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatedresttestingPackage.URL_TEXT__TEXT, oldText, text));
 	}
 
 	/**
@@ -96,8 +95,8 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.PARAMETER__PARAM_TYPE:
-				return getParamType();
+			case AutomatedresttestingPackage.URL_TEXT__TEXT:
+				return getText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,8 +109,8 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.PARAMETER__PARAM_TYPE:
-				setParamType((ParameterType)newValue);
+			case AutomatedresttestingPackage.URL_TEXT__TEXT:
+				setText((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,8 +124,8 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.PARAMETER__PARAM_TYPE:
-				setParamType(PARAM_TYPE_EDEFAULT);
+			case AutomatedresttestingPackage.URL_TEXT__TEXT:
+				setText(TEXT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -140,8 +139,8 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AutomatedresttestingPackage.PARAMETER__PARAM_TYPE:
-				return paramType != PARAM_TYPE_EDEFAULT;
+			case AutomatedresttestingPackage.URL_TEXT__TEXT:
+				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,10 +155,10 @@ public class ParameterImpl extends URLExpressionImpl implements Parameter {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (paramType: ");
-		result.append(paramType);
+		result.append(" (text: ");
+		result.append(text);
 		result.append(')');
 		return result.toString();
 	}
 
-} //ParameterImpl
+} //URLTextImpl

@@ -17,7 +17,7 @@ Entity Student{
     string id (PK,mockType=RowNumberType);
     string first_name ( mockType=FirstNameType);    
     string last_name ( mockType=LastNameType);    
-     string gender ( mockType=GenderType);    
+    string gender ( mockType=GenderType);    
     string code;
     string country ( mockType=CountryType);
     string city ( mockType=CityType);
