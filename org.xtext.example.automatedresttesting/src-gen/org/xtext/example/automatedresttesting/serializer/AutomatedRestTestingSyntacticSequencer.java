@@ -22,6 +22,7 @@ import org.xtext.example.automatedresttesting.services.AutomatedRestTestingGramm
 public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected AutomatedRestTestingGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q;
 	protected AbstractElementAlias match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q;
 	protected AbstractElementAlias match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q;
 	protected AbstractElementAlias match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a;
@@ -31,6 +32,7 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (AutomatedRestTestingGrammarAccess) access;
+		match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getAssertionAccess().getARROWTerminalRuleCall_1_0_1()), new TokenAlias(false, false, grammarAccess.getAssertionAccess().getDOTTerminalRuleCall_1_0_0()));
 		match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getParameterKeyword_1_0_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getARROWTerminalRuleCall_1_0_1_1()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getDOTTerminalRuleCall_1_0_1_0())));
 		match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMappingElementAccess().getRequestKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getMappingElementAccess().getARROWTerminalRuleCall_7_1()));
 		match_RestService___SLASHTerminalRuleCall_7_0_0_EStringParserRuleCall_7_0_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getSLASHTerminalRuleCall_7_0_0()), new TokenAlias(false, false, grammarAccess.getRestServiceAccess().getEStringParserRuleCall_7_0_1()));
@@ -193,7 +195,9 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q.equals(syntax))
+			if (match_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q.equals(syntax))
+				emit_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q.equals(syntax))
 				emit_Expression___ParameterKeyword_1_0_0___ARROWTerminalRuleCall_1_0_1_1_or_DOTTerminalRuleCall_1_0_1_0____q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q.equals(syntax))
 				emit_MappingElement___RequestKeyword_7_0_ARROWTerminalRuleCall_7_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -207,6 +211,17 @@ public class AutomatedRestTestingSyntacticSequencer extends AbstractSyntacticSeq
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     (DOT | ARROW)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) 'response' (ambiguity) dataToTest=[Element|QualifiedName]
+	 */
+	protected void emit_Assertion___ARROWTerminalRuleCall_1_0_1_or_DOTTerminalRuleCall_1_0_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Ambiguous syntax:
 	 *     ('parameter' (DOT | ARROW))?

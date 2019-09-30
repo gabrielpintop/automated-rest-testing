@@ -100,7 +100,7 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 	 *     Assertion returns Assertion
 	 *
 	 * Constraint:
-	 *     ((assertionType=AssertionType dataToTest=[Element|QualifiedName])? condition=Expression)
+	 *     (dataToTest=[Element|QualifiedName]? condition=Expression)
 	 */
 	protected void sequence_Assertion(ISerializationContext context, Assertion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -233,18 +233,18 @@ public class AutomatedRestTestingSemanticSequencer extends AbstractDelegatingSem
 	 *     Parameter returns Parameter
 	 *
 	 * Constraint:
-	 *     (paramType=ParameterType value=ID)
+	 *     (paramType=ParameterType name=ID)
 	 */
 	protected void sequence_Parameter(ISerializationContext context, automatedresttesting.Parameter semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.PARAMETER__PARAM_TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.PARAMETER__PARAM_TYPE));
-			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.ATTRIBUTE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.ATTRIBUTE__VALUE));
+			if (transientValues.isValueTransient(semanticObject, AutomatedresttestingPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AutomatedresttestingPackage.Literals.ELEMENT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getParameterAccess().getParamTypeParameterTypeEnumRuleCall_1_0(), semanticObject.getParamType());
-		feeder.accept(grammarAccess.getParameterAccess().getValueIDTerminalRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_3_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

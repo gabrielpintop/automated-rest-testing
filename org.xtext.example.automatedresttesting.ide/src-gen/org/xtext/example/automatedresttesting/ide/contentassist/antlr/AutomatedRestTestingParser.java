@@ -34,6 +34,7 @@ public class AutomatedRestTestingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getElementAccess().getAlternatives(), "rule__Element__Alternatives");
 			builder.put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 			builder.put(grammarAccess.getRestServiceAccess().getAlternatives_7(), "rule__RestService__Alternatives_7");
+			builder.put(grammarAccess.getAssertionAccess().getAlternatives_1_0(), "rule__Assertion__Alternatives_1_0");
 			builder.put(grammarAccess.getExpressionAccess().getAlternatives_1_0_1(), "rule__Expression__Alternatives_1_0_1");
 			builder.put(grammarAccess.getLiteralAccess().getAlternatives(), "rule__Literal__Alternatives");
 			builder.put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
@@ -57,7 +58,7 @@ public class AutomatedRestTestingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTestAccess().getGroup_8(), "rule__Test__Group_8__0");
 			builder.put(grammarAccess.getTestAccess().getGroup_11(), "rule__Test__Group_11__0");
 			builder.put(grammarAccess.getAssertionAccess().getGroup(), "rule__Assertion__Group__0");
-			builder.put(grammarAccess.getAssertionAccess().getGroup_0(), "rule__Assertion__Group_0__0");
+			builder.put(grammarAccess.getAssertionAccess().getGroup_1(), "rule__Assertion__Group_1__0");
 			builder.put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 			builder.put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 			builder.put(grammarAccess.getExpressionAccess().getGroup(), "rule__Expression__Group__0");
@@ -96,9 +97,8 @@ public class AutomatedRestTestingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTestAccess().getMappingsAssignment_8_2(), "rule__Test__MappingsAssignment_8_2");
 			builder.put(grammarAccess.getTestAccess().getMappingsAssignment_8_3(), "rule__Test__MappingsAssignment_8_3");
 			builder.put(grammarAccess.getTestAccess().getAssertionsAssignment_11_0(), "rule__Test__AssertionsAssignment_11_0");
-			builder.put(grammarAccess.getAssertionAccess().getAssertionTypeAssignment_0_0(), "rule__Assertion__AssertionTypeAssignment_0_0");
-			builder.put(grammarAccess.getAssertionAccess().getDataToTestAssignment_0_1(), "rule__Assertion__DataToTestAssignment_0_1");
-			builder.put(grammarAccess.getAssertionAccess().getConditionAssignment_1(), "rule__Assertion__ConditionAssignment_1");
+			builder.put(grammarAccess.getAssertionAccess().getDataToTestAssignment_1_1(), "rule__Assertion__DataToTestAssignment_1_1");
+			builder.put(grammarAccess.getAssertionAccess().getConditionAssignment_2(), "rule__Assertion__ConditionAssignment_2");
 			builder.put(grammarAccess.getExpressionAccess().getRelationalOperatorAssignment_0(), "rule__Expression__RelationalOperatorAssignment_0");
 			builder.put(grammarAccess.getExpressionAccess().getExpectedValueAssignment_1_1(), "rule__Expression__ExpectedValueAssignment_1_1");
 			builder.put(grammarAccess.getIntegerLiteralAccess().getValueAssignment(), "rule__IntegerLiteral__ValueAssignment");
@@ -107,7 +107,7 @@ public class AutomatedRestTestingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getMappingElementAccess().getParameterAssignment_3(), "rule__MappingElement__ParameterAssignment_3");
 			builder.put(grammarAccess.getMappingElementAccess().getValueAssignment_8(), "rule__MappingElement__ValueAssignment_8");
 			builder.put(grammarAccess.getParameterAccess().getParamTypeAssignment_1(), "rule__Parameter__ParamTypeAssignment_1");
-			builder.put(grammarAccess.getParameterAccess().getValueAssignment_3(), "rule__Parameter__ValueAssignment_3");
+			builder.put(grammarAccess.getParameterAccess().getNameAssignment_3(), "rule__Parameter__NameAssignment_3");
 			builder.put(grammarAccess.getRestrictionAccess().getMockTypeAssignment_3(), "rule__Restriction__MockTypeAssignment_3");
 			builder.put(grammarAccess.getEntityAccess().getNameAssignment_2(), "rule__Entity__NameAssignment_2");
 			builder.put(grammarAccess.getEntityAccess().getEntityAttributesAssignment_4(), "rule__Entity__EntityAttributesAssignment_4");

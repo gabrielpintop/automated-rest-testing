@@ -1,0 +1,6 @@
+[% 
+	var mockarooPackage:Template:= TemplateFactory.load('Mockaroo/MockarooPackage.egl');
+	// mockarooPackage.generate('result/get-mockaroo-data/package.json');
+	var mockarooScript:Template:= TemplateFactory.load('Mockaroo/MockarooScript.egl');
+	mockarooScript.generate('result/get-mockaroo-data/index.js');
+%]

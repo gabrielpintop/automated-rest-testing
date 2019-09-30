@@ -1,0 +1,57 @@
+// Gabriel Pinto & Juan Hernandez
+const mockaroo = require('mockaroo');
+const fs = require('fs');
+const json2xls = require('json2xls');
+const client = new mockaroo.Client({
+  apiKey: ''
+});
+[%
+for(entity in ART!Entity.all) {
+%]
+		
+const [%=entity.name.toLowerCase()%] = client.generate({
+  count: 5,
+  format: 'json',
+  header: true,	
+  fields: [
+[%
+	for(attribute in entity.entityAttributes) {
+%]
+    {
+      name: '[%=attribute.name%]',
+[%  	
+		if(attribute.restrictions.isDefined() and attribute.restrictions.size > 0) {
+%]
+      type: '[%=attribute.restrictions[0].mockType%]'
+[%
+    	} else {
+%]
+      type: 'Words',
+      min: 1,
+      max: 1
+[%						
+		}
+%]
+    },
+[%
+	}
+%]
+  ]
+});
+[%
+}
+%]
+
+[%
+for(entity in ART!Entity.all) {
+%]
+
+[%=entity.name.toLowerCase()%].then(([%=entity.name.toLowerCase()%]Data) => {
+  const [%=entity.name.toLowerCase()%]Xls = json2xls([%=entity.name.toLowerCase()%]Data);
+  fs.writeFileSync('./data/[%=entity.name.toLowerCase()%]Data.xlsx', [%=entity.name.toLowerCase()%]Xls, 'binary');
+});
+[%
+}
+%]
+
+

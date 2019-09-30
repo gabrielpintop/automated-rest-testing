@@ -788,26 +788,22 @@ ruleAssertion returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='response'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getAssertionAccess().getResponseKeyword_0());
+		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getAssertionAccess().getAssertionTypeAssertionTypeEnumRuleCall_0_0_0());
-					}
-					lv_assertionType_0_0=ruleAssertionType
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getAssertionRule());
-						}
-						set(
-							$current,
-							"assertionType",
-							lv_assertionType_0_0,
-							"org.xtext.example.automatedresttesting.AutomatedRestTesting.AssertionType");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
+				this_DOT_1=RULE_DOT
+				{
+					newLeafNode(this_DOT_1, grammarAccess.getAssertionAccess().getDOTTerminalRuleCall_1_0_0());
+				}
+				    |
+				this_ARROW_2=RULE_ARROW
+				{
+					newLeafNode(this_ARROW_2, grammarAccess.getAssertionAccess().getARROWTerminalRuleCall_1_0_1());
+				}
+			)?
 			(
 				(
 					{
@@ -816,7 +812,7 @@ ruleAssertion returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getAssertionAccess().getDataToTestElementCrossReference_0_1_0());
+						newCompositeNode(grammarAccess.getAssertionAccess().getDataToTestElementCrossReference_1_1_0());
 					}
 					ruleQualifiedName
 					{
@@ -828,9 +824,9 @@ ruleAssertion returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAssertionAccess().getConditionExpressionParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getAssertionAccess().getConditionExpressionParserRuleCall_2_0());
 				}
-				lv_condition_2_0=ruleExpression
+				lv_condition_4_0=ruleExpression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAssertionRule());
@@ -838,7 +834,7 @@ ruleAssertion returns [EObject current=null]
 					set(
 						$current,
 						"condition",
-						lv_condition_2_0,
+						lv_condition_4_0,
 						"org.xtext.example.automatedresttesting.AutomatedRestTesting.Expression");
 					afterParserOrEnumRuleCall();
 				}
@@ -1254,9 +1250,9 @@ ruleParameter returns [EObject current=null]
 		}
 		(
 			(
-				lv_value_3_0=RULE_ID
+				lv_name_3_0=RULE_ID
 				{
-					newLeafNode(lv_value_3_0, grammarAccess.getParameterAccess().getValueIDTerminalRuleCall_3_0());
+					newLeafNode(lv_name_3_0, grammarAccess.getParameterAccess().getNameIDTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -1264,8 +1260,8 @@ ruleParameter returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"value",
-						lv_value_3_0,
+						"name",
+						lv_name_3_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -1762,33 +1758,6 @@ ruleSimpleEntity returns [EObject current=null]
 		{
 			newLeafNode(this_RIGHT_BRACKET_8, grammarAccess.getSimpleEntityAccess().getRIGHT_BRACKETTerminalRuleCall_7());
 		}
-	)
-;
-
-// Rule AssertionType
-ruleAssertionType returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			enumLiteral_0='response->'
-			{
-				$current = grammarAccess.getAssertionTypeAccess().getResponseEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getAssertionTypeAccess().getResponseEnumLiteralDeclaration_0());
-			}
-		)
-		    |
-		(
-			enumLiteral_1='response.'
-			{
-				$current = grammarAccess.getAssertionTypeAccess().getInformationEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getAssertionTypeAccess().getInformationEnumLiteralDeclaration_1());
-			}
-		)
 	)
 ;
 

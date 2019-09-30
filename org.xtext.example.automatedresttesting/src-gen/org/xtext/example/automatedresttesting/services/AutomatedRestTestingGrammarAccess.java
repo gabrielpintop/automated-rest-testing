@@ -521,45 +521,53 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	public class AssertionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.Assertion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Assignment cAssertionTypeAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cAssertionTypeAssertionTypeEnumRuleCall_0_0_0 = (RuleCall)cAssertionTypeAssignment_0_0.eContents().get(0);
-		private final Assignment cDataToTestAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final CrossReference cDataToTestElementCrossReference_0_1_0 = (CrossReference)cDataToTestAssignment_0_1.eContents().get(0);
-		private final RuleCall cDataToTestElementQualifiedNameParserRuleCall_0_1_0_1 = (RuleCall)cDataToTestElementCrossReference_0_1_0.eContents().get(1);
-		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConditionExpressionParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
+		private final Keyword cResponseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_1_0 = (Alternatives)cGroup_1.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_1_0_0 = (RuleCall)cAlternatives_1_0.eContents().get(0);
+		private final RuleCall cARROWTerminalRuleCall_1_0_1 = (RuleCall)cAlternatives_1_0.eContents().get(1);
+		private final Assignment cDataToTestAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cDataToTestElementCrossReference_1_1_0 = (CrossReference)cDataToTestAssignment_1_1.eContents().get(0);
+		private final RuleCall cDataToTestElementQualifiedNameParserRuleCall_1_1_0_1 = (RuleCall)cDataToTestElementCrossReference_1_1_0.eContents().get(1);
+		private final Assignment cConditionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cConditionExpressionParserRuleCall_2_0 = (RuleCall)cConditionAssignment_2.eContents().get(0);
 		
 		//Assertion:
-		//	(assertionType=AssertionType dataToTest=[Element|QualifiedName])? condition=Expression;
+		//	'response' ((DOT | ARROW)? dataToTest=[Element|QualifiedName])? condition=Expression;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(assertionType=AssertionType dataToTest=[Element|QualifiedName])? condition=Expression
+		//'response' ((DOT | ARROW)? dataToTest=[Element|QualifiedName])? condition=Expression
 		public Group getGroup() { return cGroup; }
 		
-		//(assertionType=AssertionType dataToTest=[Element|QualifiedName])?
-		public Group getGroup_0() { return cGroup_0; }
+		//'response'
+		public Keyword getResponseKeyword_0() { return cResponseKeyword_0; }
 		
-		//assertionType=AssertionType
-		public Assignment getAssertionTypeAssignment_0_0() { return cAssertionTypeAssignment_0_0; }
+		//((DOT | ARROW)? dataToTest=[Element|QualifiedName])?
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//AssertionType
-		public RuleCall getAssertionTypeAssertionTypeEnumRuleCall_0_0_0() { return cAssertionTypeAssertionTypeEnumRuleCall_0_0_0; }
+		//(DOT | ARROW)?
+		public Alternatives getAlternatives_1_0() { return cAlternatives_1_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_1_0_0() { return cDOTTerminalRuleCall_1_0_0; }
+		
+		//ARROW
+		public RuleCall getARROWTerminalRuleCall_1_0_1() { return cARROWTerminalRuleCall_1_0_1; }
 		
 		//dataToTest=[Element|QualifiedName]
-		public Assignment getDataToTestAssignment_0_1() { return cDataToTestAssignment_0_1; }
+		public Assignment getDataToTestAssignment_1_1() { return cDataToTestAssignment_1_1; }
 		
 		//[Element|QualifiedName]
-		public CrossReference getDataToTestElementCrossReference_0_1_0() { return cDataToTestElementCrossReference_0_1_0; }
+		public CrossReference getDataToTestElementCrossReference_1_1_0() { return cDataToTestElementCrossReference_1_1_0; }
 		
 		//QualifiedName
-		public RuleCall getDataToTestElementQualifiedNameParserRuleCall_0_1_0_1() { return cDataToTestElementQualifiedNameParserRuleCall_0_1_0_1; }
+		public RuleCall getDataToTestElementQualifiedNameParserRuleCall_1_1_0_1() { return cDataToTestElementQualifiedNameParserRuleCall_1_1_0_1; }
 		
 		//condition=Expression
-		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
+		public Assignment getConditionAssignment_2() { return cConditionAssignment_2; }
 		
 		//Expression
-		public RuleCall getConditionExpressionParserRuleCall_1_0() { return cConditionExpressionParserRuleCall_1_0; }
+		public RuleCall getConditionExpressionParserRuleCall_2_0() { return cConditionExpressionParserRuleCall_2_0; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.QualifiedName");
@@ -793,15 +801,15 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		private final Assignment cParamTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cParamTypeParameterTypeEnumRuleCall_1_0 = (RuleCall)cParamTypeAssignment_1.eContents().get(0);
 		private final RuleCall cLEFT_BRACKETTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cValueIDTerminalRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
 		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		
 		//Parameter:
-		//	{Parameter} paramType=ParameterType LEFT_BRACKET value=ID RIGHT_BRACKET;
+		//	{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Parameter} paramType=ParameterType LEFT_BRACKET value=ID RIGHT_BRACKET
+		//{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET
 		public Group getGroup() { return cGroup; }
 		
 		//{Parameter}
@@ -816,11 +824,11 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		//LEFT_BRACKET
 		public RuleCall getLEFT_BRACKETTerminalRuleCall_2() { return cLEFT_BRACKETTerminalRuleCall_2; }
 		
-		//value=ID
-		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
 		
 		//ID
-		public RuleCall getValueIDTerminalRuleCall_3_0() { return cValueIDTerminalRuleCall_3_0; }
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 		
 		//RIGHT_BRACKET
 		public RuleCall getRIGHT_BRACKETTerminalRuleCall_4() { return cRIGHT_BRACKETTerminalRuleCall_4; }
@@ -1154,26 +1162,26 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 		private final EnumLiteralDeclaration cResponseEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cResponseResponseKeyword_0_0 = (Keyword)cResponseEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cInformationEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cInformationResponseKeyword_1_0 = (Keyword)cInformationEnumLiteralDeclaration_1.eContents().get(0);
+		private final Keyword cInformationInformationKeyword_1_0 = (Keyword)cInformationEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum AssertionType:
-		//	response='response->' | information='response.';
+		//	response | information;
 		public EnumRule getRule() { return rule; }
 		
-		//response='response->' | information='response.'
+		//response | information
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//response='response->'
+		//response
 		public EnumLiteralDeclaration getResponseEnumLiteralDeclaration_0() { return cResponseEnumLiteralDeclaration_0; }
 		
-		//'response->'
+		//'response'
 		public Keyword getResponseResponseKeyword_0_0() { return cResponseResponseKeyword_0_0; }
 		
-		//information='response.'
+		//information
 		public EnumLiteralDeclaration getInformationEnumLiteralDeclaration_1() { return cInformationEnumLiteralDeclaration_1; }
 		
-		//'response.'
-		public Keyword getInformationResponseKeyword_1_0() { return cInformationResponseKeyword_1_0; }
+		//'information'
+		public Keyword getInformationInformationKeyword_1_0() { return cInformationInformationKeyword_1_0; }
 	}
 	public class AttributeTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.automatedresttesting.AutomatedRestTesting.AttributeType");
@@ -1691,7 +1699,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	}
 	
 	//Assertion:
-	//	(assertionType=AssertionType dataToTest=[Element|QualifiedName])? condition=Expression;
+	//	'response' ((DOT | ARROW)? dataToTest=[Element|QualifiedName])? condition=Expression;
 	public AssertionElements getAssertionAccess() {
 		return pAssertion;
 	}
@@ -1701,7 +1709,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	}
 	
 	//enum AssertionType:
-	//	response='response->' | information='response.';
+	//	response | information;
 	public AssertionTypeElements getAssertionTypeAccess() {
 		return eAssertionType;
 	}
@@ -1814,7 +1822,7 @@ public class AutomatedRestTestingGrammarAccess extends AbstractGrammarElementFin
 	}
 	
 	//Parameter:
-	//	{Parameter} paramType=ParameterType LEFT_BRACKET value=ID RIGHT_BRACKET;
+	//	{Parameter} paramType=ParameterType LEFT_BRACKET name=ID RIGHT_BRACKET;
 	public ParameterElements getParameterAccess() {
 		return pParameter;
 	}
