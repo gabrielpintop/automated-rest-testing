@@ -107,7 +107,7 @@ Test p1{
 
 Test p2{
     service = GetCountryByShort;
-    description ="No existe el país";
+    description ="No existe el paï¿½s";
     Mapping[
         {parameter=GetCountryByShort.country,value="BR"}
     ]

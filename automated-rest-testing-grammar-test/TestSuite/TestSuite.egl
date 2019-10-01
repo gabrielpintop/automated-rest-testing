@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>[%=restService.name%]</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>3d9d11ea-[%=restServiceId%]-4013-99a5-0cea4f5c3a0f</testSuiteGuid>
+   <testCaseLink>
+      <guid>401a5200-9cdf-[%=restServiceId%]-94f1-16f2ecd59e09</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/[%=restService.name%]</testCaseId>
+      [%
+      	var parameters = restService.uri.urlExpression.select(ue | ue.type().name == 'Parameter');
+      	var counter = 0; 
+      %]
+      <testDataLink>
+         <combinationType>MANY</combinationType>
+         <id>524daea7-c916-4f22-[%=restServiceId%]-c0455e0ff432</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/[% 
+         if(not restService.request.isDefined()) {
+         %][%
+         } else {
+         %][%=restService.request.name %][%
+         } 
+         %]</testDataId>
+      </testDataLink>
+      [% 
+		var attribute;
+		var idZeros = '0000';
+		if(restService.request.isDefined()) {
+	   		for(i in 0.to(restService.request.entityAttributes.size() -1)) {
+	   			attribute = restService.request.entityAttributes[i];
+	   			var variableId = idZeros.substring(((counter++ + i) + '').length()) + i;
+
+      %]
+	  <variableLink>
+	     <testDataLinkId>524daea7-c916-4f22-[%=restServiceId%]-c0455e0ff432</testDataLinkId>
+	     <type>DATA_COLUMN</type>
+	     <value>[%=attribute.name%]</value>
+	     <variableId>4dc5d590-[%=restServiceId%]-43a0-[%=variableId%]-1f97dc62294d</variableId>
+	  </variableLink>
+	  [% 
+	  		} //endfor attributes
+	  	} // end if request is defined
+		if(parameters.size() > 0) {
+	   		for(i in 0.to(parameters.size - 1)) {
+   				var parameter = parameters[i];
+   				var variableId = idZeros.substring(((counter++ + i) + '').length()) + i;
+      %]
+	  <variableLink>
+	     <testDataLinkId>524daea7-c916-4f22-[%=restServiceId%]-c0455e0ff432</testDataLinkId>
+	     <type>DATA_COLUMN</type>
+	     <value>[%=parameter.name%]</value>
+	     <variableId>4dc5d590-[%=restServiceId%]-43a0-[%=variableId%]-1f97dc62294d</variableId>
+	  </variableLink>
+	  [% 
+	  		} //endfor params
+	  	} // end if param size greater than 0
+      %]
+   </testCaseLink>
+</TestSuiteEntity>

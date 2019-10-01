@@ -18,6 +18,19 @@
 		restServiceRepositoryObject.populate('restService', restService);
 		restServiceRepositoryObject.populate('restServiceId', restServiceId);
 		restServiceRepositoryObject.generate(katalonFolder + 'Object Repository/' + restService.name +'.rs');
+		
+		// build test cases
+		var restServiceGroovyFile : Template;
+		var restServiceTestSuite : Template;
+		
+		restServiceGroovyFile := TemplateFactory.load('TestSuite/Service.egl');
+		restServiceGroovyFile.populate('restService', restService);
+		restServiceGroovyFile.generate(katalonFolder + 'Test Suites/' + restService.name +'.groovy');
+		
+		restServiceTestSuite := TemplateFactory.load('TestSuite/TestSuite.egl');
+		restServiceTestSuite.populate('restService', restService);
+		restServiceTestSuite.populate('restServiceId', restServiceId);
+		restServiceTestSuite.generate(katalonFolder + 'Test Suites/' + restService.name +'.ts');
 	}
 	
 	var entityId;
