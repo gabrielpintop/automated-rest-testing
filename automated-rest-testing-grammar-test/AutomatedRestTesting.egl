@@ -27,7 +27,7 @@
 		restServiceGroovyFile.populate('restService', restService);
 		restServiceGroovyFile.generate(katalonFolder + 'Test Suites/' + restService.name +'.groovy');
 		
-		restServiceTestSuite := TemplateFactory.load('TestSuite/Service.egl');
+		restServiceTestSuite := TemplateFactory.load('TestSuite/TestSuite.egl');
 		restServiceTestSuite.populate('restService', restService);
 		restServiceTestSuite.populate('restServiceId', restServiceId);
 		restServiceTestSuite.generate(katalonFolder + 'Test Suites/' + restService.name +'.ts');
