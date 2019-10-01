@@ -30,6 +30,19 @@ import internal.GlobalVariable as GlobalVariable
 		}
 	}
 	
+	if((service.method.name == 'POST' or service.method.name == 'PUT') and service.request.isDefined()) {
+		var attribute;
+		var attributes = service.request.entityAttributes.size();
+   		for(i in 0.to(service.request.entityAttributes.size() -1)) {
+   			attribute = service.request.entityAttributes[i];
+   			elements += "('" + attribute.name + "') : " + '"$' + attribute.name + '"';
+			
+			if(i < attributes.size() - 1) {
+				elements += ', ';
+			}
+   		}
+	}
+	
 	elements += ']';
 %]
 
