@@ -139,7 +139,7 @@ Test p4{
     }
 }
 
-Test p4{
+Test p5{
     service = DeleteStudent;
     description ="Elimina un estudiante";
     Mapping[

@@ -82,7 +82,6 @@
       				if(mapping.value.type().name == 'StringLiteral') {
       					defaultValue = "'" + defaultValue + "'";
       				}
-      			
       	%]
       	<defaultValue>[%=defaultValue%]</defaultValue>
       	[%

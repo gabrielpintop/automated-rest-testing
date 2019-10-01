@@ -32,4 +32,15 @@
 		entityDataFile.generate(katalonFolder + 'Data Files/' + entity.name + '.dat');
 	}
 	
+	var test;
+	var date;
+	for(i in 0.to(ART!Test.all.size() - 1)) {
+		var testScriptFile : Template;
+		date = '9';
+		test = ART!Test.all[i];
+		testScriptFile := TemplateFactory.load('Katalon/Scripts.egl');
+		testScriptFile.populate('test', test);
+		testScriptFile.generate(katalonFolder + 'Scripts/' + test.service.name + '/Script' + date + '.groovy');
+	}
+	
 %]
