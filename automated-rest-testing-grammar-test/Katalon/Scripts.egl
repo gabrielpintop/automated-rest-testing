@@ -12,13 +12,13 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
-
 [%
-	var elements = '[';
+	var elements = ', [';
+	var added = false;
 	var service = test.service;
-	var parameters = restService.uri.urlExpression.select(ue | ue.type().name == 'Parameter');
+	var parameters = service.uri.urlExpression.select(ue | ue.type().name == 'Parameter');
 	if(parameters.size() > 0) {
+		added = true;
 		var parameter;
 		for(i in 0.to(parameters.size() - 1)) {
 			parameter = parameters[i];
@@ -33,17 +33,47 @@ import internal.GlobalVariable as GlobalVariable
 	if((service.method.name == 'POST' or service.method.name == 'PUT') and service.request.isDefined()) {
 		var attribute;
 		var attributes = service.request.entityAttributes.size();
-   		for(i in 0.to(service.request.entityAttributes.size() -1)) {
-   			attribute = service.request.entityAttributes[i];
-   			elements += "('" + attribute.name + "') : " + '"$' + attribute.name + '"';
-			
-			if(i < attributes.size() - 1) {
-				elements += ', ';
-			}
-   		}
+		if(attributes.size() > 0) {
+			added = true;
+			for(i in 0.to(attributes.size() -1)) {
+	   			attribute = service.request.entityAttributes[i];
+	   			elements += "('" + attribute.name + "') : " + '"$' + attribute.name + '"';
+				if(i < attributes.size() - 1) {
+					elements += ', ';
+				}
+   			}
+		}
 	}
 	
 	elements += ']';
+	
+	if(not added) {
+		elements = '';
+	}
+	
 %]
 
-response = WS.sendRequest(findTestObject('[%=service.name%]', [%=elements%]))
+response = WS.sendRequest(findTestObject('[%=service.name%]'[%=elements%]))
+
+[%
+	var assertions = test.assertions;
+	var operator;
+	if(assertions.size() > 0) {
+		for(assertion in assertions) {
+			operator = assertion.condition.relationalOperator;
+			if(assertion.assertionType.name == 'information') {
+				if(operator.name == 'Equal') {
+%]
+WS.verifyResponseStatusCode(response, [%=assertion.condition.expectedValue.value%])
+[%
+				} else {
+%]
+List json = new JsonSlurper().parseText(response.getResponseText())
+WS.verifyGreaterThanOrEqual(json.size(), 129)
+[%
+				}
+			}
+		}
+	}
+%]
+
