@@ -62,7 +62,12 @@ response = WS.sendRequest(findTestObject('[%=service.name%]'[%=elements%]))
 		for(assertion in assertions) {
 			operator = assertion.condition.relationalOperator;
 			if(assertion.assertionType.name == 'response') {
-				if(operator.name == 'Equal') {
+				if(operator.name == 'Equal' and assertion.condition.expectedValue.type().name == 'ElementLiteral') { 
+%]
+WS.verifyElementPropertyValue(response, '[%=assertion.dataToTest.name %]', [%=assertion.condition.expectedValue.value.name%])
+[%
+				}
+				else if(operator.name == 'Equal') { 
 %]
 WS.verifyElementPropertyValue(response, '[%=assertion.dataToTest.name %]', '[%=assertion.condition.expectedValue.value%]')
 [%
