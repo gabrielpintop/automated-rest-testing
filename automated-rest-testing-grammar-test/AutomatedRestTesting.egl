@@ -36,11 +36,11 @@
 	var date;
 	for(i in 0.to(ART!Test.all.size() - 1)) {
 		var testScriptFile : Template;
-		date = '9';
+		date = new Native("java.util.Date");
 		test = ART!Test.all[i];
 		testScriptFile := TemplateFactory.load('Katalon/Scripts.egl');
 		testScriptFile.populate('test', test);
-		testScriptFile.generate(katalonFolder + 'Scripts/' + test.service.name + '/Script' + date + '.groovy');
+		testScriptFile.generate(katalonFolder + 'Scripts/' + test.service.name + '/Script' + date.getTime() + '.groovy');
 		
 		var testCase : Template;
 		restServiceId = idZeros.substring((i + '').length()) + i;
