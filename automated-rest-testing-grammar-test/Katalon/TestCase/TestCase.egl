@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>[%=restService.name%]</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>da6fbecf-[%=restServiceId%]-4630-94a2-957fda2d0d8a</testCaseGuid>
+   	[%
+   		// Variables are defined for both parameters and request entity
+   		var parameters = restService.uri.urlExpression.select(ue | ue.type().name == 'Parameter');
+   		if(parameters.size() > 0 or ((restService.method.name == 'POST' or restService.method.name == 'PUT') and restService.request.isDefined())) {
+   			var idZeros = '0000';
+   			var variableId;
+   			if(parameters.size() > 0) {
+   				// Get all the mappings that assigns default values
+   				var mappings = ART!Test.all.select(t | t.service.name == restService.name).collect(t | t.mappings).flatten().select(m | m.value.type().name == 'StringLiteral' or m.value.type().name == 'IntegerLiteral');
+   				var parameter;
+   				var mapping;
+   				var defaultValue;
+   				for(i in 0.to(parameters.size - 1)) {
+   					parameter = parameters[i];
+   					variableId = idZeros.substring((i + '').length()) + i;
+   	%]
+   	<variables>
+      	<description></description>
+      	[%
+      		if(mappings.size() > 0) {
+      			mapping = mappings.select(m | m.parameter.name == parameter.name).first();
+      			if(mapping.isDefined()) {
+      				defaultValue = mapping.value.value;
+      				if(mapping.value.type().name == 'StringLiteral') {
+      					defaultValue = "'" + defaultValue + "'";
+      				}
+      	%]
+      	<defaultValue>[%=defaultValue%]</defaultValue>
+      	[%
+      			}
+      		}
+      	%]
+      	<id>3744c6ab-[%=restServiceId%]-4dc9-[%=variableId%]-04bb45d5046a</id>
+      	<masked>false</masked>
+      	<name>[%=parameter.name%]</name>
+   	</variables>				
+   	[%
+   				}
+   			}
+   			
+   			if((restService.method.name == 'POST' or restService.method.name == 'PUT') and restService.request.isDefined()) {
+   				var attribute;
+   				for(i in 0.to(restService.request.entityAttributes.size() -1)) {
+   					attribute = restService.request.entityAttributes[i];
+   					variableId = idZeros.substring((i + '').length()) + i;
+   	%]
+   	<variables>
+      	<description></description>
+      	<id>4744c6ab-[%=restServiceId%]-4dc9-[%=variableId%]-04bb45d5046a</id>
+      	<masked>false</masked>
+      	<name>[%=attribute.name%]</name>
+   	</variables>				
+   	[%
+   				}
+   			}
+   			
+   		}
+   	%]
+</TestCaseEntity>

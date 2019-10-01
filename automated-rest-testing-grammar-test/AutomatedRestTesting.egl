@@ -23,11 +23,11 @@
 		var restServiceGroovyFile : Template;
 		var restServiceTestSuite : Template;
 		
-		restServiceGroovyFile := TemplateFactory.load('TestSuite/Service.egl');
+		restServiceGroovyFile := TemplateFactory.load('Katalon/TestSuite/Service.egl');
 		restServiceGroovyFile.populate('restService', restService);
 		restServiceGroovyFile.generate(katalonFolder + 'Test Suites/' + restService.name +'.groovy');
 		
-		restServiceTestSuite := TemplateFactory.load('TestSuite/TestSuite.egl');
+		restServiceTestSuite := TemplateFactory.load('Katalon/TestSuite/TestSuite.egl');
 		restServiceTestSuite.populate('restService', restService);
 		restServiceTestSuite.populate('restServiceId', restServiceId);
 		restServiceTestSuite.generate(katalonFolder + 'Test Suites/' + restService.name +'.ts');
@@ -54,6 +54,14 @@
 		testScriptFile := TemplateFactory.load('Katalon/Scripts.egl');
 		testScriptFile.populate('test', test);
 		testScriptFile.generate(katalonFolder + 'Scripts/' + test.service.name + '/Script' + date + '.groovy');
+		
+		var testCase : Template;
+		restServiceId = idZeros.substring((i + '').length()) + i;
+		testCase := TemplateFactory.load('Katalon/TestCase/TestCase.egl');
+		testCase.populate('test', test);
+		testCase.populate('restService', test.service);
+		testCase.populate('restServiceId', restServiceId);
+		testCase.generate(katalonFolder + 'Test Cases/' + test.service.name + '.tc');
 	}
 	
 %]
