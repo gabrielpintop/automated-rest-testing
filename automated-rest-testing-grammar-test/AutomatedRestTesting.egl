@@ -19,4 +19,17 @@
 		restServiceRepositoryObject.populate('restServiceId', restServiceId);
 		restServiceRepositoryObject.generate(katalonFolder + 'Object Repository/' + restService.name +'.rs');
 	}
+	
+	var entityId;
+	var entity;
+	for(i in 0.to(ART!Entity.all.size() - 1)) {
+		var entityDataFile : Template;
+		entityId = idZeros.substring((i + '').length()) + i;
+		entity = ART!Entity.all[i];
+		entityDataFile := TemplateFactory.load('Katalon/DataFilesDat.egl');
+		entityDataFile.populate('entity', entity);
+		entityDataFile.populate('entityId', entityId);
+		entityDataFile.generate(katalonFolder + 'Data Files/' + entity.name + '.dat');
+	}
+	
 %]
