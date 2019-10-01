@@ -47,7 +47,7 @@
 	     <testDataLinkId>524daea7-c916-4f22-[%=restServiceId%]-c0455e0ff432</testDataLinkId>
 	     <type>DATA_COLUMN</type>
 	     <value>[%=attribute.name%]</value>
-	     <variableId>4dc5d590-[%=restServiceId%]-43a0-[%=variableId%]-1f97dc62294d</variableId>
+	     <variableId>3744c6ab-[%=restServiceId%]-4dc9-[%=variableId%]-04bb45d5046a</variableId>
 	  </variableLink>
 	  [% 
 	  		} //endfor attributes

@@ -53,7 +53,7 @@
    	%]
    	<variables>
       	<description></description>
-      	<id>4744c6ab-[%=restServiceId%]-4dc9-[%=variableId%]-04bb45d5046a</id>
+      	<id>3744c6ab-[%=restServiceId%]-4dc9-[%=variableId%]-04bb45d5046a</id>
       	<masked>false</masked>
       	<name>[%=attribute.name%]</name>
    	</variables>				
