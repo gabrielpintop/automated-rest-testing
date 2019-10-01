@@ -5,7 +5,7 @@ const json2xls = require('json2xls');
 const client = new mockaroo.Client({
   apiKey: '9aa4bd60'
 });
-const dataDirectory = './data';
+const dataDirectory = '../katalon/Data Files/xlsx';
 [%
 for(entity in ART!Entity.all) {
 %]

@@ -6,7 +6,7 @@
 	mockarooScript.generate('result/get-mockaroo-data/index.js');
 	
 	// Katalon
-	var katalonFolder = 'result/katalon/';
+	var katalonFolder = 'result/HernandezPintoART/';
 	var restService;
 	var restServiceId;
 	var idZeros = '0000';
