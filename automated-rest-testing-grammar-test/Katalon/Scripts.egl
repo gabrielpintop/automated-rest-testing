@@ -67,8 +67,6 @@ response = WS.sendRequest(findTestObject('[%=service.name%]'[%=elements%]))
 WS.verifyElementPropertyValue(response, '[%=assertion.dataToTest.name %]', '[%=assertion.condition.expectedValue.value%]')
 [%
 				}
-			
-			// WS.verifyElementPropertyValue(response, 'status', 'success')
 			}
 			if(assertion.assertionType.name == 'information') {
 				if(operator.name == 'Equal') {
@@ -78,7 +76,20 @@ WS.verifyResponseStatusCode(response, [%=assertion.condition.expectedValue.value
 				} else {
 %]
 List json = new JsonSlurper().parseText(response.getResponseText())
-WS.verifyGreaterThanOrEqual(json.size(), 129)
+				[%
+					var result;
+					switch(operator.name) {
+						case 'MajorEqual':
+							result = 'GreaterThanOrEqual';
+						case 'Major':
+							result = 'GreaterThan';
+						case 'Minor':
+							result = 'LessThan';
+						case 'MinorEqual':
+							result = 'LessThanOrEqual';
+					}
+%]
+WS.verify[%=result%](json.size(), [%=assertion.condition.expectedValue.value%])
 [%
 				}
 			}
